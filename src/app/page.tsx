@@ -1,11 +1,11 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+
 import Hero from "./components/Hero";
 import Services from "./components/Services";
 import Gallery from "./components/Gallery";
 import ContactForm from "./components/ContactForm";
 import Testimonials from "./components/Testimonials";
-import Header from "./components/Heder";
-import type { Metadata } from "next";
+
 
 export const metadata: Metadata = {
   title: "Professional Painting Services in Sydney | Prisma Coatings",
@@ -41,17 +41,15 @@ export const metadata: Metadata = {
     type: "website",
   },
 };
+
 export default function Home() {
   return (
-    <html lang="en">
-      <Header />
-      <main>
-        {/* <Hero />
-        <Services />
-        <Gallery />
-        <Testimonials/>
-        <ContactForm/> */}
-      </main>
-    </html>
+    <>
+      <Hero />
+      <Services />
+      <Gallery />
+      <Testimonials />
+      <ContactForm />
+    </>
   );
 }
