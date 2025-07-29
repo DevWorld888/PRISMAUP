@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 
 import Hero from "./components/Hero";
-import Services from "./components/Services";
+import Aboutus from "./components/Aboutus";
+import WhatWeDo from "./components/WhatWeDo";
+import ExploreOurServices from "./components/ExploreOurServices";
 import Gallery from "./components/Gallery";
 import ContactForm from "./components/ContactForm";
 import Testimonials from "./components/Testimonials";
-import Aboutus from "./components/Aboutus";
 
 
 export const metadata: Metadata = {
@@ -48,7 +49,8 @@ export default function Home() {
     <>
       <Hero />
       <Aboutus />
-      <Services />
+      <WhatWeDo />
+      <ExploreOurServices />
       <Gallery />
       <Testimonials />
       <ContactForm />
