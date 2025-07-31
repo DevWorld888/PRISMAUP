@@ -7,6 +7,7 @@ import ExploreOurServices from "./components/ExploreOurServices";
 import Gallery from "./components/Gallery";
 import ContactForm from "./components/ContactForm";
 import Testimonials from "./components/Testimonials";
+import CallToAction from "./components/callToAction";
 
 
 export const metadata: Metadata = {
@@ -52,6 +53,7 @@ export default function Home() {
       <WhatWeDo />
       <ExploreOurServices />
       <Gallery />
+      <CallToAction/>
       <Testimonials />
       <ContactForm />
     </>
