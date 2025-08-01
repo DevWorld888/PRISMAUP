@@ -1,8 +1,9 @@
+import "./styles/globals.css";
 import type { Metadata } from "next";
 import { Roboto  } from "next/font/google";
 import { ThemeProvider } from 'next-themes';
-import "./styles/globals.css";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -28,6 +29,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <Header />
           {children}
+          <Footer/>
         </ThemeProvider>
       </body>
     </html>
