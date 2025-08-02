@@ -1,12 +1,242 @@
-import React from 'react'
+'use client';
 
-const page = () => {
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { Phone, Mail, Clock, Truck } from 'lucide-react';
+import Image from 'next/image';
+
+const ContactPage = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    address: '',
+    city: '',
+    postCode: '',
+    telephone: '',
+    comments: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log('Form submitted:', formData);
+  };
+
   return (
-    <div>
-      <h1>Contact Us</h1>
-      <p>If you have any questions, feel free to reach out!</p> 
-    </div>
-  )
-}
+    <div className="min-h-screen bg-white">
+      {/* Header with Navigation */}
+      <div className="w-full bg-cover bg-center relative" style={{
+        backgroundImage: "url('/images/5.png')",
+        minHeight: '400px'
+      }}>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent"></div>
+        <div className="relative z-10">
+          {/* Navigation */}
+          <nav className="flex items-center justify-between px-6 py-4 text-gray-800">
+            <div className="flex items-center space-x-6 text-sm uppercase tracking-wide">
+              <Link href="/" className="hover:text-[#D61C1C] transition-colors">
+                HOME
+              </Link>
+              <span>|</span>
+              <span className="text-[#D61C1C]">CONTACT US</span>
+            </div>
+          </nav>
 
-export default page
+          {/* Header Content */}
+          <div className="px-6 py-20">
+            <h1 className="text-5xl md:text-6xl font-bold text-[#13233A] mb-4">
+              Get Free Qoute
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-6 py-12">
+        <div className="grid lg:grid-cols-3 gap-12">
+          {/* Left Column - Form */}
+          <div className="lg:col-span-2">
+            <div className="bg-white">
+              <h2 className="text-3xl font-bold text-[#13233A] mb-2 border-b-4 border-[#D61C1C] inline-block pb-1">
+                Send a Message
+              </h2>
+              
+              <form onSubmit={handleSubmit} className="mt-8 space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <input
+                      type="text"
+                      name="firstName"
+                      placeholder="First Name *"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 bg-gray-50 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      name="lastName"
+                      placeholder="Last Name *"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 bg-gray-50 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <input
+                      type="text"
+                      name="address"
+                      placeholder="Address"
+                      value={formData.address}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-300 bg-gray-50 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      name="city"
+                      placeholder="City"
+                      value={formData.city}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-300 bg-gray-50 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <input
+                      type="text"
+                      name="postCode"
+                      placeholder="Post Code"
+                      value={formData.postCode}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-300 bg-gray-50 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="tel"
+                      name="telephone"
+                      placeholder="Telephone"
+                      value={formData.telephone}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-300 bg-gray-50 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <textarea
+                    name="comments"
+                    placeholder="Additional Comments / Question ?"
+                    value={formData.comments}
+                    onChange={handleInputChange}
+                    rows={6}
+                    className="w-full px-4 py-3 border border-gray-300 bg-gray-50 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-[#D61C1C] hover:bg-[#B71C1C] text-white font-semibold py-4 px-8 transition-colors duration-200 uppercase tracking-wide"
+                >
+                  SEND MESSAGE →
+                </button>
+              </form>
+
+              {/* Map */}
+              <div className="mt-12">
+                <div className="w-full h-80 bg-gray-200 rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.965535779902!2d151.10003117571074!3d-33.916286573208474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12bb68969aa811%3A0x38386a4ece4e5586!2sPrisma%20Coatings%20Pty%20Ltd!5e0!3m2!1sen!2sau!4v1754115675315!5m2!1sen!2sau"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - Info Boxes */}
+          <div className="space-y-8">
+            {/* Chat Live Box */}
+            <div className="bg-blue-50 p-8 rounded-lg text-center">
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                Chat Live With a Prisma Coatings Expert
+              </h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                We will help you with all your painting and renovation questions.
+              </p>
+              <button className="bg-[#D61C1C] hover:bg-[#B71C1C] text-white font-semibold py-3 px-8 rounded transition-colors duration-200 uppercase tracking-wide">
+                CONTACT US →
+              </button>
+              <div className="mt-6">
+                <Image
+                  src="/logo/logo.png"
+                  alt="Chat Icon"
+                  width={128}
+                  height={128}
+                  className="mx-auto"
+                />
+              </div>
+            </div>
+
+            {/* Contact Info Box */}
+            <div className="bg-blue-50 p-8 rounded-lg">
+              <h3 className="text-2xl font-bold text-[#13233A] mb-2 border-b-4 border-[#D61C1C] inline-block pb-1">
+                Contact us
+              </h3>
+              
+              <div className="mt-6 space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Phone className="w-5 h-5 text-[#13233A]" />
+                  <span className="text-gray-700" ><a href="tel:0401508036">Phone: 0401508036</a></span>
+                </div>
+                
+                <div className="flex items-center space-x-3">
+                  <Mail className="w-5 h-5 text-[#13233A]" />
+                  <span className="text-gray-700"><a href="mailto:prismacoating@gmail.com">Email: prismacoating@gmail.com</a></span>
+                </div>
+                
+                <div className="mt-6 space-y-2">
+                  <div className="flex items-center space-x-3">
+                    <Clock className="w-5 h-5 text-[#13233A]" />
+                    <span className="text-gray-700">Mon-Fri: 7 AM - 5 PM </span>
+                  </div>
+                  
+                  <div className="flex items-center space-x-3 ml-8">
+                    <span className="text-gray-700">Sat: 7 AM - 5 PM </span>
+                  </div>
+                  
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ContactPage;
