@@ -1,11 +1,13 @@
 import React from 'react'
+import AboutUs from './components/AboutUs'
+import OurServices from './components/OurServices'
 
 const page = () => {
   return (
-    <div>
-      <h1>About Us</h1>
-      <p>We are a company that values excellence and innovation.</p>
-    </div>
+    <>
+      <AboutUs />
+      <OurServices />
+    </>
   )
 }
 

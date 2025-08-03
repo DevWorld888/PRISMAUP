@@ -32,33 +32,7 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header with Navigation */}
-      <div className="w-full bg-cover bg-center relative" style={{
-        backgroundImage: "url('/images/5.png')",
-        minHeight: '400px'
-      }}>
-        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent"></div>
-        <div className="relative z-10">
-          {/* Navigation */}
-          <nav className="flex items-center justify-between px-6 py-4 text-gray-800">
-            <div className="flex items-center space-x-6 text-sm uppercase tracking-wide">
-              <Link href="/" className="hover:text-[#D61C1C] transition-colors">
-                HOME
-              </Link>
-              <span>|</span>
-              <span className="text-[#D61C1C]">CONTACT US</span>
-            </div>
-          </nav>
-
-          {/* Header Content */}
-          <div className="px-6 py-20">
-            <h1 className="text-5xl md:text-6xl font-bold text-[#13233A] mb-4">
-              Get Free Qoute
-            </h1>
-          </div>
-        </div>
-      </div>
-
+    
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid lg:grid-cols-3 gap-12">

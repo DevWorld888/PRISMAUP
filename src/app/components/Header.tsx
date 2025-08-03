@@ -49,10 +49,10 @@ export default function Header() {
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-600 origin-left scale-x-100 transition-transform duration-500" />
           </Link>
 
-          {/* <Link href="/services" className="relative group hover:text-[#D61C1C]">
-            <span className="pb-1">Services</span>
+          <Link href="/about" className="relative group hover:text-[#D61C1C]">
+            <span className="pb-1">About Us</span>
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-600 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
-          </Link> */}
+          </Link>
 
           {/* <Link href="/gallery" className="relative group hover:text-[#D61C1C]">
             <span className="pb-1">Gallery</span>
