@@ -134,16 +134,16 @@ const Testimonials = () => {
 
                 {/* Customer Info */}
                 <div className="flex items-center space-x-5">
-                  <div className="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center">
+                  <div className="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center overflow-hidden flex-shrink-0">
                     <Image
                       src={testimonials[currentTestimonial].avatar}
                       alt={`Avatar of ${testimonials[currentTestimonial].name}`}
                       width={64}
                       height={64}
-                      className="object-cover w-full h-full"
+                      className="object-cover w-full h-full rounded-full"
                     />
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     {/* Star Rating */}
                     <div className="flex space-x-1 mb-2">
                       {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
