@@ -102,11 +102,11 @@ export default function Header() {
         <div className="md:hidden bg-white dark:bg-gray-800 px-6 py-4 shadow animate-slideDown">
           <nav className="flex flex-col gap-4 text-[#13233A] dark:text-gray-200 font-medium text-lg">
             <Link href="/">Home</Link>
-            <Link href="/services">Services</Link>
-            <Link href="/gallery">Gallery</Link>
+            {/* <Link href="/services">Services</Link>
+            <Link href="/gallery">Gallery</Link> */}
             <Link href="/contact">Contact</Link>
             <Link href="/about">About us</Link>
-            <Link href="/blog">Blog</Link>
+            {/* <Link href="/blog">Blog</Link> */}
             <a
               href="tel:0416608482"
               className="flex items-center gap-2 border border-black dark:border-gray-600 px-4 py-3 rounded-2xl bg-[#13233A] dark:bg-gray-700 transition"

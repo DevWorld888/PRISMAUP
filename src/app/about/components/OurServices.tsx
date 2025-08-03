@@ -34,70 +34,47 @@ const OurServices = () => {
   ]
 
   return (
-    <section className="py-16 px-4 bg-[#FDF7F0]">
+    <section className="py-16 px-4 bg-[#1F2937]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-[#FF6B35] font-medium text-lg mb-2">Our Service</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <p className="text-[#D61C1C] font-medium text-lg mb-2">Our Service</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Experience Makes Us Confident
           </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
+          <p className="text-white max-w-3xl mx-auto text-lg leading-relaxed">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla auctor elit, et mollis massa ullamcorper in. Vestibulum egestas, neque non accumsan pede, ipsum lorem dictum nunc, a scelerisque nibh magna auctor tellus.
           </p>
         </div>
 
         {/* Services Grid */}
         <div className="relative">
-          {/* Central Image */}
-          <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
-            <div className="relative">
-              {/* Decorative elements */}
-              
-              
-              {/* Yellow circle background */}
-              <div className="w-80 h-80 bg-yellow-400 rounded-full flex items-center justify-center">
-                <Image 
-                  src="/images/about-us.png" 
-                  alt="Worker" 
-                  width={256}
-                  height={256}
-                  className="w-64 h-64 object-cover rounded-full"
-                />
-              </div>
-            </div>
-          </div>
-
           {/* Service Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto pt-20 pb-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
             {services.map((service, index) => (
               <div
                 key={service.id}
                 className={`
-                  relative p-8 rounded-2xl transition-all duration-300 cursor-pointer group
+                  relative p-6 sm:p-8 rounded-2xl transition-all duration-300 cursor-pointer group
                   ${index === 0 
-                    ? 'bg-[#FF6B35] text-white' 
-                    : 'bg-white text-gray-800 hover:bg-[#FF6B35] hover:text-white border border-gray-100'
+                    ? 'bg-[#D61C1C] text-white' 
+                    : 'bg-[#374151] text-white hover:bg-[#D61C1C] hover:text-white border border-gray-600'
                   }
-                  ${service.position === 'top-left' ? 'md:mr-40 mb-40 md:mb-0' : ''}
-                  ${service.position === 'top-right' ? 'md:ml-40 mb-40 md:mb-0' : ''}
-                  ${service.position === 'bottom-left' ? 'md:mr-40 mt-40 md:mt-0' : ''}
-                  ${service.position === 'bottom-right' ? 'md:ml-40 mt-40 md:mt-0' : ''}
                 `}
               >
                 {/* Icon */}
                 <div className={`
-                  text-4xl mb-4 transition-all duration-300
+                  text-3xl sm:text-4xl mb-3 sm:mb-4 transition-all duration-300
                   ${index === 0 
                     ? 'text-white' 
-                    : 'text-[#FF6B35] group-hover:text-white'
+                    : 'text-[#D61C1C] group-hover:text-white'
                   }
                 `}>
                   {service.icon}
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold mb-4">
+                <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">
                   {service.title}
                 </h3>
 
@@ -106,7 +83,7 @@ const OurServices = () => {
                   text-sm leading-relaxed
                   ${index === 0 
                     ? 'text-white/90' 
-                    : 'text-gray-600 group-hover:text-white/90'
+                    : 'text-white/80 group-hover:text-white/90'
                   }
                 `}>
                   {service.description}
