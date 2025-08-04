@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const AboutUs = () => {
   return (
@@ -75,9 +76,9 @@ const AboutUs = () => {
             </p>
 
             <div className="pt-4">
-              <button className="bg-[#D61C1C] hover:bg-[#C62828] text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
+              <Link href="/contact" className="inline-block bg-[#D61C1C] hover:bg-[#C62828] text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
                 Get In Touch
-              </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const ExploreOurServices = () => {
@@ -34,7 +35,7 @@ const ExploreOurServices = () => {
             We guarantee smooth finishes, clean work, and long-lasting results.
             </p>
 
-            <button className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-[#D61C1C] hover:bg-[#d61c1ce8] text-amber-50 font-semibold text-sm md:text-base rounded-md transition-colors duration-200 focus:outline-none focus:ring-2  focus:ring-offset-2">
+            <Link href="/contact" className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-[#D61C1C] hover:bg-[#d61c1ce8] text-amber-50 font-semibold text-sm md:text-base rounded-md transition-colors duration-200 focus:outline-none focus:ring-2  focus:ring-offset-2">
               Get a Free Quote
               <svg 
                 className="ml-2 w-4 h-4 md:w-5 md:h-5 text-amber-50" 
@@ -49,7 +50,7 @@ const ExploreOurServices = () => {
                   d="M9 5l7 7-7 7" 
                 />
               </svg>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Aboutus = () => {
   return (
@@ -136,9 +137,11 @@ const Aboutus = () => {
 
             {/* CTA Button */}
             <div className="pt-4 px-2 sm:px-0">
-              <button className="bg-[#D61C1C] hover:bg-[#b71c1c] text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl text-sm sm:text-base w-full sm:w-auto">
-                Get a free Quote
-              </button>
+              <Link href="/contact">
+                <button className="bg-[#D61C1C] hover:bg-[#b71c1c] text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl text-sm sm:text-base w-full sm:w-auto">
+                  Get a free Quote
+                </button>
+              </Link>
             </div>
           </div>
         </div>

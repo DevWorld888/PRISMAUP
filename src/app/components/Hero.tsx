@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 
 export default function Hero() {
   return (
@@ -28,12 +29,12 @@ export default function Hero() {
           With 9+ years of experience, Prisma Coatings transforms homes, strata and businesses with professional painting solutions.
         </p>
 
-        <a
-          href="https://wa.me/614XXXXXXXX"
+        <Link
+          href="/contact"
           className="mt-8 bg-[#D61C1C] hover:bg-red-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-md font-semibold text-sm sm:text-base md:text-lg transition duration-300 shadow-lg"
         >
           Get a Free Quote
-        </a>
+        </Link>
       </div>
     </section>
   );

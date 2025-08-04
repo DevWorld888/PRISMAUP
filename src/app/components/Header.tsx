@@ -4,16 +4,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 // import ThemeToggle from './ThemeToggle';
-import { Instagram, Facebook, Phone, Menu, X, } from "lucide-react";
+import { Phone, Menu, X, } from "lucide-react";
 
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="w-full font-[Roboto] z-50 bg-[var(--color-brand-accent)]  transition-colors duration-200">
+    <header className="sticky top-0 w-full font-[Roboto] z-50 bg-[var(--color-brand-accent)]  transition-colors duration-200">
       {/* Barra superior  */}
-      <div className="bg-[var(--color-brand-secondary)] dark:bg-gray-800 text-white text-sm py-4 px-4 flex flex-col md:flex-row items-center justify-between gap-2 text-center tracking-wider uppercase">
+      {/* <div className="bg-[var(--color-brand-secondary)] dark:bg-gray-800 text-white text-sm py-4 px-4 flex flex-col md:flex-row items-center justify-between gap-2 text-center tracking-wider uppercase">
 
         <div className="flex gap-4 text-white text-lg">
           <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -22,11 +22,11 @@ export default function Header() {
           <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
             <Facebook className="w-5 h-5 hover:scale-110 transition" />
           </a>
-          <a href="tel:0416608482" target="_blank" rel="noopener noreferrer" aria-label="Phone">
+          <a href="tel:0401508036" target="_blank" rel="noopener noreferrer" aria-label="Phone">
             <Phone className="w-5 h-5 hover:scale-110 transition" />
           </a>
         </div>
-      </div>
+      </div> */}
 
       {/* Barra principal */}
       <div className="max-w-7xl mx-auto px-4 py-4  flex items-center justify-between relative">
@@ -84,7 +84,7 @@ export default function Header() {
           className="hidden md:flex items-center gap-2 border border-black dark:border-gray-600 px-4 py-3 rounded-md bg-[#13233A] dark:bg-gray-700 transition"
         >
           <Phone className="text-[#D61C1C] w-4 h-4" />
-          <span className="text-sm text-white">0401 508 036</span>
+          <span className="text-sm text-white">0401508036</span>
         </a>
 
         {/* MENÚ HAMBURGUESA MÓVIL */}
@@ -108,11 +108,11 @@ export default function Header() {
             <Link href="/about">About us</Link>
             {/* <Link href="/blog">Blog</Link> */}
             <a
-              href="tel:0416608482"
+              href="tel:0401508036"
               className="flex items-center gap-2 border border-black dark:border-gray-600 px-4 py-3 rounded-2xl bg-[#13233A] dark:bg-gray-700 transition"
             >
               <Phone className="text-[#D61C1C] w-4 h-4" />
-              <span className="text-sm text-white">0416608482</span>
+              <span className="text-sm text-white">0401508036</span>
             </a>
           </nav>
         </div>
