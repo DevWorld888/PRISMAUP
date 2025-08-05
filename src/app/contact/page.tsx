@@ -24,10 +24,26 @@ const ContactPage = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {  
     e.preventDefault();
     // Handle form submission
-    console.log('Form submitted:', formData);
+
+    const response = await fetch('/api/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    });
+
+    const result = await response.json();
+    if (result.ok) {
+      console.log('Email sent successfully');
+      console.log('Form submitted:', formData);
+
+    } else {
+      console.error('Error sending email:', result.error);
+    }
   };
 
   return (
