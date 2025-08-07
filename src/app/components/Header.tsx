@@ -11,7 +11,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 w-full font-[Roboto] z-50 bg-[var(--color-brand-accent)]  transition-colors duration-200">
+    <header className=" w-full font-[Roboto] z-50 bg-[var(--color-brand-accent)]  transition-colors duration-200">
       {/* Barra superior  */}
       {/* <div className="bg-[var(--color-brand-secondary)] dark:bg-gray-800 text-white text-sm py-4 px-4 flex flex-col md:flex-row items-center justify-between gap-2 text-center tracking-wider uppercase">
 
@@ -54,10 +54,10 @@ export default function Header() {
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-600 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
           </Link>
 
-          {/* <Link href="/gallery" className="relative group hover:text-[#D61C1C]">
-            <span className="pb-1">Gallery</span>
+          <Link href="/gallery" className="relative group hover:text-[#D61C1C]">
+            <span className="pb-1">Projects</span>
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-600 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-          </Link> */}
+          </Link>
 
           <Link href="/contact" className="relative group hover:text-[#D61C1C]">
             <span className="pb-1">Contact</span>
