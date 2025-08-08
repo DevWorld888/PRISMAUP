@@ -35,7 +35,7 @@ export default function Header() {
         <Link href="/" className="flex items-center">
           <Image
             src="/logo/logo1.png"
-            alt="Prisma Coatings Logo"
+            alt="Prisma Coatings Sydney - Professional Painting Services"
             width={130}
             height={130}
             priority
@@ -43,7 +43,7 @@ export default function Header() {
         </Link>
 
         {/* MENÚ DESKTOP */}
-        <nav className="hidden md:flex gap-8 text-[var(--color-secondary)] dark:text-[var(--color-secondary)]  font-medium text-lg">
+        <nav className="hidden md:flex gap-8 text-[var(--color-secondary)] dark:text-[var(--color-secondary)]  font-medium text-lg" aria-label="Main navigation">
           <Link href="/" className="relative group text-[#D61C1C]">
             <span className="pb-1">Home</span>
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-600 origin-left scale-x-100 transition-transform duration-500" />
@@ -60,7 +60,7 @@ export default function Header() {
           </Link>
 
           <Link href="/contact" className="relative group hover:text-[#D61C1C]">
-            <span className="pb-1">Contact</span>
+            <span className="pb-1">Get a Free Quote</span>
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-600 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
           </Link>
 
@@ -82,6 +82,7 @@ export default function Header() {
         <a
           href="tel:0401508036"
           className="hidden md:flex items-center gap-2 border border-black dark:border-gray-600 px-4 py-3 rounded-md bg-[#13233A] dark:bg-gray-700 transition"
+          aria-label="Call Prisma Coatings Sydney"
         >
           <Phone className="text-[#D61C1C] w-4 h-4" />
           <span className="text-sm text-white">0401508036</span>
@@ -100,16 +101,17 @@ export default function Header() {
       {/* MENÚ MÓVIL */}
       {menuOpen && (
         <div className="md:hidden bg-white dark:bg-gray-800 px-6 py-4 shadow animate-slideDown">
-          <nav className="flex flex-col gap-4 text-[#13233A] dark:text-gray-200 font-medium text-lg">
+          <nav className="flex flex-col gap-4 text-[#13233A] dark:text-gray-200 font-medium text-lg" aria-label="Main navigation">
             <Link href="/">Home</Link>
             {/* <Link href="/services">Services</Link> */}
+            <Link href="/about">About Us</Link>
             <Link href="/gallery">Projects</Link> 
-            <Link href="/contact">Contact</Link>
-            <Link href="/about">About us</Link>
+            <Link href="/contact">Get a Free Quote</Link>
             {/* <Link href="/blog">Blog</Link> */}
             <a
               href="tel:0401508036"
               className="flex items-center gap-2 border border-black dark:border-gray-600 px-4 py-3 rounded-2xl bg-[#13233A] dark:bg-gray-700 transition"
+              aria-label="Call Prisma Coatings Sydney"
             >
               <Phone className="text-[#D61C1C] w-4 h-4" />
               <span className="text-sm text-white">0401508036</span>

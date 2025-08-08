@@ -15,6 +15,9 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: 'Prisma Coatings | Expert Painting in Sydney',
   description: 'Professional house and commercial painting services in Sydney. Quality, trust and perfect finish.',
+  icons: {
+    icon: "/favicon.ico", 
+  },
 };
 
 export default function RootLayout({

@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Bloquear archivos innecesarios para SEO
+Disallow: /api/
+Disallow: /_next/
+Disallow: /public/
+
+# Sitemap location
+Sitemap: https://prismaup.vercel.app/sitemap.xml
+
+# Crawl-delay para ser amigable con los servidores
+Crawl-delay: 1

@@ -71,7 +71,7 @@ const Footer = () => {
               <a href="#" className="hover:text-white transition-colors">Terms and Conditions</a>
             </div> */}
             <div className="text-sm text-gray-300 mt-4 md:mt-0">
-              Copyright © 2025 Prisma Coatings | Powered by Israel
+              Copyright © 2025 Prisma Coatings | Designed by <a href="https://israelcs.vercel.app/" className="text-blue-400 hover:text-blue-500 transition-colors" target='_blank'>Dev888</a>
             </div>
           </div>
         </div>
