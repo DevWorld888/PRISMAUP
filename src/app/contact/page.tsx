@@ -13,10 +13,12 @@ const ContactPage = () => {
     city: '',
     postCode: '',
     telephone: '',
-    comments: ''
+    comments: '',
+    nickname: '' // honeypot field
   });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
-
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
 
   const ContactSchema = z.object({
     firstName: z.string().min(2, "First name is required"),
@@ -39,7 +41,12 @@ const ContactPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
+    
+    // Clear previous messages and set loading state
+    setSubmitMessage(null);
+    setIsSubmitting(true);
+    
+    // Validate form data with Zod
     const parse = ContactSchema.safeParse(formData);
     if (!parse.success) {
       const fieldErrors: { [key: string]: string } = {};
@@ -47,25 +54,58 @@ const ContactPage = () => {
         if (typeof err.path[0] === 'string') fieldErrors[err.path[0]] = err.message;
       });
       setErrors(fieldErrors);
+      setIsSubmitting(false);
       return;
     }
 
+    // Check honeypot - if filled, it's likely a bot
+    if (formData.nickname) {
+      setIsSubmitting(false);
+      return; // Silently reject spam
+    }
+
     setErrors({}); // Clear errors
-    const response = await fetch('/api/send', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
-    });
+    
+    try {
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
 
-    const result = await response.json();
-    if (result.ok) {
-      console.log('Email sent successfully');
-      console.log('Form submitted:', formData);
-
-    } else {
-      console.error('Error sending email:', result.error);
+      const result = await response.json();
+      
+      if (result.ok) {
+        setSubmitMessage({ 
+          type: 'success', 
+          text: 'Message sent successfully! We will get back to you soon.' 
+        });
+        // Reset form after successful submission
+        setFormData({
+          firstName: '',
+          lastName: '',
+          address: '',
+          city: '',
+          postCode: '',
+          telephone: '',
+          comments: '',
+          nickname: ''
+        });
+      } else {
+        setSubmitMessage({ 
+          type: 'error', 
+          text: 'Failed to send message. Please try again or contact us directly.' 
+        });
+      }
+    } catch {
+      setSubmitMessage({ 
+        type: 'error', 
+        text: 'Network error. Please check your connection and try again.' 
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -83,6 +123,17 @@ const ContactPage = () => {
               </h2>
 
               <form onSubmit={handleSubmit} className="mt-8 space-y-6">
+                {/* Success/Error Message */}
+                {submitMessage && (
+                  <div className={`p-4 rounded-lg ${
+                    submitMessage.type === 'success' 
+                      ? 'bg-green-50 border border-green-200 text-green-800' 
+                      : 'bg-red-50 border border-red-200 text-red-800'
+                  }`}>
+                    <p className="font-medium">{submitMessage.text}</p>
+                  </div>
+                )}
+
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <input
@@ -108,6 +159,9 @@ const ContactPage = () => {
                       required
                       className="w-full px-4 py-3 border border-gray-300 bg-gray-50 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
+                    {errors.lastName && (
+                      <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>
+                    )}
                   </div>
                 </div>
 
@@ -154,6 +208,9 @@ const ContactPage = () => {
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 border border-gray-300 bg-gray-50 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
+                    {errors.telephone && (
+                      <p className="text-red-500 text-sm mt-1">{errors.telephone}</p>
+                    )}
                   </div>
                 </div>
 
@@ -166,13 +223,33 @@ const ContactPage = () => {
                     rows={6}
                     className="w-full px-4 py-3 border border-gray-300 bg-gray-50 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
                   />
+                  {errors.comments && (
+                    <p className="text-red-500 text-sm mt-1">{errors.comments}</p>
+                  )}
+                </div>
+
+                {/* Honeypot field - hidden from users but visible to bots */}
+                <div style={{ display: 'none' }}>
+                  <input
+                    type="text"
+                    name="nickname"
+                    value={formData.nickname}
+                    onChange={handleInputChange}
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-[#D61C1C] hover:bg-[#B71C1C] text-white font-semibold py-4 px-8 transition-colors duration-200 uppercase tracking-wide"
+                  disabled={isSubmitting}
+                  className={`w-full font-semibold py-4 px-8 transition-colors duration-200 uppercase tracking-wide ${
+                    isSubmitting 
+                      ? 'bg-gray-400 cursor-not-allowed text-white' 
+                      : 'bg-[#D61C1C] hover:bg-[#B71C1C] text-white'
+                  }`}
                 >
-                  SEND MESSAGE →
+                  {isSubmitting ? 'SENDING...' : 'SEND MESSAGE →'}
                 </button>
               </form>
 
