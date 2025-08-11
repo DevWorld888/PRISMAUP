@@ -13,44 +13,50 @@ const WhatWeDo = () => {
 const services = [
   {
     id: 1,
-    title: "Residential Painting",
+    title: "Residential Painting Services",
     icon: <Home />,
-    description: "Interior and exterior painting for homes and apartments",
+    description: "Professional interior and exterior house painting for homes, apartments, and residential properties with premium quality paints",
+    keywords: "house painting, residential painting, interior painting, exterior painting",
     active: true,
   },
   {
     id: 2,
-    title: "Commercial Painting",
+    title: "Commercial Painting Services",
     icon: <Building2 />,
-    description: "Painting for offices, shops, and commercial buildings",
+    description: "Expert commercial painting for offices, retail stores, warehouses, and business facilities with minimal disruption",
+    keywords: "commercial painting, office painting, business painting, retail painting",
     active: false,
   },
   {
     id: 3,
-    title: "Strata Painting",
+    title: "Strata & Apartment Complex Painting",
     icon: <Paintbrush />,
-    description: "Professional strata and apartment complex painting",
+    description: "Specialized strata painting services for apartment buildings, condos, and multi-unit residential complexes",
+    keywords: "strata painting, apartment painting, condo painting, multi-unit painting",
     active: false,
   },
   {
     id: 4,
-    title: "Color Consulting",
+    title: "Professional Color Consulting",
     icon: <Palette />,
-    description: "We help you choose the right color combination",
+    description: "Expert color consultation and design advice to help you choose the perfect color schemes for your space",
+    keywords: "color consulting, paint color advice, interior design, color schemes",
     active: false,
   },
   {
     id: 5,
-    title: "Surface Preparation",
+    title: "Surface Preparation & Priming",
     icon: <Brush />,
-    description: "We clean and prepare surfaces before painting",
+    description: "Thorough surface cleaning, sanding, priming, and preparation to ensure long-lasting paint results",
+    keywords: "surface preparation, paint preparation, priming, sanding, paint prep",
     active: false,
   },
   {
     id: 6,
-    title: "Spray Painting",
+    title: "Professional Spray Painting",
     icon: <SprayCan />,
-    description: "Smooth and modern spray paint finishes",
+    description: "High-quality spray painting services for smooth, even finishes on cabinets, furniture, and large surfaces",
+    keywords: "spray painting, cabinet painting, furniture painting, airless spraying",
     active: false,
   },
 ];
@@ -58,7 +64,11 @@ const services = [
 
 
   return (
-    <section className="py-16 px-4 bg-[#125386]">
+    <section 
+      className="py-16 px-4 bg-[#125386]" 
+      id="services"
+      aria-labelledby="services-heading"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Badge */}
         <div className="text-center mb-8">
@@ -69,38 +79,63 @@ const services = [
 
         {/* Main Title */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white ">
-            Solutions for  {' '}
+          <h1 
+            id="services-heading"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white"
+          >
+            Professional Painting Solutions for{' '}
             <span className="text-brand-primary">Every Space</span>
-          </h2>
+          </h1>
+          <p className="text-lg text-white/90 mt-4 max-w-3xl mx-auto">
+            Expert painting services for residential, commercial, and strata properties. 
+            Quality workmanship with premium materials and professional color consulting.
+          </p>
         </div>
 
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          role="list"
+          aria-label="Painting services offered"
+        >
           {services.map((service) => (
-            <div
+            <article
               key={service.id}
-              className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 "
+              className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100"
+              role="listitem"
+              itemScope
+              itemType="https://schema.org/Service"
             >
               {/* Icon */}
-              <div className="flex justify-center mb-4">
+              <div className="flex justify-center mb-4" aria-hidden="true">
                 <div className="w-16 h-16 bg-[#13233A] text-white rounded-full flex items-center justify-center text-2xl">
                   {service.icon}
                 </div>
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-semibold text-center mb-3 text-gray-900 ">
+              <h2 
+                className="text-xl font-semibold text-center mb-3 text-gray-900"
+                itemProp="name"
+              >
                 {service.title}
-              </h3>
+              </h2>
 
               {/* Description */}
-              <p className="text-gray-600  text-center text-sm mb-4">
+              <p 
+                className="text-gray-600 text-center text-sm mb-4"
+                itemProp="description"
+              >
                 {service.description}
               </p>
 
-            </div>
+              {/* Hidden keywords for SEO */}
+              <meta itemProp="keywords" content={service.keywords} />
+              <meta itemProp="serviceType" content="PaintingService" />
+              <meta itemProp="provider" content="Prisma Coatings" />
+
+            </article>
           ))}
         </div>
       </div>
