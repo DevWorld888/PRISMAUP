@@ -1,16 +1,17 @@
 import React from 'react'
+import Image from 'next/image'
 
 const OurTeam = () => {
   const teamMembers = [
     {
-      name: "Michael Chen",
+      name: "Hally",
       position: "Master Painter & Founder",
       experience: "12+ years",
       specialty: "Residential & Commercial Painting",
-      id: 1
+      id: 8
     },
     {
-      name: "Sarah Thompson", 
+      name: "Hally ", 
       position: "Project Manager",
       experience: "8+ years",
       specialty: "Strata & Large Scale Projects",
@@ -75,14 +76,15 @@ const OurTeam = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member) => (
             <div key={member.id} className="text-center" itemScope itemType="https://schema.org/Person">
-              {/* Card with red background */}
-              <div className="bg-[#D61C1C] rounded-lg p-8 mb-6 min-h-[300px] flex items-center justify-center">
-                {/* Placeholder for team member - just initials */}
-                <div className="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                  <span className="text-[#13233A] text-3xl font-bold" aria-label={`${member.name} initials`}>
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </span>
-                </div>
+              {/* Card with team member photo */}
+              <div className="relative rounded-lg overflow-hidden mb-6 min-h-[300px] bg-gray-200">
+                <Image 
+                  src={`/images/${member.id}.jpg`}
+                  alt={`${member.name} - ${member.position}`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
               </div>
               
               {/* Member Info */}

@@ -96,6 +96,22 @@ const GalleryProjects = () => {
       title: 'Company Expertise Showcase',
       category: 'company',
       description: 'Overview of Prisma Coatings comprehensive painting services and professional expertise across various project types.'
+    },
+    {
+      id: 11,
+      src: '/images/11.jpg',
+      alt: 'Prisma Coatings team members showcasing their skills and professionalism in a group photo',
+      title: 'Our Professional Team',
+      category: 'team',
+      description: 'Meet our dedicated team of professional painters committed to delivering exceptional results for every project.'
+    },
+    {
+      id: 12,
+      src: '/images/12.jpg',
+      alt: 'Prisma Coatings logo and branding materials showcasing company identity',
+      title: 'Prisma Coatings Branding',
+      category: 'branding',
+      description: 'Showcasing Prisma Coatings branding and identity through professional logo design and marketing materials.'
     }
   ]
 
