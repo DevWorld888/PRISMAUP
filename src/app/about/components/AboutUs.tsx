@@ -3,18 +3,47 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const AboutUs = () => {
+  // Schema structured data for SEO
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Prisma Coatings",
+    "description": "Professional painting services in Sydney with over 9 years of experience specializing in residential, commercial, and strata painting",
+    "foundingDate": "2015",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "NSW",
+      "addressCountry": "AU",
+      "addressLocality": "Sydney"
+    },
+    "areaServed": [
+      "Sydney", "Inner West", "Eastern Suburbs", "Northern Beaches", "North Shore", "Western Sydney"
+    ],
+    "serviceType": [
+      "House Painting", "Commercial Painting", "Strata Painting", "Interior Painting", "Exterior Painting"
+    ]
+  };
+
   return (
-    <section className="pt-16 pb-8 sm:pb-16 px-4 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <>
+      {/* Schema markup for SEO */}
+      <script 
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+      />
+      
+      <section className="pt-16 pb-8 sm:pb-16 px-4 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image Section */}
             <div className="flex justify-center">
                 <Image
                 src="/images/about-us.png"
-                alt="About Us"
+                alt="Professional painting team from Prisma Coatings - Sydney's leading house and commercial painting specialists with 9+ years experience"
                 width={450}
                 height={450}
-                
+                className="rounded-lg shadow-lg"
+                loading="eager"
                 />
             </div>
 
@@ -22,17 +51,19 @@ const AboutUs = () => {
           <div className="space-y-6">
             <div>
               <p className="text-[#D61C1C] font-medium text-sm uppercase tracking-wide mb-2">
-                About Us
+                About Prisma Coatings
               </p>
-              <h2 className="text-4xl lg:text-5xl font-bold text-[#13233A] leading-tight">
-                We Are The Best Painting Service Company
-              </h2>
+              <h1 className="text-4xl lg:text-5xl font-bold text-[#13233A] leading-tight">
+                Sydney&apos;s Premier Painting Professionals with 9+ Years Excellence
+              </h1>
             </div>
 
             <p className="text-gray-600 text-lg leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla auctor elit, et mollis 
-              massa ullamcorper in. Vestibulum egestas, neque non accumsan mollis, dui lacus dictum 
-              nunc, a scelerisque nibh magna auctor tellus.
+              Established in 2015, Prisma Coatings has become Sydney&apos;s most trusted painting company, 
+              delivering exceptional <strong>residential painting</strong>, <strong>commercial painting</strong>, 
+              and <strong>strata painting services</strong> across all Sydney suburbs. Our licensed and 
+              insured painters bring over 9 years of expertise to every project, from single-room repaints 
+              to large-scale commercial developments.
             </p>
 
             <div className="space-y-4">
@@ -43,7 +74,7 @@ const AboutUs = () => {
                   </svg>
                 </div>
                 <p className="text-[#13233A] font-medium">
-                  Aliquam lacinia in tellus et dignissim.
+                  Licensed & fully insured painters across all Sydney regions
                 </p>
               </div>
 
@@ -54,7 +85,7 @@ const AboutUs = () => {
                   </svg>
                 </div>
                 <p className="text-[#13233A] font-medium">
-                  Duis sed eros eget lectus sagittis fringilla.
+                  Premium quality paints & eco-friendly coating solutions
                 </p>
               </div>
 
@@ -65,14 +96,16 @@ const AboutUs = () => {
                   </svg>
                 </div>
                 <p className="text-[#13233A] font-medium">
-                  Suspendisse molestie diam ut velit.
+                  Free detailed quotes & comprehensive project consultation
                 </p>
               </div>
             </div>
 
             <p className="text-gray-600 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec 
-              ullamcorper mattis, pulvinar dapibus leo.
+              Whether you need <strong>interior house painting</strong>, <strong>exterior home painting</strong>, 
+              <strong>office painting</strong>, or <strong>apartment complex painting</strong>, our skilled team 
+              delivers exceptional results on time and within budget. We serve all Sydney areas including 
+              Inner West, Eastern Suburbs, Northern Beaches, North Shore, and Western Sydney.
             </p>
 
             <div className="pt-4">
@@ -84,6 +117,7 @@ const AboutUs = () => {
         </div>
       </div>
     </section>
+    </>
   )
 }
 

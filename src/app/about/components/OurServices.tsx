@@ -5,29 +5,29 @@ const OurServices = () => {
   const services = [
     {
       id: 1,
-      title: "Residential Project",
-      description: "We bring the right people together to challenge established thinking and drive transform in 2020",
+      title: "Residential Painting Services",
+      description: "Professional interior and exterior house painting with premium quality paints. We transform homes with expert color consultation, surface preparation, and lasting protective coatings for all residential properties.",
       icon: "🏠",
       position: "top-left"
     },
     {
       id: 2,
-      title: "Commercial Project", 
-      description: "We bring the right people together to challenge established thinking and drive transform in 2020",
+      title: "Commercial Painting Solutions", 
+      description: "Complete commercial painting services for offices, retail spaces, and industrial buildings. Our team delivers durable, professional finishes that enhance your business image and protect your investment.",
       icon: "🏢",
       position: "top-right"
     },
     {
       id: 3,
-      title: "Wallpapering",
-      description: "We bring the right people together to challenge established thinking and drive transform in 2020", 
+      title: "Wallpapering & Wall Coverings",
+      description: "Expert wallpaper installation and removal services. From designer wallpapers to textured wall coverings, we create stunning feature walls and complete room transformations with precision and care.", 
       icon: "🎨",
       position: "bottom-left"
     },
     {
       id: 4,
-      title: "Restoration Project",
-      description: "We bring the right people together to challenge established thinking and drive transform in 2020",
+      title: "Restoration & Repair Services",
+      description: "Specialized restoration services for damaged surfaces, historic buildings, and weathered exteriors. We restore and protect your property with advanced coating technologies and traditional craftsmanship.",
       icon: "🔧",
       position: "bottom-right"
     }
@@ -38,12 +38,12 @@ const OurServices = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-[#D61C1C] font-medium text-lg mb-2">Our Service</p>
+          <p className="text-[#D61C1C] font-medium text-lg mb-2">Our Painting Services</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Experience Makes Us Confident
+            Professional Painting & Coating Solutions
           </h2>
           <p className="text-white max-w-3xl mx-auto text-lg leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla auctor elit, et mollis massa ullamcorper in. Vestibulum egestas, neque non accumsan pede, ipsum lorem dictum nunc, a scelerisque nibh magna auctor tellus.
+            Transform your property with our comprehensive painting and coating services. From residential homes to commercial buildings, we deliver exceptional results using premium materials, expert techniques, and years of professional experience in the painting industry.
           </p>
         </div>
 

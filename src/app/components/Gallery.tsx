@@ -39,10 +39,32 @@ const Gallery = () => {
     {
       id: 4,
       src: '/images/4.jpg',
-      alt: 'Custom paint color mixing process by Prisma Coatings expert color consultants',
-      title: 'Color Mixing',
-      description: 'Expert color matching and custom paint mixing services'
-    }
+      alt: 'Professional exterior house painting service with weather-resistant coating by Prisma Coatings',
+      title: 'Exterior House Painting',
+      description: 'Durable exterior painting solutions with premium weather-resistant coatings'
+    },
+    {
+      id: 5,
+      src: '/images/5.jpg',
+      alt: 'Commercial building industrial coating application by Prisma Coatings specialists',
+      title: 'Commercial Coatings',
+      description: 'Industrial-grade commercial painting and protective coating services'
+    },
+    {
+      id: 6,
+      src: '/images/6.jpg',
+      alt: 'Professional cabinet refinishing and furniture painting by Prisma Coatings artisans',
+      title: 'Cabinet Refinishing',
+      description: 'Custom cabinet painting and furniture refinishing with flawless finishes'
+    },
+    {
+      id: 7,
+      src: '/images/7.jpg',
+      alt: 'Decorative wall texturing and specialty paint finishes by Prisma Coatings experts',
+      title: 'Decorative Finishes',
+      description: 'Artistic wall textures and specialty decorative paint techniques'
+    },
+   
   ]
 
   // Auto-scroll functionality
