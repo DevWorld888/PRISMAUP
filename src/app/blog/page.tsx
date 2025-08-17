@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { blogPosts, categories, type BlogPost } from '../utils/blogData'
+import BlogCategoriesClient from './components/BlogCategoriesClient'
 
 export const metadata: Metadata = {
   title: 'Painting Tips & Industry Insights Blog | Prisma Coatings Sydney',
@@ -40,7 +41,7 @@ const BlogCard = ({ post }: { post: BlogPost }) => (
     </div>
     <div className="p-6">
       <div className="flex items-center justify-between text-sm text-gray-500 mb-2">
-        <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">
+        <span className="bg-blue-100 text-[#13233A] px-2 py-1 rounded-full text-xs font-medium">
           {post.category}
         </span>
         <span>{post.readTime}</span>
@@ -48,7 +49,7 @@ const BlogCard = ({ post }: { post: BlogPost }) => (
       <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
         <Link 
           href={`/blog/${post.slug}`} 
-          className="hover:text-blue-600 transition-colors duration-200"
+          className="hover:text-[#13233A] transition-colors duration-200"
         >
           {post.title}
         </Link>
@@ -64,7 +65,7 @@ const BlogCard = ({ post }: { post: BlogPost }) => (
         </time>
         <Link 
           href={`/blog/${post.slug}`}
-          className="text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors duration-200"
+          className="text-[#D61C1C] hover:text-[#EF4444] font-medium text-sm transition-colors duration-200"
         >
           Read More →
         </Link>
@@ -81,7 +82,7 @@ const page = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl md:text-6xl">
-              Painting Tips & <span className="text-blue-600">Industry Insights</span>
+              Painting Tips & <span className="text-[#EF4444]">Industry Insights</span>
             </h1>
             <p className="mt-6 max-w-2xl mx-auto text-xl text-gray-600">
               Expert advice, color trends, and professional tips from Sydney&apos;s trusted painting professionals. 
@@ -94,35 +95,12 @@ const page = () => {
       {/* Main Content */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Category Filter */}
-          <div className="mb-12">
-            <div className="flex flex-wrap justify-center gap-3">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
-                    category === "All"
-                      ? "bg-blue-600 text-white"
-                      : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-300"
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Blog Posts Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
-              <BlogCard key={post.id} post={post} />
-            ))}
-          </div>
+          <BlogCategoriesClient />
         </div>
       </section>
 
       {/* Newsletter Signup */}
-      <section className="bg-blue-600 py-16">
+      <section className="bg-[#13233A] py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Stay Updated with Painting Tips
@@ -135,17 +113,17 @@ const page = () => {
               <input
                 type="email"
                 placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+                className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white border border-gray-300"
                 required
               />
               <button
                 type="submit"
-                className="px-6 py-3 bg-white text-blue-600 font-medium rounded-lg hover:bg-gray-100 transition-colors duration-200"
+                className="px-6 py-3 bg-white text-[#13233A] font-medium rounded-lg hover:bg-gray-100 transition-colors duration-200"
               >
                 Subscribe
               </button>
             </form>
-            <p className="text-blue-100 text-sm mt-3">
+            <p className="text-white text-sm mt-3">
               No spam, unsubscribe anytime.
             </p>
           </div>

@@ -67,12 +67,12 @@ export default function Header() {
           {/* <Link href="/about" className="relative group hover:text-[#D61C1C]">
             <span className="pb-1">About us</span>
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-600 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-          </Link>
+          </Link> */}
 
           <Link href="/blog" className="relative group hover:text-[#D61C1C] ">
             <span className="pb-1">Blog</span>
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-600 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-          </Link> */}
+          </Link>
         </nav>
         {/* TOGGLE DE TEMA */}
         {/* <div className="flex items-center gap-4">
@@ -107,7 +107,7 @@ export default function Header() {
             <Link href="/about">About Us</Link>
             <Link href="/gallery">Projects</Link> 
             <Link href="/contact">Get a Free Quote</Link>
-            {/* <Link href="/blog">Blog</Link> */}
+            <Link href="/blog">Blog</Link>
             <a
               href="tel:0401508036"
               className="flex items-center gap-2 border border-black dark:border-gray-600 px-4 py-3 rounded-2xl bg-[#13233A] dark:bg-gray-700 transition"
