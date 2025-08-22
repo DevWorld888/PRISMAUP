@@ -100,7 +100,7 @@ const page = () => {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="bg-[#13233A] py-16">
+      {/* <section className="bg-[#13233A] py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Stay Updated with Painting Tips
@@ -128,7 +128,7 @@ const page = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Structured Data for Blog */}
       <script
