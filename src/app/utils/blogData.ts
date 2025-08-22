@@ -2,6 +2,9 @@ export interface BlogPost {
   id: number
   title: string
   excerpt: string
+  metaTitle: string
+  metaDescription: string
+  focusKeywords: string[]
   content?: string
   image: string
   date: string
@@ -15,259 +18,272 @@ export const blogPosts: BlogPost[] = [
   {
     id: 1,
     title: "2025 Color Trends: What's Hot in Sydney Home Painting",
-    excerpt: "Discover the latest color trends that are transforming Sydney homes this year. From warm earth tones to bold statement walls.",
+    metaTitle: "2025 Sydney Painting Color Trends | Prisma Coatings",
+    metaDescription: "Discover Sydney's 2025 home painting trends: earthy tones, bold feature walls & eco-friendly paints with expert finish.",
+    focusKeywords: ["Sydney painting trends 2025", "house painting Sydney", "eco-friendly paints Sydney"],
+    excerpt: "Explore Sydney's hottest painting color trends for 2025: warm earthy tones, bold accent walls, and sustainable finishes.",
     content: `
-      <p>As we step into 2025, Sydney homeowners are embracing bold new color trends that reflect both global influences and our unique Australian lifestyle. This year's palette is all about creating spaces that feel both sophisticated and welcoming.</p>
+      <p>Choosing the right paint color can completely transform your home. In 2025, Sydney homeowners are leaning toward bold, sustainable, and sophisticated palettes. At <strong>Prisma Coatings Sydney</strong>, we’ve identified the top trends shaping Australian interiors and exteriors this year.</p>
 
-      <h2>Warm Earth Tones Take Center Stage</h2>
-      <p>The trend toward warm, earthy colors continues to dominate Sydney homes. Think rich terracottas, warm ochres, and deep clay colors that complement our natural landscape. These colors work particularly well in:</p>
+      <h2>Warm Earth Tones Inspired by Nature</h2>
+      <p>From terracotta to ochre, earthy shades reflect our connection to the Australian landscape. These colors bring warmth to living rooms, coziness to bedrooms, and elegance to exteriors.</p>
       <ul>
-        <li>Living rooms and dining areas</li>
-        <li>Feature walls in bedrooms</li>
-        <li>Exterior accents</li>
+        <li><strong>Living Rooms:</strong> Use soft clay tones for a relaxing atmosphere.</li>
+        <li><strong>Bedrooms:</strong> A terracotta feature wall creates a grounding effect.</li>
+        <li><strong>Outdoor Facades:</strong> Ochres and browns blend beautifully with gardens.</li>
       </ul>
 
-      <h2>Bold Statement Walls</h2>
-      <p>Gone are the days of playing it safe with neutral walls throughout. 2025 is seeing homeowners embrace dramatic accent walls in deep blues, forest greens, and even sophisticated burgundy tones.</p>
+      <h2>Bold Feature Walls</h2>
+      <p>Sydney homeowners are increasingly embracing deep navy, emerald green, and burgundy accent walls. These statement walls elevate modern apartments and suburban homes alike, giving them personality and depth.</p>
 
-      <h2>Sustainable Paint Choices</h2>
-      <p>Environmental consciousness continues to influence color choices, with eco-friendly paints in natural, muted tones becoming increasingly popular. These paints not only look great but also contribute to better indoor air quality.</p>
+      <h2>Eco-Friendly Paints</h2>
+      <p>With health and sustainability in mind, low-VOC and natural paints are in high demand. They reduce harmful emissions and improve indoor air quality while offering beautiful matte and satin finishes.</p>
 
-      <h2>Professional Application Makes the Difference</h2>
-      <p>While choosing the right color is important, professional application ensures your chosen palette looks its absolute best. Our team at Prisma Coatings has extensive experience with the latest color trends and can help you achieve the perfect finish.</p>
+      <h2>Professional Painters Make It Last</h2>
+      <p>Even the best palette can fail without skilled application. Our <a href="/about">Prisma Coatings team</a> ensures surfaces are properly prepared, colors are applied with precision, and finishes last for years.</p>
+
+      <h2>FAQs About 2025 Color Trends</h2>
+      <h3>What colors are best for small Sydney apartments?</h3>
+      <p>Light earth tones and soft greens create the illusion of more space while keeping interiors stylish.</p>
+
+      <h3>Are eco-friendly paints durable?</h3>
+      <p>Yes, today’s eco-friendly paints are just as durable as traditional products, with the added benefit of being healthier.</p>
+
+      <h2>Final Thoughts</h2>
+      <p>In 2025, painting trends in Sydney are about bold choices, sustainability, and comfort. Whether you’re refreshing a single room or repainting your entire property, Prisma Coatings can help you achieve a flawless result.</p>
+
+      <p>👉 Ready to transform your home? <a href="/contact">Contact our Sydney painting experts</a> for a free consultation today.</p>
     `,
     image: "/images/1.jpg",
     date: "2025-01-15",
     category: "Color Trends",
     slug: "2025-color-trends-sydney-home-painting",
-    readTime: "5 min read",
+    readTime: "7 min read",
     author: "Prisma Coatings Team"
   },
   {
     id: 2,
     title: "How to Prepare Your House for Exterior Painting",
-    excerpt: "Essential steps to prepare your home's exterior for painting. Learn about surface preparation, primer selection, and weather considerations.",
+    metaTitle: "Sydney Exterior Painting Prep Guide | Prisma Coatings",
+    metaDescription: "Learn how to prepare your Sydney home for exterior painting: cleaning, surface repairs, primers & weather tips.",
+    focusKeywords: ["exterior house painting Sydney", "house painting preparation", "Sydney painters"],
+    excerpt: "Proper preparation is the key to a flawless exterior paint job. Learn how to prepare your Sydney home before painting begins.",
     content: `
-      <p>Proper preparation is the foundation of any successful exterior painting project. Taking the time to prepare your home's exterior properly will ensure a professional finish that lasts for years to come.</p>
+      <p>Exterior painting can protect your home, boost its value, and transform its appearance. But preparation is the most important step. At <strong>Prisma Coatings</strong>, we know that skipping prep leads to costly mistakes. Here’s our professional guide for Sydney homeowners.</p>
 
-      <h2>Surface Cleaning and Inspection</h2>
-      <p>Before any painting begins, a thorough cleaning and inspection is essential:</p>
+      <h2>Step 1: Surface Cleaning</h2>
+      <p>Pressure washing removes dirt, mold, and peeling paint. Allow 24–48 hours for surfaces to dry fully before continuing.</p>
+
+      <h2>Step 2: Inspect and Repair</h2>
       <ul>
-        <li>Pressure wash all surfaces to remove dirt, mold, and loose paint</li>
-        <li>Allow 24-48 hours for complete drying</li>
-        <li>Inspect for cracks, holes, or damaged areas</li>
-        <li>Check for signs of moisture damage or wood rot</li>
+        <li>Check for cracks, gaps, or wood rot.</li>
+        <li>Fill holes with exterior filler.</li>
+        <li>Replace damaged weatherboards or trims.</li>
+        <li>Caulk around windows and doors to seal gaps.</li>
       </ul>
 
-      <h2>Surface Repairs</h2>
-      <p>Address all identified issues before painting:</p>
-      <ul>
-        <li>Fill cracks and holes with appropriate filler</li>
-        <li>Replace any damaged timber or weatherboards</li>
-        <li>Sand rough areas smooth</li>
-        <li>Caulk gaps around windows, doors, and trim</li>
-      </ul>
+      <h2>Step 3: Sanding and Priming</h2>
+      <p>Sanding ensures smooth adhesion. The right primer (oil, water, or masonry-based) will help the paint bond and extend durability.</p>
 
-      <h2>Primer Selection</h2>
-      <p>Choosing the right primer is crucial for paint adhesion and longevity. Consider:</p>
-      <ul>
-        <li>Surface material (wood, metal, masonry)</li>
-        <li>Previous paint type</li>
-        <li>Environmental conditions</li>
-        <li>Final paint selection</li>
-      </ul>
+      <h2>Step 4: Weather Considerations</h2>
+      <p>Sydney’s climate is unique. Avoid painting on humid days, in direct harsh sunlight, or just before rain. Ideal conditions are mild temperatures with low humidity.</p>
 
-      <h2>Weather Considerations</h2>
-      <p>Sydney's climate requires careful timing for exterior painting projects. Avoid painting during:</p>
-      <ul>
-        <li>High humidity periods</li>
-        <li>Direct strong sunlight</li>
-        <li>Windy conditions</li>
-        <li>When rain is forecast within 24 hours</li>
-      </ul>
+      <h2>FAQs About Exterior Painting Prep</h2>
+      <h3>Do I need a primer if the surface was painted before?</h3>
+      <p>Yes, primers ensure even coverage and prevent old paint from showing through.</p>
+
+      <h3>Can I DIY prep?</h3>
+      <p>DIY prep is possible, but professional painters ensure thorough cleaning, repairs, and long-lasting results.</p>
+
+      <h2>Final Thoughts</h2>
+      <p>A great paint job starts with preparation. <a href="/contact">Contact Prisma Coatings Sydney</a> today to get a professional team that guarantees a durable finish for your home.</p>
     `,
     image: "/images/2.jpg",
     date: "2025-01-10",
     category: "Painting Tips",
     slug: "prepare-house-exterior-painting",
-    readTime: "7 min read",
+    readTime: "8 min read",
     author: "Prisma Coatings Team"
   },
   {
     id: 3,
     title: "Choosing the Right Paint Finish for Each Room",
-    excerpt: "Understanding when to use matte, eggshell, satin, or gloss finishes. A comprehensive guide for interior painting projects.",
+    metaTitle: "Best Paint Finishes for Sydney Homes | Prisma Coatings",
+    metaDescription: "Matte, eggshell, satin, or gloss? Learn which paint finish works best in each room of your Sydney home.",
+    focusKeywords: ["best paint finish Sydney", "interior painting Sydney", "paint finishes guide"],
+    excerpt: "Understanding paint finishes is key to long-lasting results. Here’s how to choose the right finish for every room.",
     content: `
-      <p>Selecting the right paint finish is crucial for achieving the perfect look and durability in each room of your home. Different finishes serve different purposes and understanding their characteristics will help you make the best choice.</p>
+      <p>Selecting the right paint finish is about more than looks—it affects durability, cleaning, and atmosphere. At <strong>Prisma Coatings</strong>, we guide Sydney homeowners in making the right choice for each space.</p>
 
       <h2>Matte Finish</h2>
-      <p>Matte finishes offer a sophisticated, non-reflective appearance that hides surface imperfections well. They're perfect for:</p>
-      <ul>
-        <li>Adult bedrooms and low-traffic areas</li>
-        <li>Ceilings throughout the home</li>
-        <li>Creating a cozy, intimate atmosphere</li>
-      </ul>
+      <p>Soft, non-reflective, and perfect for hiding imperfections. Best for adult bedrooms, ceilings, and cozy spaces.</p>
 
       <h2>Eggshell Finish</h2>
-      <p>With a subtle sheen that's more durable than matte, eggshell is versatile and forgiving:</p>
-      <ul>
-        <li>Living rooms and dining rooms</li>
-        <li>Hallways and entryways</li>
-        <li>Areas that need occasional cleaning</li>
-      </ul>
+      <p>Low sheen but more durable than matte. Ideal for living rooms, dining areas, and hallways where occasional cleaning is needed.</p>
 
       <h2>Satin Finish</h2>
-      <p>Satin finishes offer good durability and are easy to clean, making them ideal for:</p>
-      <ul>
-        <li>Children's bedrooms and playrooms</li>
-        <li>Family rooms and kitchens</li>
-        <li>Bathrooms and laundries</li>
-      </ul>
+      <p>A versatile choice with a smooth look and good washability. Works well in kitchens, family rooms, and children’s bedrooms.</p>
 
-      <h2>Gloss and Semi-Gloss</h2>
-      <p>High-gloss finishes are the most durable and easiest to clean:</p>
-      <ul>
-        <li>Trim, doors, and window frames</li>
-        <li>Kitchen cabinets</li>
-        <li>High-moisture areas</li>
-      </ul>
+      <h2>Semi-Gloss and Gloss</h2>
+      <p>Highly durable, easy to clean, and moisture resistant. Perfect for trims, doors, cabinets, and bathrooms.</p>
+
+      <h2>FAQs About Paint Finishes</h2>
+      <h3>Which finish is easiest to clean?</h3>
+      <p>Gloss and satin are the most washable, making them ideal for high-traffic areas.</p>
+
+      <h3>Does matte paint last long?</h3>
+      <p>Yes, but it’s better suited to low-traffic rooms since it can mark more easily.</p>
+
+      <h2>Final Thoughts</h2>
+      <p>The right finish balances style and function. Unsure which one to choose? <a href="/contact">Ask our Sydney painting experts</a> for tailored advice and professional application.</p>
     `,
     image: "/images/3.jpg",
     date: "2025-01-05",
     category: "Interior Design",
     slug: "choosing-right-paint-finish-each-room",
-    readTime: "6 min read",
+    readTime: "7 min read",
     author: "Prisma Coatings Team"
   },
   {
     id: 4,
     title: "Maintenance Tips to Keep Your Paint Looking Fresh",
-    excerpt: "Extend the life of your paint job with these professional maintenance tips. Learn when and how to touch up your walls.",
+    metaTitle: "Sydney House Painting Maintenance Tips | Prisma Coatings",
+    metaDescription: "Keep your Sydney home paint fresh longer with expert maintenance: cleaning, touch-ups & exterior care.",
+    focusKeywords: ["house painting maintenance Sydney", "touch up paint Sydney", "keep paint fresh"],
+    excerpt: "Extend the life of your paint job with expert maintenance tips. Learn how to keep walls and exteriors looking new.",
     content: `
-      <p>A quality paint job is an investment in your home, and with proper maintenance, you can keep it looking fresh for years to come. Here are our professional tips for maintaining your painted surfaces.</p>
+      <p>A professional paint job is an investment. With the right maintenance, you can extend its life and keep it looking sharp. At <strong>Prisma Coatings Sydney</strong>, we recommend these essential tips.</p>
 
       <h2>Regular Cleaning</h2>
-      <p>Keep your walls clean with gentle, regular maintenance:</p>
       <ul>
-        <li>Dust walls monthly with a microfiber cloth</li>
-        <li>Clean scuff marks immediately with a damp cloth</li>
-        <li>Use mild soap solution for stubborn stains</li>
-        <li>Always test cleaning products in an inconspicuous area first</li>
+        <li>Dust walls monthly with a microfiber cloth.</li>
+        <li>Use a damp cloth for scuffs or fingerprints.</li>
+        <li>Avoid harsh chemicals that damage finishes.</li>
       </ul>
 
-      <h2>Touch-Up Techniques</h2>
-      <p>Small touch-ups can prevent the need for complete repainting:</p>
+      <h2>Touch-Ups</h2>
+      <p>Keep leftover paint for quick fixes. Clean the area, use the same method of application, and feather edges for seamless blending.</p>
+
+      <h2>Exterior Care</h2>
       <ul>
-        <li>Keep leftover paint properly stored for future use</li>
-        <li>Clean the area before touching up</li>
-        <li>Use the same application method as the original</li>
-        <li>Feather the edges to blend seamlessly</li>
+        <li>Inspect annually for cracks, peeling, or fading.</li>
+        <li>Trim trees and bushes to avoid surface damage.</li>
+        <li>Clean gutters to prevent water streaks.</li>
       </ul>
 
-      <h2>Exterior Maintenance</h2>
-      <p>Exterior surfaces need special attention:</p>
-      <ul>
-        <li>Inspect annually for signs of wear</li>
-        <li>Clean gutters to prevent water damage</li>
-        <li>Trim vegetation away from painted surfaces</li>
-        <li>Address any moisture issues immediately</li>
-      </ul>
+      <h2>FAQs About Paint Maintenance</h2>
+      <h3>How often should I repaint exterior walls?</h3>
+      <p>On average, Sydney homes need repainting every 7–10 years, depending on climate and exposure.</p>
+
+      <h3>What’s the best way to protect interior walls?</h3>
+      <p>Use washable finishes in high-traffic areas and clean them regularly.</p>
+
+      <h2>Final Thoughts</h2>
+      <p>Maintenance saves money in the long run. <a href="/contact">Contact Prisma Coatings</a> for professional touch-ups or full repaints that keep your home looking new.</p>
     `,
     image: "/images/4.jpg",
     date: "2024-12-28",
     category: "Maintenance",
     slug: "maintenance-tips-keep-paint-looking-fresh",
-    readTime: "4 min read",
+    readTime: "6 min read",
     author: "Prisma Coatings Team"
   },
   {
     id: 5,
     title: "Commercial Painting: What Businesses Need to Know",
-    excerpt: "Key considerations for commercial painting projects, including timeline planning, minimal disruption strategies, and professional standards.",
+    metaTitle: "Commercial Painters Sydney | Prisma Coatings",
+    metaDescription: "Sydney commercial painting guide: planning, minimal disruption & professional standards for businesses.",
+    focusKeywords: ["commercial painters Sydney", "office painting Sydney", "business painting services"],
+    excerpt: "Key considerations for Sydney commercial painting projects: planning, disruption strategies, and high standards.",
     content: `
-      <p>Commercial painting projects require careful planning and execution to minimize business disruption while achieving professional results. Here's what every business owner should know.</p>
+      <p>Painting a commercial property requires different planning compared to residential projects. At <strong>Prisma Coatings</strong>, we work with Sydney businesses to ensure minimal disruption while delivering premium results.</p>
 
       <h2>Project Planning</h2>
-      <p>Successful commercial painting starts with thorough planning:</p>
       <ul>
-        <li>Schedule during off-peak business hours</li>
-        <li>Plan for weather delays and contingencies</li>
-        <li>Coordinate with other trades and maintenance</li>
-        <li>Ensure adequate ventilation and safety measures</li>
+        <li>Schedule during non-peak hours or weekends.</li>
+        <li>Allow for weather delays when painting exteriors.</li>
+        <li>Coordinate with other trades (plumbers, electricians).</li>
       </ul>
 
       <h2>Professional Standards</h2>
-      <p>Commercial spaces require higher standards of finish and durability:</p>
+      <p>Commercial spaces demand durability and compliance. We use commercial-grade paints, follow safety codes, and apply strict quality control.</p>
+
+      <h2>Minimizing Business Disruption</h2>
       <ul>
-        <li>Use commercial-grade paints and materials</li>
-        <li>Follow building codes and safety regulations</li>
-        <li>Ensure proper surface preparation</li>
-        <li>Implement quality control measures</li>
+        <li>Work in sections so operations continue.</li>
+        <li>Use low-odour, quick-dry paints for faster turnover.</li>
+        <li>Protect all furniture and equipment before painting.</li>
       </ul>
 
-      <h2>Minimizing Disruption</h2>
-      <p>Keep your business running smoothly during painting:</p>
-      <ul>
-        <li>Work in sections to maintain operations</li>
-        <li>Use low-odor, fast-drying paints</li>
-        <li>Protect furniture and equipment</li>
-        <li>Communicate clearly with staff and customers</li>
-      </ul>
+      <h2>FAQs About Commercial Painting</h2>
+      <h3>How long does commercial painting take?</h3>
+      <p>It depends on property size, but planning ensures deadlines are met without disrupting your business.</p>
+
+      <h3>Do commercial paints last longer?</h3>
+      <p>Yes, they are formulated for high traffic and heavy use, ensuring longevity in offices, shops, and strata buildings.</p>
+
+      <h2>Final Thoughts</h2>
+      <p>Commercial painting is about precision, planning, and professionalism. <a href="/contact">Contact Prisma Coatings Sydney</a> to get your business painted with minimal downtime and maximum impact.</p>
     `,
     image: "/images/5.jpg",
     date: "2024-12-20",
     category: "Commercial",
     slug: "commercial-painting-what-businesses-need-know",
-    readTime: "8 min read",
+    readTime: "9 min read",
     author: "Prisma Coatings Team"
   },
   {
     id: 6,
     title: "The Benefits of Professional vs DIY Painting",
-    excerpt: "Compare the pros and cons of hiring professionals versus DIY painting. Understand when it's worth investing in expert services.",
+    metaTitle: "DIY vs Professional Painters in Sydney | Prisma Coatings",
+    metaDescription: "Should you DIY or hire professional painters in Sydney? Compare benefits, costs, and durability.",
+    focusKeywords: ["professional painters Sydney", "DIY vs professional painting", "hire painters Sydney"],
+    excerpt: "Compare DIY painting vs hiring Sydney professionals. Learn when it’s smarter to invest in expert painters.",
     content: `
-      <p>When it comes to painting your home, you have two main options: tackle it yourself or hire professionals. Each approach has its merits, and the best choice depends on various factors.</p>
+      <p>When planning to repaint, many Sydney homeowners wonder: should I DIY or hire professionals? Both have pros and cons. At <strong>Prisma Coatings</strong>, here’s what we recommend.</p>
 
-      <h2>DIY Painting Advantages</h2>
-      <p>DIY painting can be rewarding and cost-effective:</p>
+      <h2>DIY Advantages</h2>
       <ul>
-        <li>Lower upfront costs (labor savings)</li>
-        <li>Complete control over timeline</li>
-        <li>Personal satisfaction of completing the project</li>
-        <li>Ability to work at your own pace</li>
+        <li>Lower upfront cost.</li>
+        <li>Control over pace and schedule.</li>
+        <li>Satisfaction of completing it yourself.</li>
       </ul>
 
-      <h2>Professional Painting Benefits</h2>
-      <p>Professional services offer significant advantages:</p>
+      <h2>DIY Disadvantages</h2>
+      <p>Lack of expertise can lead to uneven finishes, missed prep steps, and shorter paint lifespan.</p>
+
+      <h2>Benefits of Hiring Professional Painters</h2>
       <ul>
-        <li>Expert surface preparation and technique</li>
-        <li>Access to quality materials and tools</li>
-        <li>Warranty on workmanship</li>
-        <li>Time savings and convenience</li>
-        <li>Professional finish and attention to detail</li>
+        <li>Skilled surface prep ensures durability.</li>
+        <li>Premium tools and paints deliver a flawless finish.</li>
+        <li>Time-saving—projects completed faster.</li>
+        <li>Workmanship warranties offer peace of mind.</li>
       </ul>
 
-      <h2>When to Choose Professional Services</h2>
-      <p>Consider hiring professionals when:</p>
-      <ul>
-        <li>Painting exterior surfaces or high areas</li>
-        <li>Dealing with lead paint or asbestos</li>
-        <li>Working with specialized finishes or techniques</li>
-        <li>Time constraints or physical limitations</li>
-        <li>Wanting a warranty and guaranteed results</li>
-      </ul>
+      <h2>When to Hire Professionals</h2>
+      <p>If your project involves exteriors, high walls, textured finishes, or commercial spaces, professionals guarantee safety and quality.</p>
 
-      <h2>Making the Right Choice</h2>
-      <p>Consider your budget, timeline, skill level, and the complexity of the project. For most homeowners, professional services provide better value in terms of quality, durability, and peace of mind.</p>
+      <h2>FAQs About DIY vs Professional Painting</h2>
+      <h3>Is professional painting more expensive?</h3>
+      <p>Upfront, yes. But factoring in durability and fewer repaints, it often saves money long-term.</p>
+
+      <h3>Can I DIY small rooms?</h3>
+      <p>Yes, small bedrooms or studies can be DIY-friendly. For larger projects, pros are worth it.</p>
+
+      <h2>Final Thoughts</h2>
+      <p>DIY painting can be fun for small tasks, but professional painters offer unmatched value for bigger projects. <a href="/contact">Book Prisma Coatings Sydney</a> for reliable results that last.</p>
     `,
     image: "/images/6.jpg",
     date: "2024-12-15",
     category: "Professional Services",
     slug: "benefits-professional-vs-diy-painting",
-    readTime: "6 min read",
+    readTime: "7 min read",
     author: "Prisma Coatings Team"
   }
 ]
+
+
+
 
 export const categories = ["All", "Color Trends", "Painting Tips", "Interior Design", "Maintenance", "Commercial", "Professional Services"]
 
