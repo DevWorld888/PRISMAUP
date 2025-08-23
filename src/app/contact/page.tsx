@@ -1,11 +1,14 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import { Phone, Mail, Clock } from 'lucide-react';
-import { z } from "zod";
+import ReCAPTCHA from "react-google-recaptcha"
+import { set, z } from "zod";
 import Image from 'next/image';
 
 const ContactPage = () => {
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -20,6 +23,9 @@ const ContactPage = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
 
+  const phoneNumber = "+610401508036"; // Formato: código de país + número sin espacios ni símbolos
+  const message = "¡Hi! I am interested in learning more about your painting services.";
+
   const ContactSchema = z.object({
     firstName: z.string().min(2, "First name is required"),
     lastName: z.string().min(2, "Last name is required"),
@@ -30,6 +36,10 @@ const ContactPage = () => {
     comments: z.string().min(10, "Message must be at least 10 characters"),
     nickname: z.string().optional(), // honeypot
   });
+
+  const handleCaptchaChange = (token: string | null) => {
+    setCaptchaToken(token);
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -45,7 +55,11 @@ const ContactPage = () => {
     // Clear previous messages and set loading state
     setSubmitMessage(null);
     setIsSubmitting(true);
-    
+     if (!captchaToken) {
+      setErrors({ captcha: "Please complete the CAPTCHA" });
+      setIsSubmitting(false);
+      return;
+     }
     // Validate form data with Zod
     const parse = ContactSchema.safeParse(formData);
     if (!parse.success) {
@@ -72,7 +86,7 @@ const ContactPage = () => {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({ ...formData, captchaToken })
       });
 
       const result = await response.json();
@@ -93,21 +107,36 @@ const ContactPage = () => {
           comments: '',
           nickname: ''
         });
+        setCaptchaToken(null); // Reset CAPTCHA
+        recaptchaRef.current?.reset(); // Reset CAPTCHA visual state
       } else {
         setSubmitMessage({ 
           type: 'error', 
           text: 'Failed to send message. Please try again or contact us directly.' 
         });
+        // Reset CAPTCHA on network error
+        setCaptchaToken(null);
+        recaptchaRef.current?.reset();
       }
     } catch {
       setSubmitMessage({ 
         type: 'error', 
         text: 'Network error. Please check your connection and try again.' 
       });
+      // Reset CAPTCHA on network error
+      setCaptchaToken(null);
+      recaptchaRef.current?.reset();
     } finally {
       setIsSubmitting(false);
     }
   };
+
+  const handleButtonClick = () => {
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(whatsappUrl, '_blank');
+  };
+  
 
   return (
     <div className="min-h-screen bg-white">
@@ -239,7 +268,17 @@ const ContactPage = () => {
                     autoComplete="off"
                   />
                 </div>
-
+                <div className="mb-4">
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
+                    onChange={handleCaptchaChange}
+                    className="g-recaptcha"
+                  />
+                </div>
+                {errors.captcha && (
+                  <p className="text-red-500 text-sm mt-1">{errors.captcha}</p>
+                )}
                 <button
                   type="submit"
                   disabled={isSubmitting}
@@ -280,7 +319,9 @@ const ContactPage = () => {
               <p className="text-gray-600 mb-6 leading-relaxed">
                 We will help you with all your painting and renovation questions.
               </p>
-              <button className="bg-[#D61C1C] hover:bg-[#B71C1C] text-white font-semibold py-3 px-8 rounded transition-colors duration-200 uppercase tracking-wide">
+              <button 
+              onClick={handleButtonClick}
+              className="bg-[#D61C1C] hover:bg-[#B71C1C] text-white font-semibold py-3 px-8 rounded transition-colors duration-200 uppercase tracking-wide">
                 CONTACT US →
               </button>
               <div className="mt-6">

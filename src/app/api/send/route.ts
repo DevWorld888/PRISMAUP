@@ -1,17 +1,39 @@
 // app/api/send/route.ts
-import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
   const data = await req.json();
-  const { firstName, lastName, address, city, postCode, telephone, comments } = data;
+  const {
+    firstName,
+    lastName,
+    address,
+    city,
+    postCode,
+    telephone,
+    comments,
+    captchaToken,
+  } = data;
+  // Validate the captcha token
+  const verifyRes = await fetch(
+    `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${captchaToken}`,
+    { method: "POST" }
+  );
+  const verifyData = await verifyRes.json();
+
+  if (!verifyData.success) {
+    return NextResponse.json(
+      { ok: false, error: "Captcha failed" },
+      { status: 400 }
+    );
+  }
 
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: "gmail",
     auth: {
       user: process.env.GMAIL_USER, // tu email
-      pass: process.env.GMAIL_PASS  // app password
-    }
+      pass: process.env.GMAIL_PASS, // app password
+    },
   });
 
   try {
@@ -24,12 +46,12 @@ export async function POST(req: Request) {
       Teléfono: ${telephone}
       Dirección: ${address}, ${city}, ${postCode}
       Comentarios: ${comments}
-      `
+      `,
     });
 
     return NextResponse.json({ ok: true });
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error("Error sending email:", error);
     return NextResponse.json({ ok: false, error });
   }
 }
