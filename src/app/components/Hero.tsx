@@ -14,7 +14,7 @@ export default function Hero() {
         aria-label="Professional painters working on house painting projects"
         title="Prisma Coatings - Professional Painting Services in Sydney"
       >
-        <source src="/videos/painting.mp4" type="video/mp4" />
+        <source src="/videos/hero.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
