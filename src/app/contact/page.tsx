@@ -151,6 +151,11 @@ const ContactPage = () => {
                 Send a Message
               </h2>
 
+              {/* Move the text above the form */}
+              <div className="mt-4 text-center text-gray-600 text-sm">
+                <p className="font-medium">Free Quote – No Obligation – Reply Within 24h</p>
+              </div>
+
               <form onSubmit={handleSubmit} className="mt-8 space-y-6">
                 {/* Success/Error Message */}
                 {submitMessage && (

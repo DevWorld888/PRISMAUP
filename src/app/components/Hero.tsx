@@ -1,9 +1,12 @@
-'use client';
-import Link from 'next/link';
+"use client";
+import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative h-[100vh] w-full overflow-hidden" aria-label="Professional painting services in Sydney - Prisma Coatings">
+    <section
+      className="relative h-[100vh] w-full overflow-hidden"
+      aria-label="Professional painting services in Sydney - Prisma Coatings"
+    >
       {/* 🎥 VIDEO BACKGROUND */}
       <video
         className="absolute inset-0 w-full h-full object-cover z-0"
@@ -24,11 +27,14 @@ export default function Hero() {
       {/* 📝 CONTENT */}
       <div className="relative z-20 flex flex-col items-center justify-center text-center h-full px-4 sm:px-8 md:px-16">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white max-w-4xl leading-snug drop-shadow-md">
-          Professional House & Commercial Painting Services in Sydney | Prisma Coatings
+          Professional House & Commercial Painters in Sydney On-Time. Clean. No
+          Hidden Costs.
         </h1>
 
         <p className="text-base sm:text-lg md:text-xl mt-6 text-white max-w-xl font-medium drop-shadow-sm">
-          Expert painters with 9+ years of experience. We transform homes, strata buildings, and commercial properties across Sydney with premium painting solutions. Licensed, insured & affordable.
+          Expert painters with 9+ years of experience. We transform homes,
+          strata buildings, and commercial properties across Sydney with premium
+          painting solutions. Licensed, insured & affordable.
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row gap-4 items-center">
@@ -38,9 +44,9 @@ export default function Hero() {
             title="Get free painting quote from Prisma Coatings Sydney"
             aria-label="Contact us for a free painting estimate"
           >
-            Get a Free Quote
+            Get Your Free Quote Today
           </Link>
-          
+
           <Link
             href="/gallery"
             className="bg-white/10 hover:bg-white/20 text-white border border-white/30 hover:border-white/50 px-6 sm:px-8 py-3 sm:py-4 rounded-md font-semibold text-sm sm:text-base md:text-lg transition duration-300 backdrop-blur-sm"
@@ -54,5 +60,3 @@ export default function Hero() {
     </section>
   );
 }
-
-
