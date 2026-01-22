@@ -111,10 +111,11 @@ const Gallery = () => {
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-white"
             itemProp="name"
           >
-            Get <span className="text-red-500 italic font-script">inspired.</span>
+            Get <span className="text-red-500 italic font-script">inspired </span> by Our Recent Work.
           </h2>
           <p className="text-gray-400 text-base md:text-lg mt-4 max-w-3xl mx-auto" itemProp="description">
-            Explore our portfolio of professional painting and coating projects. From interior transformations to industrial coatings, see the quality craftsmanship that sets Prisma Coatings apart.
+            Real projects completed across Sydney — clean finishes,professional service, and results that last.
+
           </p>
         </header>
 
@@ -249,7 +250,7 @@ const Gallery = () => {
             className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-red-500 hover:bg-red-600 text-white font-semibold text-sm md:text-base rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
             aria-describedby="gallery-cta-description"
           >
-            Get a Free Quote
+            Request Your Free Quote Today
             <svg className="ml-2 w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>

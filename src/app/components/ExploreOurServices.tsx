@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { Check } from 'lucide-react'
 
 const ExploreOurServices = () => {
   return (
@@ -15,9 +16,9 @@ const ExploreOurServices = () => {
           {/* Left side - Illustration */}
           <div className="order-2 lg:order-1">
             <Image
-              src="/images/explore-our-services.png"
+              src="/images/8.jpg"
               alt="Professional painting services in Sydney - interior and exterior painting for homes and businesses"
-              className="w-full h-auto"
+              className="w-full h-auto rounded-lg"
               width={500}
               height={500}
               priority
@@ -29,7 +30,7 @@ const ExploreOurServices = () => {
           <div className="order-1 lg:order-2 text-center lg:text-left">
             <div className="mb-4">
               <span 
-                className="text-sm md:text-base font-medium text-[#13233A] uppercase tracking-wider"
+                className="text-sm md:text-sm font-normal text-gray-600 uppercase tracking-wider"
                 itemProp="category"
               >
                 Transforming Homes and Businesses with Color
@@ -41,15 +42,14 @@ const ExploreOurServices = () => {
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
               itemProp="name"
             >
-              <span className="text-[#D61C1C]">Expert Painting Services in Sydney</span>
+              <span className="text-[#D61C1C]">Professional Painters in Sydney You Can Trust</span>
             </h2>
             
             <p 
               className="text-base md:text-lg text-gray-600 leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0"
               itemProp="description"
             >
-              We provide expert interior and exterior painting services for homes, strata, and businesses in Sydney.
-              We guarantee smooth finishes, clean work, and long-lasting results.
+              Clean finishes, professional service, and long-lasting results — all delivered by experienced painters.
             </p>
 
             <Link 
@@ -59,7 +59,7 @@ const ExploreOurServices = () => {
               aria-label="Get a free painting quote from Prisma Coatings in Sydney"
               title="Contact us for a free painting estimate"
             >
-              Get a Free Quote
+              Get a Free Quote – No Obligation
               <svg 
                 className="ml-2 w-4 h-4 md:w-5 md:h-5 text-amber-50" 
                 fill="none" 
@@ -76,7 +76,26 @@ const ExploreOurServices = () => {
                 />
               </svg>
             </Link>
+
+            {/* Features with green checkmarks */}
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+              <div className="flex items-center justify-center lg:justify-start space-x-2">
+                <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
+                <span className="text-sm md:text-base text-gray-700 font-medium">9+ Years Experience</span>
+              </div>
+              <div className="flex items-center justify-center lg:justify-start space-x-2">
+                <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
+                <span className="text-sm md:text-base text-gray-700 font-medium">Sydney Based</span>
+              </div>
+              <div className="flex items-center justify-center lg:justify-start space-x-2">
+                <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
+                <span className="text-sm md:text-base text-gray-700 font-medium">Fully Insured</span>
+              </div>
+            </div>
+
+            
           </div>
+          
         </div>
       </div>
     </section>

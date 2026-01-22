@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import {
   Home,
   Building2,
@@ -15,7 +16,7 @@ const services = [
     id: 1,
     title: "Residential Painting Services",
     icon: <Home />,
-    description: "Professional interior and exterior house painting for homes, apartments, and residential properties with premium quality paints",
+    description: "Clean, high-quality finishes that protect your home and increase its value.",
     keywords: "house painting, residential painting, interior painting, exterior painting",
     active: true,
   },
@@ -23,7 +24,7 @@ const services = [
     id: 2,
     title: "Commercial Painting Services",
     icon: <Building2 />,
-    description: "Expert commercial painting for offices, retail stores, warehouses, and business facilities with minimal disruption",
+    description: "Minimal disruption to your business withon-time, professional delivery.",
     keywords: "commercial painting, office painting, business painting, retail painting",
     active: false,
   },
@@ -31,7 +32,7 @@ const services = [
     id: 3,
     title: "Strata & Apartment Complex Painting",
     icon: <Paintbrush />,
-    description: "Specialized strata painting services for apartment buildings, condos, and multi-unit residential complexes",
+    description: "Reliable painting solutions for buildings,managed professionally from start to finish.",
     keywords: "strata painting, apartment painting, condo painting, multi-unit painting",
     active: false,
   },
@@ -39,7 +40,7 @@ const services = [
     id: 4,
     title: "Professional Color Consulting",
     icon: <Palette />,
-    description: "Expert color consultation and design advice to help you choose the perfect color schemes for your space",
+    description: "Expert advice to choose the right colors before any paint is applied.",
     keywords: "color consulting, paint color advice, interior design, color schemes",
     active: false,
   },
@@ -83,12 +84,11 @@ const services = [
             id="services-heading"
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white"
           >
-            Professional Painting Solutions for{' '}
-            <span className="text-brand-primary">Every Space</span>
+            Professional Painting Without Delays,{' '}
+            <span className="text-brand-primary">Mess or Hidden Costs</span>
           </h1>
           <p className="text-lg text-white/90 mt-4 max-w-3xl mx-auto">
-            Expert painting services for residential, commercial, and strata properties. 
-            Quality workmanship with premium materials and professional color consulting.
+            Trusted painters delivering clean finishes, on time and with no surprises.
           </p>
         </div>
 
@@ -100,44 +100,60 @@ const services = [
           aria-label="Painting services offered"
         >
           {services.map((service) => (
-            <article
+            <Link
               key={service.id}
-              className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100"
-              role="listitem"
-              itemScope
-              itemType="https://schema.org/Service"
+              href="/contact"
+              className="block"
             >
-              {/* Icon */}
-              <div className="flex justify-center mb-4" aria-hidden="true">
-                <div className="w-16 h-16 bg-[#13233A] text-white rounded-full flex items-center justify-center text-2xl">
-                  {service.icon}
+              <article
+                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 hover:border-[#D61C1C] cursor-pointer h-full"
+                role="listitem"
+                itemScope
+                itemType="https://schema.org/Service"
+              >
+                {/* Icon */}
+                <div className="flex justify-center mb-4" aria-hidden="true">
+                  <div className="w-16 h-16 bg-[#13233A] text-white rounded-full flex items-center justify-center text-2xl">
+                    {service.icon}
+                  </div>
                 </div>
-              </div>
 
-              {/* Title */}
-              <h2 
-                className="text-xl font-semibold text-center mb-3 text-gray-900"
-                itemProp="name"
-              >
-                {service.title}
-              </h2>
+                {/* Title */}
+                <h2 
+                  className="text-xl font-semibold text-center mb-3 text-gray-900"
+                  itemProp="name"
+                >
+                  {service.title}
+                </h2>
 
-              {/* Description */}
-              <p 
-                className="text-gray-600 text-center text-sm mb-4"
-                itemProp="description"
-              >
-                {service.description}
-              </p>
+                {/* Description */}
+                <p 
+                  className="text-gray-600 text-center text-sm mb-4"
+                  itemProp="description"
+                >
+                  {service.description}
+                </p>
 
-              {/* Hidden keywords for SEO */}
-              <meta itemProp="keywords" content={service.keywords} />
-              <meta itemProp="serviceType" content="PaintingService" />
-              <meta itemProp="provider" content="Prisma Coatings" />
+                {/* Hidden keywords for SEO */}
+                <meta itemProp="keywords" content={service.keywords} />
+                <meta itemProp="serviceType" content="PaintingService" />
+                <meta itemProp="provider" content="Prisma Coatings" />
 
-            </article>
+              </article>
+            </Link>
           ))}
         </div>
+
+        {/* Call to Action Button */}
+        <div className="text-center mt-12">
+          <Link 
+            href="/contact"
+            className="inline-block bg-[#D61C1C] text-white font-semibold px-8 py-4 rounded-lg hover:bg-[#B01616] transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-base md:text-lg cursor-pointer"
+          >
+            Talk to a Painting Expert Today
+          </Link>
+        </div>
+        
       </div>
     </section>
   )
