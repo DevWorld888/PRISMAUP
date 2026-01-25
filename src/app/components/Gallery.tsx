@@ -64,6 +64,48 @@ const Gallery = () => {
       title: 'Decorative Finishes',
       description: 'Artistic wall textures and specialty decorative paint techniques'
     },
+    { id: 9,
+      src: '/images/13.jpg',
+      alt: 'Eco-friendly painting solutions by Prisma Coatings using low-VOC and sustainable materials',  
+      title: 'Eco-Friendly Painting',
+      description: 'Sustainable painting options with low-VOC and eco-friendly materials'
+    },
+    { id: 10,
+      src: '/images/14.jpg',
+      alt: 'Eco-friendly painting solutions by Prisma Coatings using low-VOC and sustainable materials',  
+      title: 'Eco-Friendly Painting',
+      description: 'Sustainable painting options with low-VOC and eco-friendly materials'
+    },
+    { id: 11,
+      src: '/images/15.jpg',
+      alt: 'Eco-friendly painting solutions by Prisma Coatings using low-VOC and sustainable materials',  
+      title: 'Eco-Friendly Painting',
+      description: 'Sustainable painting options with low-VOC and eco-friendly materials'
+    },
+    { id: 12,
+      src: '/images/16.jpg',
+      alt: 'Eco-friendly painting solutions by Prisma Coatings using low-VOC and sustainable materials',  
+      title: 'Eco-Friendly Painting',
+      description: 'Sustainable painting options with low-VOC and eco-friendly materials'
+    },
+    { id: 13,
+      src: '/images/17.jpg',
+      alt: 'Eco-friendly painting solutions by Prisma Coatings using low-VOC and sustainable materials',  
+      title: 'Eco-Friendly Painting',
+      description: 'Sustainable painting options with low-VOC and eco-friendly materials'
+    },
+    { id: 14,
+      src: '/images/18.jpg',
+      alt: 'Eco-friendly painting solutions by Prisma Coatings using low-VOC and sustainable materials',  
+      title: 'Eco-Friendly Painting',
+      description: 'Sustainable painting options with low-VOC and eco-friendly materials'
+    },
+    { id: 15,
+      src: '/images/19.jpg',
+      alt: 'Eco-friendly painting solutions by Prisma Coatings using low-VOC and sustainable materials',  
+      title: 'Eco-Friendly Painting',
+      description: 'Sustainable painting options with low-VOC and eco-friendly materials'
+    }
    
   ]
 

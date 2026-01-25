@@ -6,6 +6,7 @@ import WhatWeDo from "./components/WhatWeDo";
 import ExploreOurServices from "./components/ExploreOurServices";
 import Gallery from "./components/Gallery";
 import Testimonials from "./components/Testimonials";
+import CtaFinal from "./components/CtaFinal";
 
 
 
@@ -53,6 +54,7 @@ export default function Home() {
       <ExploreOurServices />
       <Gallery />
       <Testimonials />
+      <CtaFinal/>
     </>
   );
 }

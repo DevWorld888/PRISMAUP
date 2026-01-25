@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import Image from "next/image";
+import Link from "next/link";
 
 const Testimonials = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
@@ -231,6 +232,18 @@ const Testimonials = () => {
                 ))}
               </div>
             </div>
+          </div>
+          
+          {/* CTA Button */}
+          <div className="mt-16 text-center">
+            <Link href="/contact" className="inline-block bg-[#D61C1C] hover:bg-red-600 text-white font-semibold text-lg px-8 py-4 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all">
+              Join Our 5-Star Clients – Get a Free Quote
+            </Link>
+            
+            {/* Call text */}
+            <p className="mt-4 text-[#4A5568] text-sm">
+              Or <a href="tel:0401508036" className="text-[#13233A] hover:text-[#C53030] transition-colors">call us now</a> and speak with a painting expert
+            </p>
           </div>
         </div>
       </section>

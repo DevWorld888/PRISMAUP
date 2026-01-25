@@ -86,6 +86,12 @@ const Footer = () => {
                     0401 508 036
                   </a>
                 </p>
+                <p className="text-gray-300 text-sm mt-1">
+                  ABN: XX XXX XXX XXX
+                </p>
+                <p className="text-gray-300 text-sm">
+                  Fully Insured & Licensed
+                </p>
               </div>
               <div className="space-y-2">
                 <p className="text-gray-300">
@@ -99,7 +105,7 @@ const Footer = () => {
                 </p>
                 <p className="text-gray-300" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
                   <span itemProp="streetAddress">20/25 Marlowe St</span>, 
-                  <span itemProp="addressLocality"> Campsie</span> 
+                  <span itemProp="addressLocality"> Campsie, </span> 
                   <span itemProp="addressRegion">NSW</span> 
                   <span itemProp="postalCode">2193</span>
                   <span itemProp="addressCountry" className="sr-only">Australia</span>
