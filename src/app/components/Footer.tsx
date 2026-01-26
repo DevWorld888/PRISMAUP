@@ -126,6 +126,11 @@ const Footer = () => {
                 <li><Link href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
               </ul>
             </nav>
+            <nav aria-label="Footer navigation">
+              <ul className="flex flex-wrap justify-center md:justify-start space-x-6 text-sm">
+                <li><Link href="/careers" className="text-gray-300 hover:text-white transition-colors">Work With Us</Link></li>
+              </ul>
+            </nav>
             <div className="text-sm text-gray-300 mt-4 md:mt-0">
               Copyright © 2025 Prisma Coatings | Designed by <a href="https://israelcs.vercel.app/" className="text-blue-400 hover:text-blue-500 transition-colors" target='_blank' rel="noopener noreferrer">Dev888</a>
             </div>

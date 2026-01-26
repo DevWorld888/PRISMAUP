@@ -68,8 +68,10 @@ const OurTeam = () => {
               Professional Painters You Can Trust
             </h2>
             <p className="text-gray-600 max-w-4xl mx-auto text-base md:text-lg leading-relaxed">
-              Meet our skilled team of professional painters with over 30 years of combined experience in residential painting, commercial projects, and strata maintenance across Sydney. Our certified painters deliver exceptional results using premium quality paints and proven techniques.
+              Meet our skilled team of professional painters with decades of combined
+              experience across residential, commercial, and strata projects in Sydney.
             </p>
+
           </div>
 
         {/* Team Grid */}
@@ -102,6 +104,19 @@ const OurTeam = () => {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="mt-12 text-center">
+          <p className="text-base text-gray-700">
+            Want to work with our team?{' '}
+            <a 
+              href="/contact"
+              className="text-[#13233A] font-normal hover:text-[#C53030] hover:underline transition-all duration-200"
+            >
+              Get a free quote today →
+            </a>
+          </p>
         </div>
       </div>
     </section>

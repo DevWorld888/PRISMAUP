@@ -1,49 +1,58 @@
-import React from 'react'
-
+import React from "react";
+import Link from "next/link";
 
 const OurServices = () => {
   const services = [
     {
       id: 1,
       title: "Residential Painting Services",
-      description: "Professional interior and exterior house painting with premium quality paints. We transform homes with expert color consultation, surface preparation, and lasting protective coatings for all residential properties.",
+      description:
+        "Professional interior and exterior house painting designed to protect your home, enhance its value, and deliver long-lasting finishes youcan trust.",
       icon: "🏠",
-      position: "top-left"
+      position: "top-left",
     },
     {
       id: 2,
-      title: "Commercial Painting Solutions", 
-      description: "Complete commercial painting services for offices, retail spaces, and industrial buildings. Our team delivers durable, professional finishes that enhance your business image and protect your investment.",
+      title: "Commercial Painting Solutions",
+      description:
+        "Professional commercial painting for offices, retail spaces, and industrial buildings. We deliver durable, high-quality finishes that enhance your business image, minimize disruption, and protect your investment long term.",
       icon: "🏢",
-      position: "top-right"
+      position: "top-right",
     },
     {
       id: 3,
       title: "Wallpapering & Wall Coverings",
-      description: "Expert wallpaper installation and removal services. From designer wallpapers to textured wall coverings, we create stunning feature walls and complete room transformations with precision and care.", 
+      description:
+        "Expert wallpaper installation and removal services for homes and commercial spaces. From designer wallpapers to textured wall coverings, we create elegant feature walls and complete room transformations with precision and care.",
       icon: "🎨",
-      position: "bottom-left"
+      position: "bottom-left",
     },
     {
       id: 4,
       title: "Restoration & Repair Services",
-      description: "Specialized restoration services for damaged surfaces, historic buildings, and weathered exteriors. We restore and protect your property with advanced coating technologies and traditional craftsmanship.",
+      description:
+        "Specialized surface restoration and repair services for damaged areas, heritage buildings, and weathered exteriors. We restore, strengthen, and protect your property using advanced coating systems and proven craftsmanship.",
       icon: "🔧",
-      position: "bottom-right"
-    }
-  ]
+      position: "bottom-right",
+    },
+  ];
 
   return (
     <section className="py-16 px-4 bg-[#1F2937]">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-[#D61C1C] font-medium text-lg mb-2">Our Painting Services</p>
+          <p className="text-[#D61C1C] font-medium text-lg mb-2">
+            Our Painting Services
+          </p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Professional Painting & Coating Solutions
           </h2>
           <p className="text-white max-w-3xl mx-auto text-lg leading-relaxed">
-            Transform your property with our comprehensive painting and coating services. From residential homes to commercial buildings, we deliver exceptional results using premium materials, expert techniques, and years of professional experience in the painting industry.
+            Transform your property with professional painting and coating
+            services. From residential homes to commercial buildings, we deliver
+            durable, high-quality finishes using premium materials and expert
+            techniques.
           </p>
         </div>
 
@@ -56,20 +65,24 @@ const OurServices = () => {
                 key={service.id}
                 className={`
                   relative p-6 sm:p-8 rounded-2xl transition-all duration-300 cursor-pointer group
-                  ${index === 0 
-                    ? 'bg-[#D61C1C] text-white' 
-                    : 'bg-[#374151] text-white hover:bg-[#D61C1C] hover:text-white border border-gray-600'
+                  ${
+                    index === 0
+                      ? "bg-[#D61C1C] text-white"
+                      : "bg-[#374151] text-white hover:bg-[#D61C1C] hover:text-white border border-gray-600"
                   }
                 `}
               >
                 {/* Icon */}
-                <div className={`
+                <div
+                  className={`
                   text-3xl sm:text-4xl mb-3 sm:mb-4 transition-all duration-300
-                  ${index === 0 
-                    ? 'text-white' 
-                    : 'text-[#D61C1C] group-hover:text-white'
+                  ${
+                    index === 0
+                      ? "text-white"
+                      : "text-[#D61C1C] group-hover:text-white"
                   }
-                `}>
+                `}
+                >
                   {service.icon}
                 </div>
 
@@ -79,22 +92,40 @@ const OurServices = () => {
                 </h3>
 
                 {/* Description */}
-                <p className={`
-                  text-sm leading-relaxed
-                  ${index === 0 
-                    ? 'text-white/90' 
-                    : 'text-white/80 group-hover:text-white/90'
+                <p
+                  className={`
+                  text-sm leading-relaxed mb-4
+                  ${
+                    index === 0
+                      ? "text-white/90"
+                      : "text-white/80 group-hover:text-white/90"
                   }
-                `}>
+                `}
+                >
                   {service.description}
                 </p>
+
+                {/* Request a quote link */}
+                <Link
+                  href="/contact"
+                  className={`
+                    inline-flex items-center text-sm font-medium transition-all duration-300
+                    ${
+                      index === 0
+                        ? "text-white hover:text-white/80 underline underline-offset-4"
+                        : "text-[#D61C1C] group-hover:text-white hover:underline underline-offset-4"
+                    }
+                  `}
+                >
+                  Request a quote →
+                </Link>
               </div>
             ))}
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default OurServices
+export default OurServices;
