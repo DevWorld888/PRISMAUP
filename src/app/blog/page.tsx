@@ -1,8 +1,7 @@
 import React from 'react'
 import type { Metadata } from 'next'
-import Image from 'next/image'
-import Link from 'next/link'
-import { blogPosts, categories, type BlogPost } from '../utils/blogData'
+
+import { blogPosts  } from '../utils/blogData'
 import BlogCategoriesClient from './components/BlogCategoriesClient'
 
 export const metadata: Metadata = {
@@ -28,51 +27,51 @@ export const metadata: Metadata = {
   },
 }
 
-const BlogCard = ({ post }: { post: BlogPost }) => (
-  <article className="blog-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-    <div className="relative h-48 w-full">
-      <Image
-        src={post.image}
-        alt={post.title}
-        fill
-        className="object-cover"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-      />
-    </div>
-    <div className="p-6">
-      <div className="flex items-center justify-between text-sm text-gray-500 mb-2">
-        <span className="bg-blue-100 text-[#13233A] px-2 py-1 rounded-full text-xs font-medium">
-          {post.category}
-        </span>
-        <span>{post.readTime}</span>
-      </div>
-      <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-        <Link 
-          href={`/blog/${post.slug}`} 
-          className="hover:text-[#13233A] transition-colors duration-200"
-        >
-          {post.title}
-        </Link>
-      </h2>
-      <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
-      <div className="flex items-center justify-between">
-        <time className="text-sm text-gray-500" dateTime={post.date}>
-          {new Date(post.date).toLocaleDateString('en-AU', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          })}
-        </time>
-        <Link 
-          href={`/blog/${post.slug}`}
-          className="text-[#D61C1C] hover:text-[#EF4444] font-medium text-sm transition-colors duration-200"
-        >
-          Read More →
-        </Link>
-      </div>
-    </div>
-  </article>
-)
+// const BlogCard = ({ post }: { post: BlogPost }) => (
+//   <article className="blog-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+//     <div className="relative h-48 w-full">
+//       <Image
+//         src={post.image}
+//         alt={post.title}
+//         fill
+//         className="object-cover"
+//         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+//       />
+//     </div>
+//     <div className="p-6">
+//       <div className="flex items-center justify-between text-sm text-gray-500 mb-2">
+//         <span className="bg-blue-100 text-[#13233A] px-2 py-1 rounded-full text-xs font-medium">
+//           {post.category}
+//         </span>
+//         <span>{post.readTime}</span>
+//       </div>
+//       <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+//         <Link 
+//           href={`/blog/${post.slug}`} 
+//           className="hover:text-[#13233A] transition-colors duration-200"
+//         >
+//           {post.title}
+//         </Link>
+//       </h2>
+//       <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
+//       <div className="flex items-center justify-between">
+//         <time className="text-sm text-gray-500" dateTime={post.date}>
+//           {new Date(post.date).toLocaleDateString('en-AU', {
+//             year: 'numeric',
+//             month: 'long',
+//             day: 'numeric'
+//           })}
+//         </time>
+//         <Link 
+//           href={`/blog/${post.slug}`}
+//           className="text-[#D61C1C] hover:text-[#EF4444] font-medium text-sm transition-colors duration-200"
+//         >
+//           Read More →
+//         </Link>
+//       </div>
+//     </div>
+//   </article>
+// )
 
 const page = () => {
   return (

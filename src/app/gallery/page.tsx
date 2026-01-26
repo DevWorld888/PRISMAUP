@@ -1,5 +1,5 @@
 import React from 'react'
-import Gallery from '../components/Gallery'
+
 import BeforeAfterGallery from '../components/BeforeAfterGallery'
 import GalleryProjects from './components/GalleryProjects'
 

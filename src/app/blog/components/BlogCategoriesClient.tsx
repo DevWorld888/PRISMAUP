@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { blogPosts, categories, type BlogPost } from '../../utils/blogData';
 
 interface BlogCardProps {
@@ -10,7 +11,7 @@ interface BlogCardProps {
 const BlogCard = ({ post }: BlogCardProps) => (
   <article className="blog-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
     <div className="relative h-48 w-full">
-      <img
+      <Image
         src={post.image}
         alt={post.title}
         className="object-cover w-full h-full"
