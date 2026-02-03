@@ -10,19 +10,19 @@ const OurTeam = () => {
       specialty: "Residential & Commercial Painting",
       id: 8
     },
-    {
-      name: "Hally ", 
-      position: "Project Manager",
-      experience: "8+ years",
-      specialty: "Strata & Large Scale Projects",
-      id: 2
-    },
+    // {
+    //   name: "Hally ", 
+    //   position: "Project Manager",
+    //   experience: "8+ years",
+    //   specialty: "Strata & Large Scale Projects",
+    //   id: 20
+    // },
     {
       name: "David Rodriguez",
       position: "Lead Painter", 
       experience: "10+ years",
       specialty: "Interior Design & Color Consultation",
-      id: 3
+      id: 20
     }
   ]
 
@@ -75,7 +75,7 @@ const OurTeam = () => {
           </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {teamMembers.map((member) => (
             <div key={member.id} className="text-center" itemScope itemType="https://schema.org/Person">
               {/* Card with team member photo */}
