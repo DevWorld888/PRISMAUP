@@ -38,7 +38,7 @@ const CtaFinal = () => {
           </div>
           <div className="flex items-center gap-2">
             <span className="text-green-400 text-xl">✔</span>
-            <span className="text-sm sm:text-base font-medium">9+ Years Experience</span>
+            <span className="text-sm sm:text-base font-medium">10+ Years Experience</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="text-green-400 text-xl">✔</span>

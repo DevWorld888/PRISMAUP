@@ -21,7 +21,7 @@ const Aboutus = () => {
             >
               <div className="relative h-32 sm:h-40 w-full rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/1.jpg"
+                  src="/images/aboutus/1.jpeg"
                   alt="Professional Prisma Coatings team applying protective coating to residential property exterior"
                   fill
                   className="object-cover"
@@ -31,7 +31,7 @@ const Aboutus = () => {
               </div>
               <div className="relative h-32 sm:h-40 w-full rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/2.jpg"
+                  src="/images/aboutus/2.jpeg"
                   alt="High-quality coating application process using professional equipment and techniques"
                   fill
                   className="object-cover"
@@ -41,7 +41,7 @@ const Aboutus = () => {
               </div>
               <div className="relative h-32 sm:h-40 w-full rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/3.jpg"
+                  src="/images/aboutus/3.jpeg"
                   alt="Professional moving services and comprehensive project management by Prisma Coatings"
                   fill
                   className="object-cover"
@@ -51,7 +51,7 @@ const Aboutus = () => {
               </div>
               <div className="relative h-32 sm:h-40 w-full rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/4.jpg"
+                  src="/images/aboutus/4.jpeg"
                   alt="Exterior coating services for commercial and residential buildings with premium materials"
                   fill
                   className="object-cover"
@@ -70,7 +70,7 @@ const Aboutus = () => {
               <div className="space-y-4">
                 <div className="relative h-64 w-full rounded-lg overflow-hidden shadow-lg">
                   <Image
-                    src="/images/1.jpg"
+                    src="/images/aboutus/1.jpeg"
                     alt="Professional Prisma Coatings team applying protective coating to residential property exterior"
                     fill
                     className="object-cover"
@@ -80,7 +80,7 @@ const Aboutus = () => {
                 </div>
                 <div className="relative h-48 w-full rounded-lg overflow-hidden shadow-lg">
                   <Image
-                    src="/images/2.jpg"
+                    src="/images/aboutus/2.jpeg"
                     alt="High-quality coating application process using professional equipment and techniques"
                     fill
                     className="object-cover"
@@ -92,7 +92,7 @@ const Aboutus = () => {
               <div className="space-y-4 mt-8">
                 <div className="relative h-48 w-full rounded-lg overflow-hidden shadow-lg">
                   <Image
-                    src="/images/3.jpg"
+                    src="/images/aboutus/3.jpeg"
                     alt="Professional moving services and comprehensive project management by Prisma Coatings"
                     fill
                     className="object-cover"
@@ -102,7 +102,7 @@ const Aboutus = () => {
                 </div>
                 <div className="relative h-64 w-full rounded-lg overflow-hidden shadow-lg">
                   <Image
-                    src="/images/4.jpg"
+                    src="/images/aboutus/4.jpeg"
                     alt="Exterior coating services for commercial and residential buildings with premium materials"
                     fill
                     className="object-cover"
@@ -129,8 +129,9 @@ const Aboutus = () => {
                 id="about-us-heading"
                 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#13233A] leading-tight"
               >
-                Provides a complete{" "}
-                <span className="text-[#D61C1C]">suite of services</span>
+                
+                A Complete Suite of {" "}
+                <span className="text-[#D61C1C]">Professional Painting Services</span>
               </h2>
               <div
                 className="w-16 h-1 bg-[#D61C1C] mt-4"
@@ -141,8 +142,8 @@ const Aboutus = () => {
             {/* Description */}
             <p className="text-base sm:text-lg text-[#13233A] leading-relaxed px-2 sm:px-0">
               At <strong>Prisma Coatings</strong>, we’ve been helping
-              <strong> Sydney homeowners and businesses</strong> transform their
-              spaces for over <strong>9 years</strong>. We understand that
+              <strong> Sydney home owners and businesses</strong> transform their
+              spaces for over <strong>10 years</strong>. We understand that
               hiring painters is not just about colour — it’s about
                <strong> trust</strong>, <strong>timelines</strong>, and getting
               the job done

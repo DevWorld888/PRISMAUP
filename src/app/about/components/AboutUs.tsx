@@ -54,7 +54,7 @@ const AboutUs = () => {
                   About Prisma Coatings
                 </p>
                 <h1 className="text-4xl lg:text-5xl font-bold text-[#13233A] leading-tight">
-                  Sydney&apos;s Trusted Painting Professionals with 9+ Years of
+                  Sydney&apos;s Trusted Painting Professionals with 10+ Years of
                   Experience
                 </h1>
               </div>
@@ -64,7 +64,7 @@ const AboutUs = () => {
                 most trusted painting companies, <strong>delivering high-quality</strong>{' '} 
                 residential, commercial, and strata painting services across all
                 Sydney suburbs.<strong>Our licensed and fully insured painters bring
-                over 9 years of hands-on experience </strong> to every project — from
+                over 10 years of hands-on experience </strong> to every project — from
                 single-room repaints to large-scale commercial developments.
 
               </p>

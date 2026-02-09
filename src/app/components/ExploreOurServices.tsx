@@ -81,7 +81,7 @@ const ExploreOurServices = () => {
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               <div className="flex items-center justify-center lg:justify-start space-x-2">
                 <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-                <span className="text-sm md:text-base text-gray-700 font-medium">9+ Years Experience</span>
+                <span className="text-sm md:text-base text-gray-700 font-medium">10+ Years Experience</span>
               </div>
               <div className="flex items-center justify-center lg:justify-start space-x-2">
                 <Check className="w-5 h-5 text-green-500 flex-shrink-0" />

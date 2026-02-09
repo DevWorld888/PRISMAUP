@@ -32,7 +32,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-base sm:text-lg md:text-xl mt-6 text-white max-w-xl font-medium drop-shadow-sm">
-          Expert painters with 9+ years of experience. We transform homes,
+          Expert painters with 10+ years of experience. We transform homes,
           strata buildings, and commercial properties across Sydney with premium
           painting solutions. Licensed, insured & affordable.
         </p>

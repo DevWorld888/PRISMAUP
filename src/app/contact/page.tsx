@@ -10,10 +10,7 @@ const ContactPage = () => {
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    address: '',
-    city: '',
+    Fullname: '',
     postCode: '',
     telephone: '',
     comments: '',
@@ -27,10 +24,7 @@ const ContactPage = () => {
   const message = "¡Hi! I am interested in learning more about your painting services.";
 
   const ContactSchema = z.object({
-    firstName: z.string().min(2, "First name is required"),
-    lastName: z.string().min(2, "Last name is required"),
-    address: z.string().optional(),
-    city: z.string().optional(),
+    Fullname: z.string().min(2, "Full name is required"),
     postCode: z.string().optional(),
     telephone: z.string().min(6, "Phone number is too short"),
     comments: z.string().min(10, "Message must be at least 10 characters"),
@@ -98,10 +92,7 @@ const ContactPage = () => {
         });
         // Reset form after successful submission
         setFormData({
-          firstName: '',
-          lastName: '',
-          address: '',
-          city: '',
+          Fullname: '',
           postCode: '',
           telephone: '',
           comments: '',
@@ -168,57 +159,20 @@ const ContactPage = () => {
                   </div>
                 )}
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid  gap-6 w-full">
                   <div>
                     <input
                       type="text"
-                      name="firstName"
-                      placeholder="First Name *"
-                      value={formData.firstName}
+                      name="Fullname"
+                      placeholder="Full Name *"
+                      value={formData.Fullname}
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 bg-gray-50 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
-                    {errors.firstName && (
-                      <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>
+                    {errors.Fullname && (
+                      <p className="text-red-500 text-sm mt-1">{errors.Fullname }</p>
                     )}
-                  </div>
-                  <div>
-                    <input
-                      type="text"
-                      name="lastName"
-                      placeholder="Last Name *"
-                      value={formData.lastName}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 bg-gray-50 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    />
-                    {errors.lastName && (
-                      <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>
-                    )}
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <input
-                      type="text"
-                      name="address"
-                      placeholder="Address"
-                      value={formData.address}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 bg-gray-50 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="text"
-                      name="city"
-                      placeholder="City"
-                      value={formData.city}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 bg-gray-50 text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    />
                   </div>
                 </div>
 

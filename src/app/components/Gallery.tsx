@@ -17,91 +17,91 @@ const Gallery = () => {
   const galleryImages: GalleryImage[] = [
     {
       id: 1,
-      src: '/images/1.jpg',
+      src: '/images/recentWorks/1.jpeg',
       alt: 'Professional interior painting service by Prisma Coatings showing high-quality residential wall painting work',
       title: 'Interior Painting',
       description: 'Professional interior painting services with premium quality finishes'
     },
     {
       id: 2,
-      src: '/images/2.jpg',
+      src: '/images/recentWorks/2.jpeg',
       alt: 'Expert spray coating application by Prisma Coatings team using professional spray equipment',
       title: 'Spray Coating',
       description: 'Advanced spray coating techniques for smooth and durable finishes'
     },
     {
       id: 3,
-      src: '/images/3.jpg',
+      src: '/images/recentWorks/3.jpeg',
       alt: 'Professional wall surface preparation process before painting by Prisma Coatings specialists',
       title: 'Surface Preparation',
       description: 'Meticulous surface preparation ensuring perfect paint adhesion'
     },
     {
       id: 4,
-      src: '/images/4.jpg',
+      src: '/images/recentWorks/4.jpeg',
       alt: 'Professional exterior house painting service with weather-resistant coating by Prisma Coatings',
       title: 'Exterior House Painting',
       description: 'Durable exterior painting solutions with premium weather-resistant coatings'
     },
     {
       id: 5,
-      src: '/images/5.jpg',
+      src: '/images/recentWorks/5.jpeg',
       alt: 'Commercial building industrial coating application by Prisma Coatings specialists',
       title: 'Commercial Coatings',
       description: 'Industrial-grade commercial painting and protective coating services'
     },
     {
       id: 6,
-      src: '/images/6.jpg',
+      src: '/images/recentWorks/6.jpeg',
       alt: 'Professional cabinet refinishing and furniture painting by Prisma Coatings artisans',
       title: 'Cabinet Refinishing',
       description: 'Custom cabinet painting and furniture refinishing with flawless finishes'
     },
     {
       id: 7,
-      src: '/images/7.jpg',
+      src: '/images/recentWorks/7.jpeg',
       alt: 'Decorative wall texturing and specialty paint finishes by Prisma Coatings experts',
       title: 'Decorative Finishes',
       description: 'Artistic wall textures and specialty decorative paint techniques'
     },
     { id: 9,
-      src: '/images/13.jpg',
+      src: '/images/recentWorks/8.jpeg',
       alt: 'Eco-friendly painting solutions by Prisma Coatings using low-VOC and sustainable materials',  
       title: 'Eco-Friendly Painting',
       description: 'Sustainable painting options with low-VOC and eco-friendly materials'
     },
     { id: 10,
-      src: '/images/14.jpg',
+      src: '/images/recentWorks/9.jpeg',
       alt: 'Eco-friendly painting solutions by Prisma Coatings using low-VOC and sustainable materials',  
       title: 'Eco-Friendly Painting',
       description: 'Sustainable painting options with low-VOC and eco-friendly materials'
     },
     { id: 11,
-      src: '/images/15.jpg',
+      src: '/images/recentWorks/10.jpeg',
       alt: 'Eco-friendly painting solutions by Prisma Coatings using low-VOC and sustainable materials',  
       title: 'Eco-Friendly Painting',
       description: 'Sustainable painting options with low-VOC and eco-friendly materials'
     },
     { id: 12,
-      src: '/images/16.jpg',
+      src: '/images/recentWorks/11.jpeg',
       alt: 'Eco-friendly painting solutions by Prisma Coatings using low-VOC and sustainable materials',  
       title: 'Eco-Friendly Painting',
       description: 'Sustainable painting options with low-VOC and eco-friendly materials'
     },
     { id: 13,
-      src: '/images/17.jpg',
+      src: '/images/recentWorks/12.jpeg',
       alt: 'Eco-friendly painting solutions by Prisma Coatings using low-VOC and sustainable materials',  
       title: 'Eco-Friendly Painting',
       description: 'Sustainable painting options with low-VOC and eco-friendly materials'
     },
     { id: 14,
-      src: '/images/18.jpg',
+      src: '/images/recentWorks/13.jpeg',
       alt: 'Eco-friendly painting solutions by Prisma Coatings using low-VOC and sustainable materials',  
       title: 'Eco-Friendly Painting',
       description: 'Sustainable painting options with low-VOC and eco-friendly materials'
     },
     { id: 15,
-      src: '/images/19.jpg',
+      src: '/images/recentWorks/14.jpeg',
       alt: 'Eco-friendly painting solutions by Prisma Coatings using low-VOC and sustainable materials',  
       title: 'Eco-Friendly Painting',
       description: 'Sustainable painting options with low-VOC and eco-friendly materials'

@@ -43,23 +43,7 @@ const services = [
     description: "Expert advice to choose the right colors before any paint is applied.",
     keywords: "color consulting, paint color advice, interior design, color schemes",
     active: false,
-  },
-  {
-    id: 5,
-    title: "Surface Preparation & Priming",
-    icon: <Brush />,
-    description: "Thorough surface cleaning, sanding, priming, and preparation to ensure long-lasting paint results",
-    keywords: "surface preparation, paint preparation, priming, sanding, paint prep",
-    active: false,
-  },
-  {
-    id: 6,
-    title: "Professional Spray Painting",
-    icon: <SprayCan />,
-    description: "High-quality spray painting services for smooth, even finishes on cabinets, furniture, and large surfaces",
-    keywords: "spray painting, cabinet painting, furniture painting, airless spraying",
-    active: false,
-  },
+  }
 ];
 
 

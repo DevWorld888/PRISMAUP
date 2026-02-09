@@ -18,7 +18,7 @@ const OurTeam = () => {
     //   id: 20
     // },
     {
-      name: "David Rodriguez",
+      name: "Julian Rendon",
       position: "Lead Painter", 
       experience: "10+ years",
       specialty: "Interior Design & Color Consultation",
@@ -33,7 +33,7 @@ const OurTeam = () => {
     "name": "Prisma Coatings",
     "url": "https://www.prismacoatings.com.au",
     "logo": "https://www.prismacoatings.com.au/logo/logo.png",
-    "description": "Professional painting services in Sydney with over 9 years of experience",
+    "description": "Professional painting services in Sydney with over 10 years of experience",
     "areaServed": "Sydney, Australia",
     "serviceType": ["Residential Painting", "Commercial Painting", "Strata Painting"],
     "employee": teamMembers.map(member => ({
@@ -99,9 +99,9 @@ const OurTeam = () => {
               <p className="text-sm text-gray-500 mb-1">
                 <strong>Experience:</strong> {member.experience}
               </p>
-              <p className="text-sm text-gray-500">
+              {/* <p className="text-sm text-gray-500">
                 <strong>Specialty:</strong> {member.specialty}
-              </p>
+              </p> */}
             </div>
           ))}
         </div>
