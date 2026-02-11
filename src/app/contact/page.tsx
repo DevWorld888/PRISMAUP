@@ -308,7 +308,7 @@ const ContactPage = () => {
 
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-[#13233A]" />
-                  <span className="text-gray-700"><a href="mailto:prismacoating@gmail.com">Email: prismacoating@gmail.com</a></span>
+                  <span className="text-gray-700"><a href="mailto:info@prismacoatings.com.au">Email: info@prismacoatings.com.au</a></span>
                 </div>
 
                 <div className="mt-6 space-y-2">

@@ -183,7 +183,7 @@ const Gallery = () => {
                     src={image.src}
                     alt={image.alt}
                     fill
-                    className="object-cover"
+                    className="object-contain bg-gray-900"
                     priority={index === 0}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
                     itemProp="contentUrl"

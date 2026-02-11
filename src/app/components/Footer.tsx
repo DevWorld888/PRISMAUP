@@ -33,7 +33,7 @@ const Footer = () => {
               <div className="flex justify-center md:justify-start space-x-4">
                 {/* Facebook */}
                 <a 
-                  href="https://www.facebook.com/profile.php?id=61572618991416s" 
+                  href="https://www.facebook.com/profile.php?id=61572618991416" 
                   className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#13233A] hover:bg-gray-100 transition-colors"
                   aria-label="Follow Prisma Coatings on Facebook"
                   rel="noopener noreferrer"
@@ -96,11 +96,11 @@ const Footer = () => {
               <div className="space-y-2">
                 <p className="text-gray-300">
                   <a 
-                    href="mailto:prismacoatingsau@gmail.com" 
+                    href="mailto:info@prismacoatings.com.au" 
                     className="hover:text-white transition-colors"
                     itemProp="email"
                   >
-                    prismacoatingsau@gmail.com
+                    info@prismacoatings.com.au
                   </a>
                 </p>
                 <p className="text-gray-300" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">

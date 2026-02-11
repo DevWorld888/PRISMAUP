@@ -1,5 +1,7 @@
-import React from 'react'
-import Image from 'next/image'
+"use client";
+import React from "react";
+import Image from "next/image";
+import ProfileCard from "./Profilecard";
 
 const OurTeam = () => {
   const teamMembers = [
@@ -8,44 +10,42 @@ const OurTeam = () => {
       position: "Master Painter & Founder",
       experience: "12+ years",
       specialty: "Residential & Commercial Painting",
-      id: 8
+      id: 8,
     },
     // {
-    //   name: "Hally ", 
-    //   position: "Project Manager",
-    //   experience: "8+ years",
-    //   specialty: "Strata & Large Scale Projects",
-    //   id: 20
+    //   name: "Hally",
+    //   position: "Master Painter & Founder",
+    //   experience: "12+ years",
+    //   specialty: "Residential & Commercial Painting",
+    //   id: 8,
     // },
-    {
-      name: "Julian Rendon",
-      position: "Lead Painter", 
-      experience: "10+ years",
-      specialty: "Interior Design & Color Consultation",
-      id: 20
-    }
-  ]
+  ];
 
   // Structured data for SEO
   const organizationStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Prisma Coatings",
-    "url": "https://www.prismacoatings.com.au",
-    "logo": "https://www.prismacoatings.com.au/logo/logo.png",
-    "description": "Professional painting services in Sydney with over 10 years of experience",
-    "areaServed": "Sydney, Australia",
-    "serviceType": ["Residential Painting", "Commercial Painting", "Strata Painting"],
-    "employee": teamMembers.map(member => ({
+    name: "Prisma Coatings",
+    url: "https://www.prismacoatings.com.au",
+    logo: "https://www.prismacoatings.com.au/logo/logo.png",
+    description:
+      "Professional painting services in Sydney with over 10 years of experience",
+    areaServed: "Sydney, Australia",
+    serviceType: [
+      "Residential Painting",
+      "Commercial Painting",
+      "Strata Painting",
+    ],
+    employee: teamMembers.map((member) => ({
       "@type": "Person",
-      "name": member.name,
-      "jobTitle": member.position,
-      "worksFor": {
+      name: member.name,
+      jobTitle: member.position,
+      worksFor: {
         "@type": "Organization",
-        "name": "Prisma Coatings"
-      }
-    }))
-  }
+        name: "Prisma Coatings",
+      },
+    })),
+  };
 
   return (
     <>
@@ -56,8 +56,12 @@ const OurTeam = () => {
           __html: JSON.stringify(organizationStructuredData),
         }}
       />
-      
-      <section className="py-16 px-4 bg-white" itemScope itemType="https://schema.org/Organization">
+
+      <section
+        className="py-16 px-4 bg-white"
+        itemScope
+        itemType="https://schema.org/Organization"
+      >
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
@@ -68,60 +72,46 @@ const OurTeam = () => {
               Professional Painters You Can Trust
             </h2>
             <p className="text-gray-600 max-w-4xl mx-auto text-base md:text-lg leading-relaxed">
-              Meet our skilled team of professional painters with decades of combined
-              experience across residential, commercial, and strata projects in Sydney.
+              Meet our skilled team of professional painters with decades of
+              combined experience across residential, commercial, and strata
+              projects in Sydney.
             </p>
-
           </div>
 
-        {/* Team Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {teamMembers.map((member) => (
-            <div key={member.id} className="text-center" itemScope itemType="https://schema.org/Person">
-              {/* Card with team member photo */}
-              <div className="relative rounded-lg overflow-hidden mb-6 min-h-[300px] bg-gray-200">
-                <Image 
-                  src={`/images/${member.id}.jpg`}
-                  alt={`${member.name} - ${member.position}`}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
+          {/* Team Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-2">
+            {teamMembers.map((member, index) => (
+              <div key={member.id} className="text-center" itemScope itemType="https://schema.org/Person">
+              <ProfileCard
+                imageUrl={`/images/${member.id}.jpg`}
+                name={member.name}
+                isVerified={true}
+                title={member.position}
+                followers={10}
+                projects={73}
+                onFollowClick={() => alert(`Followed ${member.name}!`)}
+                isFollowing={false}
+              />
               </div>
-              
-              {/* Member Info */}
-              <h3 className="text-xl font-bold text-[#D61C1C] mb-2" itemProp="name">
-                {member.name}
-              </h3>
-              <p className="text-gray-600 font-medium mb-2" itemProp="jobTitle">
-                {member.position}
-              </p>
-              <p className="text-sm text-gray-500 mb-1">
-                <strong>Experience:</strong> {member.experience}
-              </p>
-              {/* <p className="text-sm text-gray-500">
-                <strong>Specialty:</strong> {member.specialty}
-              </p> */}
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        {/* Call to Action */}
-        <div className="mt-12 text-center">
-          <p className="text-base text-gray-700">
-            Want to work with our team?{' '}
-            <a 
-              href="/contact"
-              className="text-[#13233A] font-normal hover:text-[#C53030] hover:underline transition-all duration-200"
-            >
-              Get a free quote today →
-            </a>
-          </p>
+          {/* Call to Action */}
+          <div className="mt-12 text-center">
+            <p className="text-base text-gray-700">
+              Want to work with our team?{" "}
+              <a
+                href="/contact"
+                className="text-[#13233A] font-normal hover:text-[#C53030] hover:underline transition-all duration-200"
+              >
+                Get a free quote today →
+              </a>
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </>
-  )
-}
+  );
+};
 
-export default OurTeam
+export default OurTeam;

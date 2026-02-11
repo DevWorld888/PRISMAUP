@@ -143,7 +143,7 @@ export default function Header() {
             {/* EXPERIENCIA */}
             <div className="flex items-center gap-1 text-xs text-[#4A5568]">
               <span className="text-green-500 font-bold">✓</span>
-              <span>9+ Years Experience</span>
+              <span>10+ Years Experience</span>
             </div>
             {/* EXPERIENCIA */}
             <div className="flex items-center gap-1 text-xs text-[#4A5568]">

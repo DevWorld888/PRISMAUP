@@ -142,7 +142,7 @@ const Aboutus = () => {
             {/* Description */}
             <p className="text-base sm:text-lg text-[#13233A] leading-relaxed px-2 sm:px-0">
               At <strong>Prisma Coatings</strong>, we’ve been helping
-              <strong> Sydney home owners and businesses</strong> transform their
+              <strong> Sydney homeowners and businesses</strong> transform their
               spaces for over <strong>10 years</strong>. We understand that
               hiring painters is not just about colour — it’s about
                <strong> trust</strong>, <strong>timelines</strong>, and getting
