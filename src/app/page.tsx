@@ -13,7 +13,7 @@ import CtaFinal from "./components/CtaFinal";
 export const metadata: Metadata = {
   title: "Professional Painting Services in Sydney | Prisma Coatings",
   description:
-    "Expert residential and commercial painting in Sydney. Over 9 years of experience in strata, repaints, and new builds. Get your free quote today.",
+    "Expert residential and commercial painting in Sydney. Over 10 years of experience in strata, repaints, and new builds. Get your free quote today.",
   keywords: [
     "house painter Sydney",
     "interior painting Sydney",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Prisma Coatings | Expert Painting in Sydney",
-    description: "Transform your home with professional painting. Free quotes and 5-star reviews.",
+    description: "Transform your home with professional painting. Over 10 years of experience. Free quotes and 5-star reviews.",
     url: "https://www.prismacoatings.com.au",
     siteName: "Prisma Coatings",
     images: [

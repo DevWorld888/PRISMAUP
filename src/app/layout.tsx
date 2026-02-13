@@ -14,14 +14,14 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: 'Professional Painting Services Sydney | Prisma Coatings - House & Commercial Painters',
-  description: 'Expert house & commercial painting in Sydney with 9+ years experience. Licensed painters offering free quotes. Transform your property with Prisma Coatings - trusted by hundreds of customers.',
+  description: 'Expert house & commercial painting in Sydney with 10+ years experience. Licensed painters offering free quotes. Transform your property with Prisma Coatings - trusted by hundreds of customers.',
   keywords: 'house painting sydney, commercial painting, strata painting, painters sydney, painting services, interior painting, exterior painting, residential painting',
   icons: {
     icon: "/favicon.ico", 
   },
   openGraph: {
     title: 'Professional Painting Services Sydney | Prisma Coatings',
-    description: 'Expert house & commercial painting in Sydney with 9+ years experience. Licensed painters offering free quotes.',
+    description: 'Expert house & commercial painting in Sydney with 10+ years experience. Licensed painters offering free quotes.',
     url: 'https://prismacoatings.com.au',
     type: 'website',
     locale: 'en_AU',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Professional Painting Services Sydney | Prisma Coatings',
-    description: 'Expert house & commercial painting in Sydney with 9+ years experience.',
+    description: 'Expert house & commercial painting in Sydney with 10+ years experience.',
   },
   robots: {
     index: true,
@@ -61,7 +61,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "Prisma Coatings",
-              "description": "Professional house and commercial painting services in Sydney with 9+ years of experience",
+              "description": "Professional house and commercial painting services in Sydney with 10+ years of experience",
               "address": {
                 "@type": "PostalAddress",
                 "addressRegion": "NSW",

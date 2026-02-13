@@ -5,10 +5,7 @@ import nodemailer from "nodemailer";
 export async function POST(req: Request) {
   const data = await req.json();
   const {
-    firstName,
-    lastName,
-    address,
-    city,
+    Fullname,
     postCode,
     telephone,
     comments,
@@ -40,11 +37,11 @@ export async function POST(req: Request) {
     await transporter.sendMail({
       from: process.env.GMAIL_USER,
       to: process.env.GMAIL_USER,
-      subject: `Nuevo mensaje de ${firstName} ${lastName}`,
+      subject: `Nuevo mensaje de ${Fullname}`,
       text: `
-      Nombre: ${firstName} ${lastName}
+      Nombre: ${Fullname}
       Teléfono: ${telephone}
-      Dirección: ${address}, ${city}, ${postCode}
+      Código Postal: ${postCode}
       Comentarios: ${comments}
       `,
     });
