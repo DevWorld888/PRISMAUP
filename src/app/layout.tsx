@@ -5,6 +5,7 @@ import { ThemeProvider } from 'next-themes';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import WhatsAppFloat from "./components/WhatsAppFloat";
+import Script from "next/script";
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -118,8 +119,13 @@ export default function RootLayout({
               }
             })
           }}
+
         />
       </head>
+       <Script
+          src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+          strategy="afterInteractive"
+        />
       <body
         className={`${roboto.variable} antialiased`}
       >

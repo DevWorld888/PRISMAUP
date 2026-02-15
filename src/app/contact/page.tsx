@@ -2,13 +2,14 @@
 
 import React, { useState,useRef } from 'react';
 import { Phone, Mail, Clock } from 'lucide-react';
-import ReCAPTCHA from "react-google-recaptcha"
+// import ReCAPTCHA from "react-google-recaptcha"
 import { z } from "zod";
 import Image from 'next/image';
+import TurnstileWidget from '../components/TurnstileWidget';
 
 const ContactPage = () => {
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  // const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [formData, setFormData] = useState({
     Fullname: '',
     postCode: '',
@@ -19,6 +20,9 @@ const ContactPage = () => {
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
+
+  const [turnstileToken, setTurnstileToken] = useState("");
+
 
   const phoneNumber = "+610401508036"; // Formato: código de país + número sin espacios ni símbolos
   const message = "¡Hi! I am interested in learning more about your painting services.";
@@ -31,9 +35,9 @@ const ContactPage = () => {
     nickname: z.string().optional(), // honeypot
   });
 
-  const handleCaptchaChange = (token: string | null) => {
-    setCaptchaToken(token);
-  };
+  // const handleCaptchaChange = (token: string | null) => {
+  //   setCaptchaToken(token);
+  // };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -49,10 +53,18 @@ const ContactPage = () => {
     // Clear previous messages and set loading state
     setSubmitMessage(null);
     setIsSubmitting(true);
-     if (!captchaToken) {
-      setErrors({ captcha: "Please complete the CAPTCHA" });
-      setIsSubmitting(false);
-      return;
+    //  if (!captchaToken) {
+    //   setErrors({ captcha: "Please complete the CAPTCHA" });
+    //   setIsSubmitting(false);
+    //   return;
+    //  }
+     if (!turnstileToken) {
+       setSubmitMessage({
+         type: "error",
+         text: "Please complete the security check.",
+       });
+       setIsSubmitting(false);
+       return;
      }
     // Validate form data with Zod
     const parse = ContactSchema.safeParse(formData);
@@ -80,7 +92,7 @@ const ContactPage = () => {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ ...formData, captchaToken })
+        body: JSON.stringify({ ...formData, turnstileToken  })
       });
 
       const result = await response.json();
@@ -98,16 +110,18 @@ const ContactPage = () => {
           comments: '',
           nickname: ''
         });
-        setCaptchaToken(null); // Reset CAPTCHA
-        recaptchaRef.current?.reset(); // Reset CAPTCHA visual state
+        // setCaptchaToken(null); // Reset CAPTCHA
+        // recaptchaRef.current?.reset(); // Reset CAPTCHA visual state
+        setTurnstileToken("")
       } else {
         setSubmitMessage({ 
           type: 'error', 
           text: 'Failed to send message. Please try again or contact us directly.' 
         });
         // Reset CAPTCHA on network error
-        setCaptchaToken(null);
-        recaptchaRef.current?.reset();
+        // setCaptchaToken(null);
+        // recaptchaRef.current?.reset();
+        setTurnstileToken("")
       }
     } catch {
       setSubmitMessage({ 
@@ -115,8 +129,9 @@ const ContactPage = () => {
         text: 'Network error. Please check your connection and try again.' 
       });
       // Reset CAPTCHA on network error
-      setCaptchaToken(null);
-      recaptchaRef.current?.reset();
+      // setCaptchaToken(null);
+      // recaptchaRef.current?.reset();
+      setTurnstileToken("")
     } finally {
       setIsSubmitting(false);
     }
@@ -228,12 +243,14 @@ const ContactPage = () => {
                   />
                 </div>
                 <div className="mb-4">
-                  <ReCAPTCHA
+                  {/* <ReCAPTCHA
                     ref={recaptchaRef}
                     sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
                     onChange={handleCaptchaChange}
                     className="g-recaptcha"
-                  />
+                  /> */}
+                  <TurnstileWidget onToken={setTurnstileToken} />
+
                 </div>
                 {errors.captcha && (
                   <p className="text-red-500 text-sm mt-1">{errors.captcha}</p>
