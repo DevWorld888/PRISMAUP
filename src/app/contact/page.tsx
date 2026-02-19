@@ -8,7 +8,7 @@ import Image from 'next/image';
 import TurnstileWidget from '../components/TurnstileWidget';
 
 const ContactPage = () => {
-  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  // const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   // const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [formData, setFormData] = useState({
     Fullname: '',
@@ -134,6 +134,7 @@ const ContactPage = () => {
       setTurnstileToken("")
     } finally {
       setIsSubmitting(false);
+      setTurnstileToken("")
     }
   };
 

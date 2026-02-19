@@ -150,7 +150,7 @@ const GalleryProjects = () => {
           <div className="flex items-center justify-center mb-4">
             <div className="w-1 h-12 bg-red-500 mr-4" aria-hidden="true"></div>
             <span className="text-sm md:text-base font-medium text-gray-400 uppercase tracking-wider">
-              Project Gallery
+              Behind Every Great Project is a Dedicated Team
             </span>
           </div>
           <h1 
@@ -158,15 +158,15 @@ const GalleryProjects = () => {
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
             itemProp="name"
           >
-            Our <span className="text-red-500 italic font-script">Projects</span> Gallery
+            Our <span className="text-red-500 italic font-script">Team</span> Gallery
           </h1>
           <p className="text-gray-400 text-base md:text-lg max-w-3xl mx-auto" itemProp="description">
-            Explore our comprehensive portfolio of professional painting and coating projects. From residential transformations to commercial applications, discover the quality craftsmanship and attention to detail that makes Prisma Coatings the preferred choice for discerning clients.
+            Explore our collection of completed projects and discover the quality that distinguishes us in every painting and coating job.
           </p>
         </header>
 
         {/* Category Filter */}
-        <nav className="mb-12" aria-label="Project categories filter">
+        {/* <nav className="mb-12" aria-label="Project categories filter">
           <div className="flex flex-wrap justify-center gap-2 md:gap-4">
             {categories.map((category) => (
               <button
@@ -184,7 +184,7 @@ const GalleryProjects = () => {
               </button>
             ))}
           </div>
-        </nav>
+        </nav> */}
 
         {/* Projects Grid */}
         <div 

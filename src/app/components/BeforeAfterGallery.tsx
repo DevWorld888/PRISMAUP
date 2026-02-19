@@ -80,7 +80,24 @@ const BeforeAfterGallery = () => {
       title: 'Residential Exterior Painting',
       description: 'Complete exterior transformation with high-quality materials',
       category: 'residential'
-    }
+    },
+    {
+      id: 9,
+      before: '/images/beforeafter/17.jpeg',
+      after: '/images/beforeafter/18.jpeg',
+      title: 'Interior Painting',
+      description: 'Complete interior transformation with high-quality materials',
+      category: 'interior'
+    },
+    {
+      id: 10,
+      before: '/images/beforeafter/19.jpeg',
+      after: '/images/beforeafter/20.jpeg',
+      title: 'Interior Painting',
+      description: 'Complete interior transformation with high-quality materials',
+      category: 'interior'
+    },
+  
 
   ]
 
@@ -308,76 +325,46 @@ const BeforeAfterGallery = () => {
             onClick={() => setSelectedImage(null)}
           >
             <div
-              className="bg-white dark:bg-gray-800 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+              className="bg-white dark:bg-gray-800 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="p-6">
-                {/* Modal Header */}
-                <div className="flex justify-between items-center mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                    {selectedImage.title}
-                  </h3>
-                  <button
-                    onClick={() => setSelectedImage(null)}
-                    className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
-                  >
-                    <svg
-                      className="w-6 h-6"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M6 18L18 6M6 6l12 12"
-                      />
-                    </svg>
-                  </button>
-                </div>
+              {/* Close Button */}
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="absolute top-4 right-4 z-10 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
 
-                {/* Modal Images */}
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
-                  <div className="relative">
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-                      Before
-                    </h4>
-                    <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                      <Image
-                        src={selectedImage.before}
-                        alt={`Before - ${selectedImage.title}`}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-                  <div className="relative">
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-                      After
-                    </h4>
-                    <div className="relative h-64 md:h-80 rounded-lg overflow-hidden">
-                      <Image
-                        src={selectedImage.after}
-                        alt={`After - ${selectedImage.title}`}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
+              {/* Modal Images - Responsive Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 w-full">
+                <div className="relative w-full h-64 md:h-80 lg:h-96">
+                  <Image
+                    src={selectedImage.before}
+                    alt={`Before - ${selectedImage.title}`}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-
-                {/* Modal Description */}
-                <div className="border-t border-gray-200 dark:border-gray-700 pt-6">
-                  <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed mb-4">
-                    {selectedImage.description}
-                  </p>
-                  {/* <div className="flex items-center gap-4">
-                    <span className="text-sm text-gray-500 dark:text-gray-400">Category:</span>
-                    <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full capitalize">
-                      {selectedImage.category}
-                    </span>
-                  </div> */}
+                <div className="relative w-full h-64 md:h-80 lg:h-96">
+                  <Image
+                    src={selectedImage.after}
+                    alt={`After - ${selectedImage.title}`}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
             </div>
