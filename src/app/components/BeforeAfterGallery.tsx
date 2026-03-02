@@ -98,6 +98,23 @@ const BeforeAfterGallery = () => {
       category: 'interior'
     },
   
+    {
+      id: 11,
+      before: '/images/beforeafter/21.JPG',
+      after: '/images/beforeafter/22.JPG',
+      title: 'Interior Painting',
+      description: 'Complete interior transformation with high-quality materials',
+      category: 'interior'
+    },
+    {
+      id: 12,
+      before: '/images/beforeafter/23.JPG',
+      after: '/images/beforeafter/24.JPG',
+      title: 'Interior Painting',
+      description: 'Complete interior transformation with high-quality materials',
+      category: 'interior'
+    }
+  
 
   ]
 

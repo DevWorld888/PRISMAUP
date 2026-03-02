@@ -40,9 +40,9 @@ const AboutUs = () => {
               <Image
                 src="/images/about-us.png"
                 alt="Professional painting team from Prisma Coatings - Sydney's leading house and commercial painting specialists with 9+ years experience"
-                width={450}
-                height={450}
-                className="rounded-lg shadow-lg"
+                width={900}
+                height={900}
+                className="rounded-lg"
                 loading="eager"
               />
             </div>
