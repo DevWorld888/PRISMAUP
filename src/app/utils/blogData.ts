@@ -18,10 +18,10 @@ export const blogPosts: BlogPost[] = [
   {
     id: 1,
     title:
-      "January 2025 Painting Projects in Sydney – Real Residential Transformations",
+      "January 2026 Painting Projects in Sydney – Real Residential Transformations",
     metaTitle: "January Painting Projects Sydney | Apartment & House Repaints",
     metaDescription:
-      "See our January 2025 residential painting projects across Sydney. Apartment repaints, exterior render restoration and renovation painting by professional painters.",
+      "See our January 2026 residential painting projects across Sydney. Apartment repaints, exterior render restoration and renovation painting by professional painters.",
     focusKeywords: [
       "house painters Sydney",
       "apartment repaint Sydney",
@@ -29,9 +29,9 @@ export const blogPosts: BlogPost[] = [
       "exterior house painting Sydney",
     ],
     excerpt:
-      "Take a look at our January 2025 residential painting projects completed across Sydney including full apartment repaints and exterior render restoration.",
+      "Take a look at our January 2026 residential painting projects completed across Sydney including full apartment repaints and exterior render restoration.",
     content: `
-    <p>In January 2025, Prisma Coatings completed several residential painting projects across Sydney. From full apartment repaints to exterior render restoration, our team delivered premium interior and exterior finishes.</p>
+    <p>In January 2026, Prisma Coatings completed several residential painting projects across Sydney. From full apartment repaints to exterior render restoration, our team delivered premium interior and exterior finishes.</p>
 
     <h2>Full Apartment Repaint – 57 Ralph Street</h2>
     <p>This apartment underwent a complete repaint transformation including walls, ceilings and trims. Proper surface preparation ensured a flawless and durable finish.</p>
@@ -69,9 +69,9 @@ export const blogPosts: BlogPost[] = [
     <p>👉 <a href="/contact">Contact us for a free quote today.</a></p>
   `,
     image: "/images/blog/january-projects-cover.jpg",
-    date: "2025-01-31",
+    date: "2026-01-31",
     category: "Recent Projects",
-    slug: "january-2025-painting-projects-sydney",
+    slug: "january-2026-painting-projects-sydney",
     readTime: "6 min read",
     author: "Prisma Coatings Team",
   },
