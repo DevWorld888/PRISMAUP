@@ -1,28 +1,63 @@
-'use client'
-import React, { useState } from 'react'
-import Image from 'next/image'
+"use client";
+import React, { useState } from "react";
+import Image from "next/image";
 
 interface BeforeAfterItem {
-  id: number
-  before: string
-  after: string
-  title: string
-  beforeAlt: string
-  afterAlt: string
-  beforeTitle?: string
-  afterTitle?: string
-  description: string
-  category: string
+  id: number;
+  before: string;
+  after: string;
+  title: string;
+  beforeAlt: string;
+  afterAlt: string;
+  beforeTitle?: string;
+  afterTitle?: string;
+  description: string;
+  category: string;
 }
 
 const BeforeAfterGallery = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all')
-  const [selectedImage, setSelectedImage] = useState<BeforeAfterItem | null>(null)
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedImage, setSelectedImage] = useState<BeforeAfterItem | null>(
+    null,
+  );
 
   // Sample data - replace with your actual images
   const beforeAfterData: BeforeAfterItem[] = [
-    {
+
+     {
       id: 1,
+      before: "/images/beforeafter/exterior-house-painting-sydney-before.webp",
+      after: "/images/beforeafter/exterior-house-painting-sydney-after.webp",
+      title:
+        "Exterior House Painting Sydney - Modern Home Transformation Before & After",
+      beforeAlt:
+        "House exterior under construction before painting in Sydney showing unfinished structure",
+      afterAlt:
+        "Modern house exterior after professional painting in Sydney with clean white finish",
+      beforeTitle: "Exterior House Painting Sydney - Before",
+      afterTitle: "Exterior House Painting Sydney - After",
+      description:
+        "Professional exterior house painting in Sydney transforming a newly built home with premium coatings and a modern architectural finish.",
+      category: "exterior",
+    },
+    {
+      id: 2,
+      before: "/images/beforeafter/house-repainting-sydney-before.webp",
+      after: "/images/beforeafter/house-repainting-sydney-after.webp",
+      title:
+        "House Repainting Sydney - Exterior Home Transformation Before & After",
+      beforeAlt:
+        "House exterior before repainting in Sydney showing unfinished renovation and construction area",
+      afterAlt:
+        "House exterior after professional repainting in Sydney with clean white weatherboard finish",
+      beforeTitle: "Exterior House Repainting Sydney - Before",
+      afterTitle: "Exterior House Repainting Sydney - After",
+      description:
+        "Exterior house repainting project in Sydney transforming a residential home with professional preparation and premium exterior coatings.",
+      category: "exterior",
+    },
+    {
+      id: 3,
       before: "/images/beforeafter/staircase-painting-sydney-before.webp",
       after: "/images/beforeafter/staircase-painting-sydney-after.webp",
       title: "Interior Staircase Painting Sydney – Before & After",
@@ -37,7 +72,7 @@ const BeforeAfterGallery = () => {
       category: "interior",
     },
     {
-      id: 2,
+      id: 4,
       before: "/images/beforeafter/interior-room-painting-sydney-before.webp",
       after: "/images/beforeafter/interior-room-painting-sydney-after.webp",
       title: "Interior Room Painting Sydney - Wall Restoration Before & After",
@@ -52,7 +87,7 @@ const BeforeAfterGallery = () => {
       category: "interior",
     },
     {
-      id: 3,
+      id: 5,
       before: "/images/beforeafter/roof-painting-sydney-before.webp",
       after: "/images/beforeafter/roof-painting-sydney-after.webp",
       title: "Roof Painting Sydney - Complete Roof Restoration Before & After",
@@ -67,130 +102,104 @@ const BeforeAfterGallery = () => {
       category: "exterior",
     },
     {
-      id: 4,
-      before: "/images/beforeafter/7.jpeg",
-      after: "/images/beforeafter/8.jpeg",
-      title:
-        "Residential Exterior Painting Sydney - Full Makeover Before & After",
-      beforeAlt:
-        "Home exterior before painting in Sydney showing peeling paint and surface wear",
-      afterAlt:
-        "Home exterior after professional painting in Sydney with clean finish and multi coat application",
-      beforeTitle: "Residential Exterior Painting Sydney - Before",
-      afterTitle: "Residential Exterior Painting Sydney - After",
-      description:
-        "Complete home exterior makeover in Sydney with professional surface preparation and multi-coat application for lasting results.",
-      category: "residential",
-    },
-    {
-      id: 5,
-      before: "/images/beforeafter/9.jpeg",
-      after: "/images/beforeafter/10.jpeg",
-      title: "Exterior Colour Change Sydney - House Repaint Before & After",
-      beforeAlt:
-        "House exterior before colour change repaint in Sydney with old faded colour",
-      afterAlt:
-        "House exterior after colour change repaint in Sydney with fresh modern exterior finish",
-      beforeTitle: "Exterior Colour Change Sydney - Before",
-      afterTitle: "Exterior Colour Change Sydney - After",
-      description:
-        "Dramatic exterior colour change repaint in Sydney with expert preparation and high-quality finishes by professional house painters.",
-      category: "residential",
-    },
-    {
       id: 6,
-      before: "/images/beforeafter/11.jpeg",
-      after: "/images/beforeafter/12.jpeg",
-      title: "Heritage House Painting Sydney - Restoration Before & After",
+      before: "/images/beforeafter/window-frame-painting-sydney-before.webp",
+      after: "/images/beforeafter/window-frame-painting-sydney-after.webp",
+      title: "Window Frame Painting Sydney - Restoration Before & After",
       beforeAlt:
-        "Heritage home interior before restoration painting in Sydney showing aged walls and original details",
+        "Old exterior window frame before painting in Sydney with peeling paint and worn wood",
       afterAlt:
-        "Heritage home interior after restoration painting in Sydney preserving character with a clean premium finish",
-      beforeTitle: "Heritage House Painting Sydney - Before",
-      afterTitle: "Heritage House Painting Sydney - After",
+        "Exterior window frame after professional painting in Sydney with smooth white finish and restored trim",
+      beforeTitle: "Window Frame Painting Sydney - Before",
+      afterTitle: "Window Frame Painting Sydney - After",
       description:
-        "Heritage house painting in Sydney preserving architectural character. Careful preparation and premium paint systems for a respectful restoration.",
-      category: "residential",
+        "Exterior window frame restoration and painting in Sydney including sanding, surface preparation and premium protective paint finish.",
+      category: "exterior",
     },
     {
       id: 7,
-      before: "/images/beforeafter/17.jpeg",
-      after: "/images/beforeafter/18.jpeg",
-      title: "Modern Interior Painting Sydney - Feature Wall Before & After",
+      before: "/images/beforeafter/hallway-painting-sydney-before.webp",
+      after: "/images/beforeafter/hallway-painting-sydney-after.webp",
+      title: "Hallway Interior Painting Sydney - Before & After Transformation",
       beforeAlt:
-        "Modern living area before interior painting in Sydney with unfinished walls and neutral base",
+        "Interior hallway before painting in Sydney showing wall repairs and unfinished plaster work",
       afterAlt:
-        "Modern living area after interior painting in Sydney with contemporary colour palette and feature wall finish",
-      beforeTitle: "Modern Interior Painting Sydney - Before",
-      afterTitle: "Modern Interior Painting Sydney - After",
+        "Interior hallway after professional painting in Sydney with smooth white walls and restored ceiling",
+      beforeTitle: "Hallway Interior Painting Sydney - Before",
+      afterTitle: "Hallway Interior Painting Sydney - After",
       description:
-        "Contemporary interior painting in Sydney using modern colour palettes. Professional wall finishing and clean lines for a high-end result.",
+        "Professional interior hallway painting in Sydney including wall repairs, surface preparation and premium paint finish for a clean modern look.",
       category: "interior",
     },
     {
       id: 8,
-      before: "/images/beforeafter/19.jpeg",
-      after: "/images/beforeafter/20.jpeg",
-      title: "Living Room Painting Sydney - Transformation Before & After",
+      before: "/images/beforeafter/living-room-painting-sydney-before.webp",
+      after: "/images/beforeafter/living-room-painting-sydney-after.webp",
+      title:
+        "Living Room Interior Painting Sydney - Before & After Transformation",
       beforeAlt:
-        "Living room before interior painting in Sydney showing old wall colour and uneven finish",
+        "Living room before painting renovation in Sydney with old walls and worn interior surfaces",
       afterAlt:
-        "Living room after professional interior painting in Sydney with smooth finish and refreshed colour",
+        "Living room after professional interior painting in Sydney with smooth white walls and modern finish",
       beforeTitle: "Living Room Painting Sydney - Before",
       afterTitle: "Living Room Painting Sydney - After",
       description:
-        "Living room transformation in Sydney with professional interior painting and premium application for a clean, bright finish.",
+        "Professional living room interior painting in Sydney including wall preparation and premium paint finish for a modern clean living space.",
       category: "interior",
     },
     {
       id: 9,
-      before: "/images/beforeafter/21.JPG",
-      after: "/images/beforeafter/22.JPG",
-      title: "Bedroom Painting Sydney - Calming Makeover Before & After",
+      before: "/images/beforeafter/feature-wall-painting-sydney-before.webp",
+      after: "/images/beforeafter/feature-wall-painting-sydney-after.webp",
+      title:
+        "Feature Wall Painting Sydney - Interior Accent Wall Before & After",
       beforeAlt:
-        "Bedroom before painting in Sydney with old colour and worn interior walls",
+        "Interior living area before accent wall painting in Sydney with neutral wall colour",
       afterAlt:
-        "Bedroom after professional painting in Sydney with calming colour scheme and smooth finish",
-      beforeTitle: "Bedroom Painting Sydney - Before",
-      afterTitle: "Bedroom Painting Sydney - After",
+        "Interior living area after feature wall painting in Sydney with modern orange accent wall",
+      beforeTitle: "Feature Wall Painting Sydney - Before",
+      afterTitle: "Feature Wall Painting Sydney - After",
       description:
-        "Bedroom repaint in Sydney with calming colour schemes. Professional interior painting including ceilings and trim for a complete refresh.",
+        "Interior feature wall painting in Sydney transforming a modern living space with a bold accent colour and professional paint finish.",
       category: "interior",
     },
     {
       id: 10,
-      before: "/images/beforeafter/23.JPG",
-      after: "/images/beforeafter/24.JPG",
-      title: "Kitchen Painting Sydney - Cabinets & Walls Before & After",
+      before: "/images/beforeafter/kitchen-painting-sydney-before.webp",
+      after: "/images/beforeafter/kitchen-painting-sydney-after.webp",
+      title:
+        "Kitchen Interior Painting Sydney - Modern Kitchen Transformation Before & After",
       beforeAlt:
-        "Kitchen before painting in Sydney showing outdated cabinets and wall finish",
+        "Kitchen before interior painting renovation in Sydney with preparation covers and unfinished walls",
       afterAlt:
-        "Kitchen after cabinet and wall painting in Sydney with durable finish suitable for kitchen areas",
+        "Kitchen after professional interior painting in Sydney with modern light grey walls and clean finish",
       beforeTitle: "Kitchen Painting Sydney - Before",
       afterTitle: "Kitchen Painting Sydney - After",
       description:
-        "Kitchen cabinet and wall painting in Sydney using durable coatings suited for kitchens. Clean preparation and long-lasting finish.",
+        "Professional kitchen interior painting in Sydney including careful surface preparation and premium paint finish for a bright modern kitchen space.",
       category: "interior",
     },
+   
   ];
   const categories = [
-    { id: 'all', name: 'All Projects' },
-    { id: 'interior', name: 'Interior' },
-    { id: 'exterior', name: 'Exterior' },
-    { id: 'commercial', name: 'Commercial' },
-    { id: 'residential', name: 'Residential' }
-  ]
+    { id: "all", name: "All Projects" },
+    { id: "interior", name: "Interior" },
+    { id: "exterior", name: "Exterior" },
+    { id: "commercial", name: "Commercial" },
+    { id: "residential", name: "Residential" },
+  ];
 
-  const filteredData = selectedCategory === 'all' 
-    ? beforeAfterData 
-    : beforeAfterData.filter(item => item.category === selectedCategory)
+  const filteredData =
+    selectedCategory === "all"
+      ? beforeAfterData
+      : beforeAfterData.filter((item) => item.category === selectedCategory);
 
   const BeforeAfterCard = ({ item }: { item: BeforeAfterItem }) => {
-    const [isHovered, setIsHovered] = useState(false)
-    const [showAfter, setShowAfter] = useState(false)
+    const [isHovered, setIsHovered] = useState(false);
+    const [showAfter, setShowAfter] = useState(false);
 
     return (
-      <div 
+      <div
         className="group relative bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
@@ -199,29 +208,33 @@ const BeforeAfterGallery = () => {
         {/* Image Container */}
         <div className="relative h-64 md:h-72 lg:h-80 overflow-hidden">
           {/* Before Image */}
-          <div className={`absolute inset-0 transition-opacity duration-500 ${showAfter ? 'opacity-0' : 'opacity-100'}`}>
+          <div
+            className={`absolute inset-0 transition-opacity duration-500 ${showAfter ? "opacity-0" : "opacity-100"}`}
+          >
             <Image
               src={item.before}
               alt={item.beforeAlt}
               title={item.beforeTitle || `Before - ${item.title}`}
               fill
               className="object-cover"
-              loading='lazy'
+              loading="lazy"
             />
             <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
               Before
             </div>
           </div>
-          
+
           {/* After Image */}
-          <div className={`absolute inset-0 transition-opacity duration-500 ${showAfter ? 'opacity-100' : 'opacity-0'}`}>
+          <div
+            className={`absolute inset-0 transition-opacity duration-500 ${showAfter ? "opacity-100" : "opacity-0"}`}
+          >
             <Image
               src={item.after}
               alt={item.afterAlt}
               title={item.afterTitle || `After - ${item.title}`}
               fill
               className="object-cover"
-              loading='lazy'
+              loading="lazy"
             />
             <div className="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
               After
@@ -232,21 +245,48 @@ const BeforeAfterGallery = () => {
           <button
             className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200"
             onClick={(e) => {
-              e.stopPropagation()
-              setShowAfter(!showAfter)
+              e.stopPropagation();
+              setShowAfter(!showAfter);
             }}
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m0-4l4-4" />
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m0-4l4-4"
+              />
             </svg>
           </button>
 
           {/* Hover Overlay */}
-          <div className={`absolute inset-0 bg-black/30 flex items-center justify-center transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
+          <div
+            className={`absolute inset-0 bg-black/30 flex items-center justify-center transition-opacity duration-300 ${isHovered ? "opacity-100" : "opacity-0"}`}
+          >
             <div className="text-white text-center">
-              <svg className="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              <svg
+                className="w-12 h-12 mx-auto mb-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                />
               </svg>
               <p className="text-sm font-medium">View details</p>
             </div>
@@ -263,53 +303,76 @@ const BeforeAfterGallery = () => {
           </p>
         </div>
       </div>
-    )
-  }
-
+    );
+  };
 
   const BeforeAftercard1 = ({ item }: { item: BeforeAfterItem }) => {
-    const [isHovered, setIsHovered] = useState(false)
-    const [showAfter, setShowAfter] = useState(false)
+    const [isHovered, setIsHovered] = useState(false);
+    const [showAfter, setShowAfter] = useState(false);
     return (
-      <div className="w-full max-w-xs overflow-hidden rounded-lg border border-slate-200 bg-white shadow-lg shadow-slate-950/5"
-       onMouseEnter={() => setIsHovered(true)}
+      <div
+        className="w-full max-w-xs overflow-hidden rounded-lg border border-slate-200 bg-white shadow-lg shadow-slate-950/5"
+        onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div className="relative h-64 md:h-72 lg:h-80 overflow-hidden m-1.5 rounded-[5px] cursor-pointer"
-             onClick={() => setSelectedImage(item)}>
-          <div className={`absolute inset-0 transition-opacity duration-500 ${showAfter ? 'opacity-0' : 'opacity-100'}`}>
+        <div
+          className="relative h-64 md:h-72 lg:h-80 overflow-hidden m-1.5 rounded-[5px] cursor-pointer"
+          onClick={() => setSelectedImage(item)}
+        >
+          <div
+            className={`absolute inset-0 transition-opacity duration-500 ${showAfter ? "opacity-0" : "opacity-100"}`}
+          >
             <Image
-                src={item.before}
-                alt={item.beforeAlt}
-                title={item.beforeTitle || `Before - ${item.title}`}
-                fill
-                className="object-cover rounded-[5px]"
-                loading='lazy'
-              />
+              src={item.before}
+              alt={item.beforeAlt}
+              title={item.beforeTitle || `Before - ${item.title}`}
+              fill
+              className="object-cover rounded-[5px]"
+              loading="lazy"
+            />
           </div>
-          <div className={`absolute inset-0 transition-opacity duration-500 ${showAfter ? 'opacity-100' : 'opacity-0'}`}>
+          <div
+            className={`absolute inset-0 transition-opacity duration-500 ${showAfter ? "opacity-100" : "opacity-0"}`}
+          >
             <Image
-                src={item.after}
-                alt={item.afterAlt}
-                title={item.afterTitle || `After - ${item.title}`}
-                fill
-                className="object-cover rounded-[5px]"
-                loading='lazy'
-              />
+              src={item.after}
+              alt={item.afterAlt}
+              title={item.afterTitle || `After - ${item.title}`}
+              fill
+              className="object-cover rounded-[5px]"
+              loading="lazy"
+            />
           </div>
-          
+
           {/* Hover Overlay with Eye Icon */}
-          <div className={`absolute inset-0 bg-black/30 flex items-center justify-center transition-opacity duration-300 rounded-[5px] ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
+          <div
+            className={`absolute inset-0 bg-black/30 flex items-center justify-center transition-opacity duration-300 rounded-[5px] ${isHovered ? "opacity-100" : "opacity-0"}`}
+          >
             <div className="text-white text-center">
-              <svg className="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              <svg
+                className="w-12 h-12 mx-auto mb-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                />
               </svg>
               <p className="text-sm font-medium">View Details</p>
             </div>
           </div>
         </div>
-        
+
         {/* Image Caption */}
         <div className="px-3 py-2 bg-gray-50 border-b border-gray-100">
           <p className="text-sm font-medium text-gray-700 text-center">
@@ -326,25 +389,26 @@ const BeforeAfterGallery = () => {
             )}
           </p>
         </div>
-        
-        <div className="h-max w-full rounded px-3 py-2"> 
+
+        <div className="h-max w-full rounded px-3 py-2">
           <p className="my-1 font-sans text-base text-slate-600 antialiased">
             {item.description}
           </p>
         </div>
         <div className="w-full rounded px-3 pb-3 pt-1.5">
-          <button 
-          onClick={(e) => {
-              e.stopPropagation()
-              setShowAfter(!showAfter)
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setShowAfter(!showAfter);
             }}
-          className="inline-flex rounded-md border border-slate-800 bg-slate-800 px-4 py-2 text-center font-sans text-sm font-medium text-slate-50 transition-all duration-300 ease-in hover:border-slate-700 hover:bg-slate-700 disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none cursor-pointer">
-            {showAfter ? 'Show Before' : 'Show After'}
+            className="inline-flex rounded-md border border-slate-800 bg-slate-800 px-4 py-2 text-center font-sans text-sm font-medium text-slate-50 transition-all duration-300 ease-in hover:border-slate-700 hover:bg-slate-700 disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none cursor-pointer"
+          >
+            {showAfter ? "Show Before" : "Show After"}
           </button>
         </div>
       </div>
     );
-  }
+  };
 
   return (
     <section className="py-16 px-4 md:px-8 lg:px-16 bg-gradient-to-b from-gray-50 to-white ">
@@ -358,8 +422,9 @@ const BeforeAfterGallery = () => {
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Recent <span className="text-red-500 italic">Painting Projects </span>in Sydney
-            
+            Recent{" "}
+            <span className="text-red-500 italic">Painting Projects </span>in
+            Sydney
           </h2>
           <p className="text-gray-600  text-lg md:text-xl max-w-3xl mx-auto">
             Discover the complete transformation of our projects. Each job
@@ -389,7 +454,6 @@ const BeforeAfterGallery = () => {
           {filteredData.map((item) => (
             <BeforeAftercard1 key={item.id} item={item} />
           ))}
-          
         </div>
 
         {/* Empty State */}
@@ -472,6 +536,6 @@ const BeforeAfterGallery = () => {
       </div>
     </section>
   );
-}
+};
 
-export default BeforeAfterGallery
+export default BeforeAfterGallery;
