@@ -68,7 +68,7 @@ export const blogPosts: BlogPost[] = [
 
     <p>👉 <a href="/contact">Contact us for a free quote today.</a></p>
   `,
-    image: "/images/blog/january-projects-cover.jpg",
+    image: "/images/blog/january-projects-cover.webp",
     date: "2026-01-31",
     category: "Recent Projects",
     slug: "january-2026-painting-projects-sydney",
