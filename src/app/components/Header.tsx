@@ -9,6 +9,15 @@ import { Phone, Menu, X } from "lucide-react";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const handlePhoneClick = () => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'click_phone', {
+        event_category: 'engagement',
+        event_label: 'header_phone'
+      });
+    }
+  };
+
   return (
     <header className=" w-full font-[Roboto] z-50 bg-[var(--color-brand-accent)]  transition-colors duration-200">
       {/* Barra superior  */}
@@ -85,6 +94,7 @@ export default function Header() {
           {/* BOTÓN TELÉFONO */}
           <a
             href="tel:0401508036"
+            onClick={handlePhoneClick}
             className="flex items-center gap-0 transition group"
             aria-label="Call Prisma Coatings Sydney"
           >
@@ -134,6 +144,7 @@ export default function Header() {
             <Link href="/blog">Blog</Link>
             <a
               href="tel:0401508036"
+              onClick={handlePhoneClick}
               className="flex items-center gap-2 border border-black dark:border-gray-600 px-4 py-3 rounded-2xl bg-[#D61C1C]! dark:bg-gray-700 transition"
               aria-label="Call Prisma Coatings Sydney"
             >
