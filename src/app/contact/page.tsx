@@ -87,6 +87,12 @@ const ContactPage = () => {
     setErrors({}); // Clear errors
     
     try {
+      if (typeof window !== "undefined" && 'gtag' in window) {
+      (window as any).gtag('event', 'form_submit', {
+        event_category: 'lead',
+        event_label: 'contact_form_submission'
+      });
+    }
       const response = await fetch('/api/send', {
         method: 'POST',
         headers: {
@@ -139,6 +145,12 @@ const ContactPage = () => {
   };
 
   const handleButtonClick = () => {
+     if (typeof window !== "undefined" && 'gtag' in window) {
+      (window as any).gtag('event', 'whatsapp_click', {
+        event_category: 'contact',
+        event_label: 'floating_whatsapp'
+      });
+    }
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');

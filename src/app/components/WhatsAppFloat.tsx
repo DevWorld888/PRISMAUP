@@ -19,6 +19,12 @@ const WhatsAppFloat = () => {
   }, []);
   
   const handleWhatsAppClick = () => {
+    if (typeof window !== "undefined" && 'gtag' in window) {
+      (window as any).gtag('event', 'whatsapp_click', {
+        event_category: 'contact',
+        event_label: 'floating_whatsapp'
+      });
+    }
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
