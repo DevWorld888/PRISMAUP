@@ -8,6 +8,30 @@ const Testimonials = () => {
 
   const testimonials = [
     {
+      text: "We have engaged Hally and his team from Prisma Coatings to paint our house. Hally spends the time to understand the job and offers great advice. The work is of exceptional quality and we were very happy with the results. I would highly recommend Prisma Coatings",
+      name: "Kevin McEwen",
+      avatar: "https://lh3.googleusercontent.com/a/ACg8ocKroJkHhumuRB1UE-E1VtAzfwlpvjA-L3VpYePheB2k8uKK4w=w90-h90-p-rp-mo-br100",
+      rating: 5
+    },
+    {
+      text: "Hally has completed several jobs for me and his finish has been nothing short of exceptional every time. His preparation and cleanliness is on point and always delivers what he promises.Thankyou for your hard work.",
+      avatar: "https://lh3.googleusercontent.com/a/ACg8ocIyxPQM-X2s-vdRhWuBItP5nhwE2oLU8OkVdtkCKUrXlKZfKQ=w90-h90-p-rp-mo-ba2-br100",
+      name: "Joseph Haddad",
+      rating: 5
+    },
+    {
+      text: "I use Hally on all jobs I do, he gets it done in time to a premium quality for a great price! Highly recommend using Prisma coatings for all painting needs!",
+      name: "Matt Schaudin",
+      avatar: "https://lh3.googleusercontent.com/a/ACg8ocIlC5LWV6cW6VNklQoOJByfdQWDRs4UcAQ4jH67Q-1IDILjew=w90-h90-p-rp-mo-br100",
+      rating: 5
+    },
+    {
+      text: "Hally & the Team at Prisma coatings are an exceptional painting & decorating team, we’ve had the boys work alongside us for many years now & will continue to do so in the foreseeable future",
+      name: "Frontline Building Group",
+      avatar: "https://lh3.googleusercontent.com/a/ACg8ocI2X9cKA-gMqHQToesKf9nVsh0DewPjrjeozsenWiE8wUwrYg=s45-c-rp-mo-br100",
+      rating: 5
+    },
+    {
       text: "Highly recommended! Great service and price. Hally was really helpful from start to finish. He made me feel confident with his professionalism. If you are looking for a company that is responsible and delivers please contact them.",
       name: "Mateo Patino",
       avatar: "https://lh3.googleusercontent.com/a/ACg8ocKt0X65FUf5E4-wp6qV-ovRocQm53yBbnKZqqenT632qLigwg=w90-h90-p-rp-mo-br100",
