@@ -7,7 +7,7 @@ Disallow: /_next/
 Disallow: /public/
 
 # Sitemap location
-Sitemap: https://prismaup.vercel.app/sitemap.xml
+Sitemap: https://www.prismacoatings.com.au/sitemap.xml
 
 # Crawl-delay para ser amigable con los servidores
 Crawl-delay: 1

@@ -6,7 +6,7 @@ interface SitemapRoute {
 }
 
 export async function GET() {
-  const baseUrl = 'https://prismaup.vercel.app';
+  const baseUrl = 'https://www.prismacoatings.com.au/';
   const currentDate = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format
 
   const routes: SitemapRoute[] = [
