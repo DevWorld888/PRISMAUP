@@ -63,7 +63,7 @@ export default function BlogCategoriesClient() {
   return (
     <>
       {/* Category Filter */}
-      <div className="mb-12">
+      {/* <div className="mb-12">
         <div className="flex flex-wrap justify-center gap-3">
           {categories.map((category) => (
             <button
@@ -79,7 +79,7 @@ export default function BlogCategoriesClient() {
             </button>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Blog Posts Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
