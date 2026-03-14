@@ -34,7 +34,7 @@ export const blogPosts: BlogPost[] = [
     <p>In January 2026, Prisma Coatings completed several residential painting projects across Sydney. From full apartment repaints to exterior render restoration, our team delivered premium interior and exterior finishes.</p>
 
     <h2>Full Apartment Repaint – 57 Ralph Street</h2>
-    <img src="/images/blog/57RalphStreet.webp" alt="Apartment Repaint Sydney" class="w-full h-auto rounded-lg mb-4" />
+    <img src="/images/blog/january/57RalphStreet.webp" alt="Apartment Repaint Sydney" class="w-full h-auto rounded-lg mb-4" />
     <p>This apartment underwent a complete repaint transformation including walls, ceilings and trims. Proper surface preparation ensured a flawless and durable finish.</p>
 
     <ul>
@@ -45,7 +45,7 @@ export const blogPosts: BlogPost[] = [
     </ul>
 
     <h2>Interior & Exterior Repaint – 14 Reservoir Circuit</h2>
-    <img src="/images/blog/14ReservoirCircuit.webp" alt="Interior & Exterior Repaint Sydney" class="w-full h-auto rounded-lg mb-4" />
+    <img src="/images/blog/january/14ReservoirCircuit.webp" alt="Interior & Exterior Repaint Sydney" class="w-full h-auto rounded-lg mb-4" />
 
     <p>This residential home required both interior refresh and exterior upgrades to improve curb appeal.</p>
 
@@ -57,7 +57,7 @@ export const blogPosts: BlogPost[] = [
     </ul>
 
     <h2>Ground Floor Renovation – 67 Alma Road</h2>
-    <img src="/images/blog/67AlmaRoad.webp" alt="Ground Floor Renovation Sydney" class="w-full h-auto rounded-lg mb-4" />
+    <img src="/images/blog/january/67AlmaRoad.webp" alt="Ground Floor Renovation Sydney" class="w-full h-auto rounded-lg mb-4" />
 
     <p>This project combined renovation works with professional repainting services.</p>
 
@@ -73,7 +73,7 @@ export const blogPosts: BlogPost[] = [
 
     <p>👉 <a href="/contact">Contact us for a free quote today.</a></p>
   `,
-    image: "/images/blog/67AlmaRoad.webp",
+    image: "/images/blog/january/67AlmaRoad.webp",
     date: "2026-01-31",
     category: "Recent Projects",
     slug: "january-2026-painting-projects-sydney",

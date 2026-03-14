@@ -1,94 +1,87 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import Image from 'next/image';
-import { blogPosts, categories, type BlogPost } from '../../utils/blogData';
+import React, { useState } from "react";
+import Image from "next/image";
+import { blogPosts,  type BlogPost } from "../../utils/blogData";
+import Link from 'next/link';
+
 
 interface BlogCardProps {
   post: BlogPost;
 }
 
 const BlogCard = ({ post }: BlogCardProps) => (
-  <article className="blog-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-    <div className="relative h-48 w-full">
-      <Image
-        src={post.image}
-        alt={post.title}
-        width={400}
-        height={200}
-        className="object-cover w-full h-full"
-      />
-    </div>
-    <div className="p-6">
-      <div className="flex items-center justify-between text-sm text-gray-500 mb-2">
-        <span className="bg-blue-100 text-[#13233A] px-2 py-1 rounded-full text-xs font-medium">
-          {post.category}
-        </span>
-        <span>{post.readTime}</span>
+ <article className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+    <Link
+      href={`/blog/${post.slug}`}
+      className="block"
+      aria-label={`Read article: ${post.title}`}
+    >
+      <div className="relative h-56 sm:h-64 lg:h-72 overflow-hidden">
+        <Image
+          src={post.image}
+          alt={post.title}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
-      <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-        <a 
-          href={`/blog/${post.slug}`} 
-          className="hover:text-[#13233A] transition-colors duration-200"
-        >
+      <div className="p-6 lg:p-8">
+        <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
+          <span className="bg-red-50 text-[#D61C1C] px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide">
+            {post.category}
+          </span>
+          <span className="font-medium">{post.readTime}</span>
+        </div>
+        <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4 line-clamp-2 group-hover:text-[#D61C1C] transition-colors duration-200">
           {post.title}
-        </a>
-      </h2>
-      <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
-      <div className="flex items-center justify-between">
-        <time className="text-sm text-gray-500" dateTime={post.date}>
-          {new Date(post.date).toLocaleDateString('en-AU', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          })}
-        </time>
-        <a 
-          href={`/blog/${post.slug}`}
-          className="text-[#D61C1C] hover:text-[#EF4444] font-medium text-sm transition-colors duration-200"
-        >
-          Read More →
-        </a>
+        </h3>
+        <p className="text-gray-600 mb-6 line-clamp-3 leading-relaxed">
+          {post.excerpt}
+        </p>
+        <div className="flex items-center justify-between">
+          <time 
+            className="text-sm text-gray-500 font-medium" 
+            dateTime={post.date}
+          >
+            {new Date(post.date).toLocaleDateString("en-AU", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </time>
+          <span className="inline-flex items-center text-[#D61C1C] font-semibold text-sm group-hover:text-[#B91C1C] transition-colors duration-200">
+            Read Article
+            <svg 
+              className="ml-2 w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </span>
+        </div>
       </div>
-    </div>
+    </Link>
   </article>
 );
 
 export default function BlogCategoriesClient() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const filteredPosts = selectedCategory === 'All'
-    ? blogPosts
-    : blogPosts.filter(post => post.category === selectedCategory);
-
+  
   return (
     <>
-      {/* Category Filter */}
-      {/* <div className="mb-12">
-        <div className="flex flex-wrap justify-center gap-3">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 border ${
-                selectedCategory === category
-                  ? "bg-[#D61C1C] text-white border-[#D61C1C]"
-                  : "bg-white text-gray-700 hover:bg-gray-100 border-gray-300"
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-      </div> */}
-
       {/* Blog Posts Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {filteredPosts.length > 0 ? (
-          filteredPosts.map((post) => (
-            <BlogCard key={post.id} post={post} />
-          ))
+        {blogPosts.length > 0 ? (
+          blogPosts.map((post) => <BlogCard key={post.id} post={post} />)
+          
         ) : (
-          <div className="col-span-full text-center text-gray-500 py-12">No posts found for this category.</div>
+          <div className="col-span-full text-center text-gray-500 py-12">
+            No posts found for this category.
+          </div>
         )}
       </div>
     </>

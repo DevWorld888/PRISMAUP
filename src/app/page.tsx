@@ -7,6 +7,9 @@ import ExploreOurServices from "./components/ExploreOurServices";
 import Gallery from "./components/Gallery";
 import Testimonials from "./components/Testimonials";
 import CtaFinal from "./components/CtaFinal";
+import BlogCategoriesClient from "./blog/components/BlogCategoriesClient";
+import Blog from "./components/Blog";
+import RecentProjects from "./components/recentProjects";
 
 
 
@@ -52,9 +55,11 @@ export default function Home() {
       <Aboutus />
       <WhatWeDo />
       <ExploreOurServices />
-      <Gallery />
+      {/* <Gallery /> */}
+      <RecentProjects />
       <Testimonials />
       <CtaFinal/>
+      <Blog />
     </>
   );
 }
