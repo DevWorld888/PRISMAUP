@@ -16,7 +16,7 @@ const ExploreOurServices = () => {
           {/* Left side - Illustration */}
           <div className="order-2 lg:order-1">
             <Image
-              src="/images/8.jpg"
+              src="/images/exploreourservices/painting-team-sydney-professional-painters.webp"
               alt="Professional painting services in Sydney - interior and exterior painting for homes and businesses"
               className="w-full h-auto rounded-lg"
               width={500}

@@ -43,7 +43,7 @@ const AboutUs = () => {
                 width={900}
                 height={900}
                 className="rounded-lg"
-                loading="eager"
+                loading="lazy"
               />
             </div>
 
