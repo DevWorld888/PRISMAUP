@@ -6,26 +6,29 @@ interface SitemapRoute {
 }
 
 export async function GET() {
-  const baseUrl = 'https://www.prismacoatings.com.au/';
-  const currentDate = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format
+  const baseUrl = 'https://www.prismacoatings.com.au';
+  const currentDate = new Date().toISOString().split('T')[0];
 
   const routes: SitemapRoute[] = [
+    // HOME
     {
       url: '',
       changefreq: 'weekly',
       priority: '1.0',
       lastmod: currentDate
     },
+
+    // MAIN
     {
       url: '/about',
       changefreq: 'monthly',
-      priority: '0.8',
+      priority: '0.7',
       lastmod: currentDate
     },
     {
       url: '/contact',
       changefreq: 'monthly',
-      priority: '0.7',
+      priority: '0.9',
       lastmod: currentDate
     },
     {
@@ -35,9 +38,51 @@ export async function GET() {
       lastmod: currentDate
     },
     {
+      url: '/projects',
+      changefreq: 'weekly',
+      priority: '0.8',
+      lastmod: currentDate
+    },
+
+    // 🔥 SERVICES (CLAVE SEO)
+    {
+      url: '/interior-painting-sydney',
+      changefreq: 'weekly',
+      priority: '0.9',
+      lastmod: currentDate
+    },
+    {
+      url: '/exterior-painting-sydney',
+      changefreq: 'weekly',
+      priority: '0.9',
+      lastmod: currentDate
+    },
+    {
+      url: '/commercial-painting-sydney',
+      changefreq: 'weekly',
+      priority: '0.9',
+      lastmod: currentDate
+    },
+
+    // 🚀 LOCATION PAGES (cuando las crees)
+    // {
+    //   url: '/painters-bondi',
+    //   changefreq: 'monthly',
+    //   priority: '0.8',
+    //   lastmod: currentDate
+    // },
+    // {
+    //   url: '/painters-parramatta',
+    //   changefreq: 'monthly',
+    //   priority: '0.8',
+    //   lastmod: currentDate
+    // },
+
+    // BLOG
+    {
       url: '/blog',
       changefreq: 'weekly',
-      priority: '0.6',
+      priority: '0.7',
       lastmod: currentDate
     }
   ];
@@ -59,7 +104,7 @@ ${routes
   return new Response(sitemap, {
     headers: {
       'Content-Type': 'application/xml',
-      'Cache-Control': 'public, max-age=86400', // Cache por 24 horas
+      'Cache-Control': 'public, max-age=86400',
     },
   });
 }

@@ -59,48 +59,86 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Schema.org Structured Data for Local Business */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "LocalBusiness",
+              "@type": "HousePainter",
+              "@id": "https://www.prismacoatings.com.au/#business",
               name: "Prisma Coatings",
+              url: "https://www.prismacoatings.com.au",
+              logo: "https://www.prismacoatings.com.au/logo/logo.png",
+              image: "https://www.prismacoatings.com.au/logo/logo.png",
               description:
-                "Professional house and commercial painting services in Sydney with 10+ years of experience",
+                "Professional house and commercial painting services in Sydney. Interior, exterior, strata and residential painting with over 10 years of experience.",
+              telephone: "+61 401 508 036",
+              priceRange: "$$",
+              foundingDate: "2015",
+
               address: {
                 "@type": "PostalAddress",
-                addressRegion: "NSW",
-                addressCountry: "AU",
                 addressLocality: "Sydney",
+                addressRegion: "NSW",
+                postalCode: "2000",
+                addressCountry: "AU",
               },
+
+              geo: {
+                "@type": "GeoCoordinates",
+                "latitude": -33.9162866,
+                "longitude": 151.1026061
+              },
+
               areaServed: [
-                "Sydney",
-                "Inner West",
-                "Eastern Suburbs",
-                "Northern Beaches",
-                "North Shore",
-                "Western Sydney",
+                {
+                  "@type": "City",
+                  name: "Sydney",
+                },
+                {
+                  "@type": "AdministrativeArea",
+                  name: "Inner West",
+                },
+                {
+                  "@type": "AdministrativeArea",
+                  name: "Eastern Suburbs",
+                },
+                {
+                  "@type": "AdministrativeArea",
+                  name: "North Shore",
+                },
+                {
+                  "@type": "AdministrativeArea",
+                  name: "Western Sydney",
+                },
               ],
-              serviceType: [
-                "House Painting",
-                "Commercial Painting",
-                "Strata Painting",
-                "Interior Painting",
-                "Exterior Painting",
-                "Residential Painting",
+
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                  ],
+                  opens: "07:00",
+                  closes: "17:00",
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: "Saturday",
+                  opens: "07:00",
+                  closes: "17:00",
+                },
               ],
-              priceRange: "$$",
-              yearEstablished: "2015",
-              url: "https://prismacoatings.com.au",
-              telephone: "+61-xxx-xxx-xxx",
-              image: "https://prismacoatings.com.au/logo/logo.png",
-              aggregateRating: {
-                "@type": "AggregateRating",
-                ratingValue: "4.9",
-                reviewCount: "150",
-              },
+
+              sameAs: [
+                "https://instagram.com/prismacoatings",
+                "https://www.facebook.com/profile.php?id=61572618991416",
+              ],
+
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
                 name: "Painting Services",
@@ -109,19 +147,41 @@ export default function RootLayout({
                     "@type": "Offer",
                     itemOffered: {
                       "@type": "Service",
-                      name: "House Painting",
-                      description: "Professional residential painting services",
+                      name: "Interior Painting Sydney",
+                      areaServed: "Sydney",
                     },
                   },
                   {
                     "@type": "Offer",
                     itemOffered: {
                       "@type": "Service",
-                      name: "Commercial Painting",
-                      description: "Expert commercial and office painting",
+                      name: "Exterior Painting Sydney",
+                      areaServed: "Sydney",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Commercial Painting Sydney",
+                      areaServed: "Sydney",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Strata Painting Sydney",
+                      areaServed: "Sydney",
                     },
                   },
                 ],
+              },
+
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "5.0",
+                reviewCount: "15",
               },
             }),
           }}

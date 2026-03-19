@@ -4,10 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 // import ThemeToggle from './ThemeToggle';
-import { Phone, Menu, X } from "lucide-react";
+import { Phone, Menu, X, ChevronDown } from "lucide-react";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
   const handlePhoneClick = () => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -63,6 +65,48 @@ export default function Header() {
             <span className="pb-1">About Us</span>
             <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-600 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
           </Link>
+
+          <div
+            className="relative"
+            onMouseEnter={() => setServicesOpen(true)}
+            onMouseLeave={() => setServicesOpen(false)}
+          >
+            <button className="relative group hover:text-[#C53030] flex items-center gap-1 font-medium text-lg text-[var(--color-secondary)] focus:outline-none">
+              <span className="pb-1">Services</span>
+              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`} />
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-600 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+            </button>
+            {servicesOpen && (
+              <div className="absolute top-full left-0 w-52 pt-2 z-50">
+                <div className="bg-white shadow-lg rounded-md py-2">
+                  <Link
+                    href="/house-painters-sydney"
+                    className="block px-4 py-2 text-sm text-[#13233A] hover:bg-gray-100 hover:text-[#C53030] transition-colors"
+                  >
+                    House Painters Sydney
+                  </Link>
+                  <Link
+                    href="/interior-painting-sydney"
+                    className="block px-4 py-2 text-sm text-[#13233A] hover:bg-gray-100 hover:text-[#C53030] transition-colors"
+                  >
+                    Interior Painting Sydney
+                  </Link>
+                  <Link
+                    href="/exterior-painting-sydney"
+                    className="block px-4 py-2 text-sm text-[#13233A] hover:bg-gray-100 hover:text-[#C53030] transition-colors"
+                  >
+                    Exterior Painting Sydney
+                  </Link>
+                  <Link
+                    href="/commercial-painting-sydney"
+                    className="block px-4 py-2 text-sm text-[#13233A] hover:bg-gray-100 hover:text-[#C53030] transition-colors"
+                  >
+                    Commercial Painting Sydney
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div>
 
           <Link href="/gallery" className="relative group hover:text-[#C53030]">
             <span className="pb-1">Projects</span>
@@ -139,6 +183,31 @@ export default function Header() {
             <Link href="/">Home</Link>
             {/* <Link href="/services">Services</Link> */}
             <Link href="/about">About Us</Link>
+            <div>
+              <button
+                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                className="flex items-center gap-1 w-full text-left"
+              >
+                Services
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""}`} />
+              </button>
+              {mobileServicesOpen && (
+                <div className="ml-4 mt-2 flex flex-col gap-2 text-base text-[#444]">
+                  <Link href="/house-painters-sydney" onClick={() => setMenuOpen(false)}>
+                    House Painters Sydney
+                  </Link>
+                  <Link href="/interior-painting-sydney" onClick={() => setMenuOpen(false)}>
+                    Interior Painting Sydney
+                  </Link>
+                  <Link href="/exterior-painting-sydney" onClick={() => setMenuOpen(false)}>
+                    Exterior Painting Sydney
+                  </Link>
+                  <Link href="/commercial-painting-sydney" onClick={() => setMenuOpen(false)}>
+                    Commercial Painting Sydney
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link href="/gallery">Projects</Link>
             <Link href="/contact">Get a Free Quote</Link>
             <Link href="/blog">Blog</Link>
