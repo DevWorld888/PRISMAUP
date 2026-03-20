@@ -153,7 +153,7 @@ export default function InteriorPaintingSydneyPage() {
 
           <div className="relative min-h-[320px] md:min-h-[480px] rounded-2xl overflow-hidden shadow-2xl">
             <Image
-              src="/images/2.jpg"
+              src="/images/recentWorks/14.jpeg"
               alt="Interior painting service in Sydney by Prisma Coatings for walls and ceilings"
               fill
               className="object-cover"
@@ -290,7 +290,7 @@ export default function InteriorPaintingSydneyPage() {
 
         <div className="relative min-h-[320px] rounded-2xl overflow-hidden shadow-lg">
           <Image
-            src="/images/3.jpg"
+            src="/images/recentWorks/11.jpeg"
             alt="Interior wall preparation and painting process in a Sydney home"
             fill
             className="object-cover"

@@ -153,7 +153,7 @@ export default function ExteriorPaintingSydneyPage() {
 
           <div className="relative min-h-[320px] md:min-h-[480px] rounded-2xl overflow-hidden">
             <Image
-              src="/images/4.jpg"
+              src="/images/recentWorks/1.jpeg"
               alt="Exterior house painting in Sydney with weather resistant coating"
               fill
               className="object-cover"
@@ -167,7 +167,7 @@ export default function ExteriorPaintingSydneyPage() {
       <section className="max-w-7xl mx-auto px-6 py-16 grid lg:grid-cols-2 gap-12 items-center">
         <div className="relative min-h-[320px] rounded-2xl overflow-hidden">
           <Image
-            src="/images/3.jpg"
+            src="/images/recentWorks/2.jpeg"
             alt="Exterior surface preparation and pressure cleaning before painting"
             fill
             className="object-cover"
