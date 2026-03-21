@@ -1,111 +1,120 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import Image from 'next/image'
-import { CheckCircle, Building2, Shield, Sun, Phone, Star } from 'lucide-react'
+import type { Metadata } from "next";
+import Link from "next/link";
+import Image from "next/image";
+import { CheckCircle, Building2, Shield, Sun, Phone, Star } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: 'Exterior Painting Sydney | House Painters | Prisma Coatings',
+  title: "Exterior Painting Sydney | House Painters | Prisma Coatings",
   description:
-    'Professional exterior painting in Sydney. Prisma Coatings provides durable, weather-resistant finishes for houses and residential properties. Get a free quote today.',
+    "Professional exterior painting in Sydney. Prisma Coatings provides durable, weather-resistant finishes for houses and residential properties. Get a free quote today.",
   keywords: [
-    'exterior painting sydney',
-    'house painters sydney',
-    'exterior painters sydney',
-    'residential painting sydney',
-    'render painting sydney',
-    'weather resistant paint sydney',
-    'outside house painting sydney',
+    "exterior painting sydney",
+    "house painters sydney",
+    "exterior painters sydney",
+    "residential painting sydney",
+    "render painting sydney",
+    "weather resistant paint sydney",
+    "outside house painting sydney",
   ],
   alternates: {
-    canonical: 'https://www.prismacoatings.com.au/exterior-painting-sydney',
+    canonical: "https://www.prismacoatings.com.au/exterior-painting-sydney",
   },
   openGraph: {
-    title: 'Exterior Painting Sydney | Prisma Coatings',
+    title: "Exterior Painting Sydney | Prisma Coatings",
     description:
-      'Durable exterior painting services in Sydney designed to protect and enhance your property.',
-    url: 'https://www.prismacoatings.com.au/exterior-painting-sydney',
-    siteName: 'Prisma Coatings',
-    locale: 'en_AU',
-    type: 'website',
+      "Durable exterior painting services in Sydney designed to protect and enhance your property.",
+    url: "https://www.prismacoatings.com.au/exterior-painting-sydney",
+    siteName: "Prisma Coatings",
+    locale: "en_AU",
+    type: "website",
   },
-}
+};
 
 const features = [
-  'Weather-resistant coatings for Australian conditions',
-  'Exterior walls, render, facades and trims',
-  'Pressure cleaning and surface preparation',
-  'Long-lasting finishes with quality materials',
-  'Residential homes, apartments and buildings',
-]
+  "Weather-resistant coatings for Australian conditions",
+  "Exterior walls, render, facades and trims",
+  "Pressure cleaning and surface preparation",
+  "Long-lasting finishes with quality materials",
+  "Residential homes, apartments and buildings",
+];
 
 const services = [
   {
-    title: 'Exterior Walls & Facades',
+    title: "Exterior Walls & Facades",
     description:
-      'We repaint exterior walls and facades to improve appearance and protect your property from weather damage.',
+      "We repaint exterior walls and facades to improve appearance and protect your property from weather damage.",
     icon: Building2,
   },
   {
-    title: 'Protection & Durability',
+    title: "Protection & Durability",
     description:
-      'We use high-quality coatings designed to handle sun exposure, rain and temperature changes in Sydney.',
+      "We use high-quality coatings designed to handle sun exposure, rain and temperature changes in Sydney.",
     icon: Shield,
   },
   {
-    title: 'Weather Preparation',
+    title: "Weather Preparation",
     description:
-      'Proper cleaning and preparation ensures better adhesion and longer-lasting results for exterior surfaces.',
+      "Proper cleaning and preparation ensures better adhesion and longer-lasting results for exterior surfaces.",
     icon: Sun,
   },
-]
+];
 
 const faqs = [
   {
-    q: 'How much does exterior painting cost in Sydney?',
-    a: 'Costs vary depending on property size, surface condition, accessibility and preparation required. The best option is to request a site inspection and tailored quote.',
+    q: "How much does exterior painting cost in Sydney?",
+    a: "Costs vary depending on property size, surface condition, accessibility and preparation required. The best option is to request a site inspection and tailored quote.",
   },
   {
-    q: 'How long does exterior paint last?',
-    a: 'With proper preparation and quality materials, exterior paint can last several years depending on weather exposure and maintenance.',
+    q: "How long does exterior paint last?",
+    a: "With proper preparation and quality materials, exterior paint can last several years depending on weather exposure and maintenance.",
   },
   {
-    q: 'Do you prepare surfaces before painting?',
-    a: 'Yes. Exterior painting includes pressure cleaning, surface repairs and preparation to ensure a durable and professional finish.',
+    q: "Do you prepare surfaces before painting?",
+    a: "Yes. Exterior painting includes pressure cleaning, surface repairs and preparation to ensure a durable and professional finish.",
   },
   {
-    q: 'Can I get a free quote?',
-    a: 'Yes. Contact Prisma Coatings to discuss your exterior painting project and receive a free quote.',
+    q: "Can I get a free quote?",
+    a: "Yes. Contact Prisma Coatings to discuss your exterior painting project and receive a free quote.",
   },
-]
+];
 
 export default function ExteriorPaintingSydneyPage() {
   const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: 'Exterior Painting Sydney',
-    serviceType: 'Exterior Residential Painting',
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://www.prismacoatings.com.au/exterior-painting-sydney#service",
+    name: "Exterior Painting Sydney",
+    serviceType: "Exterior Residential Painting",
+    url: "https://www.prismacoatings.com.au/exterior-painting-sydney",
+    description:
+      "Exterior painting services in Sydney with weather-resistant coatings for long-lasting protection and improved street appeal.",
+    areaServed: {
+      "@type": "City",
+      name: "Sydney",
+    },
     provider: {
-      '@type': 'LocalBusiness',
-      name: 'Prisma Coatings',
-      url: 'https://www.prismacoatings.com.au',
-      telephone: '+61 401 508 036',
+      "@type": "PaintingContractor",
+      name: "Prisma Coatings",
+      url: "https://www.prismacoatings.com.au",
+      telephone: "+61 401 508 036",
       address: {
-        '@type': 'PostalAddress',
-        streetAddress: '20/25 Marlowe St',
-        addressLocality: 'Campsie',
-        addressRegion: 'NSW',
-        postalCode: '2194',
-        addressCountry: 'AU',
-      },
-      areaServed: {
-        '@type': 'City',
-        name: 'Sydney',
+        "@type": "PostalAddress",
+        streetAddress: "20/25 Marlowe St",
+        addressLocality: "Campsie",
+        addressRegion: "NSW",
+        postalCode: "2194",
+        addressCountry: "AU",
       },
     },
-    url: 'https://www.prismacoatings.com.au/exterior-painting-sydney',
-    description:
-      'Exterior painting services in Sydney with weather-resistant coatings for long-lasting protection and improved street appeal.',
-  }
+    offers: {
+      "@type": "Offer",
+      url: "https://www.prismacoatings.com.au/contact",
+      priceCurrency: "AUD",
+      availability: "https://schema.org/InStock",
+      description:
+        "Request a free quote for exterior painting services in Sydney.",
+    },
+  };
 
   return (
     <main className="bg-white text-[#13233A]">
@@ -128,9 +137,10 @@ export default function ExteriorPaintingSydneyPage() {
             </h1>
 
             <p className="mt-6 text-lg text-gray-200 max-w-2xl">
-              Prisma Coatings provides professional exterior painting services in Sydney
-              designed to protect your property and improve its street appeal. We use
-              high-quality materials and proper preparation for long-lasting results.
+              Prisma Coatings provides professional exterior painting services
+              in Sydney designed to protect your property and improve its street
+              appeal. We use high-quality materials and proper preparation for
+              long-lasting results.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -180,9 +190,9 @@ export default function ExteriorPaintingSydneyPage() {
           </h2>
 
           <p className="mt-6 text-lg text-gray-700">
-            Exterior painting is not just about looks. It protects your property from sun,
-            rain and environmental damage. That is why proper preparation and the right
-            materials are essential.
+            Exterior painting is not just about looks. It protects your property
+            from sun, rain and environmental damage. That is why proper
+            preparation and the right materials are essential.
           </p>
 
           <div className="mt-8 space-y-4">
@@ -205,14 +215,14 @@ export default function ExteriorPaintingSydneyPage() {
 
           <div className="mt-12 grid md:grid-cols-3 gap-6">
             {services.map((s) => {
-              const Icon = s.icon
+              const Icon = s.icon;
               return (
                 <div key={s.title} className="bg-white p-8 rounded-2xl">
                   <Icon className="mb-4 text-[#13233A]" />
                   <h3 className="font-bold text-xl">{s.title}</h3>
                   <p className="mt-4 text-gray-600">{s.description}</p>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
@@ -261,5 +271,5 @@ export default function ExteriorPaintingSydneyPage() {
         </div>
       </section>
     </main>
-  )
+  );
 }

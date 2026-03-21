@@ -1,124 +1,133 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import Image from 'next/image'
-import { CheckCircle, Phone, Brush, Building2, Home, Star } from 'lucide-react'
+import type { Metadata } from "next";
+import Link from "next/link";
+import Image from "next/image";
+import { CheckCircle, Phone, Brush, Building2, Home, Star } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: 'House Painters Sydney | Interior & Exterior Painting | Prisma Coatings',
+  title:
+    "House Painters Sydney | Interior & Exterior Painting | Prisma Coatings",
   description:
-    'Looking for trusted house painters in Sydney? Prisma Coatings provides professional interior and exterior painting services for homes, apartments and strata properties across Sydney.',
+    "Looking for trusted house painters in Sydney? Prisma Coatings provides professional interior and exterior painting services for homes, apartments and strata properties across Sydney.",
   keywords: [
-    'house painters sydney',
-    'painters sydney',
-    'interior painting sydney',
-    'exterior painting sydney',
-    'residential painters sydney',
-    'apartment painters sydney',
-    'professional painters sydney',
-    'home painting services sydney',
+    "house painters sydney",
+    "painters sydney",
+    "interior painting sydney",
+    "exterior painting sydney",
+    "residential painters sydney",
+    "apartment painters sydney",
+    "professional painters sydney",
+    "home painting services sydney",
   ],
   alternates: {
-    canonical: 'https://www.prismacoatings.com.au/house-painters-sydney',
+    canonical: "https://www.prismacoatings.com.au/house-painters-sydney",
   },
   openGraph: {
-    title: 'House Painters Sydney | Prisma Coatings',
+    title: "House Painters Sydney | Prisma Coatings",
     description:
-      'Professional house painters in Sydney for interior, exterior and residential painting projects.',
-    url: 'https://www.prismacoatings.com.au/house-painters-sydney',
-    siteName: 'Prisma Coatings',
-    locale: 'en_AU',
-    type: 'website',
+      "Professional house painters in Sydney for interior, exterior and residential painting projects.",
+    url: "https://www.prismacoatings.com.au/house-painters-sydney",
+    siteName: "Prisma Coatings",
+    locale: "en_AU",
+    type: "website",
   },
-}
+};
 
 const serviceAreas = [
-  'Sydney',
-  'Inner West',
-  'Campsie',
-  'Canterbury',
-  'Burwood',
-  'Marrickville',
-  'Ashfield',
-  'Strathfield',
-]
+  "Sydney",
+  "Inner West",
+  "Campsie",
+  "Canterbury",
+  "Burwood",
+  "Marrickville",
+  "Ashfield",
+  "Strathfield",
+];
 
 const benefits = [
-  'Professional interior and exterior painting',
-  'Careful surface preparation before every project',
-  'Clean, reliable and detail-focused workmanship',
-  'Residential, apartment and strata painting solutions',
-  'Free quotes for Sydney homeowners and property managers',
-]
+  "Professional interior and exterior painting",
+  "Careful surface preparation before every project",
+  "Clean, reliable and detail-focused workmanship",
+  "Residential, apartment and strata painting solutions",
+  "Free quotes for Sydney homeowners and property managers",
+];
 
 const services = [
   {
-    title: 'Interior House Painting',
+    title: "Interior House Painting",
     description:
-      'We refresh walls, ceilings, trims, doors and living spaces with clean finishes that lift the look of your home.',
+      "We refresh walls, ceilings, trims, doors and living spaces with clean finishes that lift the look of your home.",
     icon: Home,
   },
   {
-    title: 'Exterior House Painting',
+    title: "Exterior House Painting",
     description:
-      'Our team applies durable exterior coatings designed to improve street appeal and help protect your property from Sydney weather.',
+      "Our team applies durable exterior coatings designed to improve street appeal and help protect your property from Sydney weather.",
     icon: Building2,
   },
   {
-    title: 'Surface Preparation',
+    title: "Surface Preparation",
     description:
-      'Proper prep is everything. We patch, sand, clean and prepare surfaces to achieve a longer-lasting result.',
+      "Proper prep is everything. We patch, sand, clean and prepare surfaces to achieve a longer-lasting result.",
     icon: Brush,
   },
-]
+];
 
 const faqs = [
   {
-    q: 'How much does house painting cost in Sydney?',
-    a: 'Pricing depends on the size of the property, surface condition, access, paint system and scope of work. The best move is a site inspection and a tailored quote.',
+    q: "How much does house painting cost in Sydney?",
+    a: "Pricing depends on the size of the property, surface condition, access, paint system and scope of work. The best move is a site inspection and a tailored quote.",
   },
   {
-    q: 'Do you handle both interior and exterior painting?',
-    a: 'Yes. Prisma Coatings provides both interior and exterior house painting services across Sydney.',
+    q: "Do you handle both interior and exterior painting?",
+    a: "Yes. Prisma Coatings provides both interior and exterior house painting services across Sydney.",
   },
   {
-    q: 'Do you offer painting for apartments and strata properties?',
-    a: 'Yes. We work on houses, apartments, units and strata painting projects depending on the scope.',
+    q: "Do you offer painting for apartments and strata properties?",
+    a: "Yes. We work on houses, apartments, units and strata painting projects depending on the scope.",
   },
   {
-    q: 'Can I request a free quote?',
-    a: 'Yes. You can contact Prisma Coatings for a free quote and discuss your painting project with the team.',
+    q: "Can I request a free quote?",
+    a: "Yes. You can contact Prisma Coatings for a free quote and discuss your painting project with the team.",
   },
-]
+];
 
 export default function HousePaintersSydneyPage() {
   const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: 'House Painters Sydney',
-    serviceType: 'Residential Painting Services',
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://www.prismacoatings.com.au/house-painters-sydney#service",
+    name: "House Painters Sydney",
+    serviceType: "Residential Painting Services",
+    url: "https://www.prismacoatings.com.au/house-painters-sydney",
+    description:
+      "Professional house painters in Sydney offering interior and exterior painting for homes, apartments and residential properties.",
+    areaServed: {
+      "@type": "City",
+      name: "Sydney",
+    },
     provider: {
-      '@type': 'LocalBusiness',
-      name: 'Prisma Coatings',
-      url: 'https://www.prismacoatings.com.au',
-      telephone: '+61 401 508 036',
-      areaServed: {
-        '@type': 'City',
-        name: 'Sydney',
-      },
+      "@type": "PaintingContractor",
+      name: "Prisma Coatings",
+      url: "https://www.prismacoatings.com.au",
+      telephone: "+61 401 508 036",
       address: {
-        '@type': 'PostalAddress',
-        streetAddress: '20/25 Marlowe St',
-        addressLocality: 'Campsie',
-        addressRegion: 'NSW',
-        postalCode: '2194',
-        addressCountry: 'AU',
+        "@type": "PostalAddress",
+        streetAddress: "20/25 Marlowe St",
+        addressLocality: "Campsie",
+        addressRegion: "NSW",
+        postalCode: "2194",
+        addressCountry: "AU",
       },
     },
-    url: 'https://www.prismacoatings.com.au/house-painters-sydney',
-    areaServed: serviceAreas,
-    description:
-      'Professional house painters in Sydney offering interior and exterior painting for homes, apartments and residential properties.',
-  }
+    offers: {
+      "@type": "Offer",
+      url: "https://www.prismacoatings.com.au/contact",
+      priceCurrency: "AUD",
+      availability: "https://schema.org/InStock",
+      description:
+        "Request a free quote for house painting services in Sydney.",
+    },
+  };
 
   return (
     <main className="bg-white text-[#13233A]">
@@ -140,9 +149,9 @@ export default function HousePaintersSydneyPage() {
             </h1>
 
             <p className="mt-6 text-lg md:text-xl text-gray-200 max-w-2xl">
-              Prisma Coatings delivers professional house painting services in Sydney,
-              helping homeowners transform interiors and exteriors with clean finishes,
-              careful preparation and reliable service.
+              Prisma Coatings delivers professional house painting services in
+              Sydney, helping homeowners transform interiors and exteriors with
+              clean finishes, careful preparation and reliable service.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -206,10 +215,11 @@ export default function HousePaintersSydneyPage() {
           </h2>
 
           <p className="mt-6 text-lg text-gray-700 leading-relaxed">
-            If you are searching for experienced house painters in Sydney, Prisma Coatings
-            offers a practical mix of workmanship, communication and attention to detail.
-            We work on homes, apartments and residential properties with a focus on
-            preparation, finish quality and a smooth client experience.
+            If you are searching for experienced house painters in Sydney,
+            Prisma Coatings offers a practical mix of workmanship, communication
+            and attention to detail. We work on homes, apartments and
+            residential properties with a focus on preparation, finish quality
+            and a smooth client experience.
           </p>
 
           <div className="mt-8 space-y-4">
@@ -233,15 +243,15 @@ export default function HousePaintersSydneyPage() {
               Interior and Exterior House Painting in Sydney
             </h2>
             <p className="mt-6 text-lg text-gray-700">
-              We help homeowners improve the look and feel of their property with painting
-              solutions tailored to interior spaces, exterior surfaces and full residential
-              repaints.
+              We help homeowners improve the look and feel of their property
+              with painting solutions tailored to interior spaces, exterior
+              surfaces and full residential repaints.
             </p>
           </div>
 
           <div className="mt-12 grid md:grid-cols-3 gap-6">
             {services.map((service) => {
-              const Icon = service.icon
+              const Icon = service.icon;
               return (
                 <article
                   key={service.title}
@@ -251,9 +261,11 @@ export default function HousePaintersSydneyPage() {
                     <Icon className="w-6 h-6" />
                   </div>
                   <h3 className="text-xl font-bold">{service.title}</h3>
-                  <p className="mt-4 text-gray-700 leading-relaxed">{service.description}</p>
+                  <p className="mt-4 text-gray-700 leading-relaxed">
+                    {service.description}
+                  </p>
                 </article>
-              )
+              );
             })}
           </div>
         </div>
@@ -268,15 +280,15 @@ export default function HousePaintersSydneyPage() {
             House Painting That Improves Appearance and Adds Protection
           </h2>
           <p className="mt-6 text-lg text-gray-700 leading-relaxed">
-            A quality paint job does more than change colour. It refreshes tired spaces,
-            improves presentation and helps protect surfaces from daily wear and weather
-            exposure. That is why proper preparation, premium materials and careful
-            application matter.
+            A quality paint job does more than change colour. It refreshes tired
+            spaces, improves presentation and helps protect surfaces from daily
+            wear and weather exposure. That is why proper preparation, premium
+            materials and careful application matter.
           </p>
           <p className="mt-4 text-lg text-gray-700 leading-relaxed">
-            Whether you need a full repaint, a smaller residential update or support for a
-            property preparation project, Prisma Coatings can help with practical advice and
-            professional execution.
+            Whether you need a full repaint, a smaller residential update or
+            support for a property preparation project, Prisma Coatings can help
+            with practical advice and professional execution.
           </p>
 
           <div className="mt-8 flex items-center gap-2 text-[#D61C1C]">
@@ -308,8 +320,8 @@ export default function HousePaintersSydneyPage() {
             Need Reliable House Painters in Sydney?
           </h2>
           <p className="mt-6 text-lg text-gray-200">
-            Speak with Prisma Coatings about your residential painting project and request
-            a free quote today.
+            Speak with Prisma Coatings about your residential painting project
+            and request a free quote today.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
@@ -341,7 +353,10 @@ export default function HousePaintersSydneyPage() {
 
         <div className="mt-12 space-y-6">
           {faqs.map((faq) => (
-            <article key={faq.q} className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+            <article
+              key={faq.q}
+              className="bg-gray-50 rounded-2xl p-6 border border-gray-100"
+            >
               <h3 className="text-xl font-bold">{faq.q}</h3>
               <p className="mt-3 text-gray-700 leading-relaxed">{faq.a}</p>
             </article>
@@ -349,5 +364,5 @@ export default function HousePaintersSydneyPage() {
         </div>
       </section>
     </main>
-  )
+  );
 }

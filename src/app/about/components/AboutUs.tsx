@@ -4,25 +4,13 @@ import Link from 'next/link'
 
 const AboutUs = () => {
   // Schema structured data for SEO
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Prisma Coatings",
-    "description": "Professional painting services in Sydney with over 9 years of experience specializing in residential, commercial, and strata painting",
-    "foundingDate": "2015",
-    "address": {
-      "@type": "PostalAddress",
-      "addressRegion": "NSW",
-      "addressCountry": "AU",
-      "addressLocality": "Sydney"
-    },
-    "areaServed": [
-      "Sydney", "Inner West", "Eastern Suburbs", "Northern Beaches", "North Shore", "Western Sydney"
-    ],
-    "serviceType": [
-      "House Painting", "Commercial Painting", "Strata Painting", "Interior Painting", "Exterior Painting"
-    ]
-  };
+ const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Prisma Coatings",
+  "description": "Learn more about Prisma Coatings, professional painters in Sydney with over 10 years of experience.",
+  "url": "https://www.prismacoatings.com.au/about"
+};
 
   return (
     <>

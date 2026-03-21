@@ -24,25 +24,19 @@ const OurTeam = () => {
   // Structured data for SEO
   const organizationStructuredData = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Prisma Coatings",
-    url: "https://www.prismacoatings.com.au",
-    logo: "https://www.prismacoatings.com.au/logo/logo.png",
+    "@type": "AboutPage",
+    name: "Our Team | Prisma Coatings",
+    url: "https://www.prismacoatings.com.au/our-team",
     description:
-      "Professional painting services in Sydney with over 10 years of experience",
-    areaServed: "Sydney, Australia",
-    serviceType: [
-      "Residential Painting",
-      "Commercial Painting",
-      "Strata Painting",
-    ],
-    employee: teamMembers.map((member) => ({
+      "Meet the Prisma Coatings team, experienced painters serving residential, commercial, and strata projects across Sydney.",
+    mainEntity: teamMembers.map((member) => ({
       "@type": "Person",
       name: member.name,
       jobTitle: member.position,
       worksFor: {
-        "@type": "Organization",
+        "@type": "PaintingContractor",
         name: "Prisma Coatings",
+        url: "https://www.prismacoatings.com.au",
       },
     })),
   };
@@ -81,17 +75,22 @@ const OurTeam = () => {
           {/* Team Grid */}
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-2">
             {teamMembers.map((member, index) => (
-              <div key={member.id} className="text-center" itemScope itemType="https://schema.org/Person">
-              <ProfileCard
-                imageUrl={`/images/${member.id}.jpg`}
-                name={member.name}
-                isVerified={true}
-                title={member.position}
-                followers={10}
-                projects={73}
-                onFollowClick={() => alert(`Followed ${member.name}!`)}
-                isFollowing={false}
-              />
+              <div
+                key={member.id}
+                className="text-center"
+                itemScope
+                itemType="https://schema.org/Person"
+              >
+                <ProfileCard
+                  imageUrl={`/images/${member.id}.jpg`}
+                  name={member.name}
+                  isVerified={true}
+                  title={member.position}
+                  followers={10}
+                  projects={73}
+                  onFollowClick={() => alert(`Followed ${member.name}!`)}
+                  isFollowing={false}
+                />
               </div>
             ))}
           </div>

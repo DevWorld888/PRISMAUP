@@ -1,31 +1,35 @@
-import React from 'react'
-import type { Metadata } from 'next'
+import React from "react";
+import type { Metadata } from "next";
 
-import { blogPosts  } from '../utils/blogData'
-import BlogCategoriesClient from './components/BlogCategoriesClient'
+import { blogPosts } from "../utils/blogData";
+import BlogCategoriesClient from "./components/BlogCategoriesClient";
 
 export const metadata: Metadata = {
-  title: 'Painting Tips & Industry Insights Blog | Prisma Coatings Sydney',
-  description: 'Expert painting tips, color trends, maintenance advice, and industry insights from Sydney\'s professional painters. Get the latest updates from Prisma Coatings.',
-  keywords: 'painting tips, color trends, house painting advice, painting maintenance, exterior painting tips, interior design, painting blog sydney',
+  title: "Painting Tips & Industry Insights Blog | Prisma Coatings Sydney",
+  description:
+    "Expert painting tips, color trends, maintenance advice, and industry insights from Sydney's professional painters. Get the latest updates from Prisma Coatings.",
+  keywords:
+    "painting tips, color trends, house painting advice, painting maintenance, exterior painting tips, interior design, painting blog sydney",
   openGraph: {
-    title: 'Painting Tips & Industry Insights Blog | Prisma Coatings',
-    description: 'Expert painting tips, color trends, and maintenance advice from Sydney\'s professional painters.',
-    url: 'https://prismacoatings.com.au/blog',
-    type: 'website',
-    locale: 'en_AU',
-    siteName: 'Prisma Coatings',
+    title: "Painting Tips & Industry Insights Blog | Prisma Coatings",
+    description:
+      "Expert painting tips, color trends, and maintenance advice from Sydney's professional painters.",
+    url: "https://prismacoatings.com.au/blog",
+    type: "website",
+    locale: "en_AU",
+    siteName: "Prisma Coatings",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Painting Tips & Industry Insights Blog | Prisma Coatings',
-    description: 'Expert painting tips, color trends, and maintenance advice from Sydney\'s professional painters.',
+    card: "summary_large_image",
+    title: "Painting Tips & Industry Insights Blog | Prisma Coatings",
+    description:
+      "Expert painting tips, color trends, and maintenance advice from Sydney's professional painters.",
   },
   robots: {
     index: true,
     follow: true,
   },
-}
+};
 
 // const BlogCard = ({ post }: { post: BlogPost }) => (
 //   <article className="blog-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
@@ -46,8 +50,8 @@ export const metadata: Metadata = {
 //         <span>{post.readTime}</span>
 //       </div>
 //       <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-//         <Link 
-//           href={`/blog/${post.slug}`} 
+//         <Link
+//           href={`/blog/${post.slug}`}
 //           className="hover:text-[#13233A] transition-colors duration-200"
 //         >
 //           {post.title}
@@ -62,7 +66,7 @@ export const metadata: Metadata = {
 //             day: 'numeric'
 //           })}
 //         </time>
-//         <Link 
+//         <Link
 //           href={`/blog/${post.slug}`}
 //           className="text-[#D61C1C] hover:text-[#EF4444] font-medium text-sm transition-colors duration-200"
 //         >
@@ -81,11 +85,13 @@ const page = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl md:text-6xl">
-              Painting Tips & <span className="text-[#EF4444]">Industry Insights</span>
+              Painting Tips &{" "}
+              <span className="text-[#EF4444]">Industry Insights</span>
             </h1>
             <p className="mt-6 max-w-2xl mx-auto text-xl text-gray-600">
-              Expert advice, color trends, and professional tips from Sydney&apos;s trusted painting professionals. 
-              Stay updated with the latest in residential and commercial painting.
+              Expert advice, color trends, and professional tips from
+              Sydney&apos;s trusted painting professionals. Stay updated with
+              the latest in residential and commercial painting.
             </p>
           </div>
         </div>
@@ -136,34 +142,44 @@ const page = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Blog",
-            "name": "Prisma Coatings Blog",
-            "description": "Expert painting tips, color trends, and industry insights from Sydney's professional painters",
-            "url": "https://prismacoatings.com.au/blog",
-            "publisher": {
+            name: "Prisma Coatings Blog",
+            description:
+              "Expert painting tips, color trends, and industry insights from Sydney's professional painters.",
+            url: "https://www.prismacoatings.com.au/blog",
+            publisher: {
               "@type": "Organization",
-              "name": "Prisma Coatings",
-              "url": "https://prismacoatings.com.au"
-            },
-            "blogPost": blogPosts.map(post => ({
-              "@type": "BlogPosting",
-              "headline": post.title,
-              "description": post.excerpt,
-              "url": `https://prismacoatings.com.au/blog/${post.slug}`,
-              "datePublished": post.date,
-              "author": {
-                "@type": "Organization",
-                "name": "Prisma Coatings"
+              name: "Prisma Coatings",
+              url: "https://www.prismacoatings.com.au",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://www.prismacoatings.com.au/logo/logo.png",
               },
-              "publisher": {
+            },
+            blogPost: blogPosts.map((post) => ({
+              "@type": "BlogPosting",
+              headline: post.title,
+              description: post.excerpt,
+              url: `https://www.prismacoatings.com.au/blog/${post.slug}`,
+              mainEntityOfPage: `https://www.prismacoatings.com.au/blog/${post.slug}`,
+              datePublished: post.date,
+              author: {
                 "@type": "Organization",
-                "name": "Prisma Coatings"
-              }
-            }))
-          })
+                name: "Prisma Coatings",
+              },
+              publisher: {
+                "@type": "Organization",
+                name: "Prisma Coatings",
+                logo: {
+                  "@type": "ImageObject",
+                  url: "https://www.prismacoatings.com.au/logo/logo.png",
+                },
+              },
+            })),
+          }),
         }}
       />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

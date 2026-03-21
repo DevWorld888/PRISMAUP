@@ -1,22 +1,28 @@
-import React from 'react'
-import type { Metadata } from 'next'
-import Image from 'next/image'
-import Link from 'next/link'
-import { notFound } from 'next/navigation'
-import { getBlogPostBySlug, getRelatedPosts, blogPosts } from '../../utils/blogData'
+import React from "react";
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import {
+  getBlogPostBySlug,
+  getRelatedPosts,
+  blogPosts,
+} from "../../utils/blogData";
 
 interface PageProps {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string }>;
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params
-  const post = getBlogPostBySlug(slug)
-  
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getBlogPostBySlug(slug);
+
   if (!post) {
     return {
-      title: 'Post Not Found',
-    }
+      title: "Post Not Found",
+    };
   }
 
   return {
@@ -27,11 +33,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: post.title,
       description: post.excerpt,
       url: `https://prismacoatings.com.au/blog/${post.slug}`,
-      type: 'article',
+      type: "article",
       publishedTime: post.date,
       authors: [post.author],
-      locale: 'en_AU',
-      siteName: 'Prisma Coatings',
+      locale: "en_AU",
+      siteName: "Prisma Coatings",
       images: [
         {
           url: post.image,
@@ -42,7 +48,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       ],
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
       images: [post.image],
@@ -51,24 +57,24 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       index: true,
       follow: true,
     },
-  }
+  };
 }
 
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({
     slug: post.slug,
-  }))
+  }));
 }
 
 const page = async ({ params }: PageProps) => {
-  const { slug } = await params
-  const post = getBlogPostBySlug(slug)
+  const { slug } = await params;
+  const post = getBlogPostBySlug(slug);
 
   if (!post) {
-    notFound()
+    notFound();
   }
 
-  const relatedPosts = getRelatedPosts(post.id, post.category)
+  const relatedPosts = getRelatedPosts(post.id, post.category);
 
   return (
     <div className="min-h-screen bg-white">
@@ -77,7 +83,9 @@ const page = async ({ params }: PageProps) => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-2 text-sm text-gray-500 mb-4">
-              <Link href="/blog" className="hover:text-blue-600">Blog</Link>
+              <Link href="/blog" className="hover:text-blue-600">
+                Blog
+              </Link>
               <span>/</span>
               <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">
                 {post.category}
@@ -88,10 +96,10 @@ const page = async ({ params }: PageProps) => {
             </h1>
             <div className="flex items-center justify-center space-x-4 text-gray-600">
               <time dateTime={post.date}>
-                {new Date(post.date).toLocaleDateString('en-AU', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric'
+                {new Date(post.date).toLocaleDateString("en-AU", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
                 })}
               </time>
               <span>•</span>
@@ -118,9 +126,9 @@ const page = async ({ params }: PageProps) => {
       {/* Article Content */}
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="prose prose-lg max-w-none">
-          <div 
+          <div
             className="text-gray-700 leading-relaxed"
-            dangerouslySetInnerHTML={{ __html: post.content || '' }}
+            dangerouslySetInnerHTML={{ __html: post.content || "" }}
           />
         </div>
       </article>
@@ -132,7 +140,8 @@ const page = async ({ params }: PageProps) => {
             Ready to Transform Your Space?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Get professional painting services from Sydney&apos;s trusted experts.
+            Get professional painting services from Sydney&apos;s trusted
+            experts.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -160,7 +169,10 @@ const page = async ({ params }: PageProps) => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {relatedPosts.map((relatedPost) => (
-                <article key={relatedPost.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <article
+                  key={relatedPost.id}
+                  className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                >
                   <div className="relative h-48 w-full">
                     <Image
                       src={relatedPost.image}
@@ -177,15 +189,17 @@ const page = async ({ params }: PageProps) => {
                       </span>
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      <Link 
+                      <Link
                         href={`/blog/${relatedPost.slug}`}
                         className="hover:text-blue-600 transition-colors duration-200"
                       >
                         {relatedPost.title}
                       </Link>
                     </h3>
-                    <p className="text-gray-600 mb-4 line-clamp-3">{relatedPost.excerpt}</p>
-                    <Link 
+                    <p className="text-gray-600 mb-4 line-clamp-3">
+                      {relatedPost.excerpt}
+                    </p>
+                    <Link
                       href={`/blog/${relatedPost.slug}`}
                       className="text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors duration-200"
                     >
@@ -205,34 +219,39 @@ const page = async ({ params }: PageProps) => {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": post.title,
-            "description": post.excerpt,
-            "image": `https://prismacoatings.com.au${post.image}`,
-            "datePublished": post.date,
-            "dateModified": post.date,
-            "author": {
-              "@type": "Organization",
-              "name": post.author,
-              "url": "https://prismacoatings.com.au"
+            "@type": "BlogPosting",
+            headline: post.title,
+            description: post.excerpt,
+            url: `https://www.prismacoatings.com.au/blog/${post.slug}`,
+            image: {
+              "@type": "ImageObject",
+              url: `https://www.prismacoatings.com.au${post.image}`,
             },
-            "publisher": {
+            datePublished: post.date,
+            dateModified: post.date,
+            author: {
               "@type": "Organization",
-              "name": "Prisma Coatings",
-              "logo": {
+              name: "Prisma Coatings",
+              url: "https://www.prismacoatings.com.au",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "Prisma Coatings",
+              url: "https://www.prismacoatings.com.au",
+              logo: {
                 "@type": "ImageObject",
-                "url": "https://prismacoatings.com.au/logo/logo.png"
-              }
+                url: "https://www.prismacoatings.com.au/logo/logo.png",
+              },
             },
-            "mainEntityOfPage": {
+            mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": `https://prismacoatings.com.au/blog/${post.slug}`
-            }
-          })
+              "@id": `https://www.prismacoatings.com.au/blog/${post.slug}`,
+            },
+          }),
         }}
       />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

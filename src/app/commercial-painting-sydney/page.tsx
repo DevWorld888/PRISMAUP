@@ -1,6 +1,6 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import Image from 'next/image'
+import type { Metadata } from "next";
+import Link from "next/link";
+import Image from "next/image";
 import {
   CheckCircle,
   Building2,
@@ -9,113 +9,123 @@ import {
   Phone,
   ShieldCheck,
   Star,
-} from 'lucide-react'
+} from "lucide-react";
 
 export const metadata: Metadata = {
-  title: 'Commercial Painting Sydney | Professional Painters for Businesses | Prisma Coatings',
+  title:
+    "Commercial Painting Sydney | Professional Painters for Businesses | Prisma Coatings",
   description:
-    'Prisma Coatings provides commercial painting services in Sydney for offices, retail spaces, strata properties and business premises. Reliable painters, quality finishes and minimal disruption.',
+    "Prisma Coatings provides commercial painting services in Sydney for offices, retail spaces, strata properties and business premises. Reliable painters, quality finishes and minimal disruption.",
   keywords: [
-    'commercial painting sydney',
-    'commercial painters sydney',
-    'office painting sydney',
-    'retail painting sydney',
-    'business painters sydney',
-    'professional painters sydney',
-    'strata painting sydney',
-    'commercial property painting sydney',
+    "commercial painting sydney",
+    "commercial painters sydney",
+    "office painting sydney",
+    "retail painting sydney",
+    "business painters sydney",
+    "professional painters sydney",
+    "strata painting sydney",
+    "commercial property painting sydney",
   ],
   alternates: {
-    canonical: 'https://www.prismacoatings.com.au/commercial-painting-sydney',
+    canonical: "https://www.prismacoatings.com.au/commercial-painting-sydney",
   },
   openGraph: {
-    title: 'Commercial Painting Sydney | Prisma Coatings',
+    title: "Commercial Painting Sydney | Prisma Coatings",
     description:
-      'Professional commercial painting services in Sydney for offices, retail spaces and business properties.',
-    url: 'https://www.prismacoatings.com.au/commercial-painting-sydney',
-    siteName: 'Prisma Coatings',
-    locale: 'en_AU',
-    type: 'website',
+      "Professional commercial painting services in Sydney for offices, retail spaces and business properties.",
+    url: "https://www.prismacoatings.com.au/commercial-painting-sydney",
+    siteName: "Prisma Coatings",
+    locale: "en_AU",
+    type: "website",
   },
-}
+};
 
 const benefits = [
-  'Commercial painting for offices, shops and business premises',
-  'Flexible scheduling to reduce disruption to operations',
-  'Professional surface preparation and quality finishes',
-  'Reliable timelines and clear communication',
-  'Suitable for commercial properties, retail and strata projects',
-]
+  "Commercial painting for offices, shops and business premises",
+  "Flexible scheduling to reduce disruption to operations",
+  "Professional surface preparation and quality finishes",
+  "Reliable timelines and clear communication",
+  "Suitable for commercial properties, retail and strata projects",
+];
 
 const services = [
   {
-    title: 'Office Painting',
+    title: "Office Painting",
     description:
-      'We deliver clean and professional painting finishes for office environments, workspaces and shared business premises.',
+      "We deliver clean and professional painting finishes for office environments, workspaces and shared business premises.",
     icon: Briefcase,
   },
   {
-    title: 'Retail & Business Spaces',
+    title: "Retail & Business Spaces",
     description:
-      'We help improve the presentation of retail stores, commercial interiors and customer-facing spaces with high-quality finishes.',
+      "We help improve the presentation of retail stores, commercial interiors and customer-facing spaces with high-quality finishes.",
     icon: Building2,
   },
   {
-    title: 'Minimal Disruption Scheduling',
+    title: "Minimal Disruption Scheduling",
     description:
-      'We plan projects carefully to help reduce disruption and keep your business operations moving as smoothly as possible.',
+      "We plan projects carefully to help reduce disruption and keep your business operations moving as smoothly as possible.",
     icon: Clock3,
   },
-]
+];
 
 const faqs = [
   {
-    q: 'What types of commercial properties do you paint?',
-    a: 'Prisma Coatings works on offices, retail spaces, commercial buildings, strata properties and other business premises across Sydney.',
+    q: "What types of commercial properties do you paint?",
+    a: "Prisma Coatings works on offices, retail spaces, commercial buildings, strata properties and other business premises across Sydney.",
   },
   {
-    q: 'Can commercial painting be scheduled to reduce disruption?',
-    a: 'Yes. Commercial projects can be planned around business needs to help reduce operational disruption where possible.',
+    q: "Can commercial painting be scheduled to reduce disruption?",
+    a: "Yes. Commercial projects can be planned around business needs to help reduce operational disruption where possible.",
   },
   {
-    q: 'Do you prepare commercial surfaces before painting?',
-    a: 'Yes. Surface preparation is an important part of any commercial painting project to ensure a clean, professional and longer-lasting finish.',
+    q: "Do you prepare commercial surfaces before painting?",
+    a: "Yes. Surface preparation is an important part of any commercial painting project to ensure a clean, professional and longer-lasting finish.",
   },
   {
-    q: 'Can I request a free commercial painting quote?',
-    a: 'Yes. Contact Prisma Coatings to discuss your commercial painting project and request a free quote.',
+    q: "Can I request a free commercial painting quote?",
+    a: "Yes. Contact Prisma Coatings to discuss your commercial painting project and request a free quote.",
   },
-]
+];
 
 export default function CommercialPaintingSydneyPage() {
   const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: 'Commercial Painting Sydney',
-    serviceType: 'Commercial Painting Services',
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id":
+      "https://www.prismacoatings.com.au/commercial-painting-sydney#service",
+    name: "Commercial Painting Sydney",
+    serviceType: "Commercial Painting Services",
+    url: "https://www.prismacoatings.com.au/commercial-painting-sydney",
+    description:
+      "Commercial painting services in Sydney for offices, retail spaces, commercial properties and business premises.",
+    areaServed: {
+      "@type": "City",
+      name: "Sydney",
+    },
     provider: {
-      '@type': 'LocalBusiness',
-      name: 'Prisma Coatings',
-      url: 'https://www.prismacoatings.com.au',
-      telephone: '+61 401 508 036',
+      "@type": "PaintingContractor",
+      name: "Prisma Coatings",
+      url: "https://www.prismacoatings.com.au",
+      telephone: "+61 401 508 036",
       address: {
-        '@type': 'PostalAddress',
-        streetAddress: '20/25 Marlowe St',
-        addressLocality: 'Campsie',
-        addressRegion: 'NSW',
-        postalCode: '2194',
-        addressCountry: 'AU',
-      },
-      areaServed: {
-        '@type': 'City',
-        name: 'Sydney',
+        "@type": "PostalAddress",
+        streetAddress: "20/25 Marlowe St",
+        addressLocality: "Campsie",
+        addressRegion: "NSW",
+        postalCode: "2194",
+        addressCountry: "AU",
       },
     },
-    url: 'https://www.prismacoatings.com.au/commercial-painting-sydney',
-    description:
-      'Commercial painting services in Sydney for offices, retail spaces, commercial properties and business premises.',
-  }
-
+    offers: {
+      "@type": "Offer",
+      url: "https://www.prismacoatings.com.au/contact",
+      priceCurrency: "AUD",
+      availability: "https://schema.org/InStock",
+      description:
+        "Request a free quote for commercial painting services in Sydney.",
+    },
+  };
   return (
     <main className="bg-white text-[#13233A]">
       <script
@@ -136,9 +146,10 @@ export default function CommercialPaintingSydneyPage() {
             </h1>
 
             <p className="mt-6 text-lg md:text-xl text-gray-200 max-w-2xl">
-              Prisma Coatings provides commercial painting services in Sydney for offices,
-              retail spaces, strata buildings and business properties. We focus on quality,
-              professionalism and project planning that helps minimise disruption.
+              Prisma Coatings provides commercial painting services in Sydney
+              for offices, retail spaces, strata buildings and business
+              properties. We focus on quality, professionalism and project
+              planning that helps minimise disruption.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -191,15 +202,16 @@ export default function CommercialPaintingSydneyPage() {
           </h2>
 
           <p className="mt-6 text-lg text-gray-700 leading-relaxed">
-            Commercial painting requires more than just a good finish. Businesses need
-            reliable scheduling, professional communication and work that supports the
-            presentation of the space without creating unnecessary delays.
+            Commercial painting requires more than just a good finish.
+            Businesses need reliable scheduling, professional communication and
+            work that supports the presentation of the space without creating
+            unnecessary delays.
           </p>
 
           <p className="mt-4 text-lg text-gray-700 leading-relaxed">
-            Prisma Coatings helps businesses across Sydney improve their premises with
-            professional painting services for offices, shops, commercial interiors and
-            larger shared properties.
+            Prisma Coatings helps businesses across Sydney improve their
+            premises with professional painting services for offices, shops,
+            commercial interiors and larger shared properties.
           </p>
 
           <div className="mt-8 space-y-4">
@@ -225,14 +237,15 @@ export default function CommercialPaintingSydneyPage() {
             </h2>
 
             <p className="mt-6 text-lg text-gray-700">
-              We support a range of commercial painting needs, from office interiors to
-              business premises and customer-facing retail environments.
+              We support a range of commercial painting needs, from office
+              interiors to business premises and customer-facing retail
+              environments.
             </p>
           </div>
 
           <div className="mt-12 grid md:grid-cols-3 gap-6">
             {services.map((service) => {
-              const Icon = service.icon
+              const Icon = service.icon;
               return (
                 <article
                   key={service.title}
@@ -242,9 +255,11 @@ export default function CommercialPaintingSydneyPage() {
                     <Icon className="w-6 h-6" />
                   </div>
                   <h3 className="text-xl font-bold">{service.title}</h3>
-                  <p className="mt-4 text-gray-700 leading-relaxed">{service.description}</p>
+                  <p className="mt-4 text-gray-700 leading-relaxed">
+                    {service.description}
+                  </p>
                 </article>
-              )
+              );
             })}
           </div>
         </div>
@@ -261,14 +276,15 @@ export default function CommercialPaintingSydneyPage() {
           </h2>
 
           <p className="mt-6 text-lg text-gray-700 leading-relaxed">
-            The appearance of your premises affects how clients, staff and visitors
-            experience your business. Clean, professional finishes help reinforce trust,
-            presentation and attention to detail.
+            The appearance of your premises affects how clients, staff and
+            visitors experience your business. Clean, professional finishes help
+            reinforce trust, presentation and attention to detail.
           </p>
 
           <p className="mt-4 text-lg text-gray-700 leading-relaxed">
-            Prisma Coatings combines practical project planning with quality workmanship to
-            help commercial properties look sharp, professional and well maintained.
+            Prisma Coatings combines practical project planning with quality
+            workmanship to help commercial properties look sharp, professional
+            and well maintained.
           </p>
 
           <div className="mt-8 flex items-center gap-2 text-[#D61C1C]">
@@ -318,8 +334,8 @@ export default function CommercialPaintingSydneyPage() {
           </h2>
 
           <p className="mt-6 text-lg text-gray-200">
-            Speak with Prisma Coatings about your business, office or commercial painting
-            project and request a free quote today.
+            Speak with Prisma Coatings about your business, office or commercial
+            painting project and request a free quote today.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
@@ -353,7 +369,10 @@ export default function CommercialPaintingSydneyPage() {
 
         <div className="mt-12 space-y-6">
           {faqs.map((faq) => (
-            <article key={faq.q} className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+            <article
+              key={faq.q}
+              className="bg-gray-50 rounded-2xl p-6 border border-gray-100"
+            >
               <h3 className="text-xl font-bold">{faq.q}</h3>
               <p className="mt-3 text-gray-700 leading-relaxed">{faq.a}</p>
             </article>
@@ -361,5 +380,5 @@ export default function CommercialPaintingSydneyPage() {
         </div>
       </section>
     </main>
-  )
+  );
 }

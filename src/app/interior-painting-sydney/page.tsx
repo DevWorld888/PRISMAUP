@@ -1,113 +1,129 @@
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import Image from 'next/image'
-import { CheckCircle, Home, Paintbrush, Palette, Phone, Star } from 'lucide-react'
+import type { Metadata } from "next";
+import Link from "next/link";
+import Image from "next/image";
+import {
+  CheckCircle,
+  Home,
+  Paintbrush,
+  Palette,
+  Phone,
+  Star,
+} from "lucide-react";
 
 export const metadata: Metadata = {
-  title: 'Interior Painting Sydney | Professional House Painters | Prisma Coatings',
+  title:
+    "Interior Painting Sydney | Professional House Painters | Prisma Coatings",
   description:
-    'Prisma Coatings provides professional interior painting services in Sydney for homes, apartments and residential spaces. Get a free quote for walls, ceilings, trims and full interior repaints.',
+    "Prisma Coatings provides professional interior painting services in Sydney for homes, apartments and residential spaces. Get a free quote for walls, ceilings, trims and full interior repaints.",
   keywords: [
-    'interior painting sydney',
-    'interior painters sydney',
-    'house painters sydney',
-    'home interior painting sydney',
-    'apartment painters sydney',
-    'ceiling painting sydney',
-    'wall painting sydney',
-    'trim painting sydney',
+    "interior painting sydney",
+    "interior painters sydney",
+    "house painters sydney",
+    "home interior painting sydney",
+    "apartment painters sydney",
+    "ceiling painting sydney",
+    "wall painting sydney",
+    "trim painting sydney",
   ],
   alternates: {
-    canonical: 'https://www.prismacoatings.com.au/interior-painting-sydney',
+    canonical: "https://www.prismacoatings.com.au/interior-painting-sydney",
   },
   openGraph: {
-    title: 'Interior Painting Sydney | Prisma Coatings',
+    title: "Interior Painting Sydney | Prisma Coatings",
     description:
-      'Professional interior painting services in Sydney for homes, apartments and living spaces.',
-    url: 'https://www.prismacoatings.com.au/interior-painting-sydney',
-    siteName: 'Prisma Coatings',
-    locale: 'en_AU',
-    type: 'website',
+      "Professional interior painting services in Sydney for homes, apartments and living spaces.",
+    url: "https://www.prismacoatings.com.au/interior-painting-sydney",
+    siteName: "Prisma Coatings",
+    locale: "en_AU",
+    type: "website",
   },
-}
+};
 
 const features = [
-  'Walls, ceilings, trims and doors',
-  'Full interior repaints and room refreshes',
-  'Apartment and residential painting',
-  'Careful surface preparation before painting',
-  'Clean workmanship and attention to detail',
-]
+  "Walls, ceilings, trims and doors",
+  "Full interior repaints and room refreshes",
+  "Apartment and residential painting",
+  "Careful surface preparation before painting",
+  "Clean workmanship and attention to detail",
+];
 
 const services = [
   {
-    title: 'Walls & Ceilings',
+    title: "Walls & Ceilings",
     description:
-      'We repaint interior walls and ceilings to give your home a cleaner, brighter and more modern look.',
+      "We repaint interior walls and ceilings to give your home a cleaner, brighter and more modern look.",
     icon: Home,
   },
   {
-    title: 'Trims, Doors & Details',
+    title: "Trims, Doors & Details",
     description:
-      'From trims and skirting boards to doors and detailed finishes, we focus on the elements that lift the whole space.',
+      "From trims and skirting boards to doors and detailed finishes, we focus on the elements that lift the whole space.",
     icon: Paintbrush,
   },
   {
-    title: 'Colour Guidance',
+    title: "Colour Guidance",
     description:
-      'We help clients choose paint colours and finish types that suit the light, mood and style of each room.',
+      "We help clients choose paint colours and finish types that suit the light, mood and style of each room.",
     icon: Palette,
   },
-]
+];
 
 const faqs = [
   {
-    q: 'How much does interior painting cost in Sydney?',
-    a: 'The cost depends on the size of the area, the number of rooms, surface condition, ceiling height and how much preparation is required. The best option is to request a tailored quote.',
+    q: "How much does interior painting cost in Sydney?",
+    a: "The cost depends on the size of the area, the number of rooms, surface condition, ceiling height and how much preparation is required. The best option is to request a tailored quote.",
   },
   {
-    q: 'Do you paint apartments as well as houses?',
-    a: 'Yes. Prisma Coatings provides interior painting for houses, apartments, units and other residential properties across Sydney.',
+    q: "Do you paint apartments as well as houses?",
+    a: "Yes. Prisma Coatings provides interior painting for houses, apartments, units and other residential properties across Sydney.",
   },
   {
-    q: 'Do you prepare the surfaces before painting?',
-    a: 'Yes. Surface preparation is a key part of a quality finish. This can include patching, sanding, cleaning and preparing surfaces before paint is applied.',
+    q: "Do you prepare the surfaces before painting?",
+    a: "Yes. Surface preparation is a key part of a quality finish. This can include patching, sanding, cleaning and preparing surfaces before paint is applied.",
   },
   {
-    q: 'Can I get a free quote for interior painting?',
-    a: 'Yes. You can contact Prisma Coatings to discuss your project and request a free quote.',
+    q: "Can I get a free quote for interior painting?",
+    a: "Yes. You can contact Prisma Coatings to discuss your project and request a free quote.",
   },
-]
+];
 
 export default function InteriorPaintingSydneyPage() {
   const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: 'Interior Painting Sydney',
-    serviceType: 'Interior Residential Painting',
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://www.prismacoatings.com.au/interior-painting-sydney#service",
+    name: "Interior Painting Sydney",
+    serviceType: "Interior Residential Painting",
+    url: "https://www.prismacoatings.com.au/interior-painting-sydney",
+    description:
+      "Professional interior painting services in Sydney for homes, apartments and residential spaces including walls, ceilings, trims and doors.",
+    areaServed: {
+      "@type": "City",
+      name: "Sydney",
+    },
     provider: {
-      '@type': 'LocalBusiness',
-      name: 'Prisma Coatings',
-      url: 'https://www.prismacoatings.com.au',
-      telephone: '+61 401 508 036',
+      "@type": "PaintingContractor",
+      name: "Prisma Coatings",
+      url: "https://www.prismacoatings.com.au",
+      telephone: "+61 401 508 036",
       address: {
-        '@type': 'PostalAddress',
-        streetAddress: '20/25 Marlowe St',
-        addressLocality: 'Campsie',
-        addressRegion: 'NSW',
-        postalCode: '2194',
-        addressCountry: 'AU',
-      },
-      areaServed: {
-        '@type': 'City',
-        name: 'Sydney',
+        "@type": "PostalAddress",
+        streetAddress: "20/25 Marlowe St",
+        addressLocality: "Campsie",
+        addressRegion: "NSW",
+        postalCode: "2194",
+        addressCountry: "AU",
       },
     },
-    url: 'https://www.prismacoatings.com.au/interior-painting-sydney',
-    description:
-      'Professional interior painting services in Sydney for homes, apartments and residential spaces including walls, ceilings, trims and doors.',
-  }
-
+    offers: {
+      "@type": "Offer",
+      url: "https://www.prismacoatings.com.au/contact",
+      priceCurrency: "AUD",
+      availability: "https://schema.org/InStock",
+      description:
+        "Request a free quote for interior painting services in Sydney.",
+    },
+  };
   return (
     <main className="bg-white text-[#13233A]">
       <script
@@ -128,9 +144,10 @@ export default function InteriorPaintingSydneyPage() {
             </h1>
 
             <p className="mt-6 text-lg md:text-xl text-gray-200 max-w-2xl">
-              Prisma Coatings provides professional interior painting services in Sydney
-              for homes, apartments and residential spaces. We help transform walls,
-              ceilings, trims and living areas with clean finishes and careful workmanship.
+              Prisma Coatings provides professional interior painting services
+              in Sydney for homes, apartments and residential spaces. We help
+              transform walls, ceilings, trims and living areas with clean
+              finishes and careful workmanship.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -183,15 +200,16 @@ export default function InteriorPaintingSydneyPage() {
           </h2>
 
           <p className="mt-6 text-lg text-gray-700 leading-relaxed">
-            Looking for professional interior painting in Sydney? Prisma Coatings helps
-            homeowners refresh and modernise their spaces with high-quality finishes,
-            practical advice and a strong focus on preparation.
+            Looking for professional interior painting in Sydney? Prisma
+            Coatings helps homeowners refresh and modernise their spaces with
+            high-quality finishes, practical advice and a strong focus on
+            preparation.
           </p>
 
           <p className="mt-4 text-lg text-gray-700 leading-relaxed">
-            Whether you need a full repaint or selected rooms updated, our team works with
-            care and attention to detail so the final result feels clean, polished and
-            long-lasting.
+            Whether you need a full repaint or selected rooms updated, our team
+            works with care and attention to detail so the final result feels
+            clean, polished and long-lasting.
           </p>
 
           <div className="mt-8 space-y-4">
@@ -217,14 +235,15 @@ export default function InteriorPaintingSydneyPage() {
             </h2>
 
             <p className="mt-6 text-lg text-gray-700">
-              We help improve the look and feel of your home with interior painting services
-              designed for everyday living spaces, bedrooms, hallways, kitchens and more.
+              We help improve the look and feel of your home with interior
+              painting services designed for everyday living spaces, bedrooms,
+              hallways, kitchens and more.
             </p>
           </div>
 
           <div className="mt-12 grid md:grid-cols-3 gap-6">
             {services.map((service) => {
-              const Icon = service.icon
+              const Icon = service.icon;
               return (
                 <article
                   key={service.title}
@@ -234,9 +253,11 @@ export default function InteriorPaintingSydneyPage() {
                     <Icon className="w-6 h-6" />
                   </div>
                   <h3 className="text-xl font-bold">{service.title}</h3>
-                  <p className="mt-4 text-gray-700 leading-relaxed">{service.description}</p>
+                  <p className="mt-4 text-gray-700 leading-relaxed">
+                    {service.description}
+                  </p>
                 </article>
-              )
+              );
             })}
           </div>
         </div>
@@ -253,14 +274,15 @@ export default function InteriorPaintingSydneyPage() {
           </h2>
 
           <p className="mt-6 text-lg text-gray-700 leading-relaxed">
-            Interior painting is not just about applying paint. Good preparation is what
-            separates an average result from a finish that looks premium and lasts longer.
+            Interior painting is not just about applying paint. Good preparation
+            is what separates an average result from a finish that looks premium
+            and lasts longer.
           </p>
 
           <p className="mt-4 text-lg text-gray-700 leading-relaxed">
-            Prisma Coatings takes the time to prepare surfaces properly before painting.
-            That means a smoother final appearance, more consistent coverage and a cleaner
-            overall result for your home.
+            Prisma Coatings takes the time to prepare surfaces properly before
+            painting. That means a smoother final appearance, more consistent
+            coverage and a cleaner overall result for your home.
           </p>
 
           <div className="mt-8 flex items-center gap-2 text-[#D61C1C]">
@@ -309,8 +331,8 @@ export default function InteriorPaintingSydneyPage() {
           </h2>
 
           <p className="mt-6 text-lg text-gray-200">
-            Talk to Prisma Coatings about your project and get a free quote for interior
-            painting services in Sydney.
+            Talk to Prisma Coatings about your project and get a free quote for
+            interior painting services in Sydney.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
@@ -343,7 +365,10 @@ export default function InteriorPaintingSydneyPage() {
 
         <div className="mt-12 space-y-6">
           {faqs.map((faq) => (
-            <article key={faq.q} className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+            <article
+              key={faq.q}
+              className="bg-gray-50 rounded-2xl p-6 border border-gray-100"
+            >
               <h3 className="text-xl font-bold">{faq.q}</h3>
               <p className="mt-3 text-gray-700 leading-relaxed">{faq.a}</p>
             </article>
@@ -351,5 +376,5 @@ export default function InteriorPaintingSydneyPage() {
         </div>
       </section>
     </main>
-  )
+  );
 }
