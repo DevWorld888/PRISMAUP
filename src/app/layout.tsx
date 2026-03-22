@@ -172,7 +172,24 @@ export default function RootLayout({
                   },
                 ],
               },
-              
+              review: {
+                "@type": "Review",
+                reviewRating: {
+                  "@type": "Rating",
+                  ratingValue: "5",
+                  bestRating: "5",
+                },
+                author: {
+                  "@type": "Person",
+                  name: "Ken Stevens",
+                },
+                reviewBody:"Hally, the founder of Prisma Coatings, and his team are truly outstanding painters. I have used them several times on large homes in Mosman and the work is First Class. Courteous and Professional....and importantly 'lots of preparation'.....which ensures an excellent and long lasting finish. I recommend Hally and Prisma Coatings highly. The most important test is simple.....ask yourself would I use them again The answer is YES ! Well priced and reliable. A great team. Ken Stevens"
+              },
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "5.0",
+                reviewCount: "15",
+              },
             }),
           }}
         />
