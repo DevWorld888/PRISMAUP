@@ -14,40 +14,31 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title:
-    "Professional Painting Services Sydney | Prisma Coatings - House & Commercial Painters",
+  title: {
+    default: "Prisma Coatings | Professional Painters in Sydney",
+    template: "%s | Prisma Coatings",
+  },
   description:
-    "Expert house & commercial painting in Sydney with 10+ years experience. Licensed painters offering free quotes. Transform your property with Prisma Coatings - trusted by hundreds of customers.",
+    "Expert house & commercial painting in Sydney with 10+ years experience. Licensed painters offering free quotes.",
   keywords:
-    "house painting sydney, commercial painting, strata painting, painters sydney, painting services, interior painting, exterior painting, residential painting",
+    "house painting sydney, commercial painting, strata painting, painters sydney",
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Professional Painting Services Sydney | Prisma Coatings",
+    title: "Prisma Coatings | Professional Painters in Sydney",
     description:
-      "Expert house & commercial painting in Sydney with 10+ years experience. Licensed painters offering free quotes.",
-    url: "https://prismacoatings.com.au",
+      "Expert house & commercial painting in Sydney with 10+ years experience.",
+    url: "https://www.prismacoatings.com.au",
     type: "website",
     locale: "en_AU",
     siteName: "Prisma Coatings",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Professional Painting Services Sydney | Prisma Coatings",
+    title: "Prisma Coatings | Professional Painters in Sydney",
     description:
       "Expert house & commercial painting in Sydney with 10+ years experience.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
   },
 };
 

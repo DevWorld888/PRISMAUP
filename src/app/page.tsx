@@ -14,7 +14,7 @@ import RecentProjects from "./components/recentProjects";
 
 
 export const metadata: Metadata = {
-  title: "Professional Painting Services in Sydney | Prisma Coatings",
+  title: "House Painters Sydney | Commercial Painting | Prisma Coatings",
   description:
     "Expert residential and commercial painting in Sydney. Over 10 years of experience in strata, repaints, and new builds. Get your free quote today.",
   keywords: [

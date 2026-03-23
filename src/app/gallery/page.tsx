@@ -2,7 +2,11 @@ import React from 'react'
 
 import BeforeAfterGallery from '../components/BeforeAfterGallery'
 import GalleryProjects from './components/GalleryProjects'
-
+export const metadata = {
+  title: "Painting Gallery Sydney",
+  description:
+    "See our recent painting projects in Sydney including residential, commercial and strata work.",
+};
 const page = () => {
   return (
     <div className="min-h-screen">

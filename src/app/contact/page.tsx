@@ -7,6 +7,12 @@ import { z } from "zod";
 import Image from 'next/image';
 import TurnstileWidget from '../components/TurnstileWidget';
 
+export const metadata = {
+  title: "Contact Painters Sydney",
+  description:
+    "Contact Prisma Coatings for a free quote on house and commercial painting services in Sydney.",
+};
+
 const ContactPage = () => {
   // const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   // const recaptchaRef = useRef<ReCAPTCHA>(null);
