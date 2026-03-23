@@ -77,34 +77,34 @@ const Testimonials = () => {
   };
 
   // JSON-LD structured data for SEO
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "PaintingContractor",
-    name: "Prisma Coatings",
-    url: "https://www.prismacoatings.com.au",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5.0",
-      reviewCount: testimonials.length,
-      bestRating: "5",
-      worstRating: "1",
-    },
-    review: testimonials.map((testimonial) => ({
-      "@type": "Review",
-      reviewBody: testimonial.text,
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: testimonial.rating,
-        bestRating: "5",
-        worstRating: "1",
-      },
-      author: {
-        "@type": "Person",
-        name: testimonial.name,
-      },
+  // const structuredData = {
+  //   "@context": "https://schema.org",
+  //   "@type": "PaintingContractor",
+  //   name: "Prisma Coatings",
+  //   url: "https://www.prismacoatings.com.au",
+  //   aggregateRating: {
+  //     "@type": "AggregateRating",
+  //     ratingValue: "5.0",
+  //     reviewCount: testimonials.length,
+  //     bestRating: "5",
+  //     worstRating: "1",
+  //   },
+  //   review: testimonials.map((testimonial) => ({
+  //     "@type": "Review",
+  //     reviewBody: testimonial.text,
+  //     reviewRating: {
+  //       "@type": "Rating",
+  //       ratingValue: testimonial.rating,
+  //       bestRating: "5",
+  //       worstRating: "1",
+  //     },
+  //     author: {
+  //       "@type": "Person",
+  //       name: testimonial.name,
+  //     },
      
-    })),
-  };
+  //   })),
+  // };
 
   // Auto-rotate testimonials every 5 seconds
   // useEffect(() => {
@@ -120,7 +120,7 @@ const Testimonials = () => {
       {/* JSON-LD Structured Data for SEO */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        // dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <section
         className="py-20 bg-gray-50"
