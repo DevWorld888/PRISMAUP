@@ -102,11 +102,7 @@ const Testimonials = () => {
         "@type": "Person",
         name: testimonial.name,
       },
-      itemReviewed: {
-        "@type": "PaintingContractor",
-        name: "Prisma Coatings",
-        url: "https://www.prismacoatings.com.au",
-      },
+     
     })),
   };
 
