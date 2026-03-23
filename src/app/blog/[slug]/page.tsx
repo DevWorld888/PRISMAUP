@@ -26,7 +26,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${post.title} | Prisma Coatings Blog`,
+    title: `${post.title}`,
     description: post.excerpt,
     keywords: `${post.category.toLowerCase()}, painting tips sydney, ${post.title.toLowerCase()}`,
     openGraph: {
