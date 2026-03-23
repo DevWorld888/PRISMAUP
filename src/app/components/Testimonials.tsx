@@ -138,7 +138,7 @@ const Testimonials = () => {
 
               <h2
                 className="text-5xl sm:text-6xl font-bold text-[#13233A] leading-tight"
-                itemProp="headline"
+               
               >
                 Customer Reviews for <br />
                 <span className="text-[#D61C1C]">Prisma Coatings</span>
@@ -146,13 +146,10 @@ const Testimonials = () => {
 
               <div
                 className="border-l-4 border-[#D61C1C] pl-6"
-                itemScope
-                itemType="https://schema.org/AggregateRating"
               >
                 <div className="flex items-center space-x-3 mb-3">
                   <span
                     className="text-5xl font-bold text-[#13233A]"
-                    itemProp="ratingValue"
                   >
                     5.0
                   </span>
@@ -187,8 +184,8 @@ const Testimonials = () => {
                       ))}
                     </div>
                     <span className="text-2xl text-gray-600">
-                      (<span itemProp="ratingValue">5.0</span>/
-                      <span itemProp="bestRating">5</span>)
+                      (<span>5.0</span>/
+                      <span >5</span>)
                     </span>
                   </div>
                 </div>
@@ -236,8 +233,6 @@ const Testimonials = () => {
                   Our clients rate us as the best painting contractors in the
                   area. Professional house painting services with 5-star
                   reviews.
-                  <meta itemProp="reviewCount" content="5" />
-                  <meta itemProp="worstRating" content="1" />
                 </p>
                 {/* <p className="text-gray-600 text-lg">Based on 147 Google reviews.</p> */}
               </div>
@@ -247,8 +242,6 @@ const Testimonials = () => {
             <div className="relative">
               <article
                 className="bg-white rounded-3xl shadow-xl p-10 relative min-h-[400px]"
-                itemScope
-                itemType="https://schema.org/Review"
               >
                 {/* Quote Icon - Positioned to not overlap text */}
                 <div className="absolute top-8 right-8 z-10">
@@ -266,7 +259,7 @@ const Testimonials = () => {
                 <div className="space-y-8 relative z-20 pr-20">
                   <blockquote
                     className="text-gray-700 text-xl leading-relaxed italic font-light"
-                    itemProp="reviewBody"
+                    
                   >
                     &ldquo;{testimonials[currentTestimonial].text}&rdquo;
                   </blockquote>
@@ -274,9 +267,7 @@ const Testimonials = () => {
                   {/* Customer Info */}
                   <div
                     className="flex items-center space-x-5"
-                    itemProp="author"
-                    itemScope
-                    itemType="https://schema.org/Person"
+                   
                   >
                     <div className="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center overflow-hidden flex-shrink-0">
                       <Image
@@ -290,21 +281,10 @@ const Testimonials = () => {
                     <div className="flex-1 min-w-0">
                       {/* Star Rating */}
                       <div
-                        className="flex space-x-1 mb-2"
-                        itemProp="reviewRating"
-                        itemScope
-                        itemType="https://schema.org/Rating"
+                        className="flex space-x-1 mb-2"      
                         role="img"
                         aria-label={`${testimonials[currentTestimonial].rating} out of 5 stars`}
                       >
-                        <meta
-                          itemProp="ratingValue"
-                          content={testimonials[
-                            currentTestimonial
-                          ].rating.toString()}
-                        />
-                        <meta itemProp="bestRating" content="5" />
-                        <meta itemProp="worstRating" content="1" />
                         {[
                           ...Array(testimonials[currentTestimonial].rating),
                         ].map((_, i) => (
@@ -320,7 +300,6 @@ const Testimonials = () => {
                       </div>
                       <h4
                         className="font-semibold text-gray-900 text-lg"
-                        itemProp="name"
                       >
                         {testimonials[currentTestimonial].name}
                       </h4>
