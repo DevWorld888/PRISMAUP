@@ -4,10 +4,10 @@ import { Metadata } from 'next'
 const GOOGLE_FORM_URL = "https://forms.gle/c2H7LP2YdLNTECeS8"
 
 export const metadata: Metadata = {
-  title: 'Work With Prisma Coatings - Join Our Professional Painting Team in Sydney',
+  title: "Painting Jobs Sydney | Join Our Team",  
   description: 'Join Prisma Coatings professional painting team in Sydney. We\'re looking for experienced painters and apprentices for residential, commercial, and strata projects.',
   openGraph: {
-    title: 'Work With Prisma Coatings - Join Our Professional Painting Team',
+    title: 'Painting Jobs Sydney | Join Our Team',
     description: 'Join our professional painting team in Sydney. Ongoing projects, respectful worksites, quality-focused work.',
   },
 }

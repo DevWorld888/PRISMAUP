@@ -5,13 +5,13 @@ import { blogPosts } from "../utils/blogData";
 import BlogCategoriesClient from "./components/BlogCategoriesClient";
 
 export const metadata: Metadata = {
-  title: "Painting Tips & Industry Insights Blog | Prisma Coatings Sydney",
+  title: "Painting Blog Sydney | Prisma Coatings",
   description:
     "Expert painting tips, color trends, maintenance advice, and industry insights from Sydney's professional painters. Get the latest updates from Prisma Coatings.",
   keywords:
     "painting tips, color trends, house painting advice, painting maintenance, exterior painting tips, interior design, painting blog sydney",
   openGraph: {
-    title: "Painting Tips & Industry Insights Blog | Prisma Coatings",
+    title: "Painting Blog Sydney | Prisma Coatings",
     description:
       "Expert painting tips, color trends, and maintenance advice from Sydney's professional painters.",
     url: "https://prismacoatings.com.au/blog",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Painting Tips & Industry Insights Blog | Prisma Coatings",
+    title: "Painting Blog Sydney | Prisma Coatings",
     description:
       "Expert painting tips, color trends, and maintenance advice from Sydney's professional painters.",
   },

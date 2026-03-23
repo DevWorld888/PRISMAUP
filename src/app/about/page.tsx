@@ -5,7 +5,7 @@ import OurServices from './components/OurServices'
 import OurTeam from './components/OurTeam'
 
 export const metadata: Metadata = {
-  title: 'About Prisma Coatings | Professional Painting Company Sydney - 9+ Years Experience',
+  title: 'About Prisma Coatings | Sydney Painters',
   description: 'Learn about Prisma Coatings, Sydney\'s trusted painting professionals with over 9 years of experience. Expert residential, commercial & strata painting services across Sydney.',
   keywords: [
     'about prisma coatings',

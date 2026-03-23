@@ -17,8 +17,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title:
-      "January 2026 Painting Projects in Sydney – Real Residential Transformations",
+    title: "Sydney Painting Projects January 2026",
     metaTitle: "January Painting Projects Sydney | Apartment & House Repaints",
     metaDescription:
       "See our January 2026 residential painting projects across Sydney. Apartment repaints, exterior render restoration and renovation painting by professional painters.",
