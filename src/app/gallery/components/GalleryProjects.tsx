@@ -153,13 +153,13 @@ const GalleryProjects = () => {
               Behind Every Great Project is a Dedicated Team
             </span>
           </div>
-          <h1 
+          <h2 
             id="projects-gallery-heading"
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
             itemProp="name"
           >
             Our <span className="text-red-500 italic font-script">Team</span> Gallery
-          </h1>
+          </h2>
           <p className="text-gray-400 text-base md:text-lg max-w-3xl mx-auto" itemProp="description">
             Explore our collection of completed projects and discover the quality that distinguishes us in every painting and coating job.
           </p>

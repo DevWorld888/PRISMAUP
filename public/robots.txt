@@ -1,6 +1,9 @@
 User-agent: *
 Allow: /
 
+# importante
+Allow: /_next/image
+
 # Bloquear archivos innecesarios para SEO
 Disallow: /api/
 Disallow: /_next/
