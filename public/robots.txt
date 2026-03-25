@@ -3,6 +3,7 @@ Allow: /
 
 # importante
 Allow: /_next/image
+Allow: /_next/static/
 
 # Bloquear archivos innecesarios para SEO
 Disallow: /api/
