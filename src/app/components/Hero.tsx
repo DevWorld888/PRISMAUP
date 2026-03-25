@@ -27,14 +27,14 @@ export default function Hero() {
       {/* 📝 CONTENT */}
       <div className="relative z-20 flex flex-col items-center justify-center text-center h-full px-4 sm:px-8 md:px-16">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white max-w-4xl leading-snug drop-shadow-md">
-          Professional House & Commercial Painters in Sydney On-Time. Clean. No
-          Hidden Costs.
+          House Painters Sydney – Professional Residential & Commercial Painting
         </h1>
+        <h2 className="text-xl sm:text-2xl md:text-3xl mt-4 text-white font-semibold drop-shadow-sm">
+          On-Time. Clean. No Hidden Costs.
+        </h2>
 
         <p className="text-base sm:text-lg md:text-xl mt-6 text-white max-w-xl font-medium drop-shadow-sm">
-          Expert painters with 10+ years of experience. We transform homes,
-          strata buildings, and commercial properties across Sydney with premium
-          painting solutions. Licensed, insured & affordable.
+          Professional house painters in Sydney with over 10 years of experience delivering high-quality interior and exterior painting services. We transform homes, strata properties and commercial spaces with premium finishes built to last.
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row gap-4 items-center">
@@ -44,7 +44,7 @@ export default function Hero() {
             title="Get free painting quote from Prisma Coatings Sydney"
             aria-label="Contact us for a free painting estimate"
           >
-            Get Your Free Quote Today
+            Get Your Free Quote
           </Link>
 
           <Link
@@ -53,7 +53,7 @@ export default function Hero() {
             title="View our painting portfolio and completed projects"
             aria-label="Browse our painting work gallery"
           >
-            View Our Work
+            View Our Projects
           </Link>
         </div>
       </div>
