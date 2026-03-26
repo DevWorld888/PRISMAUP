@@ -128,16 +128,16 @@ const Aboutus = () => {
 
             {/* Main Heading */}
             <div>
-              
-                <h2
-                  id="about-us-heading"
-                  className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#13233A] leading-tight"
-                >
-                  
-                  A Complete Suite of {" "}
-                  <span className="text-[#D61C1C]">Professional Painting Services</span>
-                </h2>
-                
+              <h2
+                id="about-us-heading"
+                className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#13233A] leading-tight"
+              >
+                <span className="text-[#D61C1C]">
+                  Professional Painting Services
+                </span>{" "}
+                in Sydney
+              </h2>
+
               <div
                 className="w-16 h-1 bg-[#D61C1C] mt-4"
                 role="presentation"
@@ -146,21 +146,20 @@ const Aboutus = () => {
 
             {/* Description */}
             <p className="text-base sm:text-lg text-[#13233A] leading-relaxed px-2 sm:px-0">
-              At <strong>Prisma Coatings</strong>, we’ve been helping
-              <strong> Sydney homeowners and businesses</strong> transform their
-              spaces for over <strong>10 years</strong>. We understand that
-              hiring painters is not just about colour — it’s about
-               <strong> trust</strong>, <strong>timelines</strong>, and getting
-              the job done
-              <strong> right the first time</strong>. That’s why our experienced
-              team combines <strong>proven techniques </strong>
-              with <strong>premium materials</strong> to deliver
-              <strong> clean, long-lasting finishes</strong> with{" "}
-              <strong>no surprises</strong>. From{" "}
-              <strong>residential homes</strong> to{" "}
-              <strong>commercial properties</strong>, we take care of every
-              detail with <strong>professionalism</strong>,
-              <strong> transparency</strong>, and genuine pride in our work.
+              At <strong>Prisma Coatings</strong>, we provide professional painting services in
+              Sydney, <strong>helping homeowners and businesses</strong> transform their
+              properties with high-quality finishes that last. <strong>With over 10
+              years of experience</strong>, our team of skilled Sydney painters
+              specialises in <strong>residential and commercial painting projects</strong>,
+              delivering reliable results with attention to detail. <strong>We
+              understand that hiring painters is about more than colour — it’s
+              about trust</strong>, clear communication and getting the job done right
+              the first time.<strong>We combine proven painting techniques with premium
+              materials to deliver clean, durable finishes designed for
+              Australian conditions.</strong> Whether it’s interior or exterior painting,
+              strata work or full property repaints, we ensure every project is
+              completed with professionalism, transparency and care. 
+              
             </p>
 
             {/* Features List */}
@@ -171,7 +170,7 @@ const Aboutus = () => {
                   role="presentation"
                 ></div>
                 <span className="text-[#13233A] text-sm sm:text-base">
-                  <strong>Flawless</strong>, professional finishes that stand the test of time  
+                  <strong>Flawless, long-lasting painting finishes </strong>
                 </span>
               </div>
               <div className="flex items-center space-x-3" role="listitem">
@@ -180,7 +179,8 @@ const Aboutus = () => {
                   role="presentation"
                 ></div>
                 <span className="text-[#13233A] text-sm sm:text-base">
-                  <strong>Expert guidance </strong>  and <strong>  clear planning </strong>before we start
+                  <strong>Experienced Sydney painters you can trust</strong> 
+                  
                 </span>
               </div>
               <div className="flex items-center space-x-3" role="listitem">
@@ -189,8 +189,8 @@ const Aboutus = () => {
                   role="presentation"
                 ></div>
                 <span className="text-[#13233A] text-sm sm:text-base">
-                  <strong>Quality materials and equipment</strong> from trusted
-                  suppliers
+                  <strong>Premium paints and professional equipment </strong>
+                 
                 </span>
               </div>
               <div className="flex items-center space-x-3" role="listitem">
@@ -199,11 +199,21 @@ const Aboutus = () => {
                   role="presentation"
                 ></div>
                 <span className="text-[#13233A] text-sm sm:text-base">
-                  <strong>Comprehensive project management</strong> from start
-                  to finish
+                  <strong>Clear communication and reliable timelines </strong> 
+                </span>
+              </div>
+              <div className="flex items-center space-x-3" role="listitem">
+                <div
+                  className="w-2 h-2 bg-[#D61C1C] rounded-full flex-shrink-0"
+                  role="presentation"
+                ></div>
+                <span className="text-[#13233A] text-sm sm:text-base">
+                  <strong>Complete project management from start to finish</strong> 
                 </span>
               </div>
             </div>
+
+            <p className="text-base sm:text-lg text-[#13233A] leading-relaxed px-2 sm:px-0">Looking for reliable house painters in Sydney? We’re ready to help.</p>
 
             {/* CTA Button */}
             <div className="pt-4 px-2 sm:px-0">

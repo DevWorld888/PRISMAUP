@@ -5,7 +5,7 @@ import { Check } from 'lucide-react'
 
 const ExploreOurServices = () => {
   return (
-    <section 
+    <section
       className="py-16 px-4 md:px-8 lg:px-16 bg-gray-50"
       aria-labelledby="services-heading"
       itemScope
@@ -29,50 +29,59 @@ const ExploreOurServices = () => {
           {/* Right side - Content */}
           <div className="order-1 lg:order-2 text-center lg:text-left">
             <div className="mb-4">
-              <span 
+              <span
                 className="text-sm md:text-sm font-normal text-gray-600 uppercase tracking-wider"
                 itemProp="category"
               >
-                Transforming Homes and Businesses with Color
+                Trusted House Painters in Sydney
               </span>
             </div>
-            
-            <h2 
+
+            <h2
               id="services-heading"
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
               itemProp="name"
             >
-              <span className="text-[#D61C1C]">Professional Painters in Sydney You Can Trust</span>
+              <span className="text-[#D61C1C]">
+                Professional Painters in Sydney You Can Trust
+              </span>
             </h2>
-            
-            <p 
+
+            <p
               className="text-base md:text-lg text-gray-600 leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0"
               itemProp="description"
             >
-              Clean finishes, professional service, and long-lasting results — all delivered by experienced painters.
+              At Prisma Coatings, we deliver professional painting services in
+              Sydney with a strong focus on quality, reliability and
+              long-lasting results. Our experienced house painters specialise in
+              interior and exterior painting for residential homes, strata
+              properties and commercial spaces. We understand that every project
+              is different, which is why we focus on clear communication,
+              attention to detail and delivering clean finishes that stand the
+              test of time.
             </p>
 
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="inline-flex items-center px-6 md:px-8 py-3 md:py-4 bg-[#D61C1C] hover:bg-[#d61c1ce8] text-amber-50 font-semibold text-sm md:text-base rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2"
               itemProp="url"
               aria-label="Get a free painting quote from Prisma Coatings in Sydney"
               title="Contact us for a free painting estimate"
             >
               Get a Free Quote – No Obligation
-              <svg 
-                className="ml-2 w-4 h-4 md:w-5 md:h-5 text-amber-50" 
-                fill="none" 
-                stroke="currentColor" 
+              <svg
+                className="ml-2 w-4 h-4 md:w-5 md:h-5 text-amber-50"
+                fill="none"
+                stroke="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
                 role="img"
               >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M9 5l7 7-7 7" 
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
                 />
               </svg>
             </Link>
@@ -81,25 +90,28 @@ const ExploreOurServices = () => {
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               <div className="flex items-center justify-center lg:justify-start space-x-2">
                 <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-                <span className="text-sm md:text-base text-gray-700 font-medium">10+ Years Experience</span>
+                <span className="text-sm md:text-base text-gray-700 font-medium">
+                  10+ Years Experience in Sydney 
+                </span>
               </div>
               <div className="flex items-center justify-center lg:justify-start space-x-2">
                 <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-                <span className="text-sm md:text-base text-gray-700 font-medium">Sydney Based</span>
+                <span className="text-sm md:text-base text-gray-700 font-medium">
+                  Fully Licensed & Insured Painters 
+                </span>
               </div>
               <div className="flex items-center justify-center lg:justify-start space-x-2">
                 <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-                <span className="text-sm md:text-base text-gray-700 font-medium">Fully Insured</span>
+                <span className="text-sm md:text-base text-gray-700 font-medium">
+                  Residential & Commercial Painting Experts  
+                </span>
               </div>
             </div>
-
-            
           </div>
-          
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 export default ExploreOurServices   

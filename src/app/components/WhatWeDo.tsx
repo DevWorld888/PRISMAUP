@@ -16,7 +16,7 @@ const services = [
     id: 1,
     title: "Residential Painting Services",
     icon: <Home />,
-    description: "Clean, high-quality finishes that protect your home and increase its value.",
+    description: "High-quality residential painting services in Sydney designed to protect your home and increase its value. We deliver clean, long-lasting interior and exterior finishes with attention to detail.",
     keywords: "house painting, residential painting, interior painting, exterior painting",
     active: true,
   },
@@ -24,7 +24,7 @@ const services = [
     id: 2,
     title: "Commercial Painting Services",
     icon: <Building2 />,
-    description: "Minimal disruption to your business withon-time, professional delivery.",
+    description: "Reliable commercial painting services in Sydney with minimal disruption to your business. Professional finishes delivered on time and within schedule.",
     keywords: "commercial painting, office painting, business painting, retail painting",
     active: false,
   },
@@ -32,7 +32,7 @@ const services = [
     id: 3,
     title: "Strata & Apartment Complex Painting",
     icon: <Paintbrush />,
-    description: "Reliable painting solutions for buildings,managed professionally from start to finish.",
+    description: "Professional strata painting services for apartment complexes and multi-unit properties across Sydney. Managed efficiently from start to finish.",
     keywords: "strata painting, apartment painting, condo painting, multi-unit painting",
     active: false,
   },
@@ -40,7 +40,7 @@ const services = [
     id: 4,
     title: "Professional Color Consulting",
     icon: <Palette />,
-    description: "Expert advice to choose the right colors before any paint is applied.",
+    description: "Expert colour consultation to help you choose the right tones and finishes for your space before any painting begins.",
     keywords: "color consulting, paint color advice, interior design, color schemes",
     active: false,
   }
@@ -68,11 +68,11 @@ const services = [
             id="services-heading"
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white"
           >
-            Professional Painting Without Delays,{' '}
-            <span className="text-brand-primary">Mess or Hidden Costs</span>
+            Professional Painting Services in Sydney{' '}
+            <span className="text-brand-primary">Without Delays or Hidden Costs</span>
           </h1>
           <p className="text-lg text-white/90 mt-4 max-w-3xl mx-auto">
-            Trusted painters delivering clean finishes, on time and with no surprises.
+           Trusted Sydney painters delivering high-quality interior and exterior painting services, on time and with no surprises.
           </p>
         </div>
 
@@ -134,7 +134,7 @@ const services = [
             href="/contact"
             className="inline-block bg-[#D61C1C] text-white font-semibold px-8 py-4 rounded-lg hover:bg-[#B01616] transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-base md:text-lg cursor-pointer"
           >
-            Talk to a Painting Expert Today
+            Get a Free Painting Quote
           </Link>
         </div>
         
