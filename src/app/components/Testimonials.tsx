@@ -8,6 +8,13 @@ const Testimonials = () => {
 
   const testimonials = [
     {
+      text: "Hally recently did a patch and paint job of the bedroom ceiling for us. Very professional, punctual and neatly done work. The ceiling looks as good as new! Thank you Hally!",
+      name: "M Aron",
+      avatar:
+        "https://lh3.googleusercontent.com/a/ACg8ocLonNqDXZ8zWFjwkc8VfxYMEIJ2IatGbhBIw7x9fGfq0hSWXA=w90-h90-p-rp-mo-br100",
+      rating: 5,
+    },
+    {
       text: "We have engaged Hally and his team from Prisma Coatings to paint our house. Hally spends the time to understand the job and offers great advice. The work is of exceptional quality and we were very happy with the results. I would highly recommend Prisma Coatings",
       name: "Kevin McEwen",
       avatar:
