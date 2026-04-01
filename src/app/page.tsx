@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: "Prisma Coatings",
     images: [
       {
-        url: "og/og-image.png", // ✅ be sure to replace with your actual image path
+        url: "https://www.prismacoatings.com.au/og/og-image.png",
         width: 1200,
         height: 630,
         alt: "House painting service in Sydney",

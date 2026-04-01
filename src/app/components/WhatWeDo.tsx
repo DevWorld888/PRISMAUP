@@ -18,6 +18,7 @@ const services = [
     icon: <Home />,
     description: "High-quality residential painting services in Sydney designed to protect your home and increase its value. We deliver clean, long-lasting interior and exterior finishes with attention to detail.",
     keywords: "house painting, residential painting, interior painting, exterior painting",
+    href: "/house-painters-sydney",
     active: true,
   },
   {
@@ -26,6 +27,7 @@ const services = [
     icon: <Building2 />,
     description: "Reliable commercial painting services in Sydney with minimal disruption to your business. Professional finishes delivered on time and within schedule.",
     keywords: "commercial painting, office painting, business painting, retail painting",
+    href: "/commercial-painting-sydney",
     active: false,
   },
   {
@@ -34,6 +36,7 @@ const services = [
     icon: <Paintbrush />,
     description: "Professional strata painting services for apartment complexes and multi-unit properties across Sydney. Managed efficiently from start to finish.",
     keywords: "strata painting, apartment painting, condo painting, multi-unit painting",
+    href: "/contact",
     active: false,
   },
   {
@@ -42,6 +45,7 @@ const services = [
     icon: <Palette />,
     description: "Expert colour consultation to help you choose the right tones and finishes for your space before any painting begins.",
     keywords: "color consulting, paint color advice, interior design, color schemes",
+    href: "/contact",
     active: false,
   }
 ];
@@ -64,13 +68,13 @@ const services = [
 
         {/* Main Title */}
         <div className="text-center mb-12">
-          <h1 
+          <h2
             id="services-heading"
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white"
           >
             Professional Painting Services in Sydney{' '}
             <span className="text-brand-primary">Without Delays or Hidden Costs</span>
-          </h1>
+          </h2>
           <p className="text-lg text-white/90 mt-4 max-w-3xl mx-auto">
            Trusted Sydney painters delivering high-quality interior and exterior painting services, on time and with no surprises.
           </p>
@@ -86,7 +90,7 @@ const services = [
           {services.map((service) => (
             <Link
               key={service.id}
-              href="/contact"
+              href={service.href}
               className="block"
             >
               <article
