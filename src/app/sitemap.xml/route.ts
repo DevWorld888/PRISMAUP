@@ -64,19 +64,37 @@ export async function GET() {
       lastmod: currentDate
     },
 
-    // 🚀 LOCATION PAGES (cuando las crees)
-    // {
-    //   url: '/painters-bondi',
-    //   changefreq: 'monthly',
-    //   priority: '0.8',
-    //   lastmod: currentDate
-    // },
-    // {
-    //   url: '/painters-parramatta',
-    //   changefreq: 'monthly',
-    //   priority: '0.8',
-    //   lastmod: currentDate
-    // },
+    // 🚀 LOCATION PAGES
+    {
+      url: '/house-painters-sydney',
+      changefreq: 'monthly',
+      priority: '0.9',
+      lastmod: currentDate
+    },
+    {
+      url: '/painters-eastern-suburbs',
+      changefreq: 'monthly',
+      priority: '0.8',
+      lastmod: currentDate
+    },
+    {
+      url: '/painters-inner-west',
+      changefreq: 'monthly',
+      priority: '0.8',
+      lastmod: currentDate
+    },
+    {
+      url: '/painters-north-west-sydney',
+      changefreq: 'monthly',
+      priority: '0.8',
+      lastmod: currentDate
+    },
+    {
+      url: '/painters-sutherland-shire',
+      changefreq: 'monthly',
+      priority: '0.8',
+      lastmod: currentDate
+    },
 
     // BLOG
     {

@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <footer className="bg-[#13233A] text-white py-12 px-4" role="contentinfo">
       <div className="max-w-7xl mx-auto">
-        {/* Main Footer Content - 3 Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-8">
+        {/* Main Footer Content - 4 Columns */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-8">
           {/* Column 1: Logo and Company Info */}
           <div className="flex justify-center md:justify-start">
             <div className="text-center md:text-left">
@@ -82,7 +82,41 @@ const Footer = () => {
             </nav>
           </div>
 
-          {/* Column 3: Contact Information */}
+          {/* Column 3: Areas We Serve */}
+          <div className="text-center md:text-left">
+            <h3 className="text-xl font-semibold mb-6">AREAS WE SERVE</h3>
+            <nav aria-label="Service areas">
+              <ul className="space-y-2">
+                <li>
+                  <Link href="/painters-eastern-suburbs" className="text-gray-300 hover:text-white transition-colors text-sm">
+                    Eastern Suburbs
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/painters-inner-west" className="text-gray-300 hover:text-white transition-colors text-sm">
+                    Inner West
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/painters-north-west-sydney" className="text-gray-300 hover:text-white transition-colors text-sm">
+                    North West Sydney
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/painters-sutherland-shire" className="text-gray-300 hover:text-white transition-colors text-sm">
+                    Sutherland Shire
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/house-painters-sydney" className="text-gray-300 hover:text-white transition-colors text-sm">
+                    All Sydney
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          {/* Column 4: Contact Information */}
           <div className="text-center md:text-left">
             <h3 className="text-xl font-semibold mb-6">CONTACT INFO</h3>
             <address className="space-y-4 not-italic">

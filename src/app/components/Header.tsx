@@ -78,7 +78,8 @@ export default function Header() {
             </button>
             {servicesOpen && (
               <div className="absolute top-full left-0 w-52 pt-2 z-50">
-                <div className="bg-white shadow-lg rounded-md py-2">
+                <div className="bg-white shadow-lg rounded-md py-2 w-56">
+                  <p className="px-4 py-1 text-xs font-semibold text-gray-400 uppercase tracking-wide">Services</p>
                   <Link
                     href="/house-painters-sydney"
                     className="block px-4 py-2 text-sm text-[#13233A] hover:bg-gray-100 hover:text-[#C53030] transition-colors"
@@ -102,6 +103,32 @@ export default function Header() {
                     className="block px-4 py-2 text-sm text-[#13233A] hover:bg-gray-100 hover:text-[#C53030] transition-colors"
                   >
                     Commercial Painting Sydney
+                  </Link>
+                  <div className="my-1 border-t border-gray-100" />
+                  <p className="px-4 py-1 text-xs font-semibold text-gray-400 uppercase tracking-wide">Areas We Serve</p>
+                  <Link
+                    href="/painters-eastern-suburbs"
+                    className="block px-4 py-2 text-sm text-[#13233A] hover:bg-gray-100 hover:text-[#C53030] transition-colors"
+                  >
+                    Eastern Suburbs
+                  </Link>
+                  <Link
+                    href="/painters-inner-west"
+                    className="block px-4 py-2 text-sm text-[#13233A] hover:bg-gray-100 hover:text-[#C53030] transition-colors"
+                  >
+                    Inner West
+                  </Link>
+                  <Link
+                    href="/painters-north-west-sydney"
+                    className="block px-4 py-2 text-sm text-[#13233A] hover:bg-gray-100 hover:text-[#C53030] transition-colors"
+                  >
+                    North West Sydney
+                  </Link>
+                  <Link
+                    href="/painters-sutherland-shire"
+                    className="block px-4 py-2 text-sm text-[#13233A] hover:bg-gray-100 hover:text-[#C53030] transition-colors"
+                  >
+                    Sutherland Shire
                   </Link>
                 </div>
               </div>
@@ -193,6 +220,7 @@ export default function Header() {
               </button>
               {mobileServicesOpen && (
                 <div className="ml-4 mt-2 flex flex-col gap-2 text-base text-[#444]">
+                  <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide mt-1">Services</span>
                   <Link href="/house-painters-sydney" onClick={() => setMenuOpen(false)}>
                     House Painters Sydney
                   </Link>
@@ -204,6 +232,19 @@ export default function Header() {
                   </Link>
                   <Link href="/commercial-painting-sydney" onClick={() => setMenuOpen(false)}>
                     Commercial Painting Sydney
+                  </Link>
+                  <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide mt-2">Areas We Serve</span>
+                  <Link href="/painters-eastern-suburbs" onClick={() => setMenuOpen(false)}>
+                    Eastern Suburbs
+                  </Link>
+                  <Link href="/painters-inner-west" onClick={() => setMenuOpen(false)}>
+                    Inner West
+                  </Link>
+                  <Link href="/painters-north-west-sydney" onClick={() => setMenuOpen(false)}>
+                    North West Sydney
+                  </Link>
+                  <Link href="/painters-sutherland-shire" onClick={() => setMenuOpen(false)}>
+                    Sutherland Shire
                   </Link>
                 </div>
               )}
