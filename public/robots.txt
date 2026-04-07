@@ -1,17 +1,8 @@
 User-agent: *
 Allow: /
 
-# importante
-Allow: /_next/image
-Allow: /_next/static/
-
-# Bloquear archivos innecesarios para SEO
+# Bloquear rutas innecesarias para SEO
 Disallow: /api/
-Disallow: /_next/
-Disallow: /public/
 
 # Sitemap location
 Sitemap: https://www.prismacoatings.com.au/sitemap.xml
-
-# Crawl-delay para ser amigable con los servidores
-Crawl-delay: 1

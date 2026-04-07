@@ -96,7 +96,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>The most reliable way to know what your painting project will cost is a proper site inspection. Every property is different, and a quote without seeing the space is just a guess.</p>
 
-<p>Prisma Coatings provides free, no-obligation quotes for residential and commercial painting across Sydney. Contact our team to arrange a time that suits you.</p>
+<p><a href="/house-painters-sydney">Prisma Coatings</a> provides free, no-obligation quotes for <a href="/interior-painting-sydney">residential interior</a> and <a href="/commercial-painting-sydney">commercial painting</a> across Sydney. Contact our team to arrange a time that suits you.</p>
     `,
     image: "/images/aboutus/house-painting-sydney.webp",
     date: "2026-02-10",
@@ -173,7 +173,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Choosing the Right Paint for Each Surface in Sydney</h2>
 
-<p>Sydney's climate adds specific considerations. Coastal properties face salt air corrosion. Western suburbs deal with intense summer heat. Southern-facing walls can trap moisture in winter. A professional painter will select a paint system suited to your specific location and surface type — not just any product off the shelf.</p>
+<p>Sydney's climate adds specific considerations. Coastal properties face salt air corrosion. Western suburbs deal with intense summer heat. Southern-facing walls can trap moisture in winter. A <a href="/house-painters-sydney">professional painter</a> will select a paint system suited to your specific location and surface type — not just any product off the shelf.</p>
 
 <h2>Common Paint Types for Sydney Homes</h2>
 
@@ -189,7 +189,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>Choosing the right paint system is one of the most important decisions in any painting project. The wrong choice means higher maintenance costs and a finish that won't last.</p>
 
-<p>Prisma Coatings recommends and supplies appropriate paint systems for every surface type and location across Sydney. If you're unsure what to use, get in touch for professional advice before you start.</p>
+<p>Prisma Coatings recommends and supplies appropriate paint systems for every surface type and location across Sydney. Whether you need <a href="/interior-painting-sydney">interior painting</a> or <a href="/exterior-painting-sydney">exterior painting</a>, get in touch for professional advice before you start.</p>
     `,
     image: "/images/aboutus/hallway-painting-sydney.webp",
     date: "2026-02-20",
@@ -273,7 +273,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>The more prepared your home is before work begins, the more efficiently your painters can work — which means a cleaner result and less disruption to your household.</p>
 
-<p>If you're planning a painting project in Sydney and want to discuss how to prepare for your specific property, get in touch with the Prisma Coatings team for a free consultation.</p>
+<p>If you're planning a <a href="/interior-painting-sydney">interior painting</a> or <a href="/exterior-painting-sydney">exterior painting</a> project in Sydney and want to discuss how to prepare for your specific property, get in touch with the Prisma Coatings team for a free consultation.</p>
     `,
     image: "/images/aboutus/kitchen-painting-sydney.webp",
     date: "2026-03-05",
@@ -359,7 +359,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>If your exterior was last painted more than 8 years ago and you're in a coastal or high-UV area, it's worth having it assessed before visible problems appear.</p>
 
-<p>Prisma Coatings provides free exterior paint assessments across Sydney. If you're unsure whether your home is due for a repaint, contact our team and we'll give you an honest assessment.</p>
+<p>Prisma Coatings provides free <a href="/exterior-painting-sydney">exterior paint</a> assessments across Sydney, including <a href="/painters-eastern-suburbs">Eastern Suburbs</a>, <a href="/painters-inner-west">Inner West</a> and <a href="/painters-sutherland-shire">Sutherland Shire</a>. If you're unsure whether your home is due for a repaint, contact our team and we'll give you an honest assessment.</p>
     `,
     image: "/images/aboutus/exterior-house-painting-sydney.webp",
     date: "2026-03-15",
@@ -435,9 +435,9 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Need Help Choosing Colours for Your Sydney Home?</h2>
 
-<p>Selecting paint colours is one of the most common sources of stress in a painting project. Prisma Coatings can assist with colour consultation before any work begins — helping you narrow down options that suit your property, your taste and your budget.</p>
+<p>Selecting paint colours is one of the most common sources of stress in a painting project. Prisma Coatings can assist with colour consultation before any <a href="/interior-painting-sydney">interior</a> or <a href="/exterior-painting-sydney">exterior painting</a> work begins — helping you narrow down options that suit your property, your taste and your budget.</p>
 
-<p>Contact our team to discuss your next painting project in Sydney.</p>
+<p>Contact our team to discuss your next <a href="/house-painters-sydney">painting project in Sydney</a>.</p>
     `,
     image: "/images/aboutus/kitchen-painting-sydney.webp",
     date: "2026-03-25",
@@ -501,7 +501,7 @@ export const blogPosts: BlogPost[] = [
     <h2>Looking for Professional House Painters in Sydney?</h2>
     <p>Whether you need a full apartment repaint or exterior house painting, Prisma Coatings delivers high-quality finishes backed by 9+ years of experience.</p>
 
-    <p>👉 <a href="/contact">Contact us for a free quote today.</a></p>
+    <p>👉 <a href="/contact">Contact us for a free quote today.</a> Or explore our <a href="/house-painters-sydney">house painting services in Sydney</a> and <a href="/interior-painting-sydney">interior painting</a> solutions.</p>
   `,
     image: "/images/blog/january/67AlmaRoad.webp",
     date: "2026-01-31",

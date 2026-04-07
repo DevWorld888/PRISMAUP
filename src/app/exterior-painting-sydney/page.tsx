@@ -27,6 +27,14 @@ export const metadata: Metadata = {
     siteName: "Prisma Coatings",
     locale: "en_AU",
     type: "website",
+    images: [
+      {
+        url: "https://www.prismacoatings.com.au/og/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Exterior Painting Sydney – Prisma Coatings",
+      },
+    ],
   },
 };
 

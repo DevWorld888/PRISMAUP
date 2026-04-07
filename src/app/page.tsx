@@ -49,8 +49,59 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "PaintingContractor",
+    "@id": "https://www.prismacoatings.com.au/#business",
+    name: "Prisma Coatings",
+    url: "https://www.prismacoatings.com.au",
+    telephone: "+61401508036",
+    email: "info@prismacoatings.com.au",
+    description:
+      "Professional residential and commercial painting services in Sydney. Interior painting, exterior painting, strata and new builds. Over 10 years of experience.",
+    image: "https://www.prismacoatings.com.au/og/og-image.png",
+    priceRange: "$$",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "20/25 Marlowe St",
+      addressLocality: "Campsie",
+      addressRegion: "NSW",
+      postalCode: "2194",
+      addressCountry: "AU",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: -33.9145,
+      longitude: 151.1034,
+    },
+    areaServed: [
+      { "@type": "City", name: "Sydney" },
+      { "@type": "AdministrativeArea", name: "Eastern Suburbs" },
+      { "@type": "AdministrativeArea", name: "Inner West" },
+      { "@type": "AdministrativeArea", name: "North West Sydney" },
+      { "@type": "AdministrativeArea", name: "Sutherland Shire" },
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Painting Services",
+      itemListElement: [
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Interior Painting Sydney" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Exterior Painting Sydney" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Commercial Painting Sydney" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Strata Painting Sydney" } },
+      ],
+    },
+    sameAs: [
+      "https://www.google.com/maps?cid=prismacoatings",
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Hero />
       <Aboutus />
       <WhatWeDo />

@@ -1,3 +1,5 @@
+import { blogPosts } from "../../app/utils/blogData";
+
 interface SitemapRoute {
   url: string;
   changefreq: 'daily' | 'weekly' | 'monthly' | 'yearly';
@@ -37,13 +39,6 @@ export async function GET() {
       priority: '0.8',
       lastmod: currentDate
     },
-    {
-      url: '/projects',
-      changefreq: 'weekly',
-      priority: '0.8',
-      lastmod: currentDate
-    },
-
     // 🔥 SERVICES (CLAVE SEO)
     {
       url: '/interior-painting-sydney',
@@ -102,7 +97,15 @@ export async function GET() {
       changefreq: 'weekly',
       priority: '0.7',
       lastmod: currentDate
-    }
+    },
+
+    // BLOG POSTS
+    ...blogPosts.map((post) => ({
+      url: `/blog/${post.slug}`,
+      changefreq: 'monthly' as const,
+      priority: '0.6',
+      lastmod: post.date,
+    })),
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
