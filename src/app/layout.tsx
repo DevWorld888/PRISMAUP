@@ -198,7 +198,9 @@ export default function RootLayout({
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-7N3MRT5YT8');
+      gtag('config', 'G-7N3MRT5YT8', {
+      debug_mode: true
+      });
     `}
       </Script>
       <body className={`${roboto.variable} antialiased`}>
