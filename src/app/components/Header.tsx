@@ -17,6 +17,7 @@ export default function Header() {
         event_category: 'phone',
         event_label: 'call_click'
       });
+      console.log("CLICK PHONE") // Para verificar que se está llamando a la función;
     }
   };
 
