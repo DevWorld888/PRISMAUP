@@ -13,11 +13,10 @@ export default function Header() {
 
   const handlePhoneClick = () => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'click', {
+      (window as any).gtag('event', 'phone_click', {
         event_category: 'phone',
-        event_label: 'call_click'
+        event_label: 'header_phone_click',
       });
-      console.log("CLICK PHONE") // Para verificar que se está llamando a la función;
     }
   };
 
