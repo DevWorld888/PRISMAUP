@@ -13,9 +13,9 @@ export default function Header() {
 
   const handlePhoneClick = () => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'click_phone', {
-        event_category: 'engagement',
-        event_label: 'header_phone'
+      (window as any).gtag('event', 'click', {
+        event_category: 'phone',
+        event_label: 'call_click'
       });
     }
   };
