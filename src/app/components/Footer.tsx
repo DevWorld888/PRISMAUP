@@ -208,7 +208,7 @@ const Footer = () => {
             <div className="text-sm text-gray-300 mt-4 md:mt-0">
               Copyright © 2026 Prisma Coatings | Designed by{" "}
               <a
-                href="https://dev-portfolio-eta-rouge.vercel.app/"
+                href="https://www.iaugustodev.com/"
                 className="text-blue-400 hover:text-blue-500 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"

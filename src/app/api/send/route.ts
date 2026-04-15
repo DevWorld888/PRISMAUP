@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
   const data = await req.json();
-  const { Fullname, postCode, telephone, comments, turnstileToken } = data;
+  const { Fullname, postCode, telephone, service, comments, turnstileToken } = data;
 
   if (!turnstileToken) {
     return NextResponse.json(
@@ -52,6 +52,7 @@ export async function POST(req: Request) {
       Nombre: ${Fullname}
       Teléfono: ${telephone}
       Código Postal: ${postCode}
+      Servicio: ${service || "Not specified"}
       Comentarios: ${comments}
       `.trim(),
     });
