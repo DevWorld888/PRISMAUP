@@ -81,7 +81,7 @@ export default function Header() {
                 <div className="bg-white shadow-lg rounded-md py-2 w-56">
                   <p className="px-4 py-1 text-xs font-semibold text-gray-400 uppercase tracking-wide">Services</p>
                   <Link
-                    href="/house-painters-sydney"
+                    href="/painters-sydney"
                     className="block px-4 py-2 text-sm text-[#13233A] hover:bg-gray-100 hover:text-[#C53030] transition-colors"
                   >
                     House Painters Sydney
