@@ -16,6 +16,148 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 7,
+    title: "10 Signs Your House Needs Repainting in Australia (Don't Ignore These)",
+    metaTitle: "Signs Your House Needs Repainting Australia | Prisma",
+    metaDescription:
+      "Discover the warning signs your house needs repainting in Australia. Protect your Sydney home before small problems become costly repairs.",
+    focusKeywords: [
+      "signs your house needs repainting in australia",
+      "when to repaint house australia",
+      "house painting sydney",
+      "peeling paint repair sydney",
+      "professional painters sydney",
+    ],
+    excerpt:
+      "Most Sydney homeowners don't notice their paint is failing until the damage is already done. Here are 10 warning signs your house needs repainting — and why acting early saves you money.",
+    content: `
+<p>Most Sydney homeowners don't notice their paint is failing until the damage is already done. By the time paint is visibly peeling or walls are showing moisture stains, the underlying surface is often already compromised — and what could have been a straightforward repaint has turned into a costly repair job.</p>
+
+<p>Australia's conditions are particularly demanding on painted surfaces. Intense UV radiation, coastal humidity, summer heat and seasonal rain all work against exterior coatings year-round. Knowing the early warning signs of paint failure can save you thousands and protect one of your most valuable assets.</p>
+
+<p>Here are 10 signs your house needs repainting — and why acting early always costs less.</p>
+
+<h2>1. Paint Is Peeling or Flaking</h2>
+
+<h3>What it means</h3>
+<p>Peeling is one of the most visible and most serious signs that paint has failed. It usually indicates moisture has penetrated behind the paint film, causing it to separate from the surface. In Sydney homes, this is common on south-facing walls, under eaves and around window frames where water tends to collect.</p>
+<p>Left untreated, peeling paint exposes the underlying substrate — whether render, timber or fibre cement — to water ingress and UV damage that compounds rapidly over time. <a href="/exterior-painting-sydney">Peeling paint repair in Sydney</a> is far more straightforward when addressed early.</p>
+
+<h2>2. Fading or Chalking Exterior Walls</h2>
+
+<h3>What it means</h3>
+<p>UV radiation in Australia is among the strongest in the world. Over time, it breaks down paint pigments and causes visible fading — particularly on north and west-facing walls that receive the most direct sun throughout the day.</p>
+<p>Run your hand along an exterior wall. If a white powder transfers onto your palm, the paint is chalking — a sign of advanced UV degradation where the binder has broken down and can no longer hold pigment particles together. Chalking paint won't protect the surface beneath it, and won't hold a new topcoat well without thorough preparation.</p>
+
+<h2>3. Cracks Are Appearing in the Paint Surface</h2>
+
+<h3>What it means</h3>
+<p>Fine hairline cracks develop as paint ages and loses flexibility. In Australian weather conditions, where temperatures can swing significantly between seasons, paint expands and contracts with the surface beneath it. If the paint system is old or wasn't designed for this movement, cracking follows.</p>
+<p>Cracks in the render or masonry beneath the paint are a more serious concern — they allow water penetration and structural damage if left unaddressed. A professional painter will identify and repair substrate cracks before any new coating is applied.</p>
+
+<h2>4. Bubbling or Blistering on the Surface</h2>
+
+<h3>What it means</h3>
+<p>Bubbles in paint are almost always a moisture problem. Paint that blisters is trapping moisture either from the surface beneath or from water vapour passing through from inside. In Sydney's humidity — particularly in bathrooms, laundries and coastal properties — blistering is a common and clear sign the existing paint system has broken down.</p>
+<p>Blistering paint that's left to deteriorate eventually cracks and peels, accelerating substrate damage and increasing the scope and cost of the eventual repair.</p>
+
+<h2>5. Mould or Dark Staining That Won't Wash Off</h2>
+
+<h3>What it means</h3>
+<p>A surface wash will remove superficial grime, but if dark staining returns quickly or covers large areas, mould has established itself within the paint film. This is particularly common in Sydney's northern and coastal suburbs where humidity is persistently high.</p>
+<p>Mould-stained paint needs to be treated and removed properly — not painted over. Applying new paint over active mould without treatment causes the fresh coat to fail within months. Professional painters use specialist primers and treatments to address mould before repainting.</p>
+
+<h2>6. Water Stains or Tide Marks</h2>
+
+<h3>What it means</h3>
+<p>Brown or yellow staining — often a ring or tide mark pattern — indicates water has been sitting on or behind the surface. On interior walls, this typically points to a roof, plumbing or window seal issue. On exterior surfaces, it can indicate a drainage or flashing problem that must be resolved before repainting.</p>
+<p>Repainting over an active water ingress issue will result in the same staining returning within months. Always resolve the source before you repaint.</p>
+
+<h2>7. Bare Timber or Substrate Showing Through</h2>
+
+<h3>What it means</h3>
+<p>When paint has worn through completely to the material beneath — bare timber, render or fibre cement — that surface is entirely unprotected from the elements. Bare timber is especially vulnerable in Australian weather conditions: it can split, rot and swell rapidly when exposed to moisture and direct sun.</p>
+<p>At this point, repainting is urgent. The longer it's left, the more extensive the preparation and repair work required — and the higher the overall cost. <a href="/exterior-painting-sydney">Professional exterior painting in Sydney</a> addresses these substrate issues properly before any new coating is applied.</p>
+
+<h2>8. Interior Walls Look Flat, Scuffed or Permanently Marked</h2>
+
+<h3>What it means</h3>
+<p>Interior paint takes a different kind of punishment — scuffs, handprints, moisture from cooking and general daily wear. Older or lower-quality paints become harder to clean over time and develop a permanently flat, tired appearance that doesn't respond to washing.</p>
+<p>If cleaning walls is making them look worse rather than better, the paint film has broken down. A fresh interior repaint is the most practical and cost-effective solution — and in Sydney homes, it makes a significant difference to how a property presents.</p>
+
+<h2>9. The Paint Job Is More Than 8–10 Years Old</h2>
+
+<h3>What it means</h3>
+<p>Even if your paint looks reasonable on the surface, age alone warrants a professional assessment. Most exterior paint systems on Sydney homes — depending on quality, surface type and location — begin to degrade after 7–10 years. The protection provided by the coating diminishes well before visible failure becomes apparent.</p>
+<p>Proactive repainting before visible failure protects the substrate and is consistently less expensive than reactive work that requires more extensive preparation and repair.</p>
+
+<h2>10. Your Home Looks Dated and Is Losing Kerb Appeal</h2>
+
+<h3>What it means</h3>
+<p>Paint condition has a direct impact on property value and first impressions — particularly in Sydney's competitive real estate market. A tired exterior finish or scuffed, dated interior doesn't just look uninviting; it signals to buyers, tenants and neighbours that maintenance has been deferred.</p>
+<p>A professionally repainted home presents significantly better, photographs better and consistently achieves stronger results at sale or lease. In Sydney, a quality repaint is one of the highest-return pre-sale investments available to homeowners.</p>
+
+<h2>The Real Cost of Ignoring Paint Failure</h2>
+
+<p>Delaying a repaint rarely saves money. In most cases, it does the opposite. Here's what happens when paint failure is left unaddressed in Australian homes:</p>
+
+<ul>
+  <li>Moisture penetrates bare or cracked surfaces, causing structural damage to timber framing, render and walls</li>
+  <li>Mould spreads into the substrate, requiring costly remediation before repainting can begin</li>
+  <li>Exposed timber rots and requires replacement rather than preparation</li>
+  <li>Water ingress leads to internal damage — stained ceilings, swollen plasterboard, degraded insulation</li>
+  <li>What was a routine $4,000–$8,000 repaint becomes a $15,000+ repair and repaint project</li>
+</ul>
+
+<p>Paint is the most cost-effective protective layer your home has. Maintaining it proactively is always the better financial decision.</p>
+
+<h2>How Often Should You Repaint a House in Australia?</h2>
+
+<p>The right interval depends on your location, surface type and the quality of the previous paint job. As a practical guide for Australian conditions:</p>
+
+<ul>
+  <li><strong>Exterior rendered or masonry walls</strong> — every 8–15 years</li>
+  <li><strong>Exterior timber (weatherboards, fascia, trims)</strong> — every 5–8 years</li>
+  <li><strong>Interior walls (standard living areas)</strong> — every 5–10 years depending on use and wear</li>
+  <li><strong>Coastal properties in Sydney</strong> — subtract 2–3 years from each of the above, as salt air accelerates degradation</li>
+</ul>
+
+<p>If you've recently purchased a home and the paint history isn't clear, a professional assessment is the most reliable starting point. <a href="/house-painters-sydney">Prisma Coatings provides free assessments for Sydney homes</a> across all suburbs.</p>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>How do I know if my house needs repainting or just a clean?</h3>
+<p>A professional wash can remove surface-level grime and improve the appearance of a sound paint surface, but it won't fix chalking, peeling, cracking or fading. If the paint itself is degraded — not just dirty — a repaint is the only lasting solution. A simple test: run your hand along an exterior wall. Powdery residue or visible colour transfer means the paint is past cleaning.</p>
+
+<h3>Can I paint over peeling paint?</h3>
+<p>No. Painting over peeling paint is one of the most common and costly mistakes in residential painting. The new coat adheres to the unstable layer beneath it and peels with it — often within months. All loose and peeling paint must be fully removed and the surface properly prepared before any new coating is applied.</p>
+
+<h3>What is the best time of year to repaint a house in Australia?</h3>
+<p>Spring and autumn are the ideal seasons for exterior painting in Sydney — temperatures are moderate and humidity is generally lower than summer. Exterior painting should be avoided during extended wet periods and on days above 35°C, as extreme heat affects application and curing. Interior painting can be done year-round with adequate ventilation.</p>
+
+<h3>How long does a house repaint take in Sydney?</h3>
+<p>A full exterior repaint of a single-storey Sydney home typically takes 3–5 days, depending on size, surface condition and weather. Interior repaints vary — a full 3-bedroom home might take 4–7 days. Significant preparation work such as crack repair, render patching or mould treatment adds time before painting begins.</p>
+
+<h3>Is it worth repainting before selling a home in Sydney?</h3>
+<p>Yes — consistently. A fresh paint job is one of the highest-return pre-sale investments for Sydney homeowners. First impressions are decisive in this market, and a professionally repainted home presents better at open for inspections, photographs better for marketing, and signals to buyers that the property has been well maintained.</p>
+
+<h3>Do professional painters in Sydney fix cracks before repainting?</h3>
+<p>Yes. Any reputable painting contractor will include surface preparation — filling cracks, patching holes, treating mould and sanding rough surfaces — as part of the painting scope. Skipping preparation is the primary cause of early paint failure. Always confirm what's included in a quote before accepting it.</p>
+
+<h2>Get a Free Quote from Professional Painters in Sydney</h2>
+
+<p>If your home is showing any of the signs above — or you simply want an expert opinion on its current condition — Prisma Coatings is here to help. We provide free, no-obligation assessments and detailed quotes for <a href="/interior-painting-sydney">interior painting</a> and <a href="/exterior-painting-sydney">exterior painting</a> across Sydney, including the Eastern Suburbs, Inner West, North Shore, Sutherland Shire and surrounding areas.</p>
+
+<p>Our team will assess your property honestly, recommend the right approach for your surface type and location, and give you a clear price with no pressure. Contact <a href="/house-painters-sydney">Prisma Coatings</a> today to arrange your free quote.</p>
+    `,
+    image: "/images/aboutus/exterior-house-painting-sydney.webp",
+    date: "2026-04-29",
+    category: "Maintenance",
+    slug: "signs-house-needs-repainting-australia",
+    readTime: "8 min read",
+    author: "Prisma Coatings Team",
+  },
+  {
     id: 2,
     title: "How Much Does It Cost to Paint a House in Sydney? (2026 Guide)",
     metaTitle:
