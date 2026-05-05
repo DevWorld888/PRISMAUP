@@ -88,21 +88,21 @@ const services = [
 const testimonials = [
   {
     name: "Sandra K.",
-    suburb: "Newtown",
+    suburb: "SYDNEY",
     rating: 5,
-    text: "Prisma did an incredible job on our Federation terrace in Newtown. The prep work alone was impressive — they filled every crack before touching a brush. The result was flawless and the team was respectful of our home the whole time.",
+    text: "Hally did a patch repair to our ceiling a few months ago and recently painted rooms in our home. We couldn’t be happier with the outcomes. We highly recommend Prisma Coatings — there is no one we trust more than Hally. His attention to detail and professionalism is unmatched.",
   },
   {
-    name: "James R.",
-    suburb: "Marrickville",
+    name: "Matt Schaudin",
+    suburb: "SYDNEY",
     rating: 5,
-    text: "I manage a few investment properties in Marrickville and these are the only painters I now call. Always on time, always tidy, and the quote they give you is the price you pay. That matters a lot when you're running a budget.",
+    text: "I use Hally on all jobs I do. He gets it done on time with premium quality for a great price. Highly recommend using Prisma Coatings for all painting needs.",
   },
   {
-    name: "Louise T.",
-    suburb: "Leichhardt",
+    name: "Jim Miliotis.",
+    suburb: "SYDNEY",
     rating: 5,
-    text: "Got quotes from three painters in Inner West Sydney and Prisma Coatings stood out straight away — professional communication, detailed scope and fair pricing. The exterior came out beautifully. Already recommended them to two neighbours.",
+    text: "We use Prisma Coatings for all our building projects. We do a lot of high-end work which requires attention to detail, quality workmanship and efficiency. Hally and his team are very professional and get the job done."
   },
 ];
 
