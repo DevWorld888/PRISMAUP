@@ -79,6 +79,12 @@ export async function GET() {
       lastmod: currentDate
     },
     {
+      url: '/painters-inner-west-sydney',
+      changefreq: 'monthly',
+      priority: '0.8',
+      lastmod: currentDate
+    },
+    {
       url: '/painters-north-west-sydney',
       changefreq: 'monthly',
       priority: '0.8',
