@@ -245,7 +245,7 @@ export default function Header() {
                     Eastern Suburbs
                   </Link>
                   <Link href="/painters-inner-west-sydney" onClick={() => setMenuOpen(false)}>
-                    Inner West Sydney
+                    Painter Inner West Sydney
                   </Link>
                   <Link href="/painters-north-west-sydney" onClick={() => setMenuOpen(false)}>
                     North West Sydney
