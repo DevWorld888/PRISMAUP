@@ -8,6 +8,13 @@ const Testimonials = () => {
 
   const testimonials = [
     {
+      text: "Hally did a patch repair to our ceiling a few months ago and recently painted rooms in our home. We couldn't be happier with the outcomes. We highly recommend Prisma Coatings, there is no one we trust more than Hally. His attention to detail and professionalism is unmatched. We will definitely be calling Hally and Prisma Coatings for our future projects.",
+      name: "Donna McMahon",
+      avatar:
+        "https://lh3.googleusercontent.com/a/ACg8ocLQ3K46osVzvHCJSdB9KjGt-C6LGG2FaIkGsDm2LP7iqGSMiw=w90-h90-p-rp-mo-br100",
+      rating: 5,
+    },
+    {
       text: "Hally recently did a patch and paint job of the bedroom ceiling for us. Very professional, punctual and neatly done work. The ceiling looks as good as new! Thank you Hally!",
       name: "M Aron",
       avatar:

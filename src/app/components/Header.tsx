@@ -119,6 +119,13 @@ export default function Header() {
                     Inner West
                   </Link>
                   <Link
+                    href="/painters-inner-west-sydney"
+                    className="block px-4 py-2 text-sm text-[#13233A] hover:bg-gray-100 hover:text-[#C53030] transition-colors"
+                  >
+                    Painters Inner West Sydney
+                  </Link>
+
+                  <Link
                     href="/painters-north-west-sydney"
                     className="block px-4 py-2 text-sm text-[#13233A] hover:bg-gray-100 hover:text-[#C53030] transition-colors"
                   >
@@ -237,8 +244,8 @@ export default function Header() {
                   <Link href="/painters-eastern-suburbs" onClick={() => setMenuOpen(false)}>
                     Eastern Suburbs
                   </Link>
-                  <Link href="/painters-inner-west" onClick={() => setMenuOpen(false)}>
-                    Inner West
+                  <Link href="/painters-inner-west-sydney" onClick={() => setMenuOpen(false)}>
+                    Inner West Sydney
                   </Link>
                   <Link href="/painters-north-west-sydney" onClick={() => setMenuOpen(false)}>
                     North West Sydney
