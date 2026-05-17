@@ -174,7 +174,7 @@ export default function PaintersNorthWestSydneyPage() {
                 Get a Free Quote
               </Link>
               <a
-                href="tel:0401508036"
+                href="tel:+61401508036"
                 className="inline-flex items-center justify-center border border-white text-white px-6 py-4 rounded-md font-semibold hover:bg-white hover:text-[#13233A] transition-colors"
               >
                 <Phone className="w-4 h-4 mr-2" />
@@ -302,7 +302,7 @@ export default function PaintersNorthWestSydneyPage() {
               Request a Free Quote
             </Link>
             <a
-              href="tel:0401508036"
+              href="tel:+61401508036"
               className="inline-flex items-center justify-center bg-white text-[#13233A] px-6 py-4 rounded-md font-semibold hover:bg-gray-100 transition-colors"
             >
               Call 0401 508 036

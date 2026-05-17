@@ -32,7 +32,7 @@ export default function Header() {
           <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
             <Facebook className="w-5 h-5 hover:scale-110 transition" />
           </a>
-          <a href="tel:0401508036" target="_blank" rel="noopener noreferrer" aria-label="Phone">
+          <a href="tel:+61401508036" target="_blank" rel="noopener noreferrer" aria-label="Phone">
             <Phone className="w-5 h-5 hover:scale-110 transition" />
           </a>
         </div>
@@ -171,7 +171,7 @@ export default function Header() {
         <div className="hidden md:flex flex-col items-center gap-2">
           {/* BOTÓN TELÉFONO */}
           <a
-            href="tel:0401508036"
+            href="tel:+61401508036"
             onClick={handlePhoneClick}
             className="flex items-center gap-0 transition group"
             aria-label="Call Prisma Coatings Sydney"
@@ -260,7 +260,7 @@ export default function Header() {
             <Link href="/contact">Get a Free Quote</Link>
             <Link href="/blog">Blog</Link>
             <a
-              href="tel:0401508036"
+              href="tel:+61401508036"
               onClick={handlePhoneClick}
               className="flex items-center gap-2 border border-black dark:border-gray-600 px-4 py-3 rounded-2xl bg-[#D61C1C]! dark:bg-gray-700 transition"
               aria-label="Call Prisma Coatings Sydney"

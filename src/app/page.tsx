@@ -55,7 +55,7 @@ export default function Home() {
     "@id": "https://www.prismacoatings.com.au/#business",
     name: "Prisma Coatings",
     url: "https://www.prismacoatings.com.au",
-    telephone: "+61401508036",
+    telephone: "+61 401 508 036",
     email: "info@prismacoatings.com.au",
     description:
       "Professional residential and commercial painting services in Sydney. Interior painting, exterior painting, strata and new builds. Over 10 years of experience.",

@@ -353,7 +353,7 @@ const Testimonials = () => {
             <p className="mt-4 text-[#4A5568] text-sm">
               Or{" "}
               <a
-                href="tel:0401508036"
+                href="tel:+61401508036"
                 className="text-[#13233A] hover:text-[#C53030] transition-colors"
               >
                 call us now

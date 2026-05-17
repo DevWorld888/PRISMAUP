@@ -311,7 +311,7 @@ export default function PaintersInnerWestSydneyPage() {
                 Get a Free Quote
               </Link>
               <a
-                href="tel:0401508036"
+                href="tel:+61401508036"
                 className="inline-flex items-center justify-center border border-[#13233A] text-[#13233A] px-6 py-4 rounded-md font-semibold hover:bg-[#13233A] hover:text-white transition-colors"
               >
                 <Phone className="w-4 h-4 mr-2" />
@@ -465,7 +465,7 @@ export default function PaintersInnerWestSydneyPage() {
               Message Us on WhatsApp
             </a>
             <a
-              href="tel:0401508036"
+              href="tel:+61401508036"
               className="inline-flex items-center justify-center border-2 border-white text-white px-6 py-4 rounded-md font-semibold hover:bg-white hover:text-[#D61C1C] transition-colors"
             >
               <Phone className="w-4 h-4 mr-2" />

@@ -6,7 +6,7 @@ const WhatsAppFloat = () => {
   const [isVisible, setIsVisible] = useState(false);
   
   // Número de WhatsApp (reemplaza con tu número real)
-  const phoneNumber = "+610401508036"; // Formato: código de país + número sin espacios ni símbolos
+  const phoneNumber = "61401508036"; // Formato: código de país + número sin espacios ni símbolos
   const message = "¡Hi, I need a painting quote for my property in Sydney. Can you help me?";
   
   useEffect(() => {

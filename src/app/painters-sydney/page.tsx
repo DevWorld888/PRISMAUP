@@ -210,7 +210,7 @@ export default function PaintersSydneyPage() {
               </Link>
 
               <a
-                href="tel:0401508036"
+                href="tel:+61401508036"
                 className="inline-flex items-center justify-center border border-white text-white px-6 py-4 rounded-md font-semibold hover:bg-white hover:text-[#13233A] transition-colors"
               >
                 <Phone className="w-4 h-4 mr-2" />
@@ -419,7 +419,7 @@ export default function PaintersSydneyPage() {
               Get a Free Quote
             </Link>
             <a
-              href="tel:0401508036"
+              href="tel:+61401508036"
               className="inline-flex items-center justify-center bg-white text-[#13233A] px-6 py-4 rounded-md font-semibold hover:bg-gray-100 transition-colors"
             >
               <Phone className="w-4 h-4 mr-2" />
@@ -515,7 +515,7 @@ export default function PaintersSydneyPage() {
             Request a Free Quote
           </Link>
           <a
-            href="tel:0401508036"
+            href="tel:+61401508036"
             className="inline-flex items-center justify-center border-2 border-[#13233A] text-[#13233A] px-8 py-4 rounded-md font-semibold text-lg hover:bg-[#13233A] hover:text-white transition-colors"
           >
             <Phone className="w-5 h-5 mr-2" />

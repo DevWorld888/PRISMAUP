@@ -6,7 +6,7 @@ import Image from "next/image";
 import TurnstileWidget from "../../components/TurnstileWidget";
 
 // ─── WhatsApp config ──────────────────────────────────────────────────────────
-const PHONE_NUMBER = "+610401508036";
+const PHONE_NUMBER = "61401508036";
 const WA_MESSAGE =
   "Hi! I'd like to get a free painting quote from Prisma Coatings.";
 
@@ -512,7 +512,7 @@ const ContactPage = () => {
 
               {/* Call CTA */}
               <a
-                href="tel:0401508036"
+                href="tel:+61401508036"
                 className="flex items-center justify-center gap-2 bg-[#D61C1C] hover:bg-[#B71C1C] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 text-sm mb-3"
                 aria-label="Call Prisma Coatings"
               >
@@ -557,7 +557,7 @@ const ContactPage = () => {
                       Phone
                     </p>
                     <a
-                      href="tel:0401508036"
+                      href="tel:+61401508036"
                       className="text-gray-800 font-semibold hover:text-[#D61C1C] transition-colors"
                     >
                       0401 508 036

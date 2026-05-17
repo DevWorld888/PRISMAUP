@@ -14,7 +14,7 @@ type ServiceCard = {
   hasServicePage: boolean;
 };
 
-const PHONE = "+610401508036";
+const PHONE = "61401508036";
 const WA_URL = `https://wa.me/${PHONE}?text=${encodeURIComponent(
   "Hi, I need a painting quote for my property in Sydney. Can you help me?"
 )}`;
@@ -211,7 +211,7 @@ const OurServices = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link
-              href={`tel:${PHONE}`}
+              href="tel:+61401508036"
               className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white text-sm font-medium rounded-lg border border-white/20 transition-colors duration-200"
             >
               <Phone className="w-4 h-4" />

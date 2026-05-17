@@ -251,7 +251,7 @@ export default function InteriorPaintingSydneyPage() {
       "@type": "PaintingContractor",
       name: "Prisma Coatings",
       url: "https://www.prismacoatings.com.au",
-      telephone: "+61401508036",
+      telephone: "+61 401 508 036",
       address: {
         "@type": "PostalAddress",
         streetAddress: "20/25 Marlowe St",
@@ -332,7 +332,7 @@ export default function InteriorPaintingSydneyPage() {
               </Link>
 
               <a
-                href="tel:0401508036"
+                href="tel:+61401508036"
                 className="inline-flex items-center justify-center border border-white text-white px-6 py-4 rounded-md font-semibold hover:bg-white hover:text-[#13233A] transition-colors"
               >
                 <Phone className="w-4 h-4 mr-2" />
@@ -534,7 +534,7 @@ export default function InteriorPaintingSydneyPage() {
                 Get a Free Quote
               </Link>
               <a
-                href="tel:0401508036"
+                href="tel:+61401508036"
                 className="inline-flex items-center justify-center bg-white text-[#13233A] px-6 py-4 rounded-md font-semibold hover:bg-gray-100 transition-colors"
               >
                 <Phone className="w-4 h-4 mr-2" />
@@ -632,7 +632,7 @@ export default function InteriorPaintingSydneyPage() {
 
           <p className="mt-8 text-center text-gray-600">
             Not sure if we cover your area?{" "}
-            <a href="tel:0401508036" className="text-[#D61C1C] font-semibold hover:underline">
+            <a href="tel:+61401508036" className="text-[#D61C1C] font-semibold hover:underline">
               Call us on 0401 508 036
             </a>{" "}
             and we'll let you know straight away.
@@ -661,7 +661,7 @@ export default function InteriorPaintingSydneyPage() {
               Request a Free Quote Online
             </Link>
             <a
-              href="tel:0401508036"
+              href="tel:+61401508036"
               className="inline-flex items-center justify-center bg-white text-[#13233A] px-6 py-4 rounded-md font-semibold hover:bg-gray-100 transition-colors"
             >
               <Phone className="w-4 h-4 mr-2" />
@@ -737,7 +737,7 @@ export default function InteriorPaintingSydneyPage() {
               Request a Free Quote
             </Link>
             <a
-              href="tel:0401508036"
+              href="tel:+61401508036"
               className="inline-flex items-center justify-center bg-white text-[#13233A] px-8 py-4 rounded-md font-semibold hover:bg-gray-100 transition-colors"
             >
               <Phone className="w-4 h-4 mr-2" />
