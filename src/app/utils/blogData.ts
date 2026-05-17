@@ -18,7 +18,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 8,
     title: "The $5,000 Mistake: Why \"Cheap\" Painters Are Costing Sydney Homeowners a Fortune",
-    metaTitle: "Why Cheap Painters Cost More in Sydney | Prisma Coatings",
+    metaTitle: "Why Cheap Painters Cost More in Sydney",
     metaDescription:
       "Think you're saving money with a cheap painter in Sydney? Discover the hidden costs of budget paint jobs — and why most homeowners end up paying twice.",
     focusKeywords: [
@@ -256,8 +256,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 2,
     title: "How Much Does It Cost to Paint a House in Sydney? (2026 Guide)",
-    metaTitle:
-      "House Painting Cost Sydney 2026 | Price Guide | Prisma Coatings",
+    metaTitle: "House Painting Cost Sydney 2026 | Price Guide",
     metaDescription:
       "How much does house painting cost in Sydney in 2026? Get a clear breakdown of interior and exterior painting prices per room, per square metre and full house.",
     focusKeywords: [
@@ -523,7 +522,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 5,
     title: "How Long Does Exterior Paint Last in Sydney's Climate?",
-    metaTitle: "How Long Does Exterior Paint Last in Sydney? | Prisma Coatings",
+    metaTitle: "How Long Does Exterior Paint Last in Sydney?",
     metaDescription:
       "How long should exterior paint last on a Sydney home? Learn what affects paint lifespan in Australia's climate and how to make your exterior paint job last longer.",
     focusKeywords: [

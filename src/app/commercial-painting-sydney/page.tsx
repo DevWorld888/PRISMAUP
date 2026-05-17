@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Commercial Painting Sydney | Prisma Coatings",
+  title: "Commercial Painting Sydney",
   description:
     "Trusted commercial painters in Sydney. Offices, strata, retail & warehouses. Licensed & insured, after-hours available. Get a free site quote today.",
   keywords: [

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { CheckCircle, Phone, Brush, Building2, Home, Star } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Painters Sutherland Shire Sydney | House Painting | Prisma Coatings",
+  title: "Painters Sutherland Shire Sydney | House Painting",
   description:
     "Professional house painters in the Sutherland Shire. Prisma Coatings provides interior and exterior painting in Cronulla, Miranda, Caringbah, Gymea, Sutherland and surrounding areas.",
   keywords: [

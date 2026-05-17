@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Painters Sydney | Prisma Coatings – Free Quotes",
+  title: "Painters Sydney – Free Quotes",
   description:
     "Trusted painters in Sydney for homes and businesses. Interior, exterior and commercial painting. Professional finish, no hidden costs. Call for a free quote.",
   keywords: [

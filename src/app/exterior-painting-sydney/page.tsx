@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Exterior Painting Sydney | House Painters | Prisma Coatings",
+  title: "Exterior Painting Sydney | House Painters",
   description:
     "Professional exterior house painters in Sydney. Weather-resistant coatings, thorough prep & premium finishes. All suburbs covered. Free quote – call 0401 508 036.",
   keywords: [

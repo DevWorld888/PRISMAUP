@@ -5,7 +5,7 @@ import { blogPosts } from "../utils/blogData";
 import BlogCategoriesClient from "./components/BlogCategoriesClient";
 
 export const metadata: Metadata = {
-  title: "Painting Blog Sydney | Prisma Coatings",
+  title: "Painting Blog Sydney",
   description:
     "Expert painting tips, color trends, maintenance advice, and industry insights from Sydney's professional painters. Get the latest updates from Prisma Coatings.",
   keywords:

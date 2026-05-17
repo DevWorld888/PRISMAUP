@@ -4,7 +4,7 @@ import Image from "next/image";
 import { CheckCircle, Phone, Brush, Building2, Home, Star, MessageCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Painters Inner West Sydney | Prisma Coatings",
+  title: "Painters Inner West Sydney",
   description:
     "Looking for painters in Inner West Sydney? Prisma Coatings delivers quality residential and commercial painting in Marrickville, Newtown, Leichhardt, Ashfield and more.",
   keywords: [

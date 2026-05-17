@@ -4,8 +4,7 @@ import Image from "next/image";
 import { CheckCircle, Phone, Brush, Building2, Home, Star } from "lucide-react";
 
 export const metadata: Metadata = {
-  title:
-    "House Painters Sydney | Interior & Exterior Painting | Prisma Coatings",
+  title: "House Painters Sydney | Interior & Exterior Painting",
   description:
     "Looking for trusted house painters in Sydney? Prisma Coatings provides professional interior and exterior painting services for homes, apartments and strata properties across Sydney.",
   keywords: [

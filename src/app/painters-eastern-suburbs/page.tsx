@@ -4,7 +4,7 @@ import Image from "next/image";
 import { CheckCircle, Phone, Brush, Building2, Home, Star } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Painters Eastern Suburbs Sydney | House Painting | Prisma Coatings",
+  title: "Painters Eastern Suburbs Sydney | House Painting",
   description:
     "Professional house painters in Sydney's Eastern Suburbs. Prisma Coatings provides interior and exterior painting in Bondi, Coogee, Randwick, Paddington and surrounding areas.",
   keywords: [

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { CheckCircle, Phone, Brush, Building2, Home, Star } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Painters North West Sydney | House Painting | Prisma Coatings",
+  title: "Painters North West Sydney | House Painting",
   description:
     "Professional house painters in Sydney's North West. Prisma Coatings provides interior and exterior painting in Castle Hill, Kellyville, Parramatta, Baulkham Hills and surrounding areas.",
   keywords: [

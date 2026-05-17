@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Interior Painters Sydney | Free Quote | Prisma Coatings",
+  title: "Interior Painters Sydney | Free Quote",
   description:
     "Professional interior painting in Sydney for homes & apartments. Walls, ceilings, trims & full repaints. Local painters, premium finish. Call for a free quote.",
   keywords: [
