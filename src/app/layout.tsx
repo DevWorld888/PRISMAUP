@@ -55,15 +55,16 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "PaintingContractor",
+              "@type": ["PaintingContractor", "HousePainter"],
               "@id": "https://www.prismacoatings.com.au/#business",
-              name: "Prisma Coatings",
+              name: "Prisma Coatings Pty Ltd",
               url: "https://www.prismacoatings.com.au",
               logo: "https://www.prismacoatings.com.au/logo/logo.png",
               image: "https://www.prismacoatings.com.au/logo/logo.png",
               description:
                 "Professional house and commercial painting services in Sydney. Interior, exterior, strata and residential painting with over 10 years of experience.",
-              telephone: "+61 401 508 036",
+              telephone: "+61401508036",
+              email: "prismacoatingsau@gmail.com",
               priceRange: "$$",
               address: {
                 "@type": "PostalAddress",
@@ -78,10 +79,10 @@ export default function RootLayout({
                 latitude: -33.9162866,
                 longitude: 151.1026061,
               },
-              areaServed: {
-                "@type": "City",
-                name: "Sydney",
-              },
+              areaServed: [
+                { "@type": "City", name: "Sydney" },
+                { "@type": "AdministrativeArea", name: "New South Wales" },
+              ],
               openingHoursSpecification: [
                 {
                   "@type": "OpeningHoursSpecification",
@@ -91,20 +92,16 @@ export default function RootLayout({
                     "Wednesday",
                     "Thursday",
                     "Friday",
+                    "Saturday",
                   ],
-                  opens: "07:00",
-                  closes: "17:00",
-                },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  dayOfWeek: "Saturday",
                   opens: "07:00",
                   closes: "17:00",
                 },
               ],
               contactPoint: {
                 "@type": "ContactPoint",
-                telephone: "+61 401 508 036",
+                telephone: "+61401508036",
+                email: "prismacoatingsau@gmail.com",
                 contactType: "customer service",
                 areaServed: "AU",
                 availableLanguage: ["English"],
@@ -121,11 +118,14 @@ export default function RootLayout({
                     "@type": "Offer",
                     itemOffered: {
                       "@type": "Service",
+                      name: "Residential Painting Sydney",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
                       name: "Interior Painting Sydney",
-                      areaServed: {
-                        "@type": "City",
-                        name: "Sydney",
-                      },
                     },
                   },
                   {
@@ -133,10 +133,6 @@ export default function RootLayout({
                     itemOffered: {
                       "@type": "Service",
                       name: "Exterior Painting Sydney",
-                      areaServed: {
-                        "@type": "City",
-                        name: "Sydney",
-                      },
                     },
                   },
                   {
@@ -144,10 +140,6 @@ export default function RootLayout({
                     itemOffered: {
                       "@type": "Service",
                       name: "Commercial Painting Sydney",
-                      areaServed: {
-                        "@type": "City",
-                        name: "Sydney",
-                      },
                     },
                   },
                   {
@@ -155,32 +147,10 @@ export default function RootLayout({
                     itemOffered: {
                       "@type": "Service",
                       name: "Strata Painting Sydney",
-                      areaServed: {
-                        "@type": "City",
-                        name: "Sydney",
-                      },
                     },
                   },
                 ],
               },
-              // review: {
-              //   "@type": "Review",
-              //   reviewRating: {
-              //     "@type": "Rating",
-              //     ratingValue: "5",
-              //     bestRating: "5",
-              //   },
-              //   author: {
-              //     "@type": "Person",
-              //     name: "Ken Stevens",
-              //   },
-              //   reviewBody:"Hally, the founder of Prisma Coatings, and his team are truly outstanding painters. I have used them several times on large homes in Mosman and the work is First Class. Courteous and Professional....and importantly 'lots of preparation'.....which ensures an excellent and long lasting finish. I recommend Hally and Prisma Coatings highly. The most important test is simple.....ask yourself would I use them again The answer is YES ! Well priced and reliable. A great team. Ken Stevens"
-              // },
-              // aggregateRating: {
-              //   "@type": "AggregateRating",
-              //   ratingValue: "5.0",
-              //   reviewCount: "15",
-              // },
             }),
           }}
         />
