@@ -113,16 +113,10 @@ export default function Header() {
                     Eastern Suburbs
                   </Link>
                   <Link
-                    href="/painters-inner-west"
-                    className="block px-4 py-2 text-sm text-[#13233A] hover:bg-gray-100 hover:text-[#C53030] transition-colors"
-                  >
-                    Inner West
-                  </Link>
-                  <Link
                     href="/painters-inner-west-sydney"
                     className="block px-4 py-2 text-sm text-[#13233A] hover:bg-gray-100 hover:text-[#C53030] transition-colors"
                   >
-                    Painters Inner West Sydney
+                    Inner West Sydney
                   </Link>
 
                   <Link

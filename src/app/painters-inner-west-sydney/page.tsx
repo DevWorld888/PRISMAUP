@@ -15,8 +15,14 @@ export const metadata: Metadata = {
     "painters newtown sydney",
     "painters leichhardt sydney",
     "painters ashfield sydney",
+    "painters balmain",
+    "painters campsie",
+    "painters burwood",
+    "painters strathfield",
     "residential painting inner west",
     "commercial painting inner west sydney",
+    "interior painting inner west",
+    "exterior painting inner west",
   ],
   alternates: {
     canonical: "https://www.prismacoatings.com.au/painters-inner-west-sydney",
@@ -53,6 +59,8 @@ const serviceAreas = [
   "Dulwich Hill",
   "Summer Hill",
   "Campsie",
+  "Burwood",
+  "Strathfield",
 ];
 
 const benefits = [
@@ -82,6 +90,12 @@ const services = [
     description:
       "Offices, retail spaces, strata buildings and body corporates across Inner West Sydney. We work around your schedule to minimise downtime and deliver a finish that reflects your brand.",
     icon: Building2,
+  },
+  {
+    title: "Surface Preparation",
+    description:
+      "Older Inner West homes often need careful patching, sanding and priming before any colour goes on. We handle all prep work properly — because that is where a lasting result is built.",
+    icon: Brush,
   },
 ];
 

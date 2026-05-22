@@ -93,11 +93,6 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/painters-inner-west" className="text-gray-300 hover:text-white transition-colors text-sm">
-                    Inner West
-                  </Link>
-                </li>
-                <li>
                   <Link href="/painters-inner-west-sydney" className="text-gray-300 hover:text-white transition-colors text-sm">
                     Inner West Sydney
                   </Link>

@@ -596,7 +596,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>If your exterior was last painted more than 8 years ago and you're in a coastal or high-UV area, it's worth having it assessed before visible problems appear.</p>
 
-<p>Prisma Coatings provides free <a href="/exterior-painting-sydney">exterior paint</a> assessments across Sydney, including <a href="/painters-eastern-suburbs">Eastern Suburbs</a>, <a href="/painters-inner-west">Inner West</a> and <a href="/painters-sutherland-shire">Sutherland Shire</a>. If you're unsure whether your home is due for a repaint, contact our team and we'll give you an honest assessment.</p>
+<p>Prisma Coatings provides free <a href="/exterior-painting-sydney">exterior paint</a> assessments across Sydney, including <a href="/painters-eastern-suburbs">Eastern Suburbs</a>, <a href="/painters-inner-west-sydney">Inner West</a> and <a href="/painters-sutherland-shire">Sutherland Shire</a>. If you're unsure whether your home is due for a repaint, contact our team and we'll give you an honest assessment.</p>
     `,
     image: "/images/aboutus/exterior-house-painting-sydney.webp",
     date: "2026-03-15",

@@ -1,9 +1,17 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   images: {
-    domains: ['lh3.googleusercontent.com'], // add more dominios if is necesary
+    domains: ['lh3.googleusercontent.com'],
+  },
+  async redirects() {
+    return [
+      {
+        source: '/painters-inner-west',
+        destination: '/painters-inner-west-sydney',
+        permanent: true,
+      },
+    ];
   },
 };
 
