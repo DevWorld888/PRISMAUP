@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { CheckCircle, Phone, Brush, Building2, Home, Star, MessageCircle } from "lucide-react";
+import FAQSchema from "../components/FAQSchema";
 
 export const metadata: Metadata = {
   title: "Painters Inner West Sydney",
@@ -122,28 +123,28 @@ const testimonials = [
 
 const faqs = [
   {
-    q: "How much does painting cost in Inner West Sydney?",
-    a: "Pricing depends on the size of your property, the condition of existing surfaces and the scope of work. A standard three-bedroom house interior in Inner West Sydney typically starts from around $3,000–$5,000, though older homes with more prep needs will vary. Contact us for a free site inspection and accurate quote.",
+    question: "How much does painting cost in Inner West Sydney?",
+    answer: "Pricing depends on the size of your property, the condition of existing surfaces and the scope of work. A standard three-bedroom house interior in Inner West Sydney typically starts from around $3,000–$5,000, though older homes with more prep needs will vary. Contact us for a free site inspection and accurate quote.",
   },
   {
-    q: "How long does a painting job take in Inner West?",
-    a: "A standard interior repaint for a three-bedroom home generally takes 3–5 days. Exterior jobs can take 3–7 days depending on surface area and preparation required. We will give you a clear timeline before work begins so you can plan accordingly.",
+    question: "How long does a painting job take in Inner West?",
+    answer: "A standard interior repaint for a three-bedroom home generally takes 3–5 days. Exterior jobs can take 3–7 days depending on surface area and preparation required. We will give you a clear timeline before work begins so you can plan accordingly.",
   },
   {
-    q: "Do you offer free quotes for Inner West Sydney?",
-    a: "Yes. We provide free, no-obligation quotes for all residential and commercial painting jobs across Inner West Sydney. We visit the property, assess the surfaces and provide a detailed written quote — no guesswork.",
+    question: "Do you offer free quotes for Inner West Sydney?",
+    answer: "Yes. We provide free, no-obligation quotes for all residential and commercial painting jobs across Inner West Sydney. We visit the property, assess the surfaces and provide a detailed written quote — no guesswork.",
   },
   {
-    q: "Do you paint older period homes in the Inner West?",
-    a: "Absolutely. We regularly work on Federation terraces, Californian bungalows and Victorian semis throughout the Inner West. These homes require careful prep, the right primers and attention to detail — that is exactly the kind of work we do.",
+    question: "Do you paint older period homes in the Inner West?",
+    answer: "Absolutely. We regularly work on Federation terraces, Californian bungalows and Victorian semis throughout the Inner West. These homes require careful prep, the right primers and attention to detail — that is exactly the kind of work we do.",
   },
   {
-    q: "Do you offer commercial painting in Inner West Sydney?",
-    a: "Yes. Prisma Coatings works with businesses, strata committees and property managers across Inner West Sydney. We schedule work to suit your operating hours and minimise disruption to your tenants or customers.",
+    question: "Do you offer commercial painting in Inner West Sydney?",
+    answer: "Yes. Prisma Coatings works with businesses, strata committees and property managers across Inner West Sydney. We schedule work to suit your operating hours and minimise disruption to your tenants or customers.",
   },
   {
-    q: "Which suburbs in the Inner West do you cover?",
-    a: "We cover all of Inner West Sydney including Marrickville, Newtown, Leichhardt, Ashfield, Balmain, Annandale, Glebe, Petersham, Stanmore, Dulwich Hill, Summer Hill, Campsie and surrounding areas.",
+    question: "Which suburbs in the Inner West do you cover?",
+    answer: "We cover all of Inner West Sydney including Marrickville, Newtown, Leichhardt, Ashfield, Balmain, Annandale, Glebe, Petersham, Stanmore, Dulwich Hill, Summer Hill, Campsie and surrounding areas.",
   },
 ];
 
@@ -194,7 +195,8 @@ export default function PaintersInnerWestSydneyPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-
+      <FAQSchema faqs={faqs} /> 
+      
       {/* HERO */}
       <section className="relative overflow-hidden bg-[#13233A]">
         <div className="absolute inset-0 bg-black/40" />
@@ -512,11 +514,11 @@ export default function PaintersInnerWestSydneyPage() {
         <div className="mt-12 space-y-6">
           {faqs.map((faq) => (
             <article
-              key={faq.q}
+              key={faq.question}
               className="bg-gray-50 rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="text-xl font-bold">{faq.q}</h3>
-              <p className="mt-3 text-gray-700 leading-relaxed">{faq.a}</p>
+              <h3 className="text-xl font-bold">{faq.question}</h3>
+              <p className="mt-3 text-gray-700 leading-relaxed">{faq.answer}</p>
             </article>
           ))}
         </div>

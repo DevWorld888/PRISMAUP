@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { CheckCircle, Phone, Brush, Building2, Home, Star } from "lucide-react";
+import FAQSchema from "../components/FAQSchema";
 
 export const metadata: Metadata = {
   title: "House Painters Sydney | Interior & Exterior Painting",
@@ -81,20 +82,20 @@ const services = [
 
 const faqs = [
   {
-    q: "How much does house painting cost in Sydney?",
-    a: "Pricing depends on the size of the property, surface condition, access, paint system and scope of work. The best move is a site inspection and a tailored quote.",
+    question: "How much does house painting cost in Sydney?",
+    answer: "Pricing depends on the size of the property, surface condition, access, paint system and scope of work. The best move is a site inspection and a tailored quote.",
   },
   {
-    q: "Do you handle both interior and exterior painting?",
-    a: "Yes. Prisma Coatings provides both interior and exterior house painting services across Sydney.",
+    question: "Do you handle both interior and exterior painting?",
+    answer: "Yes. Prisma Coatings provides both interior and exterior house painting services across Sydney.",
   },
   {
-    q: "Do you offer painting for apartments and strata properties?",
-    a: "Yes. We work on houses, apartments, units and strata painting projects depending on the scope.",
+    question: "Do you offer painting for apartments and strata properties?",
+    answer: "Yes. We work on houses, apartments, units and strata painting projects depending on the scope.",
   },
   {
-    q: "Can I request a free quote?",
-    a: "Yes. You can contact Prisma Coatings for a free quote and discuss your painting project with the team.",
+    question: "Can I request a free quote?",
+    answer: "Yes. You can contact Prisma Coatings for a free quote and discuss your painting project with the team.",
   },
 ];
 
@@ -138,6 +139,7 @@ export default function HousePaintersSydneyPage() {
 
   return (
     <main className="bg-white text-[#13233A]">
+      <FAQSchema faqs={faqs} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -361,11 +363,11 @@ export default function HousePaintersSydneyPage() {
         <div className="mt-12 space-y-6">
           {faqs.map((faq) => (
             <article
-              key={faq.q}
+              key={faq.question}
               className="bg-gray-50 rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="text-xl font-bold">{faq.q}</h3>
-              <p className="mt-3 text-gray-700 leading-relaxed">{faq.a}</p>
+              <h3 className="text-xl font-bold">{faq.question}</h3>
+              <p className="mt-3 text-gray-700 leading-relaxed">{faq.answer}</p>
             </article>
           ))}
         </div>

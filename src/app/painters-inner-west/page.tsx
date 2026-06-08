@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { CheckCircle, Phone, Brush, Building2, Home, Star } from "lucide-react";
+import FAQSchema from "../components/FAQSchema";
 
 export const metadata: Metadata = {
   title: "Painters Inner West Sydney | House Painting",
@@ -86,20 +87,20 @@ const services = [
 
 const faqs = [
   {
-    q: "Do you paint homes across the Inner West?",
-    a: "Yes. Prisma Coatings works throughout Sydney's Inner West including Newtown, Marrickville, Leichhardt, Balmain, Campsie, Ashfield, Burwood, Strathfield and surrounding suburbs.",
+    question: "Do you paint homes across the Inner West?",
+    answer: "Yes. Prisma Coatings works throughout Sydney's Inner West including Newtown, Marrickville, Leichhardt, Balmain, Campsie, Ashfield, Burwood, Strathfield and surrounding suburbs.",
   },
   {
-    q: "Do you paint older terrace and Federation homes?",
-    a: "Yes. We regularly work on older Inner West properties, including terraces, semis and Federation-style homes that require more detailed preparation and care.",
+    question: "Do you paint older terrace and Federation homes?",
+    answer: "Yes. We regularly work on older Inner West properties, including terraces, semis and Federation-style homes that require more detailed preparation and care.",
   },
   {
-    q: "How much does house painting cost in the Inner West?",
-    a: "Pricing varies based on property size, surface condition and scope. Contact us for a free inspection and tailored quote.",
+    question: "How much does house painting cost in the Inner West?",
+    answer: "Pricing varies based on property size, surface condition and scope. Contact us for a free inspection and tailored quote.",
   },
   {
-    q: "Can I get a free quote for my Inner West property?",
-    a: "Absolutely. Get in touch with Prisma Coatings and we will arrange a time to assess and quote your painting project at no obligation.",
+    question: "Can I get a free quote for my Inner West property?",
+    answer: "Absolutely. Get in touch with Prisma Coatings and we will arrange a time to assess and quote your painting project at no obligation.",
   },
 ];
 
@@ -146,7 +147,8 @@ export default function PaintersInnerWestPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-
+      <FAQSchema faqs={faqs} /> 
+      
       {/* HERO */}
       <section className="relative overflow-hidden bg-[#13233A]">
         <div className="absolute inset-0 bg-black/40" />
@@ -325,11 +327,11 @@ export default function PaintersInnerWestPage() {
         <div className="mt-12 space-y-6">
           {faqs.map((faq) => (
             <article
-              key={faq.q}
+              key={faq.question}
               className="bg-gray-50 rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="text-xl font-bold">{faq.q}</h3>
-              <p className="mt-3 text-gray-700 leading-relaxed">{faq.a}</p>
+              <h3 className="text-xl font-bold">{faq.question}</h3>
+              <p className="mt-3 text-gray-700 leading-relaxed">{faq.answer}</p>
             </article>
           ))}
         </div>
