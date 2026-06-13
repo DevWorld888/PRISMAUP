@@ -5,6 +5,7 @@ import { ThemeProvider } from "next-themes";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import WhatsAppFloat from "./components/WhatsAppFloat";
+import LocalBusinessSchema from './components/LocalBusinessSchema';
 import Script from "next/script";
 
 const roboto = Roboto({
@@ -15,7 +16,7 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: {
-    default: "Prisma Coatings | Professional Painters in Sydney",
+    default: " Professional Painters in Sydney | Prisma Coatings ",
     template: "%s | Prisma Coatings",
   },
   description:
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Prisma Coatings | Professional Painters in Sydney",
+    title: " Professional Painters in Sydney | Prisma Coatings ",
     description:
       "Expert house & commercial painting in Sydney with 10+ years experience.",
     url: "https://www.prismacoatings.com.au",
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Prisma Coatings | Professional Painters in Sydney",
+    title: " Professional Painters in Sydney | Prisma Coatings ",
     description:
       "Expert house & commercial painting in Sydney with 10+ years experience.",
   },
@@ -176,6 +177,7 @@ export default function RootLayout({
       <body className={`${roboto.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <Header />
+          <LocalBusinessSchema />
           {children}
           <Footer />
           <WhatsAppFloat />

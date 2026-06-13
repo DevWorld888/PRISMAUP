@@ -26,7 +26,7 @@ const AboutUs = () => {
             {/* Image Section */}
             <div className="flex justify-center">
               <Image
-                src="/images/about-us.png"
+                src="/images/about-us.webp"
                 alt="Professional painting team from Prisma Coatings - Sydney's leading house and commercial painting specialists with 9+ years experience"
                 width={900}
                 height={900}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { CheckCircle, Phone, Brush, Building2, Home, Star } from "lucide-react";
+import FAQSchema from "../components/FAQSchema";
 
 export const metadata: Metadata = {
   title: "Painters Sutherland Shire Sydney | House Painting",
@@ -86,20 +87,20 @@ const services = [
 
 const faqs = [
   {
-    q: "Do you paint homes in the Sutherland Shire?",
-    a: "Yes. Prisma Coatings works throughout the Sutherland Shire including Cronulla, Miranda, Caringbah, Gymea, Sutherland, Menai, Engadine and surrounding suburbs.",
+    question: "Do you paint homes in the Sutherland Shire?",
+    answer: "Yes. Prisma Coatings works throughout the Sutherland Shire including Cronulla, Miranda, Caringbah, Gymea, Sutherland, Menai, Engadine and surrounding suburbs.",
   },
   {
-    q: "Do you use paints suited to coastal conditions?",
-    a: "Yes. We select appropriate paint systems for coastal and semi-coastal environments to ensure better adhesion and durability in areas exposed to salt air.",
+    question: "Do you use paints suited to coastal conditions?",
+    answer: "Yes. We select appropriate paint systems for coastal and semi-coastal environments to ensure better adhesion and durability in areas exposed to salt air.",
   },
   {
-    q: "How much does house painting cost in the Sutherland Shire?",
-    a: "Costs vary based on property size, surface condition and scope of work. Contact us for a free, tailored quote.",
+    question: "How much does house painting cost in the Sutherland Shire?",
+    answer: "Costs vary based on property size, surface condition and scope of work. Contact us for a free, tailored quote.",
   },
   {
-    q: "Can I get a free quote for my Sutherland Shire home?",
-    a: "Absolutely. Get in touch with Prisma Coatings and we will arrange an inspection and provide a detailed, no-obligation quote.",
+    question: "Can I get a free quote for my Sutherland Shire home?",
+    answer: "Absolutely. Get in touch with Prisma Coatings and we will arrange an inspection and provide a detailed, no-obligation quote.",
   },
 ];
 
@@ -146,7 +147,8 @@ export default function PaintersSutherlandShirePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-
+      <FAQSchema faqs={faqs} /> 
+      
       {/* HERO */}
       <section className="relative overflow-hidden bg-[#13233A]">
         <div className="absolute inset-0 bg-black/40" />
@@ -201,6 +203,7 @@ export default function PaintersSutherlandShirePage() {
               fill
               className="object-cover"
               priority
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         </div>
@@ -214,6 +217,7 @@ export default function PaintersSutherlandShirePage() {
             alt="Interior painting service in the Sutherland Shire by Prisma Coatings"
             fill
             className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
 
@@ -325,11 +329,11 @@ export default function PaintersSutherlandShirePage() {
         <div className="mt-12 space-y-6">
           {faqs.map((faq) => (
             <article
-              key={faq.q}
+              key={faq.question}
               className="bg-gray-50 rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="text-xl font-bold">{faq.q}</h3>
-              <p className="mt-3 text-gray-700 leading-relaxed">{faq.a}</p>
+              <h3 className="text-xl font-bold">{faq.question}</h3>
+              <p className="mt-3 text-gray-700 leading-relaxed">{faq.answer}</p>
             </article>
           ))}
         </div>

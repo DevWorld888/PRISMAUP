@@ -216,7 +216,7 @@ const GalleryProjects = () => {
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                    priority={index < 4}
+                    priority={index === 0}
                     itemProp="contentUrl"
                   />
                   <meta itemProp="name" content={image.title} />
@@ -284,7 +284,6 @@ const GalleryProjects = () => {
                     width={800}
                     height={600}
                     className="w-full h-64 md:h-96 object-cover"
-                    priority
                   />
                 </div>
                 <div className="p-6 md:w-1/3">

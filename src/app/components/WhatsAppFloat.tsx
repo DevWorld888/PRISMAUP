@@ -40,7 +40,7 @@ const WhatsAppFloat = () => {
     >
       <button
         onClick={handleWhatsAppClick}
-        className="group relative bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out hover:scale-110 active:scale-95"
+        className="group relative bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-[transform,shadow] duration-300 ease-in-out hover:scale-110 active:scale-95"
         aria-label="Contactar por WhatsApp"
       >
         {/* Icono de WhatsApp SVG */}
@@ -60,8 +60,8 @@ const WhatsAppFloat = () => {
           <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
         </div>
         
-        {/* Efecto de pulso */}
-        <div className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-20"></div>
+        {/* Efecto de pulso — 3 iteraciones y para */}
+        <div className="absolute inset-0 rounded-full bg-green-400 opacity-20" style={{ animation: 'ping 1s cubic-bezier(0,0,0.2,1) 3' }} aria-hidden="true" />
       </button>
     </div>
   );

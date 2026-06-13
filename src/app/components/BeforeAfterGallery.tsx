@@ -218,6 +218,7 @@ const BeforeAfterGallery = () => {
               fill
               className="object-cover"
               loading="lazy"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
             />
             <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
               Before
@@ -235,6 +236,7 @@ const BeforeAfterGallery = () => {
               fill
               className="object-cover"
               loading="lazy"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
             />
             <div className="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
               After
@@ -329,6 +331,7 @@ const BeforeAfterGallery = () => {
               fill
               className="object-cover rounded-[5px]"
               loading="lazy"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
             />
           </div>
           <div
@@ -341,6 +344,7 @@ const BeforeAfterGallery = () => {
               fill
               className="object-cover rounded-[5px]"
               loading="lazy"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
             />
           </div>
 
@@ -519,6 +523,7 @@ const BeforeAfterGallery = () => {
                     alt={`Before - ${selectedImage.title}`}
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
                 <div className="relative w-full h-64 md:h-80 lg:h-96">
@@ -527,6 +532,7 @@ const BeforeAfterGallery = () => {
                     alt={`After - ${selectedImage.title}`}
                     fill
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
               </div>

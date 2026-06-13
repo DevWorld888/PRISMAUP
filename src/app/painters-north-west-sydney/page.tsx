@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { CheckCircle, Phone, Brush, Building2, Home, Star } from "lucide-react";
+import FAQSchema from "../components/FAQSchema";
 
 export const metadata: Metadata = {
   title: "Painters North West Sydney | House Painting",
@@ -86,20 +87,20 @@ const services = [
 
 const faqs = [
   {
-    q: "Do you paint homes in North West Sydney?",
-    a: "Yes. Prisma Coatings works across Sydney's North West including Castle Hill, Kellyville, Parramatta, Baulkham Hills, Norwest, Rouse Hill and surrounding suburbs.",
+    question: "Do you paint homes in North West Sydney?",
+    answer: "Yes. Prisma Coatings works across Sydney's North West including Castle Hill, Kellyville, Parramatta, Baulkham Hills, Norwest, Rouse Hill and surrounding suburbs.",
   },
   {
-    q: "Do you paint new builds in the Hills District?",
-    a: "Yes. We regularly work on new residential builds in the Hills District and surrounding North West suburbs.",
+    question: "Do you paint new builds in the Hills District?",
+    answer: "Yes. We regularly work on new residential builds in the Hills District and surrounding North West suburbs.",
   },
   {
-    q: "How much does house painting cost in North West Sydney?",
-    a: "Costs depend on the size of your home, surface condition, paint system and scope of work. Get in touch for a free quote.",
+    question: "How much does house painting cost in North West Sydney?",
+    answer: "Costs depend on the size of your home, surface condition, paint system and scope of work. Get in touch for a free quote.",
   },
   {
-    q: "Can I get a free quote for my North West Sydney home?",
-    a: "Yes. Contact Prisma Coatings and we will organise a convenient inspection and provide a detailed, obligation-free quote.",
+    question: "Can I get a free quote for my North West Sydney home?",
+    answer: "Yes. Contact Prisma Coatings and we will organise a convenient inspection and provide a detailed, obligation-free quote.",
   },
 ];
 
@@ -146,7 +147,8 @@ export default function PaintersNorthWestSydneyPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-
+      <FAQSchema faqs={faqs} /> 
+      
       {/* HERO */}
       <section className="relative overflow-hidden bg-[#13233A]">
         <div className="absolute inset-0 bg-black/40" />
@@ -201,6 +203,7 @@ export default function PaintersNorthWestSydneyPage() {
               fill
               className="object-cover"
               priority
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         </div>
@@ -214,6 +217,7 @@ export default function PaintersNorthWestSydneyPage() {
             alt="Interior painting service in North West Sydney by Prisma Coatings"
             fill
             className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
 
@@ -325,11 +329,11 @@ export default function PaintersNorthWestSydneyPage() {
         <div className="mt-12 space-y-6">
           {faqs.map((faq) => (
             <article
-              key={faq.q}
+              key={faq.question}
               className="bg-gray-50 rounded-2xl p-6 border border-gray-100"
             >
-              <h3 className="text-xl font-bold">{faq.q}</h3>
-              <p className="mt-3 text-gray-700 leading-relaxed">{faq.a}</p>
+              <h3 className="text-xl font-bold">{faq.question}</h3>
+              <p className="mt-3 text-gray-700 leading-relaxed">{faq.answer}</p>
             </article>
           ))}
         </div>

@@ -11,12 +11,78 @@ interface Project {
   category: string;
 }
 
+// Static data outside the component — no re-creation on every render
+const projects: Project[] = [
+  {
+    id: 1,
+    title: "Interior House Painting Refresh",
+    description: "Residential interior painting in Sydney with premium wall preparation, smooth finishes, and long-lasting colour coverage.",
+    image: "/images/recentWorks/bedroom-painting-sydney.webp",
+    category: "Residential"
+  },
+  {
+    id: 2,
+    title: "Modern Living Room Repaint",
+    description: "Professional residential repainting for living rooms, featuring clean lines, durable coatings, and a modern interior finish.",
+    image: "/images/recentWorks/livingroom-paint-sydney.webp",
+    category: "Residential"
+  },
+  {
+    id: 3,
+    title: "Residential Wall And Trim Finish",
+    description: "Expert house painting services for walls and trim, delivering crisp edges, premium workmanship, and elegant residential results.",
+    image: "/images/recentWorks/wall-trim-painting-sydney.webp",
+    category: "Residential"
+  },
+  {
+    id: 4,
+    title: "Apartment Interior Painting Project",
+    description: "Sydney apartment painting with seamless preparation, premium residential coatings, and a polished contemporary interior look.",
+    image: "/images/recentWorks/apartment-interior-painting-sydney.webp",
+    category: "Residential"
+  },
+  {
+    id: 5,
+    title: "Home Makeover Paint Upgrade",
+    description: "Residential painting and surface preparation designed to refresh home interiors with clean finishes and durable paint systems.",
+    image: "/images/recentWorks/exterior-house-painting-sydney.webp",
+    category: "Residential"
+  },
+  {
+    id: 6,
+    title: "Premium Home Interior Coating",
+    description: "High-end residential coating application for interiors, combining refined colour selection with flawless house painting results.",
+    image: "/images/recentWorks/premium-interior-coating-sydney.webp",
+    category: "Residential"
+  },
+  {
+    id: 7,
+    title: "Family Home Painting Service",
+    description: "Trusted residential painters delivering neat preparation, quality finishes, and reliable interior painting for family homes.",
+    image: "/images/recentWorks/family-home-painters-sydney.webp",
+    category: "Residential"
+  },
+  {
+    id: 8,
+    title: "Residential Room Repainting",
+    description: "Interior residential repainting focused on clean surfaces, smooth walls, and lasting protection for everyday living spaces.",
+    image: "/images/recentWorks/kitchen-repainting-sydney.webp",
+    category: "Residential"
+  }
+];
+
 const RecentProjects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Only load images for visible slides + 1 buffer on each side to avoid flash on navigate
+  const shouldLoadImage = (index: number) => {
+    const visibleCount = isMobile ? 1 : 3;
+    return index >= currentIndex - 1 && index <= currentIndex + visibleCount;
+  };
 
   // Check if mobile on mount and resize
   useEffect(() => {
@@ -30,64 +96,7 @@ const RecentProjects = () => {
     return () => window.removeEventListener('resize', checkIsMobile);
   }, []);
 
-  const [projects] = useState<Project[]>([
-    {
-      id: 1,
-      title: "Interior House Painting Refresh",
-      description: "Residential interior painting in Sydney with premium wall preparation, smooth finishes, and long-lasting colour coverage.",
-      image: "/images/recentWorks/1.jpeg",
-      category: "Residential"
-    },
-    {
-      id: 2,
-      title: "Modern Living Room Repaint",
-      description: "Professional residential repainting for living rooms, featuring clean lines, durable coatings, and a modern interior finish.",
-      image: "/images/recentWorks/2.jpeg",
-      category: "Residential"
-    },
-    {
-      id: 3,
-      title: "Residential Wall And Trim Finish",
-      description: "Expert house painting services for walls and trim, delivering crisp edges, premium workmanship, and elegant residential results.",
-      image: "/images/recentWorks/3.jpeg",
-      category: "Residential"
-    },
-    {
-      id: 4,
-      title: "Apartment Interior Painting Project",
-      description: "Sydney apartment painting with seamless preparation, premium residential coatings, and a polished contemporary interior look.",
-      image: "/images/recentWorks/4.jpeg",
-      category: "Residential"
-    },
-    {
-      id: 5,
-      title: "Home Makeover Paint Upgrade",
-      description: "Residential painting and surface preparation designed to refresh home interiors with clean finishes and durable paint systems.",
-      image: "/images/recentWorks/5.jpeg",
-      category: "Residential"
-    },
-    {
-      id: 6,
-      title: "Premium Home Interior Coating",
-      description: "High-end residential coating application for interiors, combining refined colour selection with flawless house painting results.",
-      image: "/images/recentWorks/6.jpeg",
-      category: "Residential"
-    },
-    {
-      id: 7,
-      title: "Family Home Painting Service",
-      description: "Trusted residential painters delivering neat preparation, quality finishes, and reliable interior painting for family homes.",
-      image: "/images/recentWorks/7.jpeg",
-      category: "Residential"
-    },
-    {
-      id: 8,
-      title: "Residential Room Repainting",
-      description: "Interior residential repainting focused on clean surfaces, smooth walls, and lasting protection for everyday living spaces.",
-      image: "/images/recentWorks/8.jpeg",
-      category: "Residential"
-    }
-  ]);
+
 
   // Auto-slide functionality
   useEffect(() => {
@@ -190,14 +199,19 @@ const RecentProjects = () => {
                   key={project.id}
                   className="flex-shrink-0 w-screen md:w-80 lg:w-96 px-4 md:px-0 bg-white dark:bg-gray-800 md:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
                 >
-                  {/* Image */}
+                  {/* Image — only loaded when slide is visible or 1 position away */}
                   <div className="relative h-48 md:h-56 w-full overflow-hidden md:rounded-t-2xl">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover transition-transform duration-300 hover:scale-105"
-                    />
+                    {shouldLoadImage(project.id - 1) ? (
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover transition-transform duration-300 hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, 384px"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gray-200 dark:bg-gray-700 animate-pulse" aria-hidden="true" />
+                    )}
                     <div className="absolute top-4 left-4">
                       <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                         {project.category}

@@ -364,6 +364,7 @@ export default function CommercialPaintingSydneyPage() {
               fill
               className="object-cover"
               priority
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         </div>
@@ -416,6 +417,7 @@ export default function CommercialPaintingSydneyPage() {
             alt="Professional commercial painters in Sydney preparing business premises"
             fill
             className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
 
@@ -594,6 +596,7 @@ export default function CommercialPaintingSydneyPage() {
               alt="Commercial interior painting in Sydney – flexible after-hours scheduling available"
               fill
               className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         </div>
@@ -658,6 +661,7 @@ export default function CommercialPaintingSydneyPage() {
                 alt="Strata building repaint project in Chatswood Sydney – Prisma Coatings"
                 fill
                 className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
 

@@ -10,6 +10,7 @@ import {
   ClipboardList,
   Star,
 } from "lucide-react";
+import FAQSchema from "../components/FAQSchema";
 
 export const metadata: Metadata = {
   title: "Painters Sydney – Free Quotes",
@@ -116,24 +117,24 @@ const steps = [
 
 const faqs = [
   {
-    q: "How much do painters cost in Sydney?",
-    a: "Pricing depends on the size of the job, surface condition and the type of painting required. Most residential projects start with a free on-site quote so you get an accurate price before committing.",
+    question: "How much do painters cost in Sydney?",
+    answer: "Pricing depends on the size of the job, surface condition and the type of painting required. Most residential projects start with a free on-site quote so you get an accurate price before committing.",
   },
   {
-    q: "How long does painting take?",
-    a: "A standard room takes one to two days. A full house interior or exterior repaint can take three to seven days depending on size, prep needed and conditions. We give you a clear timeline upfront.",
+    question: "How long does painting take?",
+    answer: "A standard room takes one to two days. A full house interior or exterior repaint can take three to seven days depending on size, prep needed and conditions. We give you a clear timeline upfront.",
   },
   {
-    q: "Do you provide free quotes?",
-    a: "Yes. All quotes are free with no obligation. Contact us and we will arrange a time to assess your project and provide a detailed written quote.",
+    question: "Do you provide free quotes?",
+    answer: "Yes. All quotes are free with no obligation. Contact us and we will arrange a time to assess your project and provide a detailed written quote.",
   },
   {
-    q: "What areas in Sydney do you service?",
-    a: "We paint across Sydney including the Inner West, Eastern Suburbs, North Shore, Western Sydney, Sutherland Shire and surrounding suburbs. Contact us to confirm your area.",
+    question: "What areas in Sydney do you service?",
+    answer: "We paint across Sydney including the Inner West, Eastern Suburbs, North Shore, Western Sydney, Sutherland Shire and surrounding suburbs. Contact us to confirm your area.",
   },
   {
-    q: "Are you insured?",
-    a: "Yes. Prisma Coatings operates with public liability insurance, giving you peace of mind on every project.",
+    question: "Are you insured?",
+    answer: "Yes. Prisma Coatings operates with public liability insurance, giving you peace of mind on every project.",
   },
 ];
 
@@ -180,7 +181,7 @@ export default function PaintersSydneyPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-
+      <FAQSchema faqs={faqs} /> 
       {/* HERO */}
       <section className="relative overflow-hidden bg-[#13233A]">
         <div className="absolute inset-0 bg-black/40" />
@@ -237,6 +238,7 @@ export default function PaintersSydneyPage() {
               fill
               className="object-cover"
               priority
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         </div>
@@ -250,6 +252,7 @@ export default function PaintersSydneyPage() {
             alt="Sydney painters completing an interior painting project"
             fill
             className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
 
@@ -465,6 +468,7 @@ export default function PaintersSydneyPage() {
             alt="Prisma Coatings painters completing a quality exterior painting job in Sydney"
             fill
             className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
       </section>
@@ -484,11 +488,11 @@ export default function PaintersSydneyPage() {
           <div className="mt-12 space-y-6">
             {faqs.map((faq) => (
               <article
-                key={faq.q}
+                key={faq.question}
                 className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm"
               >
-                <h3 className="text-xl font-bold">{faq.q}</h3>
-                <p className="mt-3 text-gray-700 leading-relaxed">{faq.a}</p>
+                <h3 className="text-xl font-bold">{faq.question}</h3>
+                <p className="mt-3 text-gray-700 leading-relaxed">{faq.answer}</p>
               </article>
             ))}
           </div>
