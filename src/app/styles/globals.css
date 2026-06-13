@@ -18,7 +18,7 @@
 }
 
 body {
- font-family: 'roboto', sans-serif;
+ font-family: var(--font-roboto), sans-serif;
  background-color: var(--color-bg);
  color: var(--color-text);
  transition: background-color 0.3s ease, color 0.3s ease;
@@ -37,6 +37,13 @@ body {
     100% {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @keyframes ping {
+    75%, 100% {
+      transform: scale(2);
+      opacity: 0;
     }
   }
 

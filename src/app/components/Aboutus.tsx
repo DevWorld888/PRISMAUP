@@ -14,103 +14,52 @@ const Aboutus = () => {
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
-          {/* Left side - Images */}
+          {/* Left side - Images — single grid, responsive heights, no CSS-hidden duplicate */}
           <div className="order-2 lg:order-1">
-            {/* Mobile: 2x2 Grid más compacto */}
             <div
-              className="grid grid-cols-2 gap-2 sm:gap-3 lg:hidden"
+              className="grid grid-cols-2 gap-2 sm:gap-3 lg:gap-4"
               role="img"
               aria-label="Prisma Coatings services showcase"
             >
-              <div className="relative h-32 sm:h-40 w-full rounded-lg overflow-hidden shadow-lg">
-                <Image
-                  src="/images/aboutus/exterior-house-painting-sydney.webp"
-                  alt="Professional Prisma Coatings team applying protective coating to residential property exterior"
-                  fill
-                  className="object-cover"
-                  loading="lazy"
-                  sizes="(max-width: 640px) 50vw, 25vw"
-                />
-              </div>
-              <div className="relative h-32 sm:h-40 w-full rounded-lg overflow-hidden shadow-lg">
-                <Image
-                  src="/images/aboutus/hallway-painting-sydney.webp"
-                  alt="High-quality coating application process using professional equipment and techniques"
-                  fill
-                  className="object-cover"
-                  loading="lazy"
-                  sizes="(max-width: 640px) 50vw, 25vw"
-                />
-              </div>
-              <div className="relative h-32 sm:h-40 w-full rounded-lg overflow-hidden shadow-lg">
-                <Image
-                  src="/images/aboutus/kitchen-painting-sydney.webp"
-                  alt="Professional painting services for residential and commercial properties with attention to detail and customer satisfaction"
-                  fill
-                  className="object-cover"
-                  loading="lazy"
-                  sizes="(max-width: 640px) 50vw, 25vw"
-                />
-              </div>
-              <div className="relative h-32 sm:h-40 w-full rounded-lg overflow-hidden shadow-lg">
-                <Image
-                  src="/images/aboutus/house-painting-sydney.webp"
-                  alt="Professional painting services for residential and commercial properties with attention to detail and customer satisfaction"
-                  fill
-                  className="object-cover"
-                  loading="lazy"
-                  sizes="(max-width: 640px) 50vw, 25vw"
-                />
-              </div>
-            </div>
-
-            {/* Desktop: Layout original */}
-            <div
-              className="hidden lg:grid grid-cols-2 gap-4"
-              role="img"
-              aria-label="Professional coating services gallery"
-            >
-              <div className="space-y-4">
-                <div className="relative h-64 w-full rounded-lg overflow-hidden shadow-lg">
+              {/* Left column */}
+              <div className="space-y-2 sm:space-y-3 lg:space-y-4">
+                <div className="relative h-32 sm:h-40 lg:h-64 w-full rounded-lg overflow-hidden shadow-lg">
                   <Image
                     src="/images/aboutus/exterior-house-painting-sydney.webp"
                     alt="Professional Prisma Coatings team applying protective coating to residential property exterior"
                     fill
                     className="object-cover"
-                    loading="lazy"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    sizes="(max-width: 640px) 50vw, 25vw"
                   />
                 </div>
-                <div className="relative h-48 w-full rounded-lg overflow-hidden shadow-lg">
+                <div className="relative h-32 sm:h-40 lg:h-48 w-full rounded-lg overflow-hidden shadow-lg">
                   <Image
                     src="/images/aboutus/hallway-painting-sydney.webp"
                     alt="High-quality coating application process using professional equipment and techniques"
                     fill
                     className="object-cover"
-                    loading="lazy"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    sizes="(max-width: 640px) 50vw, 25vw"
                   />
                 </div>
               </div>
-              <div className="space-y-4 mt-8">
-                <div className="relative h-48 w-full rounded-lg overflow-hidden shadow-lg">
+              {/* Right column — offset on desktop for staggered effect */}
+              <div className="space-y-2 sm:space-y-3 lg:space-y-4 lg:mt-8">
+                <div className="relative h-32 sm:h-40 lg:h-48 w-full rounded-lg overflow-hidden shadow-lg">
                   <Image
                     src="/images/aboutus/kitchen-painting-sydney.webp"
                     alt="Professional painting services for residential and commercial properties with attention to detail and customer satisfaction"
                     fill
                     className="object-cover"
-                    loading="lazy"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    sizes="(max-width: 640px) 50vw, 25vw"
                   />
                 </div>
-                <div className="relative h-64 w-full rounded-lg overflow-hidden shadow-lg">
+                <div className="relative h-32 sm:h-40 lg:h-64 w-full rounded-lg overflow-hidden shadow-lg">
                   <Image
                     src="/images/aboutus/house-painting-sydney.webp"
                     alt="Exterior coating services for commercial and residential buildings with premium materials"
                     fill
                     className="object-cover"
-                    loading="lazy"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    sizes="(max-width: 640px) 50vw, 25vw"
                   />
                 </div>
               </div>
