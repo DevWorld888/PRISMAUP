@@ -197,6 +197,7 @@ const RecentProjects = () => {
                       alt={project.title}
                       fill
                       className="object-cover transition-transform duration-300 hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 384px"
                     />
                     <div className="absolute top-4 left-4">
                       <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">

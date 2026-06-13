@@ -203,6 +203,7 @@ export default function PaintersNorthWestSydneyPage() {
               fill
               className="object-cover"
               priority
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         </div>
@@ -216,6 +217,7 @@ export default function PaintersNorthWestSydneyPage() {
             alt="Interior painting service in North West Sydney by Prisma Coatings"
             fill
             className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
 

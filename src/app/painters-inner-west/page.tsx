@@ -203,6 +203,7 @@ export default function PaintersInnerWestPage() {
               fill
               className="object-cover"
               priority
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         </div>
@@ -216,6 +217,7 @@ export default function PaintersInnerWestPage() {
             alt="Interior painting service in Sydney's Inner West by Prisma Coatings"
             fill
             className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
 

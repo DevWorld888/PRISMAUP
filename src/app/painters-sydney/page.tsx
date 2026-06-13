@@ -238,6 +238,7 @@ export default function PaintersSydneyPage() {
               fill
               className="object-cover"
               priority
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         </div>
@@ -251,6 +252,7 @@ export default function PaintersSydneyPage() {
             alt="Sydney painters completing an interior painting project"
             fill
             className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
 
@@ -466,6 +468,7 @@ export default function PaintersSydneyPage() {
             alt="Prisma Coatings painters completing a quality exterior painting job in Sydney"
             fill
             className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
       </section>

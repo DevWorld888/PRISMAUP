@@ -348,6 +348,7 @@ export default function InteriorPaintingSydneyPage() {
               fill
               className="object-cover"
               priority
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         </div>
@@ -361,6 +362,7 @@ export default function InteriorPaintingSydneyPage() {
             alt="Professional interior house painters in Sydney – Prisma Coatings team at work"
             fill
             className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
 
@@ -549,6 +551,7 @@ export default function InteriorPaintingSydneyPage() {
               alt="Interior wall preparation and sanding before painting in a Sydney home"
               fill
               className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         </div>

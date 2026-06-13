@@ -199,6 +199,7 @@ export default function HousePaintersSydneyPage() {
               fill
               className="object-cover"
               priority
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         </div>
@@ -211,6 +212,7 @@ export default function HousePaintersSydneyPage() {
             alt="Interior house painting service in Sydney by Prisma Coatings"
             fill
             className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
 
@@ -316,6 +318,7 @@ export default function HousePaintersSydneyPage() {
             alt="Exterior house painting project in Sydney completed by Prisma Coatings"
             fill
             className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
       </section>

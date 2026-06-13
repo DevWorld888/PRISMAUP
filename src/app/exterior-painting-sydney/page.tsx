@@ -341,6 +341,7 @@ export default function ExteriorPaintingSydneyPage() {
               fill
               className="object-cover"
               priority
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         </div>
@@ -393,6 +394,7 @@ export default function ExteriorPaintingSydneyPage() {
               alt="Prisma Coatings exterior painting team at work on a Sydney home"
               fill
               className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
 
@@ -581,6 +583,7 @@ export default function ExteriorPaintingSydneyPage() {
             alt="Exterior surface preparation and pressure washing before painting in Sydney"
             fill
             className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
       </section>
@@ -615,6 +618,7 @@ export default function ExteriorPaintingSydneyPage() {
                   alt={`Exterior painting result – Sydney residential project by Prisma Coatings`}
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 50vw, 25vw"
                 />
               </div>
             ))}

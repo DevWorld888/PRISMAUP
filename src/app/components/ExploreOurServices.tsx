@@ -21,8 +21,6 @@ const ExploreOurServices = () => {
               className="w-full h-auto rounded-lg"
               width={500}
               height={500}
-              priority
-              loading="eager"
             />
           </div>
 
