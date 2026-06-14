@@ -44,6 +44,7 @@ export default function Hero() {
       {/* VIDEO — desktop only, injected after page load, fades over the image */}
       <video
         ref={videoRef}
+        preload="none"
         className={`absolute inset-0 w-full h-full object-cover z-[1] transition-opacity duration-700 ${
           videoReady ? "opacity-100" : "opacity-0"
         }`}
