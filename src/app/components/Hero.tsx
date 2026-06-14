@@ -1,29 +1,11 @@
-"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+
+import HeroVideo from "./Heroviedo";
 
 export default function Hero() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [videoReady, setVideoReady] = useState(false);
-
-  useEffect(() => {
-    // Skip video on mobile — saves bandwidth, avoids layout jank
-    if (window.innerWidth < 768) return;
-
-    const loadVideo = () => {
-      const video = videoRef.current;
-      if (!video) return;
-      video.src = "/videos/hero.mp4";
-      video.load();
-    };
-
-    if (document.readyState === "complete") {
-      loadVideo();
-    } else {
-      window.addEventListener("load", loadVideo, { once: true });
-    }
-  }, []);
+  
 
   return (
     <section
@@ -36,25 +18,15 @@ export default function Hero() {
         alt="Professional exterior house painters in Sydney – Prisma Coatings"
         fill
         priority
-        quality={85}
+        quality={70}
+        fetchPriority="high"
         sizes="100vw"
         className="object-cover z-0"
       />
 
       {/* VIDEO — desktop only, injected after page load, fades over the image */}
-      <video
-        ref={videoRef}
-        preload="none"
-        className={`absolute inset-0 w-full h-full object-cover z-[1] transition-opacity duration-700 ${
-          videoReady ? "opacity-100" : "opacity-0"
-        }`}
-        autoPlay
-        loop
-        muted
-        playsInline
-        onLoadedData={() => setVideoReady(true)}
-        aria-hidden="true"
-      />
+      
+      <HeroVideo />
 
       {/* OVERLAY */}
       <div className="absolute inset-0 bg-black/50 z-10" />
