@@ -14,7 +14,7 @@ const WA_MESSAGE =
 // Conversion decision: named service options let staff prioritise leads instantly
 // and make the user feel the form is tailored to them, not generic.
 const SERVICE_OPTIONS = [
-  { value: "", label: "Select a Service (optional)" },
+  { value: "", label: "Select a Service" },
   { value: "Interior Painting", label: "Interior Painting" },
   { value: "Exterior Painting", label: "Exterior Painting" },
   { value: "Commercial Painting", label: "Commercial Painting" },
@@ -36,8 +36,16 @@ const TRUST_BADGES = [
 const ContactSchema = z.object({
   Fullname: z.string().min(2, "Please enter your full name"),
   telephone: z.string().min(6, "Please enter a valid phone number"),
-  postCode: z.string().optional(),
-  service: z.string().optional(),
+  suburb: z.string().min(2, "Please enter your suburb"),
+  postCode: z
+    .string()
+    .min(4, "Please enter your postcode")
+    .regex(/^\d{4}$/, "Please enter a valid 4-digit postcode")
+    .refine((value) => {
+      const postcode = Number(value);
+      return postcode >= 2000 && postcode <= 2999;
+    }, "We currently service Sydney and NSW areas only"),
+  service: z.string().min(1, "Please select a service"),
   comments: z.string().min(5, "Please tell us a little about your project"),
   nickname: z.string().optional(), // honeypot
 });
@@ -47,6 +55,7 @@ const ContactPage = () => {
   const [formData, setFormData] = useState({
     Fullname: "",
     telephone: "",
+    suburb: "",
     postCode: "",
     service: "",
     comments: "",
@@ -138,6 +147,7 @@ const ContactPage = () => {
         setFormData({
           Fullname: "",
           telephone: "",
+          suburb: "",
           postCode: "",
           service: "",
           comments: "",
@@ -329,7 +339,37 @@ const ContactPage = () => {
                       maxLength={4}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#D61C1C] focus:border-transparent text-base"
                     />
+                    {errors.postCode && (
+                      <p role="alert" className="text-red-500 text-sm mt-1">
+                        {errors.postCode}
+                      </p>
+                    )}
                   </div>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="suburb"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
+                    Suburb <span aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    id="suburb"
+                    type="text"
+                    name="suburb"
+                    placeholder="e.g. Surry Hills"
+                    value={formData.suburb}
+                    onChange={handleChange}
+                    required
+                    autoComplete="address-level2"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-gray-50 text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#D61C1C] focus:border-transparent text-base"
+                  />
+                  {errors.suburb && (
+                    <p role="alert" className="text-red-500 text-sm mt-1">
+                      {errors.suburb}
+                    </p>
+                  )}
                 </div>
 
                 {/* Row 3: Service selector */}
@@ -343,9 +383,9 @@ const ContactPage = () => {
                     htmlFor="service"
                     className="block text-sm font-medium text-gray-700 mb-1"
                   >
-                    Service Needed{" "}
+                    Service Needed{" "}*
                     <span className="text-gray-400 font-normal">
-                      (optional)
+                      (important for us to know so we can prioritise your request)
                     </span>
                   </label>
                   <select
@@ -361,6 +401,11 @@ const ContactPage = () => {
                       </option>
                     ))}
                   </select>
+                  {errors.service && (
+                    <p role="alert" className="text-red-500 text-sm mt-1">
+                      {errors.service}
+                    </p>
+                  )}
                 </div>
 
                 {/* Row 4: Message */}
