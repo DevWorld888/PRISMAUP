@@ -143,7 +143,7 @@ const Footer = () => {
                     href="mailto:info@prismacoatings.com.au"
                     className="hover:text-white transition-colors"
                   >
-                    info@prismacoatings.com.au
+                    Email Us
                   </a>
                 </p>
                 <p className="text-gray-300">

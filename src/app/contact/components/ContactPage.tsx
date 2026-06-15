@@ -624,7 +624,7 @@ const ContactPage = () => {
                       href="mailto:info@prismacoatings.com.au"
                       className="text-gray-800 hover:text-[#D61C1C] transition-colors text-sm break-all"
                     >
-                      info@prismacoatings.com.au
+                      Email Us
                     </a>
                   </div>
                 </div>
