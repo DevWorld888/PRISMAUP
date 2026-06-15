@@ -248,8 +248,8 @@ export default function PaintersSydneyPage() {
       <section className="max-w-7xl mx-auto px-6 py-16 grid lg:grid-cols-2 gap-12 items-center">
         <div className="relative min-h-[320px] rounded-2xl overflow-hidden shadow-lg">
           <Image
-            src="/images/recentWorks/3.jpeg"
-            alt="Sydney painters completing an interior painting project"
+            src="/images/recentWorks/exterior-house-painting-sydney.webp"
+            alt="Sydney painters completing an exterior house painting project"
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -464,7 +464,7 @@ export default function PaintersSydneyPage() {
 
         <div className="relative min-h-[320px] rounded-2xl overflow-hidden shadow-lg">
           <Image
-            src="/images/recentWorks/2.jpeg"
+            src="/images/recentWorks/house-paint-sydney.webp"
             alt="Prisma Coatings painters completing a quality exterior painting job in Sydney"
             fill
             className="object-cover"

@@ -288,7 +288,7 @@ export default function PaintersInnerWestSydneyPage() {
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative min-h-[360px] rounded-2xl overflow-hidden shadow-lg order-last lg:order-first">
             <Image
-              src="/images/recentWorks/3.jpeg"
+              src="/images/recentWorks/wall-trim-painting-sydney.webp"
               alt="Interior painting by Prisma Coatings in Inner West Sydney"
               fill
               className="object-cover"
@@ -414,7 +414,7 @@ export default function PaintersInnerWestSydneyPage() {
 
           <div className="relative min-h-[360px] rounded-2xl overflow-hidden shadow-2xl">
             <Image
-              src="/images/recentWorks/2.jpeg"
+              src="/images/recentWorks/kitchen-repainting-sydney.webp"
               alt="Exterior house painting in Inner West Sydney by Prisma Coatings"
               fill
               className="object-cover"

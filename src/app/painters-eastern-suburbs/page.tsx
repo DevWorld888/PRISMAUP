@@ -213,7 +213,7 @@ export default function PaintersEasternSuburbsPage() {
       <section className="max-w-7xl mx-auto px-6 py-16 grid lg:grid-cols-2 gap-12 items-center">
         <div className="relative min-h-[320px] rounded-2xl overflow-hidden shadow-lg">
           <Image
-            src="/images/recentWorks/3.jpeg"
+            src="/images/recentWorks/family-home-painters-sydney.webp"
             alt="Interior painting service in Sydney's Eastern Suburbs by Prisma Coatings"
             fill
             className="object-cover"

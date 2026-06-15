@@ -322,10 +322,8 @@ const ContactPage = () => {
                       htmlFor="postCode"
                       className="block text-sm font-medium text-gray-700 mb-1"
                     >
-                      Postcode{" "}
-                      <span className="text-gray-400 font-normal">
-                        (optional)
-                      </span>
+                      Postcode{" "}*
+                      
                     </label>
                     <input
                       id="postCode"

@@ -208,8 +208,8 @@ export default function HousePaintersSydneyPage() {
       <section className="max-w-7xl mx-auto px-6 py-16 grid lg:grid-cols-2 gap-12 items-center">
         <div className="relative min-h-[320px] rounded-2xl overflow-hidden shadow-lg">
           <Image
-            src="/images/recentWorks/3.jpeg"
-            alt="Interior house painting service in Sydney by Prisma Coatings"
+            src="/images/recentWorks/exterior-house-painting-sydney.webp"
+            alt="Exterior house painting service in Sydney by Prisma Coatings"
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 50vw"
