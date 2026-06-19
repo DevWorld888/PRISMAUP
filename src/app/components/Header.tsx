@@ -104,6 +104,13 @@ export default function Header() {
                   >
                     Commercial Painting Sydney
                   </Link>
+                  
+                  <Link
+                    href="/strata-painting-sydney"
+                    className="block px-4 py-2 text-sm text-[#13233A] hover:bg-gray-100 hover:text-[#C53030] transition-colors"
+                  >
+                    Strata Painting Sydney
+                  </Link>
                   <div className="my-1 border-t border-gray-100" />
                   <p className="px-4 py-1 text-xs font-semibold text-gray-400 uppercase tracking-wide">Areas We Serve</p>
                   <Link
@@ -233,6 +240,9 @@ export default function Header() {
                   </Link>
                   <Link href="/commercial-painting-sydney" onClick={() => setMenuOpen(false)}>
                     Commercial Painting Sydney
+                  </Link>
+                  <Link href="/strata-painting-sydney" onClick={() => setMenuOpen(false)}>
+                    Strata Painting Sydney
                   </Link>
                   <span className="text-xs font-semibold text-gray-400 uppercase tracking-wide mt-2">Areas We Serve</span>
                   <Link href="/painters-eastern-suburbs" onClick={() => setMenuOpen(false)}>

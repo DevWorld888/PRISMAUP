@@ -787,6 +787,10 @@ export default function CommercialPaintingSydneyPage() {
             {[
               { href: "/house-painters-sydney", label: "House Painters Sydney" },
               {
+                href: "/strata-painting-sydney",
+                label: "Strata Painting Sydney",
+              },
+              {
                 href: "/interior-painting-sydney",
                 label: "Interior Painting Sydney",
               },

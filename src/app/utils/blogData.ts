@@ -16,6 +16,128 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 9,
+    title: "When Should a Strata Building Be Repainted?",
+    metaTitle: "When Should a Strata Building Be Repainted? | Sydney Guide",
+    metaDescription:
+      "Is your strata building due for a repaint? Learn the key warning signs — peeling paint, cracks, water damage and faded facades — and when to schedule strata maintenance painting.",
+    focusKeywords: [
+      "strata building repaint",
+      "apartment building repaint",
+      "strata maintenance painting",
+      "strata painting sydney",
+      "commercial painting sydney",
+    ],
+    excerpt:
+      "Peeling paint, cracks, water stains and a faded facade are more than cosmetic problems in a strata building — they're early warnings of structural risk. Here's when your strata needs to be repainted.",
+    content: `
+<p>A strata building is a shared asset — and like any asset, its condition either protects or erodes its value over time. For owners corporations and strata managers across Sydney, one of the most visible and consequential maintenance decisions is knowing when to schedule a repaint.</p>
+
+<p>Unlike a private home where a single owner decides, a strata repaint requires committee agreement, budgeting through the sinking fund, and coordination across dozens or hundreds of residents. Getting the timing right matters — acting too late turns a planned maintenance job into an urgent and far more expensive repair.</p>
+
+<p>Here are the key signs that a strata building is due for repainting, and what happens when those signs are ignored.</p>
+
+<h2>1. Peeling or Flaking Paint on the Facade</h2>
+
+<p>Peeling paint is the most visible and most urgent warning sign that a building's coating system has failed. When paint peels on an exterior wall, the surface beneath it — whether rendered masonry, concrete or fibre cement — is directly exposed to Sydney's UV radiation, humidity and rain.</p>
+
+<p>In a strata building, peeling typically starts in specific areas: around window frames and sills where water tracks, on south-facing walls that stay damp longer, or on any surface where the original preparation was inadequate. Once it starts, it spreads.</p>
+
+<p>Peeling paint on a multi-storey building is not just a cosmetic problem. Exposed render and masonry absorb water, which accelerates the deterioration of the substrate and — in older buildings — can allow moisture to penetrate internal walls, causing damage to units and common areas. <a href="/strata-painting-sydney">Strata painting contractors in Sydney</a> will always address the cause of peeling before applying any new coating.</p>
+
+<h2>2. Visible Cracks in the Facade or Render</h2>
+
+<p>Fine hairline cracks are common in rendered buildings as the substrate moves and the paint system ages. In Sydney's climate, where temperatures shift significantly between seasons and the building structure responds to these cycles, some cracking is inevitable in older stock.</p>
+
+<p>The concern is not fine surface cracks in isolation — it's what they allow. Cracks in render or masonry are pathways for water ingress. In a strata building, water that enters through exterior cracks can travel internally through concrete slabs, appear as staining in unit ceilings, and create conditions for mould growth in walls.</p>
+
+<p>There are two types of cracks that warrant different responses:</p>
+
+<ul>
+  <li><strong>Surface cracks in the paint film</strong> — caused by paint aging and losing flexibility. These can be filled and overcoated as part of a standard repaint.</li>
+  <li><strong>Structural or substrate cracks</strong> — cracks that penetrate the render or masonry beneath. These require a remediation specialist to assess and repair before any painting work begins.</li>
+</ul>
+
+<p>A professional strata painting assessment will distinguish between the two and recommend the appropriate scope of work.</p>
+
+<h2>3. Water Damage and Staining</h2>
+
+<p>Water damage is one of the most costly outcomes of deferred strata maintenance. The signs appear on exterior walls as tide marks, discolouration, or brown streaking — typically below windowsills, around balcony edges, and at the base of parapet walls where water pools.</p>
+
+<p>Internally, the consequences of exterior water ingress show up as damp patches on unit ceilings and walls, efflorescence (white salt deposits on masonry), and in severe cases, structural deterioration of concrete or steel reinforcement.</p>
+
+<p>In Sydney strata buildings — particularly those constructed in the 1970s through 1990s — waterproofing systems in balconies, planter boxes and roof edges often reach the end of their service life around the same time as the exterior paint system. A repaint that doesn't address underlying waterproofing issues will fail within a short period, and the owners corporation will face the same problem again.</p>
+
+<p>The right approach is to assess waterproofing integrity as part of any strata repaint scope, not as a separate, deferred item.</p>
+
+<h2>4. A Faded or Uneven Facade</h2>
+
+<p>Colour fading is a normal consequence of UV exposure — but a significantly faded or blotchy facade is a signal that the paint system's protective properties have been substantially depleted. When paint fades unevenly, it often reflects variations in the original application, areas of patch repair, or surfaces that have been washed more aggressively than others.</p>
+
+<p>A faded facade does more than affect curb appeal. Pigment degradation is a marker of UV breakdown in the paint binder — meaning the film is no longer performing as a protective coating. At this point, the underlying render or masonry is receiving far less UV protection than it was designed to have.</p>
+
+<p>For strata buildings in Sydney's coastal suburbs — from Bondi to Manly to Cronulla — UV and salt air accelerate this process. Buildings within close proximity to the coast typically require repainting on a shorter cycle than inland properties.</p>
+
+<h2>How Often Should a Strata Building Be Repainted?</h2>
+
+<p>There is no single answer, but the following benchmarks are commonly applied to Sydney strata buildings:</p>
+
+<ul>
+  <li><strong>Rendered masonry apartment buildings</strong> — every 8 to 12 years under standard conditions</li>
+  <li><strong>Coastal strata buildings</strong> — every 6 to 8 years, due to accelerated salt air degradation</li>
+  <li><strong>Buildings with significant crack history or water issues</strong> — assessed case by case; remediation may be required outside the standard repaint cycle</li>
+  <li><strong>Older buildings (pre-1990s)</strong> — condition-based assessment recommended, as substrate quality varies significantly</li>
+</ul>
+
+<p>These are guides, not rules. The actual condition of the building at the time of assessment determines when a repaint is warranted — not the calendar.</p>
+
+<h2>Why Strata Repaints Are Different to Residential Jobs</h2>
+
+<p>A strata repaint is a commercial painting project with a residential impact. The contractor working on a multi-storey building needs to manage access safely — typically through scaffolding or elevated work platforms — while minimising disruption to residents and minimising risk to the public below.</p>
+
+<p>In NSW, commercial painting work on strata buildings requires appropriate licensing and insurance. Owners corporations should confirm that any contractor they engage holds a current contractor licence, appropriate public liability insurance, and — where scaffolding is involved — relevant WorkSafe compliance documentation.</p>
+
+<p>The scope of a strata repaint typically includes:</p>
+
+<ul>
+  <li>High-pressure washing of all exterior surfaces</li>
+  <li>Crack filling and render repairs</li>
+  <li>Treatment of mould and efflorescence</li>
+  <li>Priming of all repaired and bare surfaces</li>
+  <li>Application of premium exterior coatings — two full coats</li>
+  <li>Repainting of common area interiors, car parks and stairwells as required</li>
+</ul>
+
+<h2>The Cost of Waiting</h2>
+
+<p>Deferred maintenance always costs more. In a strata context, the consequences of delaying a repaint beyond the point of coating failure include:</p>
+
+<ul>
+  <li>Substrate damage that requires render replacement rather than just painting</li>
+  <li>Water ingress leading to internal unit damage and strata liability</li>
+  <li>Mould remediation costs that dwarf the original paint budget</li>
+  <li>Emergency repairs that cannot be planned through the sinking fund</li>
+  <li>Reduced building valuation affecting all owners' assets</li>
+</ul>
+
+<p>Strata committees that schedule regular maintenance repaints — budgeted through the 10-year sinking fund plan — consistently spend less over the long term than those that defer until urgent action is required.</p>
+
+<h2>Get a Professional Assessment for Your Strata Building</h2>
+
+<p>If your building is showing any of the signs above — peeling paint, cracks, water staining or a faded facade — the next step is a professional condition assessment. This gives the owners corporation an accurate picture of what work is needed, the scope and likely cost, and the appropriate timing.</p>
+
+<p>Prisma Coatings provides <a href="/strata-painting-sydney">strata painting services across Sydney</a>, including full facade repaints, common area painting and strata maintenance programs. We work with strata managers and owners corporations to deliver projects that are properly scoped, correctly priced and completed with minimal disruption to residents.</p>
+
+<p>Contact our team to arrange a <a href="/commercial-painting-sydney">free strata painting assessment</a> for your building.</p>
+    `,
+    image: "/images/strata/strata-painting-sydney-apartment-building.webp",
+    date: "2026-06-19",
+    category: "Commercial",
+    slug: "when-should-a-strata-building-be-repainted",
+    readTime: "7 min read",
+    author: "Prisma Coatings Team",
+  },
+  {
     id: 8,
     title: "The $5,000 Mistake: Why \"Cheap\" Painters Are Costing Sydney Homeowners a Fortune",
     metaTitle: "Why Cheap Painters Cost More in Sydney",

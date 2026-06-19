@@ -58,6 +58,12 @@ export async function GET() {
       priority: '0.9',
       lastmod: currentDate
     },
+    {
+      url: '/strata-painting-sydney',
+      changefreq: 'weekly',
+      priority: '0.9',
+      lastmod: currentDate
+    },
 
     // 🚀 LOCATION PAGES
     {
@@ -67,7 +73,19 @@ export async function GET() {
       lastmod: currentDate
     },
     {
+      url: '/painters-sydney',
+      changefreq: 'monthly',
+      priority: '0.8',
+      lastmod: currentDate
+    },
+    {
       url: '/painters-eastern-suburbs',
+      changefreq: 'monthly',
+      priority: '0.8',
+      lastmod: currentDate
+    },
+    {
+      url: '/painters-inner-west',
       changefreq: 'monthly',
       priority: '0.8',
       lastmod: currentDate
@@ -88,6 +106,12 @@ export async function GET() {
       url: '/painters-sutherland-shire',
       changefreq: 'monthly',
       priority: '0.8',
+      lastmod: currentDate
+    },
+    {
+      url: '/careers',
+      changefreq: 'monthly',
+      priority: '0.5',
       lastmod: currentDate
     },
 
