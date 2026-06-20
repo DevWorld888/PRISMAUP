@@ -109,6 +109,12 @@ export async function GET() {
       lastmod: currentDate
     },
     {
+      url: '/painters-parramatta',
+      changefreq: 'monthly',
+      priority: '0.8',
+      lastmod: currentDate
+    },
+    {
       url: '/careers',
       changefreq: 'monthly',
       priority: '0.5',
