@@ -138,6 +138,12 @@ export default function Header() {
                   >
                     Sutherland Shire
                   </Link>
+                  <Link
+                    href="/painters-parramatta"
+                    className="block px-4 py-2 text-sm text-[#13233A] hover:bg-gray-100 hover:text-[#C53030] transition-colors"
+                  >
+                    Parramatta
+                  </Link>
                 </div>
               </div>
             )}
@@ -256,6 +262,9 @@ export default function Header() {
                   </Link>
                   <Link href="/painters-sutherland-shire" onClick={() => setMenuOpen(false)}>
                     Sutherland Shire
+                  </Link>
+                  <Link href="/painters-parramatta" onClick={() => setMenuOpen(false)}>
+                    Parramatta
                   </Link>
                 </div>
               )}
