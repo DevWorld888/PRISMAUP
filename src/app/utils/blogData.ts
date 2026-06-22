@@ -328,7 +328,7 @@ export const blogPosts: BlogPost[] = [
 }
 </script>
     `,
-    image: "/images/aboutus/exterior-house-painting-sydney.webp",
+    image: "/images/parramata/house-paint-parramata.webp",
     date: "2026-06-21",
     category: "Painting Tips",
     slug: "how-much-does-house-painting-cost-in-parramatta",
