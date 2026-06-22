@@ -36,7 +36,7 @@ const services = [
     icon: <Paintbrush />,
     description: "Professional strata painting services for apartment complexes and multi-unit properties across Sydney. Managed efficiently from start to finish.",
     keywords: "strata painting, apartment painting, condo painting, multi-unit painting",
-    href: "/contact",
+    href: "/strata-painting-sydney",
     active: false,
   },
   {

@@ -10,6 +10,7 @@ import CtaFinal from "./components/CtaFinal";
 import BlogCategoriesClient from "./blog/components/BlogCategoriesClient";
 import Blog from "./components/Blog";
 import RecentProjects from "./components/recentProjects";
+import LocalServiceAreas from "./components/LocalServiceAreas";
 
 
 
@@ -105,6 +106,7 @@ export default function Home() {
       <Hero />
       <Aboutus />
       <WhatWeDo />
+      <LocalServiceAreas />
       <ExploreOurServices />
       {/* <Gallery /> */}
       <RecentProjects />
