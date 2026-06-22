@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Phone, Mail, MapPin } from 'lucide-react'
 
 const services = [
-  { label: 'Residential Painting Sydney', href: '/house-painting-sydney' },
+  { label: 'Residential Painting Sydney', href: '/painters-sydney' },
   { label: 'Commercial Painting Sydney', href: '/commercial-painting-sydney' },
   { label: 'Strata Painting Sydney', href: '/strata-painting-sydney' },
   { label: 'Interior Painting Sydney', href: '/interior-painting-sydney' },
@@ -24,14 +24,7 @@ const resources = [
     label: 'How Much Does House Painting Cost in Parramatta?',
     href: '/blog/how-much-does-house-painting-cost-in-parramatta',
   },
-  {
-    label: 'What Is Strata Painting?',
-    href: '/blog/what-is-strata-painting',
-  },
-  {
-    label: 'Commercial Painting Cost Guide Sydney',
-    href: '/blog/commercial-painting-cost-guide-sydney',
-  },
+
 ]
 
 const Footer = () => {
