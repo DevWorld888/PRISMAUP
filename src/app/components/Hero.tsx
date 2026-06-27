@@ -26,7 +26,7 @@ export default function Hero() {
 
       {/* VIDEO — desktop only, injected after page load, fades over the image */}
       
-      <HeroVideo />
+      {/* <HeroVideo /> */}
 
       {/* OVERLAY */}
       <div className="absolute inset-0 bg-black/50 z-10" />

@@ -390,7 +390,7 @@ export default function ExteriorPaintingSydneyPage() {
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative min-h-[360px] rounded-2xl overflow-hidden shadow-2xl">
             <Image
-              src="/images/exteriorpainting/exteriropaintingsydney.jpg"
+              src="/images/exteriorpainting/exteriropaintingsydney.JPG"
               alt="Prisma Coatings exterior painting team at work on a Sydney home"
               fill
               className="object-cover"

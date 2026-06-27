@@ -236,7 +236,7 @@ export const blogPosts: BlogPost[] = [
   <li><strong>Local knowledge</strong> — we understand Parramatta's property types, common surface conditions and the specific demands of the western Sydney climate</li>
 </ul>
 
-<p>From a full exterior repaint of a Federation home near Parramatta Park to a fresh interior repaint in a CBD apartment, our team delivers results that last. Explore our full range of <a href="/residential-painting-sydney">residential painting services</a> or contact us directly to arrange your free quote.</p>
+<p>From a full exterior repaint of a Federation home near Parramatta Park to a fresh interior repaint in a CBD apartment, our team delivers results that last. Explore our full range of <a href="/painters-sydney">residential painting services</a> or contact us directly to arrange your free quote.</p>
 
 <p><strong>Contact Prisma Coatings today for a free on-site assessment — and get a clear, honest price for your Parramatta painting project.</strong></p>
 

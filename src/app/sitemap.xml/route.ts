@@ -85,12 +85,6 @@ export async function GET() {
       lastmod: currentDate
     },
     {
-      url: '/painters-inner-west',
-      changefreq: 'monthly',
-      priority: '0.8',
-      lastmod: currentDate
-    },
-    {
       url: '/painters-inner-west-sydney',
       changefreq: 'monthly',
       priority: '0.8',
@@ -112,6 +106,12 @@ export async function GET() {
       url: '/painters-parramatta',
       changefreq: 'monthly',
       priority: '0.8',
+      lastmod: currentDate
+    },
+    {
+      url: '/house-painters-caringbah',
+      changefreq: 'monthly',
+      priority: '0.9',
       lastmod: currentDate
     },
     {

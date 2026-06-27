@@ -1025,7 +1025,7 @@ export default function PaintersParramattaPage() {
 
           <p className="mt-8 text-center text-gray-500 text-sm">
             Servicing all of Western Sydney.{" "}
-            <Link href="/house-painting-sydney" className="text-[#D61C1C] hover:underline font-medium">
+            <Link href="/painters-sydney" className="text-[#D61C1C] hover:underline font-medium">
               View all Sydney painting services
             </Link>
           </p>

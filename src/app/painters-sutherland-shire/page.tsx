@@ -338,6 +338,25 @@ export default function PaintersSutherlandShirePage() {
           ))}
         </div>
       </section>
+
+      {/* SUBURB PAGES */}
+      <section className="bg-gray-50 py-12">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <h2 className="text-2xl font-bold mb-4">Painting Services by Suburb</h2>
+          <p className="text-gray-700 mb-8">
+            We provide dedicated painting services across the Sutherland Shire. If you&apos;re
+            looking for painters in a specific suburb, see our local pages below.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link
+              href="/house-painters-caringbah"
+              className="bg-white border border-gray-200 rounded-xl px-5 py-3 text-sm font-medium text-[#13233A] hover:border-[#D61C1C] hover:text-[#D61C1C] transition-colors"
+            >
+              House Painters Caringbah
+            </Link>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
