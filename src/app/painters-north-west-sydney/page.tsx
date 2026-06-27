@@ -213,7 +213,7 @@ export default function PaintersNorthWestSydneyPage() {
       <section className="max-w-7xl mx-auto px-6 py-16 grid lg:grid-cols-2 gap-12 items-center">
         <div className="relative min-h-[320px] rounded-2xl overflow-hidden shadow-lg">
           <Image
-            src="/images/exteriorpainting/exteriropaint.jpg"
+            src="/images/parramata/house-paint-parramata.webp"
             alt="Exterior painting service in North West Sydney by Prisma Coatings"
             fill
             className="object-cover"
