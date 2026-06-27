@@ -8,7 +8,9 @@ const nextConfig: NextConfig = {
         hostname: 'lh3.googleusercontent.com',
       },
     ],
-    qualities: [70, 75],
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 86400,
+    qualities: [60, 70, 75],
   },
   async redirects() {
     return [

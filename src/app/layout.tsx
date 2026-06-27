@@ -165,16 +165,14 @@ export default function RootLayout({
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-7N3MRT5YT8', {
-      debug_mode: true
-      });
+      gtag('config', 'G-7N3MRT5YT8');
     `}
       </Script>
       <body className={`${roboto.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <Header />
           <LocalBusinessSchema />
-          {children}
+          <main>{children}</main>
           <Footer />
           <WhatsAppFloat />
         </ThemeProvider>
