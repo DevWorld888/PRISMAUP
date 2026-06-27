@@ -43,7 +43,7 @@ export default function Header() {
         {/* LOGO IZQUIERDA */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/logo/logo1.png"
+            src="/logo/logo1.webp"
             alt="Prisma Coatings Sydney - Professional Painting Services"
             width={130}
             height={130}
