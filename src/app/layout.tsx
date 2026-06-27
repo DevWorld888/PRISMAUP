@@ -172,7 +172,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <Header />
           <LocalBusinessSchema />
-          <main>{children}</main>
+          {children}
           <Footer />
           <WhatsAppFloat />
         </ThemeProvider>
