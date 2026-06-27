@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import ContactPageClient from "./components/ContactPage";
 
 
@@ -9,9 +10,14 @@ export const metadata: Metadata = {
 };
 
 const ContactPage = () => {
-  
   return (
-    <ContactPageClient />
+    <>
+      <Script
+        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+        strategy="afterInteractive"
+      />
+      <ContactPageClient />
+    </>
   );
 };
 

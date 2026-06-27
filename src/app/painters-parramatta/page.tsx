@@ -492,7 +492,7 @@ export default function PaintersParramattaPage() {
             </div>
 
             <Link
-              href="/house-painting-sydney"
+              href="/painters-sydney"
               className="inline-flex items-center gap-2 mt-8 text-[#D61C1C] font-semibold hover:underline"
             >
               View our house painting services <ArrowRight className="w-4 h-4" />

@@ -47,7 +47,6 @@ export default function Header() {
             alt="Prisma Coatings Sydney - Professional Painting Services"
             width={130}
             height={130}
-            priority
           />
         </Link>
 

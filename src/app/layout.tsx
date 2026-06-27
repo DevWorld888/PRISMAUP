@@ -157,10 +157,6 @@ export default function RootLayout({
         />
       </head>
       <Script
-        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-        strategy="afterInteractive"
-      />
-      <Script
         src={`https://www.googletagmanager.com/gtag/js?id=G-7N3MRT5YT8`}
         strategy="afterInteractive"
       />
