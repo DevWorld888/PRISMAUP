@@ -1095,7 +1095,7 @@ export default function HousePaintersCaringbahPage() {
             <p className="mt-4 text-sm text-gray-500">
               For a more detailed guide, see our upcoming blog post:{" "}
               <span className="text-[#D61C1C] font-medium">
-                House Painting Costs in {suburb}
+                <a href="/blog/house-painting-costs-caringbah">House Painting Costs in {suburb}</a>
               </span>
             </p>
             <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4">
