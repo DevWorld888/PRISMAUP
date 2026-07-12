@@ -1,6 +1,8 @@
+'use client';
 import React from "react";
 import Link from "next/link";
 import { Home, Building2, Layers, Wrench, Check, ArrowRight, Phone, MessageCircle } from "lucide-react";
+import { trackPhoneClick } from "@/app/utils/analytics";
 
 type ServiceCard = {
   id: number;
@@ -94,6 +96,7 @@ const trustSignals = [
 ];
 
 const OurServices = () => {
+  const handlePhoneClick = () => trackPhoneClick("our_services_section");
   return (
     <section
       className="py-20 px-4 bg-[#1F2937]"
@@ -212,6 +215,7 @@ const OurServices = () => {
           <div className="flex flex-wrap justify-center gap-3">
             <Link
               href="tel:+61401508036"
+              onClick={handlePhoneClick}
               className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white text-sm font-medium rounded-lg border border-white/20 transition-colors duration-200"
             >
               <Phone className="w-4 h-4" />

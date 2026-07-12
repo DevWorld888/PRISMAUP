@@ -5,20 +5,14 @@ import Link from "next/link";
 import { useState } from "react";
 // import ThemeToggle from './ThemeToggle';
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
+import { trackPhoneClick } from "@/app/utils/analytics";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
-  const handlePhoneClick = () => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'phone_click', {
-        event_category: 'phone',
-        event_label: 'header_phone_click',
-      });
-    }
-  };
+  const handlePhoneClick = () => trackPhoneClick("header");
 
   return (
     <header className=" w-full font-[Roboto] z-50 bg-[var(--color-brand-accent)]  transition-colors duration-200">

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Phone, Mail, Clock, ShieldCheck, Star, Zap, BadgeCheck } from "lucide-react";
 import { z } from "zod";
+import { trackPhoneClick } from "@/app/utils/analytics";
 import Image from "next/image";
 import TurnstileWidget from "../../components/TurnstileWidget";
 
@@ -89,6 +90,7 @@ const ContactPage = () => {
     const url = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(WA_MESSAGE)}`;
     window.open(url, "_blank");
   };
+  const handlePhoneClick = () => trackPhoneClick("contact_page");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -556,6 +558,7 @@ const ContactPage = () => {
               {/* Call CTA */}
               <a
                 href="tel:+61401508036"
+                onClick={handlePhoneClick}
                 className="flex items-center justify-center gap-2 bg-[#D61C1C] hover:bg-[#B71C1C] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 text-sm mb-3"
                 aria-label="Call Prisma Coatings"
               >
