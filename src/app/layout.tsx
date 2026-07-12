@@ -1,5 +1,6 @@
 import "./styles/globals.css";
 import type { Metadata } from "next";
+import { GoogleTagManager } from "@next/third-parties/google";
 import { Roboto } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import Header from "./components/Header";
@@ -50,6 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-AU" suppressHydrationWarning>
+      <GoogleTagManager gtmId="GTM-WTRBZ53P" />
       <head>
         <script
           type="application/ld+json"
