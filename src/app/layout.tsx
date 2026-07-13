@@ -7,7 +7,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import WhatsAppFloat from "./components/WhatsAppFloat";
 import LocalBusinessSchema from './components/LocalBusinessSchema';
-import Script from "next/script";
+
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -158,18 +158,6 @@ export default function RootLayout({
           }}
         />
       </head>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=G-7N3MRT5YT8`}
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-7N3MRT5YT8');
-    `}
-      </Script>
       <body className={`${roboto.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <Header />
