@@ -1,7 +1,8 @@
-import React from 'react'
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Phone, Mail, MapPin } from 'lucide-react'
+import { trackPhoneClick } from '../utils/analytics'
 
 const services = [
   { label: 'Residential Painting Sydney', href: '/painters-sydney' },
@@ -28,6 +29,8 @@ const resources = [
 ]
 
 const Footer = () => {
+  const handlePhoneClick = () => trackPhoneClick("Footer Phone Click");
+  
   return (
     <footer className="bg-[#13233A] text-white" role="contentinfo">
 
@@ -62,6 +65,7 @@ const Footer = () => {
                 0401 508 036
               </a>
               <a
+                onClick={handlePhoneClick}
                 href="mailto:info@prismacoatings.com.au"
                 className="flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors duration-200"
                 aria-label="Email Prisma Coatings"
