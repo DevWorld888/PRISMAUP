@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Phone, Mail, Clock, ShieldCheck, Star, Zap, BadgeCheck } from "lucide-react";
 import { z } from "zod";
-import { trackPhoneClick } from "@/app/utils/analytics";
+import { trackFormSubmission, trackPhoneClick } from "@/app/utils/analytics";
 import Image from "next/image";
 import TurnstileWidget from "../../components/TurnstileWidget";
 
@@ -127,12 +127,6 @@ const ContactPage = () => {
     setErrors({});
 
     try {
-      if (typeof window !== "undefined" && "gtag" in window) {
-        (window as any).gtag("event", "form_submit", {
-          event_category: "lead",
-          event_label: "contact_form_submission",
-        });
-      }
 
       const response = await fetch("/api/send", {
         method: "POST",
@@ -146,6 +140,8 @@ const ContactPage = () => {
           type: "success",
           text: "Quote request sent! We'll be in touch within a few hours.",
         });
+        trackFormSubmission("contact_page");
+
         setFormData({
           Fullname: "",
           telephone: "",

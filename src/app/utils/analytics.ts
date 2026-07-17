@@ -14,3 +14,19 @@ export function trackPhoneClick(clickLocation = "unknown") {
 
   console.log("Phone click pushed to dataLayer:", eventData);
 }
+
+export function trackFormSubmission(formLocation = "unknown") {
+  if (typeof window === "undefined") return;
+
+  const eventData = {
+    event: "form_submit_success",
+    contact_method: "form",
+    form_location: formLocation,
+    page_location: window.location.href,
+  };
+
+  window.dataLayer ??= [];
+  window.dataLayer.push(eventData);
+
+  console.log("Form submission pushed to dataLayer:", eventData);
+}
