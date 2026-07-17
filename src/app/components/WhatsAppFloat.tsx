@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { trackWhatsAppClick } from '@/app/utils/analytics';
 
 const WhatsAppFloat = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -19,12 +20,7 @@ const WhatsAppFloat = () => {
   }, []);
   
   const handleWhatsAppClick = () => {
-    if (typeof window !== "undefined" && 'gtag' in window) {
-      (window as any).gtag('event', 'whatsapp_click', {
-        event_category: 'contact',
-        event_label: 'floating_whatsapp'
-      });
-    }
+    trackWhatsAppClick("floating_button");
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');

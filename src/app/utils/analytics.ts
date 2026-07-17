@@ -30,3 +30,19 @@ export function trackFormSubmission(formLocation = "unknown") {
 
   console.log("Form submission pushed to dataLayer:", eventData);
 }
+
+export function trackWhatsAppClick(clickLocation = "unknown") {
+  if (typeof window === "undefined") return;
+
+  const eventData = {
+    event: "whatsapp_click",
+    contact_method: "whatsapp",
+    click_location: clickLocation,
+    page_location: window.location.href,
+  };
+
+  window.dataLayer ??= [];
+  window.dataLayer.push(eventData);
+
+  console.log("WhatsApp click pushed:", eventData);
+}
