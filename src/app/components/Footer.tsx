@@ -5,6 +5,7 @@ import { Phone, Mail, MapPin } from 'lucide-react'
 import { trackPhoneClick } from '../utils/analytics'
 
 const services = [
+  { label: 'House Painters Sydney', href: '/house-painters-sydney' },
   { label: 'Residential Painting Sydney', href: '/painters-sydney' },
   { label: 'Commercial Painting Sydney', href: '/commercial-painting-sydney' },
   { label: 'Strata Painting Sydney', href: '/strata-painting-sydney' },

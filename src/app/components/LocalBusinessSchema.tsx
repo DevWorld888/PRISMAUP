@@ -14,7 +14,7 @@ export default function LocalBusinessSchema() {
       streetAddress: '20/25 Marlowe St',
       addressLocality: 'Campsie',
       addressRegion: 'NSW',
-      postalCode: '2193',
+      postalCode: '2194',
 
       addressCountry: 'AU',
     },
